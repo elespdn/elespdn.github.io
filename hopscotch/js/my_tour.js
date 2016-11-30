@@ -6,7 +6,7 @@ var tour = {
       title: "My Header",
       content: "This is the header of my page.",
       target: "header",
-      placement: "right"
+      placement: "bottom"
     },
     {
       title: "My content",
