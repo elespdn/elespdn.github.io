@@ -12,7 +12,7 @@ var tour = {
     {
       title: "Transcriptions and editions",
       content: "Before even encoding the text, it needs to be transcribed! This is a philological task, that implies a first <b>interpretation</b> of the text. Segre clearly theorized the issue involved in trancriptions through the concept of <i>diasystème</i>, which meand that in the text the system of the author meets that of the scribe and that of the transcriber. Want to know more? Read: Segre, Cesare. ‘Critique Textuelle, Théorie Des Ensembles et Diasystème’. <i>Bulletin de La Classe Des Lettres et Des Sciences Morales et Politiques de l’Académie Royale de Belgique</i> 62 (1976): 279–292.",
-      target: "lastspan",
+      target: "prova",
               // document.querySelector("#content p"),
       placement: "bottom"
     }
