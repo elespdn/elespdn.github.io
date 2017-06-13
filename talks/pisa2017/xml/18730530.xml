@@ -17,16 +17,11 @@
             </respStmt>
          </titleStmt>
          <publicationStmt>
-            <publisher>Laboratorio Monaci 2016</publisher>
-            <pubPlace>Sapienza Università di Roma</pubPlace>
-            <date when="2016-11">novembre 2016</date>
+            <publisher>Scuola Estiva Strumenti Digitali per Umanisti</publisher>
+            <date when="2017-06">giugno 2017</date>
             <availability>
-               <licence target="http://creativecommons.org/licenses/by-nc-sa/4.0/"
-                  notBefore="2015-07-11">
-                  <p>I materiali originali (la lettera) appartiene alla Società Filologica Romana e
-                     è riprodotta qui con il necessario permesso.</p>
-                  <p>Questo documento (trascrizione e codifica) ha una licenza Creative Commons
-                     Attribution-NonCommercial-ShareAlike 4.0 International License.</p>
+               <licence>
+                  <p>Il testo è protetto da copyright e non può essere riprodotto senza il permesso della Bibliothèque nationale de France.</p>
                </licence>
             </availability>
          </publicationStmt>
