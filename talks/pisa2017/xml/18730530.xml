@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Ernesto Monaci a Paul Meyer, 30 maggio 1873</title>
+            <respStmt>
+               <resp>trascrizione</resp>
+               <persName>Marco Veneziale</persName>
+            </respStmt>
+            <respStmt>
+               <resp>Codifica</resp>
+               <persName>Elena Spadini</persName>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Laboratorio Monaci 2016</publisher>
+            <pubPlace>Sapienza Università di Roma</pubPlace>
+            <date when="2016-11">novembre 2016</date>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+                  notBefore="2015-07-11">
+                  <p>I materiali originali (la lettera) appartiene alla Società Filologica Romana e
+                     è riprodotta qui con il necessario permesso.</p>
+                  <p>Questo documento (trascrizione e codifica) ha una licenza Creative Commons
+                     Attribution-NonCommercial-ShareAlike 4.0 International License.</p>
+               </licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Lettera di Ernesto Monaci a Paul Meyer del 30 maggio 1873. Bibliothèque Nationale de
+               France</p>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <correspDesc>
+            <correspAction type="sent">
+               <persName ref="#EM">Ernesto Monaci</persName>
+               <placeName ref="#roma">Roma</placeName>
+               <date when="1873-05-30">30 maggio 1873</date>
+            </correspAction>
+            <correspAction type="received">
+               <persName ref="#PM">Paul Meyer</persName>
+            </correspAction>
+         </correspDesc>
+         <particDesc>
+            <listPerson>
+               <person xml:id="PM">
+                  <persName>
+                     <forename>Paul</forename>
+                     <surname>Meyer</surname>
+                  </persName>
+                  <birth when="1840">17 gennaio 1840</birth>
+                  <death when="1917">7 settembre 1917</death>
+                  <idno type="VIAF">44302645</idno>
+               </person>
+               <person xml:id="EM">
+                  <persName>
+                     <forename>Ernesto</forename>
+                     <surname>Monaci</surname>
+                  </persName>
+                  <birth when="1844">20 febbraio 1844</birth>
+                  <death when="1918">1 maggio 1918</death>
+                  <idno type="VIAF">64080350</idno>
+               </person>
+               <person xml:id="GP">
+                  <persName>
+                     <forename>Gaston</forename>
+                     <surname>Paris</surname>
+                  </persName>
+                  <birth when="1839">9 agosto 1839</birth>
+                  <death when="1907">5 marzo 1903</death>
+                  <idno type="VIAF">39382261</idno>
+               </person>
+               <person xml:id="FAV">
+                  <persName>
+                     <forename>Francisco Adolfo</forename>
+                     <surname>Varnhagen</surname>
+                  </persName>
+                  <birth when="1816">17 febbraio 1816</birth>
+                  <death when="1878">26 giugno 1878</death>
+                  <idno type="VIAF">61560726</idno>
+               </person>
+               <person xml:id="FV">
+                  <persName>
+                     <forename>Friedrich</forename>
+                     <surname>Vieweg</surname>
+                  </persName>
+                  <birth when="1761">11 marzo 1761</birth>
+                  <death when="1835">25 dicembre 1835</death>
+                  <idno type="VIAF">37718184</idno>
+               </person>
+            </listPerson>
+            <listOrg>
+               <org xml:id="BV">
+                  <orgName>Biblioteca Vaticana</orgName>
+               </org>
+            </listOrg>
+         </particDesc>
+         <settingDesc>
+            <listPlace>
+               <place xml:id="roma">
+                  <placeName>Roma</placeName>
+                  <country>Italia</country>
+                  <location>
+                     <geo>41.902783, 12.496366</geo>
+                  </location>
+               </place>
+            </listPlace>
+         </settingDesc>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div>
+            <opener>
+               <dateline>
+                  <placeName ref="#roma">Roma</placeName>, <date when="1873-05-30">30 maggio
+                     1873</date>
+               </dateline>
+               <salute>Mio signore!</salute>
+            </opener>
+            <p>Mi perdoni se ho tardato fino a questo momento per ringraziarla del dono graditissimo
+               dei suoi 2e opuscoli, ma varie occupazioni e l'agitazione in che vivo da alcuni
+               giorni per una nuova disgrazia che minaccia la mia famiglia, mi fanno
+               involontariamente mancare ai più cari doveri.</p>
+            <p>Del sig. <persName ref="#FV">Vieweg</persName> spero che avrà ricevuto la parte II
+               degli estratti della <title type="opera">Cronaca di Stramboldi</title>, da me spediti
+               il 18 corr. Ora le ne rimetto il complemento. Ho riveduto questi fogli nel <choice>
+                  <abbr>cod.</abbr>
+                  <expan>codice</expan>
+               </choice>; ma la ristrettezza del tempo non mi ha permesso di fare tutti quei
+               confronti con altre parti del <choice>
+                  <abbr>ms.</abbr>
+                  <expan>manoscritto</expan>
+               </choice>, che forse avrebbero giovato a meglio stabilire alcune parole qua e là
+               dubbie. – In tutti questi giorni la <orgName ref="#BV"><choice>
+                     <abbr>B. Vat.</abbr>
+                     <expan>Biblioteca Vaticana</expan>
+                  </choice></orgName> non è stata aperta più di 6 volte e questa mattina sono
+               cominciate altre vacanze fino a tutto il 4 giugno. – Dica però al suo collega, che se
+               desidera schiarimenti od anche che io riveda sul <choice>
+                  <abbr>ms.</abbr>
+                  <expan>manoscritto</expan>
+               </choice> le prove della stampa, lo farò poi volentieri.</p>
+            <p>Ella mi domanda se il <title type="codice"><choice>
+                     <abbr>Canz. Port.</abbr>
+                     <expan>Canzoniere Portoghese</expan>
+                  </choice></title> comincerà a pubblicarsi nel 2 <choice>
+                  <abbr>f.</abbr>
+                  <expan>fascicolo</expan>
+               </choice> della <title type="pubblicazione">Rivista</title>? Così avevo già divisato:
+               ma il mancare ancora nella tipografia varî segni che rappresenteranno (nel testo
+               diplom.) le abbreviature del <choice>
+                  <abbr>cod.</abbr>
+                  <expan>codice</expan>
+               </choice> mi ha fatto di necessità rimandare al <choice>
+                  <abbr>f.</abbr>
+                  <expan>fascicolo</expan>
+               </choice> 3 il principio di questa pubblicazione. Se Ella sapesse quali difficoltà
+               tipografiche ci si attraversano ad ogni passo! Del resto io mi sento vivamente
+               lusingato dell'interesse che Ella prende per questo lavoro, e vorrei che riuscisse
+               secondo i comuni desideri; ma gli ostacoli da superare sono assai gravi! <persName
+                  ref="#FAV">Varnhagen</persName> se ne cavò quasi sempre rimontando a suo piacere
+               il testo (e questo è il difetto principale del suo libro, che non può esser avvertito
+               se non da chi abbia esaminato il <choice>
+                  <abbr>ms.</abbr>
+                  <expan>manoscritto</expan>
+               </choice>): procedendo con un metodo più rigoroso, noi dovremo contentarci di
+               risultati più modesti. Spero poi dalla buona critica lumi ed ajuti per continuare il
+               nostro compito.</p>
+            <p>Il <choice>
+                  <abbr>f.</abbr>
+                  <expan>fascicolo</expan>
+               </choice> 2 della <title type="pubblicazione"
+                  ><abbr>Riv.</abbr><expan>Rivista</expan></title> uscirà colla prima metà di
+               giugno; spero di legger presto il 5° della <title type="pubblicazione"
+                  >Romania</title>.</p>
+            <closer><salute>Vedendo il sig. <persName ref="#GP">Gaston Paris</persName>, la prego
+                  dei miei sicuri ossequî. Ella gradisca i resti della mia più cordiale stima ed
+                  amicizia. Dev.mo</salute>
+               <signed><persName ref="#EM">Ernesto Monaci</persName></signed></closer>
+         </div>
+      </body>
+   </text>
+</TEI>

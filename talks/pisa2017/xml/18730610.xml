@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Ernesto Monaci a Paul Meyer, 10 giugno 1873</title>
+            <respStmt>
+               <resp>trascrizione</resp>
+               <persName>Marco Veneziale</persName>
+            </respStmt>
+            <respStmt>
+               <resp>Codifica</resp>
+               <persName>Elena Spadini</persName>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Scuola Estiva Strumenti Digitali per Umanisti</publisher>
+            <date when="2017-06">giugno 2017</date>
+            <availability>
+               <licence>
+                  <p>Il testo è protetto da copyright e non può essere riprodotto senza il permesso della Bibliothèque nationale de France.</p>
+               </licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Lettera di Ernesto Monaci a Paul Meyer del 10 giugno 1873. Bibliothèque nationale de
+               France</p>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <correspDesc>
+            <correspAction type="sent">
+               <persName ref="#EM">Ernesto Monaci</persName>
+               <placeName ref="#roma">Roma</placeName>
+               <date when="1873-06-10">10 giugno 1873</date>
+            </correspAction>
+            <correspAction type="received">
+               <persName ref="#PM">Paul Meyer</persName>
+            </correspAction>
+         </correspDesc>
+         <particDesc>
+            <listPerson>
+               <person xml:id="LDML">
+                  <persName>
+                     <forename>Louis</forename>
+                     <surname>De Mas Latrie</surname>
+                  </persName>
+                  <birth when="1815">9 Aprile 1815</birth>
+                  <death when="1897">3 Gennaio 1897</death>
+                  <idno type="VIAF">19773406</idno>
+               </person>
+               <person xml:id="PM">
+                  <persName>
+                     <forename>Paul</forename>
+                     <surname>Meyer</surname>
+                  </persName>
+                  <birth when="1840">17 gennaio 1840</birth>
+                  <death when="1917">7 settembre 1917</death>
+                  <idno type="VIAF">44302645</idno>
+               </person>
+               <person xml:id="EM">
+                  <persName>
+                     <forename>Ernesto</forename>
+                     <surname>Monaci</surname>
+                  </persName>
+                  <birth when="1844">20 febbraio 1844</birth>
+                  <death when="1918">1 maggio 1918</death>
+                  <idno type="VIAF">64080350</idno>
+               </person>
+               <person xml:id="EMS">
+                  <persName key="VIAF-109421062">
+                     <forename>Edmund Max</forename>
+                     <surname>Stengel</surname>
+                  </persName>
+                  <birth when="1845-04-05">5 Aprile 1845, <placeName>Halle</placeName>
+                  </birth>
+                  <death when="1918-05-01">3 Novembre 1935, <placeName>Marburg</placeName>
+                  </death>
+                  <idno type="VIAF">109421062</idno>
+               </person>
+            </listPerson>
+            <listOrg>
+               <org xml:id="BV">
+                  <orgName>Biblioteca Vaticana</orgName>
+               </org>
+               <org xml:id="BDF">
+                  <orgName>Banca di Francia</orgName>
+               </org>
+            </listOrg>
+         </particDesc>
+         <settingDesc>
+            <listPlace>
+               <place xml:id="roma">
+                  <placeName>Roma</placeName>
+                  <country>Italia</country>
+                  <location>
+                     <geo>41.902783, 12.496366</geo>
+                  </location>
+               </place>
+               <place xml:id="marburg">
+                  <placeName>Marburg</placeName>
+                  <country>Germania</country>
+               </place>
+            </listPlace>
+         </settingDesc>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div>
+            <opener><dateline><placeName ref="#roma">Roma</placeName>
+                  <date when="1873-06-10">10 giugno 1873</date></dateline> Mio riverito
+               signore</opener>
+            <p>Le accuso ricevimento di fr. 40 in tre biglietti della <orgName ref="#BDF">Banca di
+                  Francia</orgName> da lei speditimi per posta, assicurati, il giorno 5 corr. a
+               totale pagamento della copia di alcuni fogli della <title type="opera">Cronaca di
+                  Stramboldi</title> esistente nella <orgName ref="#BV">Vaticana</orgName>, fatta
+               eseguire pel signor <persName ref="LDML">de Mas Latrie</persName>. La ringrazio
+               dell'onore che Ella fa al mio libretto parlandone nella <title type="pubblicazione"
+                  >Romania</title>. Pubblicato per nozze, e quindi per un circolo di lettori non
+               troppo dediti alla filologia, esso non poteva certamente aspirare a richiamar
+               l'attenzione a l'esame di uno scienziato. Sento perciò tutta la cortesia che Ella ha
+               voluto curarmi.</p>
+            <p>Riguardo alle poche parole da me premesse alla raccolta, le fo osservare che io citai
+               quel passo del suo articolo sul <title type="codice">Cancionerihno</title> non già
+               per combatterlo, ma sibbene per confortare le parole mie coll'autorità del suo
+               giudizio; poiché siamo pienamente d'accordo che la forma attuale di quei canti sia
+               letteraria e non popolare. – Vi era però un punto sul quale le nostre vedute mi
+               pareva divergessero. Dopo aver detto che quelle poesie non sono <q>propriamente
+                  popolari</q>, Ella avea soggiunto: <q xml:lang="fr">qu'elles soient par la suite
+                  devenues pop. c'est ce qu'on peut regarder comme fort probable</q>, e citava
+               l'esempio di <persName>S. de B.</persName> che amava sentire i suoi versi cantati
+               dalle fanciulle che andavano alla fontana. Evidente quindi mi sembrava la sua
+               conclusione; che cioè quelle poesie, prima nella letteratura e poi fossero passate
+               nel popolo. Io invece pensavo che dal popolo esse fossero passate nella letteratura.
+               Ciò mi fece aggiungere quelle poche linee di osservazioni che posi nella p. IX. – Ma
+               elle ora mi dice non esistere nemmeno un'ombra di differenza tra le nostre opinioni,
+               ed io me ne rallegro sinceramente trovando dalla mia parte un giudice così
+               autorevole: solo confesso di non sapermi ancora persuadere che i due passi sopra
+               citati contengano un senso identico. Se tuttavia è così La prego a perdonarmi questo
+               plagio involontario. Del resto non posso ammettere che, se non esiste oggi differenza
+               d'opinione tra noi, esisterà forse un giorno quando Ella abbia dimostrato i rapporti
+               tra quelle poesie port. e le ant. franc. del <title type="codice">Cod. Douce
+                  308</title>. Ove ciò avvenga, io non sento alcuna ripugnanza a correggere le mie
+               opinioni, e affretto anzi col desiderio il momento che i suoi studi vengano a gettare
+               questa nuova luce sopra una letteratura che studio con molto amore.</p>
+            <closer><salute>Intanto gradisca di nuovo i miei ringraziamenti e i sensi della mia più
+                  sincera stima e devozione.</salute>
+               <signed><persName ref="#EM">Ernesto Monaci</persName></signed></closer>
+            <postscript>
+               <label>P.S.:</label>
+               <p>mi scrive <persName ref="#EMS">Stengel</persName> da <placeName ref="#marburg"
+                     >Marburg</placeName> che il fasc. V della <title type="pubblicazione"
+                     >Romania</title> è uscito da oltre un mese. È vero? Noi non l'abbiamo ancora
+                  ricevuto.</p>
+            </postscript>
+         </div>
+      </body>
+   </text>
+</TEI>
