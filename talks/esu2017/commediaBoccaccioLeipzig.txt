@@ -63,6 +63,8 @@ And Petrocchi based his edition on the mss. of the Antica Vulgata.
 10
 slide La Commedia di Boccaccio
 Now I'll say something about the project
+sonia and I
+Sunday project
 Our focus are the three mss copied by Boccaccio and what we may call the internal variants. What we are interested in is the role of Boccaccio as a copyist, while author himself, and his diverse readings of Dante's text.
 
 Our data are the result of the complete collation of the three manuscripts, something like this -->
@@ -149,11 +151,11 @@ Now, if we translate this procedure in the language of data modelling, we would 
 
 
 	Still to come: more data; statistic that will summarize this data
-	What I learn: Sonia (who is the expert in this case) pulled for having something that was methodological sound and in line with what is done in the field and relevant for the research question; where one of my biggest preoccupation was to have something that was consistent, logical, coherent and explicit
-	What I learn from the logistic point of view: also for projects that starts without any funding and, let's say, not officially, it is important that at a certain stage also your colleagues and director knows that you are working on it, so it is not anymore the Sunday project;
-	 choose a non commercial hosting space, so even if you are not sure what to do, ask for a server at your university, instead of going for commercial services like Hostinger or other, as we did (which caused us problems and loss of money).
-	 
-
+What I learn: Sonia (who is the expert in this case) pulled for having something that was methodological sound and in line with what is done in the field and relevant for the research question; where one of my biggest preoccupation was to have something that was consistent, logical, coherent and explicit
+	
+What I learn from the logistic point of view: 
+- even if it all starts as a Sunday project,  it is better if at a certain point it is recognized in your work place as part of what you do
+- this will allow for using the infrastructure of your institution, which means for example some space on a server (instead of paying for external and not always reliable services) and would help the project's sustainability.
 	
 	
 	
