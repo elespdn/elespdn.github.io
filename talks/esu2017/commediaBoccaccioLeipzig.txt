@@ -9,7 +9,7 @@ When i signed up for this presentation i was expecting a five mins presentation 
 
 First we will say something about Dante, the Commedia and Boccaccio, 
 - Context: Dante, Commedia, Boccaccio
-- Data modelling
+- Data modelling (then we will go through the procedure of data modelling)
 - Conclusion: 
 	 
 
