@@ -3,17 +3,13 @@ PRESENTATION Leipzig
 
 ## Something about Boccaccio Commedia
 
-When i signed up for this presentation i was expecting a five mins presentation that everyone had to do. Then I realized that it was a bit more and I asked myself what was the most interesting way to present this small project I am working on in the context of the Summer School, and I thought the best way would be to recall the history of the project and my experience, because other people may face similar challenges.
+When i signed up for this presentation i was expecting a five mins presentation that everyone had to do. Then I realized that it was a bit more and I thought the best way would be to recall the history of the project and my experience in it, because other people may face similar challenges.
 
 
 
 First we will say something about Dante, the Commedia and Boccaccio, 
 - Context: Dante, Commedia, Boccaccio
 - Data modelling
-	data
-	conceptual
-	logical
-	implementation
 - Conclusion: 
 	 
 
@@ -66,9 +62,13 @@ And Petrocchi based his edition on the mss. of the Antica Vulgata.
 
 10
 slide La Commedia di Boccaccio
-Our focus are the three mss copied by Boccaccio and what we may call the internal variants. What we are interested in is the role of Boccaccio as a copyist, while author himself, and his diverse reading of Dante's text.
+Now I'll say something about the project
+Our focus are the three mss copied by Boccaccio and what we may call the internal variants. What we are interested in is the role of Boccaccio as a copyist, while author himself, and his diverse readings of Dante's text.
+
 Our data are the result of the complete collation of the three manuscripts, something like this -->
 
+
+RISPIEGARE MEGLIO TUTTO QUESTO
 11
 slide tabella
 This is an example with the first 16, in total there are more than 500 (places where the texts differ).
@@ -94,6 +94,11 @@ slide table + Petrocchi + in rima + presente
 slide conceptual model 11
 
 ----------------------------------------------
+
+morphological
+echo
+substitution
+
 
 17
 slide tabella - evidenza nuovo
@@ -135,8 +140,8 @@ This is still in progress. For example, one of the discussion Sonia and I recent
 slide data modelling (mss --> conceptual completo --> db --> implementation), img clickable
 Now, if we translate this procedure in the language of data modelling, we would say that
  	- From the data, scholars create a conceptual model (where the entities and the relation between the entities are described)
-	- The conceptual model is formalized in a logical model (sufficiently consistent, logically coherent and explicit to be applied in one or more computational implementations). In this case, it is a relational database.
-	ZOOM echo
+	- The conceptual model is formalized in a logical model (sufficiently consistent, logically coherent and explicit to be applied in one or more computational implementations). In this case, it is a relational database (see ECHO).
+			ZOOM echo
 	- The logical model is then implemented
 	
 	
@@ -144,7 +149,7 @@ Now, if we translate this procedure in the language of data modelling, we would 
 
 
 	Still to come: more data; statistic that will summarize this data
-	What I learn: Sonia (who is the expert in this case) pulled for having something that was methodological sound and in line with what is done in the field; where one of my biggest preoccupation was to have something that was consistent, logically coherent and explicit
+	What I learn: Sonia (who is the expert in this case) pulled for having something that was methodological sound and in line with what is done in the field and relevant for the research question; where one of my biggest preoccupation was to have something that was consistent, logical, coherent and explicit
 	What I learn from the logistic point of view: also for projects that starts without any funding and, let's say, not officially, it is important that at a certain stage also your colleagues and director knows that you are working on it, so it is not anymore the Sunday project;
 	 choose a non commercial hosting space, so even if you are not sure what to do, ask for a server at your university, instead of going for commercial services like Hostinger or other, as we did (which caused us problems and loss of money).
 	 
