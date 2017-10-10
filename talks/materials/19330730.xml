@@ -6,7 +6,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Note de journal du 30 juillet 1933 de Gustave Roud</title>
+            <title>Note de journal du 30 juillet 1933</title>
             <author>Gustave Roud</author>
             <respStmt>
                <resp>Encodage</resp>
@@ -14,7 +14,7 @@
             </respStmt>
          </titleStmt>
          <publicationStmt>
-            <p>Materiaux de travail - UNIL</p>
+            <p>Materiaux de travail - CRLR Projet Gustave Roud - UNIL</p>
          </publicationStmt>
          <sourceDesc>
             <msDesc>
@@ -73,14 +73,14 @@
             <lb/>de descendre à l’abbaye de Moudon. Je rentre
             <lb/>presque tout de suite. Solitude – je veux dire senti<lb break="no"/>ment 
             aigu de ma solitude. 
-            <choice><abbr>mél</abbr><expan>mélancolique</expan>
+            <choice>
                <abbr>Tr.</abbr>
                <expan>Tristesse</expan>
             </choice> 
             <choice>
                <abbr>mél.</abbr>
                <expan>mélancolique</expan>
-            </choice>. Au retour 
+            </choice> Au retour 
             <lb/>je trouve J., qui est à la cuisine avec 
             <choice>
                <abbr>Mad.</abbr>
@@ -92,9 +92,9 @@
                <expan>tante</expan>
             </choice> 
             <choice>
-               <abbr>Cl.</abbr>
+               <abbr>Cl-</abbr>
                <expan>Clara</expan>
-            </choice>. Elle s’en va. La soirée se passe à chercher des 
+            </choice> Elle s’en va. La soirée se passe à chercher des 
             <lb/>musiques <hi rend="sousligné">passables</hi>, mais <hi rend="sousligné">rien</hi>.
          </p>
       </body>

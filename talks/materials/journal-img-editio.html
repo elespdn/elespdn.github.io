@@ -3,6 +3,16 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- bootstrap -->
+      <link rel="stylesheet"
+         href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+         integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+         crossorigin="anonymous" />
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+
+
 		<link rel="stylesheet" type="text/css" href="journal-img-editio.css">
 
 		<title>Éditions numériques</title>
@@ -15,6 +25,7 @@
 		</div>
 
 		<hr/>
+		<span class="division">&#129171;</span>
 
 		<div class="section">
 			<img src="../images/20171011_editions_numeriques/19330730-journal.png" width="47%" />
@@ -22,6 +33,7 @@
 		</div>
 
 		<hr/>
+		<span class="division">&#129171;</span>
 		
 		<div class="section">
 			<img src="../images/20171011_editions_numeriques/2-19330730-journal.png" width="47%" />
@@ -29,6 +41,7 @@
 		</div>
 
 		<hr/>
+		<span class="division">&#129171;</span>
 
 		<div class="section">
 			<img src="../images/20171011_editions_numeriques/2-19330730-journal.png" width="47%" />
@@ -37,13 +50,14 @@
 		</div>
 
 		<hr/>
+		<span class="division">&#129171;</span>
 
 		<div class="section">
 			<h2>Encodage de la note de journal en XML-TEI</h2>
 			<pre>
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
-&lt;?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+&lt;?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng"<br/> type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng"<br/> type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
 &lt;TEI xmlns="http://www.tei-c.org/ns/1.0"&gt;
    &lt;teiHeader&gt;
@@ -148,13 +162,24 @@
 		</div>
 
 		<hr/>
+		<span class="division">&#129171;</span>
 
 		<div class="section">
-			Encodage du texte : description de ce qu'on voit et comprend.
-			À partir de l'encodage, on peut produire plusiers visualization.
-
-			Point fondamental ici: quand on encode un texte, on ne s'occupe pas de comment il va etre affiché, mais seulement de comprendre et dècrire le texte.
+			<iframe width="95%" height="1700px" src="xsloutput/19330730.html"></iframe>
 		</div>
+		
+
+		<span class="division">&#129171;</span>
+		
+		<div class="section">
+			<h1 style="text-align: center"><a href="../20171011_editions_numeriques.html#/20">Recap</a></h1>
+		</div>
+
+		
+
+		<div class="section">
+		</div>
+		
 
 	</body>
 </html>

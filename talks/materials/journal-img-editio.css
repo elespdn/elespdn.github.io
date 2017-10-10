@@ -21,3 +21,9 @@ pre {
 .hicode {
 	color: red;
 }
+
+.division {
+	font-size: 15em;
+	text-align: center;
+	display: block;
+}
