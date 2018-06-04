@@ -1,0 +1,444 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>COMHUM 2018</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<script>
+			Reveal.initialize({
+					// More info https://github.com/hakimel/reveal.js#dependencies
+					dependencies: [
+						{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					]
+				});
+		</script>
+
+		<style>
+			div.quote {font-size: 0.8em; text-align: justify;}
+			div.source   {font-size: 0.6em; text-align: right; margin-top: 20px}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+							
+				
+				<section>
+					<h2>Exercises in modelling: <br/>textual variants</h2>
+					<br/>
+		            <p style="font-size: 0.8em">Elena Spadini (UNIL - CRLR)</p>
+		            <br/>
+		            <p>COMHUM 2018. Lausanne, 4 june</p>
+				</section>
+
+				<section>
+					<ul>
+						<li>textual variants</li>
+						<li>conceptual model</li>
+						<li>logical model (xml, sql, graph)</li>
+						<li>conclusions</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Case studies</h3>
+					<br/>
+					<ul>
+						<li><i>Lancelot en prose</i> (13<sup>th</sup> century)</li>
+						<li><i>Pastourelles</i> (12<sup>th</sup> - 13<sup>th</sup> century)</li>
+						<li>Giacomo Leopardi, <i>Alla luna</i> (1835)</li>
+						<li>Emilio Gadda, <i>Eros e Priapo</i> (1967)</li>
+					</ul>
+				</section>
+
+				<section>
+					<p>Textual variants:<br/><br/>competing readings of (a portion of) a work</p>
+				</section>
+
+				<section>
+					<ul>
+						<li>spelling, punctuation, morphology, syntax, lexis (linguistic)</li>
+						<li>deliberate or accidentally</li>
+						<li>erroneous, innovative</li>
+						<li>etc.</li>
+					</ul>
+				</section>
+
+				<section>
+				<img style="border:none" src="images/20180604_comhum/LeopardiLuna.jpg">
+					
+				</section>
+
+				<!-- <section>
+					<img width="30%" src="images/20180604_comhum/16999EntirePage.jpeg">
+					<img width="30%" src="images/20180604_comhum/1430EntirePage.jpeg">
+					<img width="30%" src="images/20180604_comhum/344EntirePage.jpeg">
+				</section> 
+
+				<section>
+					<img width="30%" src="images/20180604_comhum/16999EntirePage_selection.jpeg">
+					<img width="30%" src="images/20180604_comhum/1430EntirePage_selection.jpeg">
+					<img width="30%" src="images/20180604_comhum/344EntirePage_selection.jpeg">
+				</section>-->
+
+				<section>
+					<!-- <img width="30%" src="images/20180604_comhum/16999OrSenVa_selection.jpg">
+					<img width="30%" src="images/20180604_comhum/1430OrSenVa_selection.jpg">
+					<img width="30%" src="images/20180604_comhum/344OrSenVa_selection.jpg">
+					<br/>
+					<p>Or s'en vait Gal <b>qui congie a pris</b> lui et son compaignon</p>
+					<p>Or s'en va Galehoz entre lui et son conpaignon</p>
+					<p>Or s'en vet Galehout entre lui et son compaignon</p> -->
+
+
+					<img width="10%" style="border:none" src="images/20180604_comhum/16999EntirePage.jpeg">
+					<img width="10%" style="border:none" src="images/20180604_comhum/1430EntirePage.jpeg">
+					<img width="10%" style="border:none" src="images/20180604_comhum/344EntirePage.jpeg">
+					<img width="10%" style="border:none" src="images/20180604_comhum/16999EntirePage.jpeg">
+
+					<div style="font-size: 0.82em">
+						<br/><span style="color:red">si resaut</span> <span style="color:blue">en son cheval et</span> <span style="color:orange">s'en vait cele part ou il oi <u>le coc chanter</u></span>
+						<br/><span style="color:red">si saut</span> <span style="color:blue">en un cheval et</span> <span style="color:orange">va cele part ou il oi <u>le coc chanter</u></span>
+						<br/><span style="color:red">si saut</span> <span style="color:blue">en son cheval et</span> <span style="color:orange">vet cele part ou il oi <u>le coc chanter</u></span>
+						<br/><span style="color:red">si</span> <span style="color:orange">torna cele part ou il oi <u>le coc chanter</u></span>
+						<br/>
+						<br>oirent <u>une cloche sonner</u> et lors tourna le roy celle part</span>
+					</div>
+
+
+
+
+				</section>
+
+				<section data-background-image="images/20180604_comhum/pattern.jpg">
+				</section>
+
+				<section>
+					collation &#8594; <span style="color:red">study | annotation | description</span> &#8594; analysis 
+
+					<br/><br/><span style="font-size: 0.8em">Analytical methods: <i>critica delle varianti</i>, critique génétique, stemmatics, phylogenetic, etc.</span>
+				</section>
+
+				<section>
+					<p><span style="color:red">Or s'en</span> vait Gal <b>qui congie a pris</b> <span style="color:red">lui et</span></p>
+					<p><span style="color:red">Or s'en</span> va Galehoz entre <span style="color:red">lui et</span></p>
+					<p><span style="color:red">Or s'en</span> vet Galehout entre <span style="color:red">lui et</span></p>
+				</section>
+
+				<section>
+					model for understanding  <span style="color:grey">&#8594; model for producing</span>
+					<br/><br/>
+					<div class="source">Eide, Øyvind. 2014. ‘Ontologies, Data Modeling, and TEI’.<br/>Journal of the Text Encoding Initiative, 8.</div>
+				</section>
+
+				<section>
+					<img src="images/20180604_comhum/LeopardiLuna_selection.jpg">
+				</section>
+
+				<section>
+					<img src="images/20180604_comhum/LeopardiLuna_Cangia.jpg">
+				</section>
+
+				<section>
+					<img src="images/20180604_comhum/LeopardiLuna_Cangia.jpg">
+					<br/><br/>
+					cangia
+					<br/>
+					cambia
+					<br/>
+					cangia
+				</section>
+
+				<section data-background-image="images/20180604_comhum/fig01.png" data-background-size="100%">	
+				</section>
+
+				<section data-background-image="images/20180604_comhum/fig02.png" data-background-size="100%">
+				</section>
+
+				<section data-background-image="images/20180604_comhum/fig02_writingTool.png" data-background-size="100%">
+				</section>
+
+				<section>
+					<img src="images/20180604_comhum/LeopardiLuna_Cangia.jpg">
+					<br/><br/>
+					cangia [writing tool 1]
+					<br/>
+					cambia [writing tool 2]
+					<br/>
+					cangia [writing tool 3]
+				</section>
+
+				<section data-background-image="images/20180604_comhum/fig04.png" data-background-size="100%">
+					<div style="margin-top: 55%">
+						<p style="font-size: 0.8em"><b>Categories of change</b>: adiectio, detractio, immutatio, transmutatio</p>
+						<p style="font-size: 0.8em"><b>Linguistic categories</b>: spelling, morphology, syntax, lexis</p>
+					</div>
+				</section>
+
+				<section data-background-image="images/20180604_comhum/fig05.png" data-background-size="100%">
+				</section>
+
+				<section>
+					<img src="images/20180604_comhum/LeopardiLuna_Cangia.jpg">
+				</section>
+
+				<section data-background-image="images/20180604_comhum/fig13.png" data-background-size="60%">
+				</section>
+
+				<section>
+					<h3>Conceptual model</h3>
+					<br/><br/>
+					<ul>
+						<li>Distinction between features of the readings and features of the variation</li>
+						<li>Append multiple features to each reading and variation</li>
+					</ul>
+				</section>
+				
+				<section>
+					<div class="quote">Congiuntiva o separativa non è a rigore l'innovazione in sé, quanto piuttosto la relazione che l'innovazione stabilisce, in determinati casi, rispettivamente nei confronti della copia (o delle copie) e dell'antigrafo.</div><br/>
+					<div class="quote">The innovation per se is nor conjunctive not separative, but it is the relation that the innovation establishes, in certain cases, with the other copies and the antigraph.</div><br/>
+					<div class="source">Divizia, Paolo. 2011. ‘Fenomenologia Degli “Errori Guida”’.<br/><i>Filologia e Critica</i> XXXVI (1): 49–73.</div>
+				</section>
+
+				<section data-background-image="images/20180604_comhum/fig13.png" data-background-size="60%">
+				</section>
+
+				<section data-background-image="images/20180604_comhum/fig07_Lancelot_Pairs.png" data-background-size="50%">
+				</section>
+
+				<section>
+					<div class="quote">Recording each class for each possible relationship each location variant can have with all corresponding location variants from the other witnesses is therefore the closest approximation to an explicit classification one can aim for</div>
+					<br/>
+					<div class="source">Vanhoutte, E. (2007). 'Traditional editorial standards and the digital edition'.<br/>In Stronks, E. &  Boot, P. (Eds.), <i>Learned Love</i>. DANS.</div>
+				</section>
+
+				<section>
+					<h3>Conceptual model</h3>
+					<ul>
+						<li>Distinction between features of the readings and features of the variation</li>
+						<li>Append multiple features to each reading and variation</li>
+						<li>No base witness to orient the variation</li>
+						<li>Annotate each pair of readings or changing combinations of them</li>
+						<li>Nest and concatenate variation sites</li>
+					</ul>
+				</section>
+
+				<section>
+					<img width="25%" src="images/20180604_comhum/ExampleXML.jpg">
+					<img width="35%" src="images/20180604_comhum/ExampleSql.png">
+					<img width="33%" src="images/20180604_comhum/ExampleOWL.png">
+				</section>
+
+				<section>
+					<img src="images/20180604_comhum/modelRelationalDB.png">
+				</section>
+
+				<section>
+					<a href="http://boccacciocommedia.it/" target="_blank"><img src="images/20180604_comhum/boccaccioCommedia.png"></a>
+				</section>
+
+				<section>
+					<p>Encoding variants inside a document</p>
+					<br/>
+					<code>
+						<pre>
+
+	&#10748;subst&#10749;
+	   &#10748;del change="phase1"&#10749;<span style="color: red">cangia</span>&#10748;/del&#10749;
+	   &#10748;add&#10749;
+	      &#10748;del change="phase2"&#10749;<span style="color: red">ca</span>
+	         &#10748;subst change="phase3"&#10749;
+	            &#10748;del&#10749;<span style="color: red">mb</span>&#10748;/del&#10749;
+	            &#10748;add&#10749;<span style="color: red">ng</span>&#10748;/add&#10749;
+	         &#10748;/subst&#10749;
+	         <span style="color: red">ia</span>
+	      &#10748;/del&#10749;
+	   &#10748;/add&#10749;
+	&#10748;/subst&#10749;
+						</pre>
+					</code>
+				</section>
+
+
+				<section>
+					<p>Encoding variants between documents</p>
+					<br/>
+					<code>
+						<pre style="font-size: 0.5em">
+
+   &#10748;app&#10749;
+
+       &#10748;rdg xml:id="rdgA" type="error"&#10749;totes bontez pardue&#10748;/rdg&#10749;
+
+       &#10748;rdg xml:id="rdgB"&#10749;totes hennors pardues&#10748;/rdg&#10749;
+       
+       &#10748;rdg xml:id="rdgC" type="error"&#10749;totes honors perdus&#10748;/rdg&#10749;
+       
+       &#10748;rdg xml:id="rdgD"&#10749;toutez honneurs perdues&#10748;/rdg&#10749;
+
+   &#10748;/app&#10749;
+						</pre>
+					</code>
+				</section>
+
+
+				<section>
+					<p>Encoding variants between documents</p>
+					<br/>
+					<code>
+						<pre style="font-size: 0.48em">
+
+   &#10748;app&#10749;
+   	   <span style="color: orange">
+      &#10748;rdgGrp type="substitution" ana="orthography lexis"&#10749;
+          &#10748;rdg xml:id="rdgA" type="error"&#10749;totes bontez pardue&#10748;/rdg&#10749;
+          &#10748;rdg xml:id="rdgB"&#10749;totes hennors pardues&#10748;/rdg&#10749;
+      &#10748;/rdgGrp&#10749;</span>
+       
+      &#10748;rdg xml:id="rdgC" type="error"&#10749;totes honors perdus&#10748;/rdg&#10749;
+       
+      &#10748;rdg xml:id="rdgD"&#10749;toutez honneurs perdues&#10748;/rdg&#10749;
+       
+   &#10748;/app&#10749;
+						</pre>
+					</code>
+				</section>
+
+
+
+				<section>
+					<p>Encoding variants between documents</p>
+					<br/>
+					<code>
+						<pre style="font-size: 0.48em">
+
+   &#10748;app&#10749;
+
+      &#10748;rdg xml:id="rdgA" type="error"&#10749;totes bontez pardue&#10748;/rdg&#10749;
+   	   <span style="color: blue">
+      &#10748;rdgGrp type="substitution" ana="orthography"&#10749;
+          &#10748;rdg xml:id="rdgB"&#10749;totes hennors pardues&#10748;/rdg&#10749;
+          &#10748;rdg xml:id="rdgC" type="error"&#10749;totes honors perdus&#10748;/rdg&#10749;
+      &#10748;/rdgGrp&#10749;</span>
+       
+      &#10748;rdg xml:id="rdgD"&#10749;toutez honneurs perdues&#10748;/rdg&#10749;
+       
+   &#10748;/app&#10749;
+						</pre>
+					</code>
+				</section>
+
+
+				<section>
+					<p>Encoding variants between documents</p>
+					<br/>
+					<code>
+						<pre style="font-size: 0.48em">
+
+   &#10748;app&#10749;
+      <span style="color: orange">
+      &#10748;rdgGrp type="substitution" ana="orthography lexis"&#10749;</span>
+          &#10748;rdg xml:id="rdgA" type="error"&#10749;totes bontez pardue&#10748;/rdg&#10749;</span><span style="color: blue">
+      &#10748;rdgGrp type="substitution" ana="orthography"&#10749;</span>
+          &#10748;rdg xml:id="rdgB"&#10749;totes hennors pardues&#10748;/rdg&#10749;</span><span style="color: orange">
+      &#10748;/rdgGrp&#10749;</span>
+          &#10748;rdg xml:id="rdgC" type="error"&#10749;totes honors perdus&#10748;/rdg&#10749;<span style="color:blue">
+      &#10748;/rdgGrp&#10749;</span>
+       
+      &#10748;rdg xml:id="rdgD"&#10749;toutez honneurs perdues&#10748;/rdg&#10749;
+       
+   &#10748;/app&#10749;
+						</pre>
+					</code>
+				</section>
+
+				<section>
+					<img src="images/20180604_comhum/modelOntology.png">
+				</section>
+
+
+<section data-background-image="images/20180604_comhum/pattern.jpg">
+				</section>
+
+
+				<section>
+					<h3>Selected bibliography</h3>
+					<div style="text-align: left; font-size: 0.4em">
+					Andrews, T. L. (2016). Analysis of Variation Significance in Artificial Traditions Using Stemmaweb. Digital Scholarship in the Humanities, 31(3), 523–539.
+					<br/>
+
+Andrews, T. & van Zundert, J. (2016). Apparatus vs. Graph: New Models and Interfaces for Text. In Interface Critique (pp. 183-206). (Kaleidogramme; Vol. 139). Berlin: Kulturverlag Kadmos. 
+<br/>
+Brandoli, Cristina. “Due Canoni a Confronto: I Luoghi Di Barbi E Lo Scrutinio Di Petrocchi.” In Nuove Prospettive Sulla Tradizione Della Commedia. Una Guida Filologico Linguistica Al Poema Dantesco, edited by Paolo Trovato, 99–214. Firenze: Cesati, 2007.
+<br/>
+Camps, Jean-Baptiste. (2012) “Louis Havet, Cesare Segre, critique verbale et diasystème.” Blogpost. Sacré Gr@@l (blog). 
+<br/>
+Ciotti, F., & Tomasi, F. (2016). Formal Ontologies, Linked Data, and TEI Semantics. Journal of the Text Encoding Initiative, (Issue 9).
+<br/>
+Ciula, A., & Eide, Ø. (2017). Modelling in digital humanities: Signs in context. Digital Scholarship in the Humanities, 32(suppl_1), 33–46. 
+<br/>
+Colwell, E. C., & Tune, E. W. (1964). Variant Readings: Classification and Use. Journal of Biblical Literature, 83(3), 253–261. 
+<br/>
+Cummings, J., Hadley, M., & Noble, H. (2017). It has moving parts! Interactive visualisations in digital publications. Presented at the DiXiT Workshop The Educational and Social Impact of Digital Scholarly Editions. 
+<br/>
+Eide, Ø. (2014). Ontologies, Data Modeling, and TEI. Journal of the Text Encoding Initiative, 8. 
+<br/>
+Haentjens Dekker, R., & Birnbaum, D. J. (2017). It’s more than just overlap: Text As Graph. In Proceedings of Balisage: The Markup Conference 2017.
+<br/>
+Italia, P. (2010). Che cosa è la filologia d’autore. Roma: Carocci.
+<br/>
+Schauweker, Y. (2013). Variantes « significatives » et variantes « récurrentes ». Repenser l’appareil critique. In Actes du XXVIIe Congrès international de linguistique et de philologie romanes (Nancy, 15-20 juillet 2013). ATILF.
+<br/>
+Spadini, E. (2017). The role of the base manuscript in the collation of medieval texts. In Advances in Digital Scholarly Editing. Papers presented at the DiXiT Conferences in The Hague, Cologne, and Antwerp (pp. 345–350). Leiden: Sidestone Press.
+<br/>
+Tomasi, F., Daquino, M., & Giovannetti, F. (2018). Linked data ed edizioni scientifiche digitali. Esperimenti di trasformazione di un Quaderno di appunti. Presented at the 7th AIUCD Conference. Cultural Heritage in the Digital Age, Bari.
+<br/>
+Unsworth, J. (2002). What is Humanities Computing and What is not? Jahrbuch Für Computerphilologie, 4, 71–84.
+<br/>
+Vanhoutte, E. (2007). Traditional editorial standards and the digital edition. In Stronks, E. &  Boot, P. (Eds.), Learned Love. DANS.
+</div>
+				</section>
+				
+
+
+				
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
