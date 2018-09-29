@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>FBK 2018</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<script>
+			Reveal.initialize({
+					// More info https://github.com/hakimel/reveal.js#dependencies
+					dependencies: [
+						{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					]
+				});
+		</script>
+
+		<style>
+			div.quote {font-size: 0.8em; text-align: justify;}
+			div.source   {font-size: 0.6em; text-align: right; margin-top: 20px}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+							
+				
+				<section data-background-image="images/20181005_fbk/plastilinaRoom.jpg" data-background-opacity="0.7" data-background-size="contain">
+					<br/><br/><br/><br/><br/><br/><br/><br/>
+					<div style="background-color:rgba(255,255,255,0.5)">
+						<p><b>Edizioni digitali di plastilina: <br/>modellare i dati da Dante ad oggi</b></p>
+						<p style="font-size: 0.7em">Elena Spadini (Université de Lausanne). FBK, 5 ottobre 2018</p>
+					</div>
+				</section>
+
+
+
+				<section>
+					<ol>
+						<li>Introduzione</li>
+						<li>Esempi</li>
+						<li>Modellare: dai testi ai dati</li>
+						<li>Conclusioni</li>
+					</ul>
+				</section>
+
+				<section>1. Introduzione</section>
+
+				<section>
+					<img src="images/20181005_fbk/DHprojectComponents.png">
+					<br/><br/>
+					<div class="source"><i>Intro to Digital Humanities. <a href="http://dh101.humanities.ucla.edu/?page_id=15" target="_blank">1B: Analysis of DH projects</a></i>. Johanna Drucker, UCLA</div>
+				</section>
+
+				<section>
+					<img src="images/20181005_fbk/DHprojectComponents_highlighted.png">
+					<div class="source"><i>Intro to Digital Humanities. <a href="http://dh101.humanities.ucla.edu/?page_id=15" target="_blank">1B: Analysis of DH projects</a></i>. Johanna Drucker, UCLA</div>
+				</section>
+
+				<section>
+					<h2>oggetti complessi e disomogenei</h2>
+					<h2>da modellare ...</h2>
+					<h2>perché modellare?</h2>
+				</section>
+
+				<section>
+					<div class="quote">The models provide <b>formalized perspectives</b> on their subjects, expressed in a way that makes possible to gather specific information about the subject. In short, the formalized model determines <b>which aspects of the subject will be computable and in what form</b>.</div>
+					<br/><br/>
+					<div class="source">Flanders and Jannidis, “Data Modeling”, in <i>A New Companion to Digital Humanities</i>, 2016</div>
+				</section>
+
+				<section>
+					<img src="images/20181005_fbk/model_conceptualAndLogic.png">
+				</section>
+
+				<section data-background-image="images/20181005_fbk/magazzino1.png" data-background-size="contain">
+				</section>
+
+				<section data-background-image="images/20181005_fbk/magazzino2.png" data-background-size="contain">
+				</section>
+
+				<section>2. Esempi</section>
+
+				<section>
+					<img src="images/20181005_fbk/commediaBoccaccio_bocc.jpg">
+					<br/>
+					La <i>Commedia</i> di Boccaccio
+				</section>				
+
+				<section data-background-image="images/20181005_fbk/commediaBoccaccio_tradizioneAnticaVulgata.jpg" data-background-size="contain"></section>
+
+				<section data-background-image="images/20181005_fbk/commediaBoccaccio_website.png" data-background-size="contain">
+				</section>
+
+				<section>
+					<img src="images/20181005_fbk/commediaBoccaccio_db.png">
+				</section>
+
+				<section data-background-image="images/20181005_fbk/commediaBoccaccio_conceptual.png" data-background-size="contain"></section>
+
+				
+
+				
+				<section data-background-image="images/20181005_fbk/monaci_archiveMonaci.png" data-background-size="contain">
+				</section>
+
+				<section data-background-image="images/20181005_fbk/roud_mixMaterials.jpg" data-background-size="contain">
+				</section>
+
+
+
+				
+
+
+
+				
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
