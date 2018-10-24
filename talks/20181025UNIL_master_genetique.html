@@ -1,0 +1,396 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>FBK 2018</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<script>
+			Reveal.initialize({
+					// More info https://github.com/hakimel/reveal.js#dependencies
+					dependencies: [
+						{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					]
+				});
+		</script>
+
+		<style>
+			div.quote {font-size: 0.8em; text-align: justify;}
+			div.source   {font-size: 0.6em; text-align: right; margin-top: 20px}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+							
+				
+				<section data-background-image="images/20181005_fbk/plastilinaRoom.jpg" data-background-opacity="0.7" data-background-size="contain">
+					<br/><br/><br/><br/><br/><br/><br/>
+					<div style="background-color:rgba(255,255,255,0.5)">
+						<p><b>Edizioni digitali di plastilina: <br/>modellare i dati da Dante ad oggi</b></p>
+						<p>FBK, 5 ottobre 2018</p>
+							<p style="font-size: 0.7em">Elena Spadini (Université de Lausanne)
+							<br/>elespdn.github.io/talks/20181005_fbk</p>
+					</div>
+				</section>
+
+
+
+				<section>
+					<ol>
+						<li>Introduzione</li>
+						<li>Esempi</li>
+						<li>Modellare: dai testi ai dati</li>
+						<li>Conclusioni</li>
+					</ul>
+				</section>
+
+
+<!-- ==================================================================================================  -->
+<!-- 										SECTION 1                                                    -->
+<!-- ==================================================================================================  -->
+
+
+				<section>1. Introduzione</section>
+
+				<section>
+					<img src="images/20181005_fbk/DHprojectComponents.png">
+					<br/><br/>
+					<div class="source"><i>Intro to Digital Humanities. <a href="http://dh101.humanities.ucla.edu/?page_id=15" target="_blank">1B: Analysis of DH projects</a></i>. Johanna Drucker, UCLA</div>
+				</section>
+
+				<section>
+					<img src="images/20181005_fbk/DHprojectComponents_highlighted.png">
+					<div class="source"><i>Intro to Digital Humanities. <a href="http://dh101.humanities.ucla.edu/?page_id=15" target="_blank">1B: Analysis of DH projects</a></i>. Johanna Drucker, UCLA</div>
+				</section>
+
+				<section data-background-image="images/20181005_fbk/complexSources.png" data-background-size="contain">
+				</section>
+
+				<section data-background-image="images/20181005_fbk/complexSources.png" data-background-size="contain" data-background-opacity="0.3">
+					<div style="background-color:rgba(255,255,255,0.5)">
+						<p>oggetti complessi e eterogenei
+						<br/>da modellare ...
+						<br/>perché modellare?</p>
+					</div>
+				</section>
+
+				<section>
+					<div class="quote">The models provide <b>formalized perspectives</b> on their subjects, expressed in a way that makes possible to gather specific information about the subject. In short, the formalized model determines <b>which aspects of the subject will be computable and in what form</b>.</div>
+					<br/><br/>
+					<div class="source">Flanders and Jannidis, “Data Modeling”, in <i>A New Companion to Digital Humanities</i>, 2016</div>
+				</section>
+
+				<section>
+					<img src="images/20181005_fbk/model_conceptualAndLogic.png">
+				</section>
+
+				<section data-background-image="images/20181005_fbk/magazzino1.png" data-background-size="contain">
+				</section>
+
+				<section data-background-image="images/20181005_fbk/magazzino2.png" data-background-size="contain">
+				</section>
+
+				<section data-background-image="images/20181005_fbk/magazzino3.png" data-background-size="contain">
+				</section>
+
+				<section>
+					<img src="images/20181005_fbk/DHprojectComponents_magazzino.png">
+				</section>
+
+
+<!-- ==================================================================================================  -->
+<!-- 										SECTION 2                                                    -->
+<!-- ==================================================================================================  -->
+
+
+
+				<section>2. Esempi</section>
+
+				<section>
+					<img src="images/20181005_fbk/commediaBoccaccio_bocc.jpg">
+					<br/>
+					La <i>Commedia</i> di Boccaccio
+					<br/><br/>
+					<p style="font-size: 0.6em">con Sonia Tempestini (Università della Svizzera Italiana)</p>
+				</section>				
+
+				<section data-background-image="images/20181005_fbk/commediaBoccaccio_tradizioneAnticaVulgata.jpg" data-background-size="contain"></section>
+
+				<section data-background-image="images/20181005_fbk/commediaBoccaccio_website.png" data-background-size="contain" data-background-opacity="0.4">
+					http://boccacciocommedia.it
+				</section>
+
+				<section>
+					<img src="images/20181005_fbk/commediaBoccaccio_db.png">
+				</section>
+
+				<section data-background-image="images/20181005_fbk/commediaBoccaccio_conceptual.png" data-background-size="contain"></section>
+
+				<section data-background-image="images/20181005_fbk/commediaBoccaccio_process.png" data-background-size="contain"></section>
+
+				<section data-background-image="images/20181005_fbk/commediaBoccaccio_searchRyhme.png" data-background-size="contain"></section>
+
+				<section data-background-image="images/20181005_fbk/commediaBoccaccio_searchRhymeResults.png" data-background-size="contain"></section>
+
+				<section data-background-image="images/20181005_fbk/commediaBoccaccio_searchInversion.png" data-background-size="contain"></section>
+
+				<section data-background-image="images/20181005_fbk/commediaBoccaccio_searchInversionResults.png" data-background-size="contain"></section>
+
+				<section data-background-image="images/20181005_fbk/commediaBoccaccio_marginsAlternatives.png" data-background-size="contain"></section>
+
+				<section data-background-image="images/20181005_fbk/commediaBoccaccio_conceptual.png" data-background-size="contain"></section>
+
+
+				<section>
+					La <i>Commedia</i> di Boccaccio
+					<br/><br/><br/>
+					<ul>
+						<li>copista e autore  &rarr;  categorie <i>ad hoc</i> per le varianti</li>
+						<br/>
+						<li>dati strutturati  &rarr;  base dati relazionale</li>
+					</ul>
+				</section>
+
+				
+				<section data-background-image="images/20181005_fbk/monaci_archiveMonaci.png" data-background-size="contain">
+				</section>
+
+				<section>
+					<img src="images/20181005_fbk/monaci_websiteHome.png">
+				</section>
+
+				<section data-background-image="images/20181005_fbk/monaci_greek19570325.jpg" data-background-size="contain">
+				</section>	
+
+				<section data-background-image="images/20181005_fbk/monaci_ramon1.jpg" data-background-size="contain">
+				</section>	
+
+				<section data-background-image="images/20181005_fbk/monaci_xmlLettera.png" data-background-size="contain">
+				</section>
+
+				<section data-background-image="images/20181005_fbk/monaci_websiteLettera.png" data-background-size="contain">
+				</section>
+
+				<section data-background-image="images/20181005_fbk/monaci_websitePersone.png" data-background-size="contain">
+				</section>	
+
+				<section>
+					<img src="images/20181005_fbk/DeGasperi_CriteriEditoriali.png">
+				</section>	
+
+				<section>
+					Laboratorio Monaci
+					<br/><br/><br/>
+					<ul>
+						<li>epistolario  &rarr;  annotazione, entità, nomi</li>
+						<br/>
+						<li>rappresentazione lineare + markup  &rarr;  XML/TEI</li>
+						<br/>
+						<li>corso di codifica del testo</li>
+					</ul>
+				</section>	
+
+				<section data-background-image="images/20181005_fbk/roud_mixMaterials.jpg" data-background-size="contain">
+				</section>
+
+				<section data-background-image="images/20181005_fbk/roud_photo1.png" data-background-size="contain">
+				</section>
+
+				<section data-background-image="images/20181005_fbk/roud_photo3.png" data-background-size="contain">
+				</section>
+				
+				<section data-background-image="images/20181005_fbk/roud_photo2.png" data-background-size="contain">
+				</section>
+
+				<section data-background-image="images/20181005_fbk/roud_photo4.png" data-background-size="contain">
+				</section>
+
+				<section data-background-image="images/20181005_fbk/roud_photo5.png" data-background-size="contain">
+				</section>
+
+				<section data-background-image="images/20181005_fbk/knora_website.png" data-background-size="contain" data-background-opacity="0.4">
+					<img style="margin-left: 40%" src="images/20181005_fbk/knora_api_triplestore.png">
+				</section>	
+				
+				<section data-background-image="images/20181005_fbk/roud_ontoCompleta.png" data-background-size="contain">
+				</section>				
+
+				<section>
+					<p>Critica genetica - Filologia d'autore</p>
+					<br/><br/>
+					<ul>
+						<li>materiali preparatori alla stesura di un testo</li>
+						<br/>
+						<li>dossier genetico è costruzione critica</li>
+					</ul>
+				</section>
+
+				<section data-background-image="images/20181005_fbk/roud_materiali.png" data-background-size="contain">
+				</section>	
+
+				<section>
+					1. <img src="images/20181005_fbk/roud_genetic_no.png" />
+					2. <img src="images/20181005_fbk/roud_genetic_yes.png" />
+				</section>	
+
+				<section data-background-image="images/20181005_fbk/roud_genetic_yes2.png" data-background-size="contain">
+				</section>
+
+				<section data-background-image="images/20181005_fbk/roud_geneticStageStatistic.png" data-background-size="contain">
+				</section>	
+
+				<section>
+					Gustave Roud, <i>Œuvres complètes</i>
+					<br/><br/><br/>
+					<ul>
+						<li>descrizione dei manoscritti, edizione dei testi, annotazione</li>
+						<br/>
+						<li>Knora (RDF) - Université de Lausanne</li>
+						<br/>
+						<li>modello per dossier genetico (ontologia per la critica genetica?)</li>
+					</ul>
+				</section>	
+
+
+<!-- ==================================================================================================  -->
+<!-- 										SECTION 3                                                   -->
+<!-- ==================================================================================================  -->
+
+
+
+				<section>3. Modellare: dai testi ai dati</section>
+
+				<section>
+					modeling
+					<br/><br/>
+					vs
+					<br><br/>
+					model
+				</section>
+
+				<section>
+					<i>Il ruolo del modello nella scienza e nel sapere (Roma, 27-28 ottobre 1998)</i>, Sergio Carrà (ed.), Accademia nazionale dei Lincei, Roma 1999.
+				</section>
+
+				<section>
+					<div class="quote"><b>Un modello [...] consiste nella specificazione formale delle proprietà astratte degli oggetti rappresentati, insieme con le operazioni definibili su tali elementi</b> e le restrizioni che si applicano alle diverse classi di oggetti</div>
+					<br/>
+					<div class="quote">i requisiti fondamentali per garantirne [alla rappresentazione digitale del testo] l'adegualezza funzionale debbono essere assicurati dalla definizione di <b>un modello di dati in grado di formalizzare i procedimenti analitici e critici applicabili allo studio del testo</b></div>
+					<br/>
+					<div class="source">Dino Buzzetti, “Rappresentazione digitale e modello del testo”</div>
+				</section>
+
+				<section>
+					<div class="quote"><b>I modelli [...] rappresentano costrutti dotati di un significato più circoscritto di quello delle leggi e delle teorie scientifiche e hanno una connotazione strumentalistica. In altri termini, si suole ritenere che il modello non abbia portata generale, ma limitata a un contesto, e possa essere giudicato «buono» quando si rivela utile a scopi precisi (descrittivi, esplicativi o previsionali) non necessariamente quando lo si ritiene «vero».</b></div>
+					<br/>
+					<div class="source">Maria Carla Galavotti, “Leggi, modelli causali e manipolabilità”</div>
+				</section>
+
+				<section>
+					<div class="quote">Nelle scienze esatte [...] il modello non è una semplificazione della realtà, ma una libera posizione mentale e, come tale, non osservabile nel laboratorio, che permette di unificare tra di loro e quindi di dare un significato a tutte le misure fatte nel laboratorio, e che permette previsioni per ulteriori misure.</div>
+					<br/>
+					<div class="quote"><b>io penso che il modello sia quella posizione mentale che resta fuori dalla scena osservata, ma che ha la funzione di integrare tra di loro e quindi di rendere comprensibili i fatti che si osservano dentro alla scena. Il modello può giungere ad essere l'elemento invisibile che rende visibile il mondo</b>.</div>
+					<br/>
+					<div class="source">Giorgio Careri, “Intervento”</div>
+				</section>
+
+				<section>
+					<div class="quote">Del ruolo dei modelli nella scienza rende invece adeguatamente conto il modello analitico. Ciò dipende dal fatto che <b>formulare un modello di certi fenomeni equivale a formulare un'ipotesi su quei fenomeni</b>, e la formulazione del modello avviene in base a quegli stessi procedimenti logici, quali l'induzione e l'analogia, che il modello analitico pone alla base della formulazione delle ipotesi.</div>
+					<br/><br/>
+					<div class="source">Carlo Cellucci, “I modelli, l'analogia e la metafora”</div>
+				</section>
+
+				<section>
+					<img width="70%" src="images/20181005_fbk/cummings2017_ItHasMovingParts_slide1.jpg">
+					<p style="font-size: 0.8em">http://dixit.uni-koeln.de/programme/materials/</p>
+				</section>
+
+				<section>
+					<img width="80%" src="images/20181005_fbk/cummings2017_ItHasMovingParts_slide3.jpg">
+				</section>
+
+
+<!-- ==================================================================================================  -->
+<!-- 										SECTION 4                                                   -->
+<!-- ==================================================================================================  -->
+
+
+
+				<section>4. Conclusioni</section>
+				
+				<section>
+					<ul>
+						<li>collaborazione nel progetto</li>
+						<br/>
+						<li>compromessi nella gestione</li>
+						<br/>
+						<li>compromessi nelle scelte tecniche</li>
+					</ul>
+				</section>	
+
+
+				<section data-background-image="images/20181005_fbk/plastilinaRoom.jpg" data-background-opacity="0.7" data-background-size="contain">
+					<br/><br/><br/><br/><br/><br/><br/><br/>
+					<div style="background-color:rgba(255,255,255,0.5)">
+						<p>Grazie dell'attenzione</p>
+					</div>
+				</section>
+
+				<section>
+					<h4>Selected bibliography</h4>
+					<ul style="font-size: 0.5em">
+						<li>Carrà, Sergio, ed. 1999. <i>Il ruolo del modello nella scienza e nel sapere (Roma, 27-28 ottobre 1998)</i>. Roma: Accademia nazionale dei Lincei.</li>
+						<li>Ciula, Arianna, and Øyvind Eide. 2017. ‘Modelling in Digital Humanities: Signs in Context’. Digital Scholarship in the Humanities 32 (suppl_1): i33–46.</li>
+						<li>Eide, Øyvind. 2014. ‘Ontologies, Data Modeling, and TEI’. Journal of the Text Encoding Initiative, no. Issue 8 (December).</li>
+						<li>Flanders, Julia, and Fotis Jannidis. 2015. ‘Knowledge Organization and Data Modeling in the Humanities’. In . http://www.wwp.northeastern.edu/outreach/conference/kodm2012/index.html.</li>
+						<li>———. 2016. ‘Data Modeling’. In <i>A New Companion to Digital Humanities</i>, edited by Susan Schreibman, Ray Siemens, and John Unsworth, 229–37. Wiley-Blackwell.</li>
+						<li>McCarty, Willard. 2004. ‘Modeling: A Study in Words and Meanings’. In <i>A Companion to Digital Humanities</i>, edited by Susan Schreibman, Ray Siemens, and John Unsworth. Oxford: Blackwell. </li>
+						<li>Pierazzo, Elena. 2015. <i>Digital Scholarly Editing: Theories, Models and Methods</i>. Ashgate.</li>
+						<li>The Shape of Data in Digital Humanities by Julia Flanders and Fotis Jannidis (Hardback). 2017. https://wordery.com/the-shape-of-data-in-digital-humanities-julia-flanders-9781472443243.</li>
+					</ul>
+				</section>
+				
+
+
+
+				
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
