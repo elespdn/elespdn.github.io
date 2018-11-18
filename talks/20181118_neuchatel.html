@@ -1,0 +1,341 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Neuchâtel 2018</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<script>
+			Reveal.initialize({
+					// More info https://github.com/hakimel/reveal.js#dependencies
+					dependencies: [
+						{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					]
+				});
+		</script>
+
+		<style>
+			div.quote {font-size: 0.8em; text-align: justify;}
+			div.source   {font-size: 0.6em; text-align: right; margin-top: 20px}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+							
+				
+				<section data-background-image="images/20181005_fbk/plastilinaRoom.jpg" data-background-opacity="0.7" data-background-size="contain">
+					<br/><br/><br/><br/><br/><br/><br/>
+					<div style="background-color:rgba(255,255,255,0.5)">
+						<p><b>Modélisation de données :<br/>interpretation et collaboration</b></p>
+						<p style="font-size: 0.7em">Université de Neuchâtel, 18 novembre 2018</p>
+							<p style="font-size: 0.7em">Elena Spadini (Université de Lausanne)
+							<br/>elespdn.github.io/talks/20181118_neuchatel</p>
+					</div>
+				</section>
+
+
+
+				<section>
+					<ol>
+						<li>Introduction</li>
+						<li>Méta-données et et bases relationnelles</li>
+						<li>Données et XML/TEI</li>
+						<li>RDF et Linked Data</li>
+						<li>Conclusion</li>
+					</ul>
+				</section>
+
+
+<!-- ==================================================================================================  -->
+<!-- 										SECTION 0                                                 -->
+<!-- ==================================================================================================  -->
+
+
+				<section>0. Introduction</section>
+
+				<section>
+					<img src="images/20181005_fbk/DHprojectComponents.png">
+					<br/><br/>
+					<div class="source"><i>Intro to Digital Humanities. <a href="http://dh101.humanities.ucla.edu/?page_id=15" target="_blank">1B: Analysis of DH projects</a></i>. Johanna Drucker, UCLA</div>
+				</section>
+
+				<section>
+					<img src="images/20181005_fbk/DHprojectComponents_highlighted.png">
+					<div class="source"><i>Intro to Digital Humanities. <a href="http://dh101.humanities.ucla.edu/?page_id=15" target="_blank">1B: Analysis of DH projects</a></i>. Johanna Drucker, UCLA</div>
+				</section>
+
+				<section data-background-image="images/20181005_fbk/complexSources.png" data-background-size="contain">
+				</section>
+
+				<section>
+					<div class="quote">The models provide <b>formalized perspectives</b> on their subjects, expressed in a way that makes possible to gather specific information about the subject. In short, the formalized model determines <b>which aspects of the subject will be computable and in what form</b>.</div>
+					<br/><br/>
+					<div class="source">Flanders and Jannidis, “Data Modeling”, in <i>A New Companion to Digital Humanities</i>, 2016</div>
+				</section>
+
+				<section data-background-image="images/20181005_fbk/magazzino1.png" data-background-size="contain">
+				</section>
+
+				<section data-background-image="images/20181005_fbk/magazzino2.png" data-background-size="contain">
+				</section>
+
+				<section data-background-image="images/20181025UNIL_master_genetique/magazzino3_fr.png" data-background-size="contain">
+				</section>
+
+				<section>
+					<img src="images/20181025UNIL_master_genetique/DHprojectComponents_magazzino_fr.png">
+				</section>
+
+
+				<section>
+					<img src="images/20181005_fbk/model_conceptualAndLogic.png">
+				</section>
+
+
+
+
+				
+
+
+<!-- ==================================================================================================  -->
+<!-- 										SECTION 1                                                  -->
+<!-- ==================================================================================================  -->
+
+
+
+				<section>1. Méta-données et bases relationnelles</section>
+
+				<section>
+					Exercice 1 <br/><br/>Créer une fiche (max 5 champs) <br/>pour chaque document
+					<br/><br/><br/>
+					<a href="images/20181118_neuchatel/exercice1doc570.pdf" target="_blank">doc570</a> |
+					<a href="images/20181118_neuchatel/exercice1doc730.pdf" target="_blank">doc730</a> |
+					<a href="images/20181118_neuchatel/exercice1doc737.pdf" target="_blank">doc737</a> |
+					<a href="images/20181118_neuchatel/exercice1doc859.pdf" target="_blank">doc859</a> |
+					<a href="images/20181118_neuchatel/exercice1doc882.pdf" target="_blank">doc882</a> 
+				</section>		
+
+				<section>
+					<img src="images/20181118_neuchatel/letters_db.png">
+				</section>		
+
+
+
+<!-- ==================================================================================================  -->
+<!-- 										SECTION 2                                           -->
+<!-- ==================================================================================================  -->
+
+
+
+				<section>2. Données et XML/TEI</section>
+
+				<section>
+					Exercice 2 <br/><br/>Définir des étiquettes (max 5) pour marquer des éléments significatifs du contenu de la lettre, de la structure de son texte ou de sa mise en page (ex. noms, signature, retour à la ligne, etc.) 
+				</section>
+
+				<section>
+					<b>Quelques éléments <a href="http://www.tei-c.org" target="_blank">XML/TEI</a> :</b>
+					
+					<div style="font-size: 0.9em">
+						<br/>&#60;persName&#62;
+						<br/><br/>&#60;placeName&#62;
+						<br/><br/>&#60;signed&#62;
+						<br/><br/>&#60;rs&#62;
+						<br/><br/>&#60;p&#62;
+						<br/><br/>&#60;page&#62;
+					</div>
+				</section>
+
+				<section data-background-image="images/20181118_neuchatel/vangogh_site.png" data-background-size="contain" data-background-opacity="0.3">
+					<a style="background-color: white" href="http://vangoghletters.org/vg/" target="_blank">vangoghletters.org</a>
+				</section>
+
+
+
+<!-- ==================================================================================================  -->
+<!-- 										SECTION 3                                                   -->
+<!-- ==================================================================================================  -->
+
+
+
+				<section>3. RDF et Linked Data</section>
+
+				<section data-background-image="images/20181118_neuchatel/rdf.png" data-background-size="contain">
+				</section>
+
+				<section>
+					sujet &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+					prédicat &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; objet 
+				</section>
+
+				<section>
+					une personne &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+					est auteur de &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					un tableau
+					<br/><br/>
+					un tableau &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+					est conservé à &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					un musée
+				</section>
+
+				<section>
+					Exercice 3 <br/><br/>Ordonner les images, les artistes, <br/>les musées et les prédicats
+				</section>
+
+
+				<section>
+					<img src="images/20181118_neuchatel/dbpedia.png" width="20%">
+					<br/>
+					<div style="background-color: lightgray">
+						dbr:<i>ressource</i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						dbo:<i>prédicat</i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						dbr:<i>ressource</i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					</div>
+					<br/>
+					un tableau &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+					a comme auteur &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					une personne
+					<br/>
+					<div style="background-color: lightgray">
+						dbr:Artwork  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+						dbo:author   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
+						dbr:<i>ressource</i>
+					</div>
+					<br/>
+					un tableau &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+					est conservé au musée &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					un musée
+					<br/>
+					<div style="background-color: lightgray">
+						dbr:Artwork  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+						dbo:museum   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+						dbr:<i>ressource</i>
+					</div>
+				</section>
+
+
+				<section>
+					<a href="http://dbpedia.org/page/Landscape_near_Arles" target="_blank">dbpedia.org/page/Landscape_near_Arles</a>
+					<br/><br/><br/>
+					dbr:Paul_Gauguin  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					dbo:author  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					dbr:Landscape_near_Arles
+					<br/><br/><br/>
+					dbr:Landscape_near_Arles  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					dbo:museum  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					dbr:Indianapolis_Museum_of_Art
+				</section>
+
+
+				<section>
+					<a href="http://dbpedia.org/sparql" target="_blank">dbpedia.org/sparql</a>
+					<br/><br/><i>Van Gogh, œuvres et sites de conservation</i>
+					<br/><br/>
+					<div style="text-align: left">
+						<br/>PREFIX dbr: &#60;http://dbpedia.org/resource/&#62;
+						<br/>PREFIX dbo: &#60;http://dbpedia.org/ontology/&#62;
+						<br/>SELECT DISTINCT ?painting ?museum
+						<br/>WHERE { ?painting a dbo:Artwork . 
+						     <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   ?painting dbo:author dbr:Vincent_van_Gogh .
+						     <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    ?painting dbo:museum ?museum }
+						<br/>LIMIT 30
+					</div>
+				</section>
+
+
+
+<!-- ==================================================================================================  -->
+<!-- 										SECTION 4                                                  -->
+<!-- ==================================================================================================  -->
+				
+				<section>4. Conclusions</section>
+
+
+				<section>
+					<img src="images/20181118_neuchatel/structured_data.png" width="40%">
+					<br/>
+					Structurer les données permet de les analyser, les transformer et les manipuler de façon systématique
+				</section>
+
+				<section>
+					<img src="images/20181118_neuchatel/duck_rabbit.jpeg" width="40%">
+					<br/>
+					Structurer les données implique de les interpréter.
+					<br/><br/>Les données structurées sont interprétées
+				</section>
+
+				<section>
+					<img src="images/20181118_neuchatel/collaboration.png" width="40%">
+					<br/>
+					Les composantes scientifique et technique <br/>d'un projet DH se développent ensemble
+				</section>
+
+
+
+
+
+			
+
+
+
+
+
+				<section>
+					<h4>Selected bibliography</h4>
+					<ul style="font-size: 0.5em">
+						<li>Carrà, Sergio, ed. 1999. <i>Il ruolo del modello nella scienza e nel sapere (Roma, 27-28 ottobre 1998)</i>. Roma: Accademia nazionale dei Lincei.</li>
+						<li>Ciula, Arianna, and Øyvind Eide. 2017. ‘Modelling in Digital Humanities: Signs in Context’. Digital Scholarship in the Humanities 32 (suppl_1): i33–46.</li>
+						<li>Drucker, Johanna. 2011-2012. <i>Intro to Digital Humanities</i>. dh101.humanities.ucla.edu/</li>
+						<li>Eide, Øyvind. 2014. ‘Ontologies, Data Modeling, and TEI’. Journal of the Text Encoding Initiative, no. Issue 8 (December).</li>
+						<li>Flanders, Julia, and Fotis Jannidis. 2015. ‘Knowledge Organization and Data Modeling in the Humanities’. In . http://www.wwp.northeastern.edu/outreach/conference/kodm2012/index.html.</li>
+						<li>———. 2016. ‘Data Modeling’. In <i>A New Companion to Digital Humanities</i>, edited by Susan Schreibman, Ray Siemens, and John Unsworth, 229–37. Wiley-Blackwell.</li>
+						<li>McCarty, Willard. 2004. ‘Modeling: A Study in Words and Meanings’. In <i>A Companion to Digital Humanities</i>, edited by Susan Schreibman, Ray Siemens, and John Unsworth. Oxford: Blackwell. </li>
+						<li>Pierazzo, Elena. 2015. <i>Digital Scholarly Editing: Theories, Models and Methods</i>. Ashgate.</li>
+						<li>The Shape of Data in Digital Humanities by Julia Flanders and Fotis Jannidis (Hardback). 2017. https://wordery.com/the-shape-of-data-in-digital-humanities-julia-flanders-9781472443243.</li>
+					</ul>
+				</section>
+				
+
+
+
+				
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
