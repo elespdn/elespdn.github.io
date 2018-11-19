@@ -46,7 +46,7 @@
 						<p><b>Modélisation de données :<br/>interpretation et collaboration</b></p>
 						<p style="font-size: 0.7em">Université de Neuchâtel, 18 novembre 2018</p>
 							<p style="font-size: 0.7em">Elena Spadini (Université de Lausanne)
-							<br/>elespdn.github.io/talks/20181118_neuchatel</p>
+							<br/><a href="http://small.cat/gun">http://small.cat/gun</a></p>
 					</div>
 				</section>
 
@@ -55,9 +55,9 @@
 				<section>
 					<ol>
 						<li>Introduction</li>
+						<li>RDF et Linked Data</li>
 						<li>Méta-données et et bases relationnelles</li>
 						<li>Données et XML/TEI</li>
-						<li>RDF et Linked Data</li>
 						<li>Conclusion</li>
 					</ul>
 				</section>
@@ -81,14 +81,7 @@
 					<div class="source"><i>Intro to Digital Humanities. <a href="http://dh101.humanities.ucla.edu/?page_id=15" target="_blank">1B: Analysis of DH projects</a></i>. Johanna Drucker, UCLA</div>
 				</section>
 
-				<section data-background-image="images/20181005_fbk/complexSources.png" data-background-size="contain">
-				</section>
-
-				<section>
-					<div class="quote">The models provide <b>formalized perspectives</b> on their subjects, expressed in a way that makes possible to gather specific information about the subject. In short, the formalized model determines <b>which aspects of the subject will be computable and in what form</b>.</div>
-					<br/><br/>
-					<div class="source">Flanders and Jannidis, “Data Modeling”, in <i>A New Companion to Digital Humanities</i>, 2016</div>
-				</section>
+				
 
 				<section data-background-image="images/20181005_fbk/magazzino1.png" data-background-size="contain">
 				</section>
@@ -111,8 +104,6 @@
 
 
 
-				
-
 
 <!-- ==================================================================================================  -->
 <!-- 										SECTION 1                                                  -->
@@ -120,62 +111,14 @@
 
 
 
-				<section>1. Méta-données et bases relationnelles</section>
+				<section>1. Données structurées. RDF et Linked Data</section>
 
 				<section>
-					Exercice 1 <br/><br/>Créer une fiche (max 5 champs) <br/>pour chaque document
-					<br/><br/><br/>
-					<a href="images/20181118_neuchatel/exercice1doc570.pdf" target="_blank">doc570</a> |
-					<a href="images/20181118_neuchatel/exercice1doc730.pdf" target="_blank">doc730</a> |
-					<a href="images/20181118_neuchatel/exercice1doc737.pdf" target="_blank">doc737</a> |
-					<a href="images/20181118_neuchatel/exercice1doc859.pdf" target="_blank">doc859</a> |
-					<a href="images/20181118_neuchatel/exercice1doc882.pdf" target="_blank">doc882</a> 
-				</section>		
-
-				<section>
-					<img src="images/20181118_neuchatel/letters_db.png">
-				</section>		
-
-
-
-<!-- ==================================================================================================  -->
-<!-- 										SECTION 2                                           -->
-<!-- ==================================================================================================  -->
-
-
-
-				<section>2. Données et XML/TEI</section>
-
-				<section>
-					Exercice 2 <br/><br/>Définir des étiquettes (max 5) pour marquer des éléments significatifs du contenu de la lettre, de la structure de son texte ou de sa mise en page (ex. noms, signature, retour à la ligne, etc.) 
+					<div style="text-align: left">
+					Projet :
+					<br/><br/>Les sites de conservation <br/>des œuvres de Van Gogh e de Gauguin
+				</div>
 				</section>
-
-				<section>
-					<b>Quelques éléments <a href="http://www.tei-c.org" target="_blank">XML/TEI</a> :</b>
-					
-					<div style="font-size: 0.9em">
-						<br/>&#60;persName&#62;
-						<br/><br/>&#60;placeName&#62;
-						<br/><br/>&#60;signed&#62;
-						<br/><br/>&#60;rs&#62;
-						<br/><br/>&#60;p&#62;
-						<br/><br/>&#60;page&#62;
-					</div>
-				</section>
-
-				<section data-background-image="images/20181118_neuchatel/vangogh_site.png" data-background-size="contain" data-background-opacity="0.3">
-					<a style="background-color: white" href="http://vangoghletters.org/vg/" target="_blank">vangoghletters.org</a>
-				</section>
-
-
-
-<!-- ==================================================================================================  -->
-<!-- 										SECTION 3                                                   -->
-<!-- ==================================================================================================  -->
-
-
-
-				<section>3. RDF et Linked Data</section>
 
 				<section data-background-image="images/20181118_neuchatel/rdf.png" data-background-size="contain">
 				</section>
@@ -186,17 +129,31 @@
 				</section>
 
 				<section>
-					une personne &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-					est auteur de &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					un tableau
+					un tableau &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+					a comme auteur &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					une personne
 					<br/><br/>
 					un tableau &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-					est conservé à &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					est conservé au musée &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					un musée
 				</section>
 
 				<section>
-					Exercice 3 <br/><br/>Ordonner les images, les artistes, <br/>les musées et les prédicats
+					Exercice 1 <br/><br/>Créer des triples avec les images, <br/>les artistes, les musées et les prédicats
+					<br/><br/><br/>
+					<i>
+					un tableau &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+					a comme auteur &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					une personne
+					<br/><br/>
+					un tableau &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+					est conservé au musée &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					un musée
+				</i>
+				</section>
+
+				<section>
+					<img src="images/20181118_neuchatel/dbpedia.png" width="40%">
 				</section>
 
 
@@ -208,13 +165,14 @@
 						dbo:<i>prédicat</i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						dbr:<i>ressource</i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					</div>
-					<br/>
+					PREFIX dbo: &#60;http://dbpedia.org/ontology/&#62; 
+					<br/><br/>
 					un tableau &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 					a comme auteur &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					une personne
 					<br/>
 					<div style="background-color: lightgray">
-						dbr:Artwork  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+						dbr:<i>ressource</i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
 						dbo:author   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
 						dbr:<i>ressource</i>
 					</div>
@@ -224,7 +182,7 @@
 					un musée
 					<br/>
 					<div style="background-color: lightgray">
-						dbr:Artwork  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+						dbr:<i>ressource</i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
 						dbo:museum   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
 						dbr:<i>ressource</i>
 					</div>
@@ -234,9 +192,9 @@
 				<section>
 					<a href="http://dbpedia.org/page/Landscape_near_Arles" target="_blank">dbpedia.org/page/Landscape_near_Arles</a>
 					<br/><br/><br/>
-					dbr:Paul_Gauguin  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					dbr:Landscape_near_Arles&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					dbo:author  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					dbr:Landscape_near_Arles
+					dbr:Paul_Gauguin  
 					<br/><br/><br/>
 					dbr:Landscape_near_Arles  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					dbo:museum  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -258,6 +216,69 @@
 						<br/>LIMIT 30
 					</div>
 				</section>
+		
+
+
+<!-- ==================================================================================================  -->
+<!-- 										SECTION 2                                                 -->
+<!-- ==================================================================================================  -->
+
+
+
+				<section>2. Méta-données et bases relationnelles</section>
+
+				<section>
+					Exercice 2 <br/><br/>Créer une fiche (max 5 champs) <br/>pour chaque document
+					<br/><br/><br/>
+					<a href="images/20181118_neuchatel/exercice1doc570.pdf" target="_blank">doc570</a> |
+					<a href="images/20181118_neuchatel/exercice1doc730.pdf" target="_blank">doc730</a> |
+					<a href="images/20181118_neuchatel/exercice1doc737.pdf" target="_blank">doc737</a> |
+					<a href="images/20181118_neuchatel/exercice1doc859.pdf" target="_blank">doc859</a> |
+					<a href="images/20181118_neuchatel/exercice1doc882.pdf" target="_blank">doc882</a> 
+				</section>		
+
+				<section>
+					<img src="images/20181118_neuchatel/letters_db.png">
+				</section>	
+
+				<section>
+					<div class="quote">The models provide <b>formalized perspectives</b> on their subjects, expressed in a way that makes possible to gather specific information about the subject. In short, the formalized model determines <b>which aspects of the subject will be computable and in what form</b>.</div>
+					<br/><br/>
+					<div class="source">Flanders and Jannidis, “Data Modeling”, in <i>A New Companion to Digital Humanities</i>, 2016</div>
+				</section>	
+
+
+
+<!-- ==================================================================================================  -->
+<!-- 										SECTION 3                                          -->
+<!-- ==================================================================================================  -->
+
+
+
+				<section>3. Données et XML/TEI</section>
+
+				<section>
+					Exercice 3 <br/><br/>Définir des étiquettes (max 5) pour marquer des éléments significatifs du contenu de la lettre, de la structure de son texte ou de sa mise en page (ex. noms, signature, retour à la ligne, etc.) 
+				</section>
+
+				<section>
+					<b>Quelques éléments <a href="http://www.tei-c.org" target="_blank">XML/TEI</a> :</b>
+					
+					<div style="font-size: 0.9em">
+						<br/>&#60;persName&#62;
+						<br/><br/>&#60;placeName&#62;
+						<br/><br/>&#60;signed&#62;
+						<br/><br/>&#60;rs&#62;
+						<br/><br/>&#60;p&#62;
+						<br/><br/>&#60;page&#62;
+					</div>
+				</section>
+
+				<section data-background-image="images/20181118_neuchatel/vangogh_site.png" data-background-size="contain" data-background-opacity="0.3">
+					<a style="background-color: white" href="http://vangoghletters.org/vg/" target="_blank">vangoghletters.org</a>
+				</section>
+
+
 
 
 
@@ -285,6 +306,10 @@
 					<img src="images/20181118_neuchatel/collaboration.png" width="40%">
 					<br/>
 					Les composantes scientifique et technique <br/>d'un projet DH se développent ensemble
+				</section>
+
+				<section>
+					<img src="images/20181025UNIL_master_genetique/DHprojectComponents_magazzino_fr.png">
 				</section>
 
 
