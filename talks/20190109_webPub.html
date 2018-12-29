@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Publication web</title>
+
+		<meta name="description" content="Slides for talk at the DiXiT Workshop Rome AIUCD 2017">
+		<meta name="author" content="Elena Spadini">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<style>
+			div.quote {font-size: 0.8em; text-align: justify;}
+			div.source   {font-size: 0.6em; text-align: right; margin-top: 20px}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section>
+					<h2>Publication web</h2>
+					<br/>
+					<p><i>Encoder/Exploiter/Diffuser.<br/>Les humanités numériques dans les projets doctoraux</i></p>
+					<p>Poitiers, 9-11 janvier 2019</p>
+				</section>
+
+				<section>1. Client-server model</section>
+
+				<section>
+					<img src="images/20190109_webPub/client-server-model.jpg" width="70%">
+					<div class="source"><a href="https://www.ionos.it/digitalguide/server/know-how/cose-un-server-un-termine-due-definizioni/" target="_blank">www.ionos.it/digitalguide/</a></div>
+					<!-- NOTES: Typical servers are database servers, file servers, mail servers, print servers, web servers, game servers, and application servers. Web servers are usually extremely high-powered computers that "store" websites and release the website content every time a client asks for it. -->
+				</section>
+
+				<section>
+					<ul style="list-style: none">
+						<li><b>Navigateur (browser)</b>. Logiciel permettant de consulter des pages Web. Ex : Firefox, Chrome, Safari, Opera, Edge, etc.</li>
+						<br/>
+						<li><b>URL</b>. Uniform Resource Locator, addresse ; permet de localiser une ressource internet. Ex : http://enexdi.sciencesconf.org</li>
+					</ul>
+				</section>
+
+				
+				<section>2. Composants d'un projet numérique</section>
+
+				<section>
+					<img src="images/20190109_webPub/dhProjectComponents.png">
+					<br/><br/>
+					<div class="source"><i>Intro to Digital Humanities. <a href="http://dh101.humanities.ucla.edu/?page_id=15" target="_blank">1B: Analysis of DH projects</a></i>. Johanna Drucker, UCLA</div>
+				</section>
+
+				<section data-background-image="images/20181005_fbk/magazzino1.png" data-background-size="contain">
+				</section>
+
+				<section data-background-image="images/20181005_fbk/magazzino2.png" data-background-size="contain">
+				</section>
+
+				<section data-background-image="images/20181025UNIL_master_genetique/magazzino3_fr.png" data-background-size="contain">
+				</section>
+
+				<section>
+					<img src="images/20190109_webPub/dhProjectComponents_magazzino_fr.png">
+				</section>
+				
+				<section>
+					<img src="images/20190109_webPub/dhProjectComponents_frontendBackend.png">
+				</section>
+
+
+				<section>3. Sites web</section>
+
+				<section>
+					<ul style="list-style: none">
+						<li>La <b>publication web</b> consiste à rendre disponible sur Internet du contenu. La publication inclut la construction et la mise à jour de sites web (personnels, commerciels, communautaires) et d'e-books. Le contenu de la publication web peut comprendre texte, vidéos, images numériques, musique et autres types de médias.</li>
+					</ul>
+				</section>
+
+				<section>
+					<ul style="list-style: none; font-size: 0.8em">
+						<li>Un <b>site web</b> est un ensemble de pages web reliées par des hyperliens. Les pages peuvent être statiques ou dynamiques.</li>
+						<br/>
+						<li>Le contenu d'une <b>page web statique</b> est enregistré dans un fichier hébergé sur un serveur web. Son contenu est identique à chaque consultation.</li>
+						<li>Le contenu d'une <b>page web dynamique</b> est généré à la demande par le serveur (server-side scripting : PHP, Java, Ruby, etc.) et peut donc varier en fonction d'informations (nom de l'utilisateur, formulaire rempli par l'utilisateur, heure, etc.) qui ne sont connues qu'au moment de sa consultation.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Exercice 1</h2>
+					Statique ou dynamique ?
+					<br/><br/>
+					<ul style="list-style: none; font-size: 0.9em">
+						<li><a href="http://peterboot.nl">http://peterboot.nl</a></li>
+						<br/>
+						<li><a href="https://www.zalando.fr/">https://www.zalando.fr</a></li>
+						<br/>
+						<li><a href="http://www.thecure.com/">http://www.thecure.com</a></li>
+						<br/>
+						<li><a href="http://vangoghletters.org/vg/">http://vangoghletters.org</a></li>
+						<br/>
+						<li><a href="https://fr.wikipedia.org/wiki/Site_web">https://fr.wikipedia.org/wiki/Site_web</a></li>
+					</ul>
+				</section>
+
+				<section>
+					Dans ce cours, nous nous occupons seulement des pages web statiques, crées avec HTML + CSS (+ Javascript). Ces technologies sont aussi à la base des pages web dynamiques !
+				</section>
+
+
+				<section>4. HTML (HyperText Markup Language)</section>
+
+
+
+
+
+
+				
+				
+
+
+
+
+
+
+
+
+
+
+				<section>
+					<p>Publication web</p>
+					<div style="font-size: 0.8em">Poitiers, 9-11 janvier 2019.<br/><i>Encoder/Exploiter/Diffuser.<br/>Les humanités numériques dans les projets doctoraux</i></div>
+					<br/><br/>
+					<hr>
+					<p>Elena Spadini</p>
+					<div style="font-size:0.7em">
+					<p>Université de Lausanne</p>
+					<p><i>elena.spadini@unil.ch</i></p>
+					<p><a href="hhtp://elespdn.github.io/io" target="_blank">elespdn.github.io/io</a></p>
+					</div>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
