@@ -63,17 +63,34 @@
 				<section data-background-color="lightblue">1. Client-server model</section>
 
 				<section>
-					<img src="images/20190109_webPub/client-server-model.jpg" width="70%">
-					<div class="source"><a href="https://www.ionos.it/digitalguide/server/know-how/cose-un-server-un-termine-due-definizioni/" target="_blank">www.ionos.it/digitalguide/</a></div>
-					<!-- NOTES: Typical servers are database servers, file servers, mail servers, print servers, web servers, game servers, and application servers. Web servers are usually extremely high-powered computers that "store" websites and release the website content every time a client asks for it. -->
-				</section>
-
-				<section>
 					<ul style="list-style: none">
 						<li><b>Navigateur (browser)</b>. Logiciel permettant de consulter des pages Web. Ex : Firefox, Chrome, Safari, Opera, Edge, etc.</li>
 						<br/>
 						<li><b>URL</b>. Uniform Resource Locator, addresse ; permet de localiser une ressource internet. Ex : http://enexdi.sciencesconf.org</li>
 					</ul>
+				</section>
+
+				<section>
+					<h2>URL</h2>
+					<a href="http://www.univ-poitiers.fr/recherche/ecoles-doctorales/" target="_blank">
+						<img src="images/20190109_webPub/URL.png">
+					</a>
+				</section>
+
+				<section>
+					<img src="images/20190109_webPub/client-server-model.jpg" width="70%">
+					<div class="source"><a href="https://www.ionos.it/digitalguide/server/know-how/cose-un-server-un-termine-due-definizioni/" target="_blank">www.ionos.it/digitalguide/</a></div>
+				</section>
+
+				<section data-background-image="images/20190109_webPub/DNS.png" data-background-size="contain">
+				</section>
+
+				<section>
+					View page source ! 
+					<br/>
+					<a href="view-source:http://www.univ-poitiers.fr/recherche/ecoles-doctorales/" target="_blank">
+						<img src="images/20190109_webPub/sourcePage.png" width="60%">
+					</a>
 				</section>
 
 
@@ -177,32 +194,11 @@
 					<h3>HTML (HyperText Markup Language)</h3>
 					HTML est une application du standard SGML
 					<br/><br/>
-					<table>
-						  <tr>
-						    <td>HTML</td>
-						    <td>1991</td>
-						  </tr>
-						  <tr>
-						    <td>HTML 2.0</td>
-						    <td>1995</td>
-						  </tr>
-						  <tr>
-						    <td>HTML 3.2</td>
-						    <td>1997</td>
-						  </tr>
-						  <tr>
-						    <td>HTML 4.01</td>
-						    <td>1999</td>
-						  </tr>
-						  <tr>
-						    <td>XHTML</td>
-						    <td>2000</td>
-						  </tr>
-						  <tr>
-						    <td>HTML5</td>
-						    <td>2014</td>
-						  </tr>
-					</table>
+					<ul>
+						<li>HTML : un langage de présentation sur écran adapté à l'hypertexte</li>
+						<li>XML : une version simplifiée et extensible de SGML pour gérer des données</li>
+						<li>HTML5 : dernière version d'HTML</li>
+					</ul>
 				</section>
 
 				<section>
@@ -210,15 +206,147 @@
 					<div class="source">Aapo Laitinen, <i>Visual breakdown of the parts of a HTML element</i>, <a href="https://en.wikipedia.org/wiki/File:HTML_element_structure.png">Wikipedia</a></div>
 				</section>
 
-				<section>
-					<img style="border: none" src="images/20190109_webPub/html_basic.png">
-					<div class="source"><i>HTML DOM</i>, <a href="http://www.lucedigitale.com/blog/jquery-corso-base-online-traversing/">www.lucedigitale.com/blog/</a></div> 
+				<section data-background-image="images/20190109_webPub/html_basic.png" data-background-size="contain">
+					<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+					<a href="https://ensweb.users.info.unicaen.fr/pres/html/demo/mini.html" target="_blank"><button style="background-color: green; color:white; vertical-align: top;">Résultat</button></a>
+					<div class="source">Alexandre Niveau, <a href="https://ensweb.users.info.unicaen.fr/pres/html/" target="_blank">HTML : la base du web</a>, CC BY-NC-SA 4.0</div>
 				</section>
 
 				<section>
-					Vedi code source di una pagina
+					<h3>Prologue et élément racine</h3>
+					HTML5 : DOCTYPE et élément racine
+					<br/><br/><br/>
+
+<pre>
+<code class="hljs">
+ &lt;!DOCTYPE html&gt;
+ &lt;html lang="fr"&gt;
+
+</code>
+</pre>
+				<br/><br/><div class="source">Alexandre Niveau, <a href="https://ensweb.users.info.unicaen.fr/pres/html/" target="_blank">HTML : la base du web</a>, CC BY-NC-SA 4.0</div>
 				</section>
 
+				<section style="font-size: 0.8em">
+					<h3>En-tête : élément <code>head</code></h3>
+
+						<div>Regroupe les «&nbsp;informations de service&nbsp;» sur le document
+
+<pre class="src "><code>
+&lt;head&gt;
+	&lt;title&gt;Titre significatif (pour les moteurs de recherche)&lt;title&gt;
+	&lt;meta charset="UTF-8" /&gt;
+	&lt;meta name="keywords" content="cours, HTML" /&gt;
+	&lt;link rel="stylesheet" media="screen" href="diapos.css" /&gt;
+&lt;/head&gt;
+
+</code></pre>
+					</div>
+					<p>L'en-tête contient</p>
+						<ul>
+							<li>le titre de la page</li>
+							<li>la déclaration du codage des caractères</li>
+							<li>les <em>métadonnées</em> (descriptives, juridiques…)</li>
+							<li>les feuilles de style CSS</li>
+							<li>les scripts (pas obligatoirement)</li>
+						</ul>
+
+					<div class="source">Alexandre Niveau, <a href="https://ensweb.users.info.unicaen.fr/pres/html/" target="_blank">HTML : la base du web</a>, CC BY-NC-SA 4.0</div>
+
+				</section>
+
+				<section>
+					<h3 style="font-size: 0.8em">Le corps du document : élément <code>body</code></h3>
+<pre class="src "><code>
+&lt;body&gt;
+ 	&lt;h2&gt;Un titre de section&lt;/h2&gt;
+  	&lt;p class="intro"&gt;Ici le texte du paragraphe
+  	introductif, qui aura une présentation
+  	spécifique...&lt;/p&gt;
+
+  	&lt;p&gt;du texte et encore du texte..., 
+	parfois &lt;em&gt;mis en valeur&lt;/em&gt;,
+	parfois non...&lt;/p&gt;
+&lt;/body&gt;
+	
+</code></pre>
+					<br/><br/><div class="source">Alexandre Niveau, <a href="https://ensweb.users.info.unicaen.fr/pres/html/" target="_blank">HTML : la base du web</a>, CC BY-NC-SA 4.0</div>
+				</section>
+
+				<section style="font-size: 0.8em">
+					<h3>Interprétation des caractères d'espacement en HTML</h3>
+					<ul>
+						<li>Toute suite de caractères d'espacement (espace, saut de ligne, tabulation)
+							est considérée comme <em>un seul caractère espace</em> par le navigateur</li>
+						<li>Si on veut vraiment sauter une ligne au milieu d'une phrase, il faut utiliser la balise <code>&lt;br/&gt;</code></li>
+						<li>Mais <em>attention</em>&nbsp;: il est très rare d'avoir vraiment besoin de sauter une ligne, en général l'utilisation de paragraphes (élément <code>p</code>) suffit et est plus propre</li>
+					</ul>
+					<div class="source">Alexandre Niveau, <a href="https://ensweb.users.info.unicaen.fr/pres/html/" target="_blank">HTML : la base du web</a>, CC BY-NC-SA 4.0</div>
+				</section>
+
+
+				<section style="font-size: 0.8em">
+					<h3>Eléments de bloc et inline</h3>
+					Deux principaux types d'éléments
+					<ul>
+						<li>Elements de <em>bloc</em>&nbsp;: structurent le contenu. Par défaut commencent sur une nouvelle ligne.
+<pre class="src "><code>titres   : &lt;h1&gt;...&lt;/h1&gt; , &lt;h2&gt;...&lt;/h2&gt;
+paragraphe : &lt;p&gt;...&lt;/p&gt;
+séparateur : &lt;hr /&gt;
+listes : &lt;ul&gt; et &lt;ol&gt;, qui contiennent des items de liste &lt;li&gt;
+division générique : &lt;div&gt;...&lt;/div&gt;
+</code></pre>
+						</li>
+						<li>Eléments <em>inline</em>&nbsp;: s'inscrivent dans le flux du texte. Leur taille dépend de leur contenu.
+<pre class="src "><code>image  : &lt;img src="maphoto.jpg" alt="ma photo" /&gt;
+lien («&nbsp;ancre&nbsp;») : &lt;a href="http://www.w3.org"&gt;hypertexte&lt;/a&gt;
+saut de ligne : &lt;br /&gt;
+inline générique : texte &lt;span&gt;texte spécial&lt;/span&gt; texte
+</code></pre>
+						</li>
+					</ul>
+					<div class="source">Alexandre Niveau, <a href="https://ensweb.users.info.unicaen.fr/pres/html/" target="_blank">HTML : la base du web</a>, CC BY-NC-SA 4.0</div>
+				</section>
+
+
+				<section>
+					<h3>Commentaire</h3>
+					<br/><br/>
+<pre class="src "><code>
+	&lt;!-- ceci est un commentaire.
+	Cette partie du code n'est pas lue
+	par le navigateur --&gt;
+
+</code></pre>
+					
+				</section>
+
+				<section style="font-size: 0.8em">
+					<h3>Quelques ressources en ligne</h3>
+					<div class="p">Des ressources intéressantes (outre les <a href="http://w3c.org/">specs du W3C</a>, pas forcément faciles à lire pour se documenter rapidement)&nbsp;:
+						<br/><br/>
+					<ul>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web">Mozilla Developer Network (MDN)</a>&nbsp;: une bonne référence, généralement très à jour et fiable.
+						Possède une <a href="https://developer.mozilla.org/fr/docs/Web">version en français</a>, moins à jour, mais assez fiable également.</li>
+						<br/>
+						<li><a href="http://www.w3schools.com/">w3schools</a>, une référence avec des exemples interactifs bien faits. Attention&nbsp;: ce n'est pas du tout un site officiel du W3C,
+						et il n'est pas toujours à jour. Il peut être risqué de l'utiliser comme référence.</li>
+					</ul>
+					</div>
+					<div class="source">Alexandre Niveau, <a href="https://ensweb.users.info.unicaen.fr/pres/html/" target="_blank">HTML : la base du web</a>, CC BY-NC-SA 4.0</div>
+				</section>
+
+				<section>
+					<h2>Exercise</h2>
+					<ul>
+						<li>Téléchargé le dossier disponible ici</li>
+						<li>Ouvrez le fichier <code>index.html</code> dans oXygen</li>
+					</ul>
+				</section>
+
+		
+
+				
 
 
 
