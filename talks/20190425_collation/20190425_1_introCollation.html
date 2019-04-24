@@ -1,0 +1,318 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Intro to automatic collation</title>
+
+		<link rel="stylesheet" href="../reveal/css/reset.css">
+		<link rel="stylesheet" href="../reveal/css/reveal.css">
+		<link rel="stylesheet" href="../reveal/css/theme/night.css"> <!-- solarized -->
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!-- my little css indications -->
+		<style type="text/css">
+			.colored {
+				color: #FF99FF;
+			}
+			.smaller {
+				font-size: 0.6em;
+			}
+			.caption {
+				font-size: 0.8em;
+			}
+
+		</style>
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Intro to automatic collation</h2>
+					<br/>
+					<p>Programme doctoral en études numériques. <i>Formation <a href="Formation Textes et éditions numériques, 25 et 26 avril" target="_blank">Textes et éditions numériques</a></i>, 25 et 26 avril 2019, Université de Lausanne</p>
+					<p>Elena Spadini (Université de Lausanne)</p>
+				</section>
+
+				<section>
+					<ol>
+						<li>What is collation</li>
+						<li>Where does it come from</li>
+						<li>The beginning of automatic collation</li>
+						<li>The present of automatic collation</li>
+					</ol>
+				</section>
+
+
+
+<!--
+#########################################################################################################
+################################ INTRO ABOUT COLLATION ##################################################
+#########################################################################################################
+ -->
+
+ 				<section>
+ 					What is collation
+ 				</section>
+
+				<section> 
+					automatic
+					<br/>machine assisted
+					<br/>computer-supported
+					<br/>semi-automatic
+					<br/><br/>COLLATION
+				</section>
+
+				<section> 
+					compare two or more texts, in order to spot their differences
+					<br/><br/>
+					<span class="fragment" data-fragment-index="1"><h3>Terminology</h3>
+					compare the <em>readings</em> of two or more <em>witnesses</em> of a work, in order to spot the <em>textual variants</em> between them</span>
+				</section>
+
+				<section style="font-size: 0.8em">
+					The sources to be collated, referred as <span class="colored">witnesses</span>, are the handwritten or printed copies of a textual work. 
+					<br/><br/>
+					A <span class="colored">reading</span> is how a portion of the work is recorded in one witness. For example, considering the first verse of a poem,
+					<ul style="list-style-type: none">
+						<li>the reading of witness 1 (<b>W1</b>) is <b>the sun is high</b></li>
+						<li>the reading of witness 2 (<b>W2</b>) is <b>the star is high</b></li>
+						<li>the reading of witness 3 (<b>W3</b>) is <b>the sun is high</b></li>
+					</ul>.
+					<br/><br/>
+					A <span class="colored">textual variation</span> occurs when the witnesses have different readings. In the example above, 
+					<ul style="list-style-type: none">
+						<li>there is textual variation between <b>W1 and W2</b> and between <b>W2 and W3</b></li>
+						<li>there is no textual variation between <b>W1 and W3</b>.</li>
+					</ul> 
+				</section>
+
+				<section>
+					<h3>Examples. How many witnesses?</h3>
+					<br/>
+					<ul>
+						<li>Julius Caesar's <em>De bello gallico</em>. <span class="fragment colored" data-fragment-index="1">255 (manuscripts)</span></li>
+						<li>Dante's <em>Commedia</em>. <span class="fragment colored" data-fragment-index="2">600 (manuscripts and early prints)</span></li>
+						<li>Samuel Beckett's <em>Stirring Still</em>. <span class="fragment colored" data-fragment-index="3">40 (copybooks, holograph manuscripts, typescripts, carbon copies)</span></li>
+					</ul> 
+				</section>
+
+				<section>
+					<h3>Collate ... why?</h3>
+					<br/>
+					<ul>
+						<li>establishing a critical text, as for a critical edition</li>
+						<li>tracking the writing process, as for a genetic edition</li>
+						<li>studying the textual transmission, for purposes other than the edition</li>
+					</ul>
+				</section>
+
+
+
+<!--
+#########################################################################################################
+#################################### COLLATION HISTORY ##################################################
+#########################################################################################################
+ -->
+				<section>
+					Where does it come from
+				</section>
+
+				<section> 
+					<a title="O. Von Corven [Public domain], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Ancientlibraryalex.jpg"><img width="50%" alt="Ancientlibraryalex" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ancientlibraryalex.jpg/512px-Ancientlibraryalex.jpg"></a>
+					<br/><span class="caption">Library of Alexandria</span>
+					<br><span class="smaller">Public Domain, <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ancientlibraryalex.jpg">Link</a></span>
+					<br><span class="smaller">Canfora, Luciano. <em>La biblioteca scomparsa</em> [en. <em>The vanished library</em>].</span>
+				</section>
+
+				<section> 
+					<a href="https://commons.wikimedia.org/wiki/File:Antonio_da_Fabriano_II_-_Saint_Jerome_in_His_Study_-_Walters_37439.jpg#/media/File:Antonio_da_Fabriano_II_-_Saint_Jerome_in_His_Study_-_Walters_37439.jpg">
+						<img width="30%" src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Antonio_da_Fabriano_II_-_Saint_Jerome_in_His_Study_-_Walters_37439.jpg" alt="Antonio da Fabriano II - Saint Jerome in His Study - Walters 37439.jpg">
+					</a>
+					<br><span class="caption">Antonio da Fabriano II, <em>Saint Jerome</em></span>
+					<br><span class="smaller">Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=18783142">Link</a></span>
+				</section>
+
+				<section>
+					<div style="float: left">
+						<a href="http://www.biu-montpellier.fr/florabium/jsp/bium/num/view_diaporama_report.jsp?recordId=documents:BIU_DOCUMENTS:148&volumeIndex=1">
+						<img width="50%" src="images/maniacutia_MontpellierMS294f144r_annotated.png" /></a>
+					</div>
+					<div>
+						<em>ex multarum rationum collegio veritas facilius elucescat</em>
+						<br/>--> from the gathering of many proofs the truth comes to light more easily
+						<br/>
+						<br><span class="caption">Nicolò Maniacutia, <em>Libellus de corruptione et correptione Psalmorum et aliarum quarundam scripturarum</em></span>
+						<br><span class="smaller">Bibliothèque interuniversitaire Montpellier, ms 294 f 144r. <a href="http://www.biu-montpellier.fr/florabium/jsp/nodoc.jsp?NODOC=2013_DOC_MON1_MBUM_38">Link</a></span>
+					</div>
+					<br><span class="smaller">Peri, V. "<em>Correctores immo corruptores</em>. Un saggio di critica testuale nella Roma del XII secolo". <em>Italia medioevale e umanistica</em>, XX (1977), pp. 19-125.</span>
+				</section>
+
+				<section>
+					<p>
+						<a href="https://commons.wikimedia.org/wiki/File:Da_Vinci_Vitruve_Luc_Viatour.jpg#/media/File:Da_Vinci_Vitruve_Luc_Viatour.jpg">
+							<img width="35%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Da_Vinci_Vitruve_Luc_Viatour.jpg/1200px-Da_Vinci_Vitruve_Luc_Viatour.jpg" alt="Da Vinci Vitruve Luc Viatour.jpg"></a>
+						<br><span class="caption">Leonardo da Vinci, Vitruvian man</span>
+						<br><span class="smaller">Public domain. <a href="https://commons.wikimedia.org/w/index.php?curid=2738140">Link</a></span></p>
+				</section>
+
+				
+				<section>
+					
+						<a href="https://commons.wikimedia.org/wiki/File:Karl_Lachmann_-_Imagines_philologorum.jpg#/media/File:Karl_Lachmann_-_Imagines_philologorum.jpg">
+							<img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Karl_Lachmann_-_Imagines_philologorum.jpg" alt="Karl Lachmann - Imagines philologorum.jpg">
+						</a>
+						recensere sine interpretatione et debemus et possemus
+						<br/><span class="caption">Karl Lachmann</span>
+						<br/><span class="smaller">Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=801195">Link</a>
+						<br><span class="smaller">Timpanaro, Sebastiano. <em>La genesi del metodo di Lachmann</em>.</span>
+				</section>
+
+				<section>
+					<img width="40%" src="images/brulez-ms-02.jpg" />
+					<br/><span class="caption">Raymond Brulez, ms of <em>Sheherazade</em> (1932)</span>
+					<br/><span class="smaller">Reproduced only for didactic purposes</span>
+					<br/><span class="smaller">ITEM journal <a href="https://journals.openedition.org/genesis/" target="_blank">Genesis</a></span>
+				</section>
+
+				<section data-background-image="images/PieterBruegelElder_TheTowerBabel_Vienna.jpg" data-background-opacity="0.2"/>
+					<div><br/>copy-text |
+					bedierisme |
+					neo-lachmannian school |
+					genetic criticism |
+					filologia d'autore |
+					new bibliography |
+					Historisch-kritische Ausgabe  |
+					& more ...<br/><br/></div>
+				</section>
+
+				<section>
+					ALL MANUAL COLLATION !
+					<ol>
+						<li>choose a base witness</li>
+						<li>compare one by one the other witnesses to the base one (silent or aloud)</li>
+						<li>register important variants</li>
+					</ol>
+					<span class="fragment">Hoc exemplar audientes, singuli8 an sic in suis habeant recognoscunt. </span>
+					Ascoltando questo esemplare, ciascuno verifica se abbia lo stesso testo nel proprio.
+				</section>
+
+
+<!--
+#########################################################################################################
+#################################### AUTOMATIC COLLATION HISTORY ##################################################
+#########################################################################################################
+ -->	
+
+ 				<section>The beginning of automatic collation
+ 				NOIA !!! </section>
+
+ 				<section>
+ 					<a title="Folger Shakespeare Library, Washington, DC (Julie Ainsworth, photographer) [CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Hinman_collator.jpg"><img width="512" alt="Hinman collator" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Hinman_collator.jpg/512px-Hinman_collator.jpg"></a>
+ 					<br/><span class="caption">Hinman Collator</span>
+ 					<br/><span class="caption"><a href="https://vimeo.com/200751944">See in action!</a></span>
+ 					<br/><span class="smaller">link and licence on the image</span>
+ 				</section>
+
+ 				<section>
+ 					<div style="float: left"><img width="60%" src="images/froger1968_couv.jpg" /></div>
+					<q>Pour les collations l'emploi d'un ordinateur est dans la plupart de cas irréalisable.</q>
+					<br/><span class="smaller">R. Marichal, Préface a <em>La critique des textes et son automatisation</em></span>
+					<br/><br/>
+					<q>La collation des manuscrits est une opération qui relève en quelque sorte de la comptabilité: la machine peut fort bien l'exécuter. </q>
+					<br/><span class="smaller">Froger, Dom Jacques. <em>La critique des textes et son automatisation</em>. Dunod, 1968.<br/>Voir article Froger 1965.</span>
+				</section>
+
+				<section>
+					<img width="80%" src="images/froger1968_0.png" />
+					<br/>
+					<img width="80%" src="images/froger1968_1.png" />
+				</section>
+
+				<section>
+					<img width="80%" src="images/froger1968_2.png" />
+					<br/>
+					<img width="80%" src="images/froger1968_3.png" />
+				</section>
+
+				<section>
+					<img width="80%" src="images/dearing1970.png" />
+				</section>
+
+				<section>
+					<img width="50%" src="images/collate.jpg"/>
+					<br/>Collate
+					<div class="smaller">Robinson, P. M. W. 1989. “The Collation and Textual Criticism of Icelandic <br/>Manuscripts (1): Collation.” <i>Literary and Linguistic Computing</i> 4 (2): 99–105.</div>
+					<br/>
+					<div class="smaller">1991, annunciato nella lista di diffusione <i>Humanist</i>
+						<br/>(<a href="https://dhhumanist.org/Archives/Virginia/v04/1240.html" target="_blank">dhhumanist.org/Archives/Virginia/v04/1240.html</a>)</div>
+				</section>
+
+				<section>
+					The present of automatic collation
+				</section>
+
+				<section>
+					<img src="images/sequence-alignment.png"/>
+				</section>
+
+				<section>
+					THE GRAPH
+				</section>
+
+
+				<section>
+					<h3>Most used software nowadays</h3>
+					<br/><br/>
+					<ul>
+						<li><a href="http://juxtacommons.org/" target="_blank">Juxta Commons</a></li>
+						<li><a href="http://collatex.net/" target="_blank">CollateX</a></li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h3>Visualizing the output</h3>
+					<br/><br/>
+					<ul>
+						<li><a href="http://catview.uzi.uni-halle.de/" target="_blank">Catview</a></li>
+						<li><a href="http://www.traviz.vizcovery.org/" target="_blank">Traviz</a></li>
+					</ul>
+				</section>
+
+
+
+			</div>
+		</div>
+
+		<script src="../reveal/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: '../reveal/plugin/markdown/marked.js' },
+					{ src: '../reveal/plugin/markdown/markdown.js' },
+					{ src: '../reveal/plugin/notes/notes.js', async: true },
+					{ src: '../reveal/plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>

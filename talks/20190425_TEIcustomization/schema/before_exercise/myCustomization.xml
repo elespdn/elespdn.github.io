@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0"
+ xml:lang="en">
+ <teiHeader>
+  <fileDesc>
+   <titleStmt>
+    <title>TEI customization DiXiT workshop Athens</title>
+    <author>Elena Spadini</author>
+   </titleStmt>
+   <publicationStmt>
+    <publisher>TEI Consortium</publisher>
+    <availability status="free">
+     <p>TEI material can be licensed differently depending on the use you intend to make of it.
+      Hence it is made available under both the CC+BY and BSD-2 licences. The CC+BY licence is
+      generally appropriate for usages which treat TEI content as data or documentation. The BSD-2
+      licence is generally appropriate for usage of TEI content in a software environment. For
+      further information or clarification, please contact the TEI Consortium (info@tei-c.org).</p>
+    </availability>
+   </publicationStmt>
+   <notesStmt>
+    <note type="ns">http://www.example.org/ns/nonTEI</note>
+   </notesStmt>
+   <sourceDesc>
+    <p>Written from scratch.</p>
+   </sourceDesc>
+  </fileDesc>
+ </teiHeader>
+ <text>
+  <body>
+   <head>TEI Complete</head>
+   <p> of the TEI (P5) modules. This is a very useful starting place for manually creating your own
+    customizations — it is much easier to delete the modules you do not want than to add the modules
+    you do. Furthermore this customization often proves helpful for testing TEI software.This TEI
+    customization is intended for educational purposes for the DiXiT Workshop 'Scholarly Digital
+    Editions and Modern Greek Studies' held in Athens, 24-28 April.This TEI customization is
+    intended for educational purposes for the DiXiT Workshop 'Scholarly Digital Editions and Modern
+    Greek Studies' held in Athens, 24-28 April.</p>
+   <p>However, this particular TEI customization is <emph>not recommended</emph> for actual use for
+    encoding documents. It produces schemas and reference documentation that will be much larger,
+    and include many more elements, than almost anyone could conceivably ever need. Tempting though
+    it may be simply to have absolutely everything, and <q>just ignore</q> elements not required,
+    experience has shown that their presence makes the documentation harder to read and use, and
+    makes a schema that is far more lax than desired.</p>
+   <schemaSpec ident="tei_dixit" start="TEI teiCorpus" prefix="">
+    <moduleRef key="tei"/>
+    <!-- required -->
+    <moduleRef key="core"/>
+    <!-- required -->
+    <moduleRef key="analysis"/>
+    <moduleRef key="certainty"/>
+    <moduleRef key="corpus"/>
+    <moduleRef key="dictionaries"/>
+    <moduleRef key="drama"/>
+    <moduleRef key="header"/>
+    <!-- required -->
+    <moduleRef key="linking"/>
+    <moduleRef key="msdescription"/>
+    <moduleRef key="namesdates"/>
+    <moduleRef key="textstructure"/>
+    <!-- required -->
+    <moduleRef key="transcr"/>
+    <moduleRef key="verse"/>
+    <moduleRef key="tagdocs"/>
+   </schemaSpec>
+  </body>
+ </text>
+</TEI>
