@@ -17,7 +17,7 @@ TOC
 - TEI Customization
 - ODD (One Document Does it all)
 - TEI bricks
-- Customiting the TEI
+- Customizing the TEI
 
 
 
@@ -144,13 +144,11 @@ Recap (theory)
 
 Recap (practice)
 =========================
-<img src="images/teiall.png">
+<img width="40%" src="images/teiall.png">
 
 What happens if you change the schema?
 
-Exercise:
-
-take the last TEI document you worked with yesterday or download from the materials folder (available from the course homepage) and change the schema from 'tei_all' to 'tei_lite'. Is the green square still green?
+**Exercise**: take the last TEI document you worked with yesterday (or download it from the materials folder) and change the schema from 'tei_all' to 'tei_lite'. Is the green square still green?
 
 
 
@@ -281,7 +279,7 @@ left:40%
 ## 1. Create the ODD 
 <br/>
 - manually writing it
-- using web app [Roma](http://www.tei-c.org/Roma/)
+- using web app [Roma](https://roma2.tei-c.org/)
 
 ***
 
@@ -291,16 +289,16 @@ left:40%
 ## 1. Create the ODD 
 <br/>
 - manually writing it
-- using [Roma](http://www.tei-c.org/Roma/)
+- using [Roma](https://roma2.tei-c.org/)
 
 ***
 
 ## 2. Generate the schema
 (ODD ---> RNG, RNC, DTD, etc.)
 
-- web app  [Roma](http://www.tei-c.org/Roma/)
+- web app  [Roma](https://roma2.tei-c.org/)
 - oXygen's built-in stylesheets
-- Oxford University's [OxGarage](http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient/) multi-transformer
+- Oxford University's [OxGarage](https://oxgarage2.tei-c.org/) multi-transformer
 - roma: a command-line tool
 - Complete list with links and instructions at WWP [ODD Processors page](http://www.wwp.northeastern.edu/outreach/seminars/_current/presentations/customization/customization_overview_tutorial_13.xhtml)
 
@@ -354,12 +352,12 @@ Credits and links
 These slides reuse materials from
 
 - the TEI-C resources, and in particular
-  - <http://www.tei-c.org/Guidelines/Customization/odds.xml>
+  - <http://www.tei-c.org/Guidelines/Customization>
 
 - the Women Writers Project educational resources, and in particular
   - <http://www.wwp.northeastern.edu/outreach/resources/customization.html>
 
-  Please visit these links if you want to know more!
+  Please visit these links if you want to know more.
 </small>
 
 ==========
