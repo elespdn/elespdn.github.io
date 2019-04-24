@@ -1,15 +1,15 @@
 ---
 output:
-  word_document: default
   pdf_document: default
+  word_document: default
   html_document: default
 ---
 	
-# Working on Schema customization with ROMA
+# Exercise: TEI customization with ROMA
 
 
 ## Before you start
-In this exercise, you will use Roma, a web tool available from the TEI web site. You will need access to the internet and a web browser such as Firefox or Opera and once you have your schema you will also need an XML-aware editor to use it (e.g., oXygen).
+In this exercise, you will use Roma, a web tool available from the TEI web site. You will need access to the internet and a web browser (Firefoxm Chrome, Opera, etc.) and once you have your schema you will also need an XML-aware editor to use it (e.g., oXygen).
 
 These instructions only cover part of Roma’s functionality. They describe the steps needed to
 
@@ -30,22 +30,22 @@ These instructions do not cover some other capabilities of Roma, including addin
 
 In this exercise, we will start from an existing customization and we will edit it. 
 
-- The customization is in your Materials folder > unit9 > ODD > **tei_dixit.odd**
+- The customization is in your Materials folder (download from the course homepage).
 
-- Now, let's go to Roma: when you are on-line, point your favorite web browser to <http://www.tei-c.org/Roma/>.
+- Now, let's go to Roma: when you are on-line, point your favorite web browser to <https://roma2.tei-c.org/>.
 
-- You should get to the Roma start screen, which says something like 'Roma: generating validators for the TEI' at the top. 
+- You should get to the Roma start screen, which says something like 'Roma: generating customizations for the TEI'. 
 
-- As said, we will edit an existing ODD: check the 'Open existing customization' radio button and upload the file **tei_dixit.xml**
+- As said, we will edit an existing ODD: check the 'Open existing customization' radio button and upload the file **myCustomization_before.xml**, that you can find in the materials folder.
 
 - Click Submit!
 
 ## Metadata
 After clicking Submit, it should take you to the tab Customize in the Page *Set your parameters*. Here you can enter basic metadata of your customization:
 
-- For the **title** choose a meaningful (for you!) name, like 'My first TEI customization' or 'Athens Workshop Customization'
+- For the **title** choose a meaningful (for you!) name, like 'My first TEI customization' or 'Lausanne Workshop Customization'
 
-- For the **filename**, it’s a good idea to avoid characters that may confuse operating systems, like slashes, back-slashes, colons, spaces, etc. You can use something like 'myTEI' or 'athensTEI'
+- For the **filename**, it’s a good idea to avoid characters that may confuse operating systems, like spaces, slashes, back-slashes, colons, etc. You can use something like 'myTEI' or 'lausanneTEI'
 
 - Choose the **language** you prefer. Remember that this will only affect Roma and NOT the customization (inlcuding the documentation) that you are creating
 
@@ -59,7 +59,7 @@ Press the Submit button (the name of your Customization appears on the top right
 
 In this page (List of TEI modules) you can choose the modules which will be included in the schema. The full list of available TEI modules is listed on the left, and at the right there is a ‘List of selected modules’ which is the list currently selected for your schema.
 
-- For this exercise, remove the module Dictionary.
+- For this exercise, remove the module Dictionaries (click on 'remove', not on 'dictionaries').
 
 ## Elements 
 
@@ -68,9 +68,9 @@ We are starting from a large customization, so let's remove some elements that w
 
 - First click on a module name from the List of selected Modules (the right column). For this exercise, click on the module *namesdates*. This should take you to the appropriate *Change module* page.
 
-- Have a look at the elements listed and find one that will not be used in the encoding of letters (like the ones we have worked with). For example, the element 'climate' or 'langKnowledge' or 'terrain'. Now you can Exclude it/them. 
+- Have a look at the elements listed and find one that you haven't used in previous exercise. For example, the element 'climate' or 'langKnowledge' or 'terrain'. Now you can Exclude it/them. 
 
-Don't forget to Save your changes (bottom of the page)!
+- Save your changes, using the red button at the bottom of the page.
 
 ## Attributes
 
@@ -90,7 +90,7 @@ Also, as we are very confident about the information we have about the birth of 
 
 - As said, we want the attribute '@when' to be mandatory. How to do that? Change the values of *Is it optional* to No.
 
-- Don't forget to Save!
+- Save again!
 
 
 ## Saving your ODD files
@@ -108,19 +108,19 @@ To generate an output schema select the *Schema* tab. Here you can change the de
 
 If you want to test your Customization, go to oXygen and associate the schema to a TEI document: 
 
-- in oXygen, open a TEI document (one of the letter we have been working on)
+- in oXygen, open a TEI document (one of the document you have been working on)
 
-- choose menu 'Document' > 'Schema' > 'Associate schema' and select the schema you just downloaded by clicking on the plain folder next to the URL box. Leave the rest as it is and press OK. 
+- choose menu 'Document' > 'Schema' > 'Associate schema' and select the schema you just downloaded. Leave the rest as it is and press OK. 
 
 - The schema is now associated (you can see it at the top of your TEI document)
 
-- Now try to use the element 'entry'. oXygen will prompt you an error 'Element "entry" not allowed anywhere'! Why? Because we deleted the module Dictionaries
+- Now try to use the element 'entry'. oXygen will prompt you an error 'Element "entry" not allowed anywhere'! Why? Because we deleted the module Dictionaries.
 
-- inside the element 'person' (not 'persName', but 'person' in the Header) create an element 'langKnowledge'. The same error will appear, because we excluded this element
+- inside the element 'person' (not 'persName', but 'person' in the Header) create an element 'langKnowledge'. The same error will appear, because we excluded this element.
 
 - again inside the element 'person', have a look at the element 'birth'. The attribute '@when' is already there? If not, oXygen will prompt another error, because we made this attribute mandatory. 
 
-Very good! You can keep playing with what you changed in the schema and see how it reflects your encoding!
+Very good! You can keep playing with what you changed in the schema and see how it reflects your encoding.
 
 
 ---
@@ -151,7 +151,7 @@ For this exercise, we want to prepare a schema for encoding poems, and in partic
 
 That's all! Now you can Save the Customization and generate the Schema, as you did in the previous exercise. 
 
-You can test your schema on Karyotakis poem (also available in your folder Materials > Unit9 > examples_changeSchema > karyotakis_soneto_LITE or ALL).
+You can test your schema on the poem you have been working on!
 
 
 ---
@@ -167,7 +167,7 @@ This exercise reuses tutorials at
 
 **About this exercise**
 
-Publication: DiXiT Workshop *Digital Scholarly Editions and Modern Greek Studies*. Athens, 24-28 April 2017.
+Publication: Formation *Textes et éditions numériques*. Lausanne, 25-26 avril 2019.
 
 Author: Elena Spadini
 

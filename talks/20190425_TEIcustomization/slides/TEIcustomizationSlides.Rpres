@@ -148,6 +148,11 @@ Recap (practice)
 
 What happens if you change the schema?
 
+Exercise:
+
+take the last TEI document you worked with yesterday or download from the materials folder (available from the course homepage) and change the schema from 'tei_all' to 'tei_lite'. Is the green square still green?
+
+
 
 
 Chapter 2 
