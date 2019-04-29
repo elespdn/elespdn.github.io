@@ -4,33 +4,481 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>CollateX</title>
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="../reveal/css/reset.css">
+		<link rel="stylesheet" href="../reveal/css/reveal.css">
+		<link rel="stylesheet" href="../reveal/css/theme/white.css">
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+		<link rel="stylesheet" href="../reveal/lib/css/monokai.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+		<style type="text/css">
+		</style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				
+
+				<section>
+					<h2>The Gothenburg Model and CollateX</h2>
+					<br/>
+					<p>Programme doctoral en études numériques. <i>Formation <a href="Formation Textes et éditions numériques, 25 et 26 avril" target="_blank">Textes et éditions numériques</a></i>, 25 et 26 avril 2019, Université de Lausanne</p>
+					<p>Elena Spadini (Université de Lausanne)</p>
+				</section>
+
+				
+				<section data-background-image="images/gotheborg.jpg" data-background-opacity="0.3"	>
+					<h2>Gothenburg model</h2>
+					Gothenburg (Sweden), 2009
+					<br/>joint workshop of the EU-funded research projects <a href="http://www.cost-a32.eu/index.html">Open Scholarly Communities on the Web</a> (COST Action 32) and <a href="http://www.interedition.eu) (http://wiki.tei-c.org/index.php/Textual_Variance">Interedition</a>
+					<br/>developers of <a href="http://collatex.net">CollateX</a> and <a href="http://www.juxtasoftware.org">Juxta</a>
+				</section>
+
+				<section>
+					<ol>
+						<li>Tokenization</li>
+						<li>Normalization</li>
+						<li>Alignment</li>
+						<li>Analysis</li>
+						<li>Visualization/output</li>
+					</ol>
+				</section>
+
+				<section data-background-image="images/pipeline.png" data-background-opacity="0.2"	>
+					<ol>
+						<li>Tokenization</li>
+						<li>Normalization</li>
+						<li>Alignment</li>
+						<li>Analysis</li>
+						<li>Visualization/output</li>
+					</ol>
+					<br/><br/>
+					<div style="background-color: white" class="fragment"><br/>pipeline | separation of concerns<br/><br/></div>
+				</section>
+
+				<section>
+					Step 0. Transcription or digitizazion+OCR/HWR
+				</section>
+
+				<section>
+					<h2>1. Tokenization</h2>
+					<br/>division of a continuous text into units to be aligned, called <b>tokens</b>
+					<div class="fragment" data-fragment-index="2"><br/><br/>any level of granularity: syllables, words, lines, phrases, verses, paragraphs, text nodes ...</div>
+					<br/><br/>
+					<div class="fragment" data-fragment-index="1">
+						Exemple: <em>Peter's cat.</em>
+					</div>
+				</section>
+
+				<section>
+					<h3>Tokenization issues</h3>
+					<br/><br/>
+					<ul>
+						<li>White spaces and punctuation are not enough</li>
+						<li>multiple tokenizations are possible (vd. punctuation)</li>
+						<li>markup</li>
+						<li>language specific issues (contractions, superscription)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>CollateX default tokenization</h3>
+					<br/>
+					<ul>
+						<li>It divides the text into tokens at white space</li>
+						<li>Punctuation is tokenized separately from alphanumeric characters</li>
+					</ul>
+					<br/><br/>
+					Example: <i>Peter's cat.</i>
+					<br/><br/>
+					<table>
+						<tbody>
+						<tr>
+							<td>Peter</td>
+							<td>'</td>
+							<td>s </td>
+							<td>cat</td>
+							<td>.</td>
+						</tr>
+						</tbody>
+					</table>
+				</section>
+
+				<section>
+					<h2>2. Normalization</h2>
+					<br/><br/>
+					from handwriting or print into a digital representation (if not already in transcription)
+					<br/><br/>
+					prepare the texts for the collation in order to obtain "good" results (for example, upper/lower-case, formal vs substantive)
+				</section>
+
+
+				<section>
+					<h3>Types of normalization</h3>
+					<br/><br/>
+					<ul>
+						<li>upper vs lower cases</li>
+						<li>3 vs three</li>
+						<li>letterforms (graphemes)</li>
+						<li>... and much more</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Normalization in CollateX</h3>
+					<br/><br/>
+					By default, it removes trailing white space at the ends of tokens.
+				</section>
+
+				<section>
+					For each token, there is a <b>t</b> and a <b>n</b> property.
+					<img src="images/normalizationN-T.png">
+				</section>
+
+				<section>
+					<h2>3. Alignment</h2>
+					<br/><br/>
+					Alignement is performed on <b>n</b> (shadow copy), but <b>t</b> is available all the time
+				</section>
+
+				<section>
+					<h3>Alignment complexities</h3>
+					<br/><br/>
+					Computational complexities
+					<br/><br/>
+					&#8595;
+					<br/><br/>
+					heuristics
+				</section>
+
+				<section>
+					<h3>Alignment complexities</h3>
+					Repetition
+					<br/><img width="50%" src="images/alignment0.png">
+				</section>
+
+				<section>
+					<img src="images/alignment1.png">
+				</section>
+
+				<section>
+					<img src="images/alignment2.png">
+				</section>
+
+				<section>
+					<h3>Alignment complexities</h3>
+					<br/><br/>
+						Order effects
+					<br/><br/>Pairwise vs multiple (progressive) alignment
+				</section>
+
+				<section>
+						<h2>Pairwise alignment</h2>
+						<br/>	
+						<h4>Example</h4>
+						<p style="text-align:left">
+						<b>A:</b> Dalla collina si vede una grande casa rossa.<br/>
+						<b><span style="background-color:MistyRose">B:</span></b> Dal belvedere si vede una grande casa azzurra.<br/>
+						<b><span style="background-color:MediumTurquoise">C:</span></b> Dalla collina si vede una piccola casa rossa.<br/>
+						<b><span style="background-color:PaleGreen">D:</span></b> Dal belvedere si vedono tante case.
+						</p>
+					</section>
+					
+					<section>
+						<h4>Step 1: Pairwise alignment<br/>using 'A' as the base manuscript.</h4>
+						<br/>
+						<table style="font-size:0.6em">
+						<tr style="background-color:MistyRose;text-align:left">
+						<td>
+						<table>
+							<tr>
+								<td><b>A</b></td>
+								<td>Dalla</td>
+								<td>collina</td>
+								<td>si</td>
+								<td>vede</td>
+								<td>una</td>
+								<td>grande</td>
+								<td>casa</td>
+								<td>rossa</td>
+							</tr>
+							<tr>
+								<td><b>B</b></td>
+								<td>Dal</td>
+								<td>belvedere</td>
+								<td>si</td>
+								<td>vede</td>
+								<td>una</td>
+								<td>grande</td>
+								<td>casa</td>
+								<td>azzurra</td>
+							</tr>
+						</table>
+						</td>
+						<td>
+						<p>
+						Dalla] dal B<br/>
+						collina] belvedere B<br/>
+						rossa] azzurra B
+						</p>
+						</td>
+						</tr>
+						<tr style="background-color:MediumTurquoise">
+						<td>
+						<table>
+							<tr>
+								<td><b>A</b></td>
+								<td>Dalla</td>
+								<td>collina</td>
+								<td>si</td>
+								<td>vede</td>
+								<td>una</td>
+								<td>grande</td>
+								<td>casa</td>
+								<td>rossa</td>
+							</tr>
+							<tr>
+								<td><b>C</b></td>
+								<td>Dalla</td>
+								<td>collina</td>
+								<td>si</td>
+								<td>vede</td>
+								<td>una</td>
+								<td>piccola</td>
+								<td>casa</td>
+								<td>rossa</td>
+							</tr>
+						</table>
+						</td>
+						<td>
+						<p>
+						grande] piccola C
+						</p>
+						</td>
+						</tr>
+						<tr style="background-color:PaleGreen">
+						<td>
+						<table>
+							<tr>
+								<td><b>A</b></td>
+								<td>Dalla</td>
+								<td>collina</td>
+								<td>si</td>
+								<td>vede</td>
+								<td>una</td>
+								<td>grande</td>
+								<td>casa</td>
+								<td>rossa</td>
+							</tr>
+							<tr>
+								<td><b>D</b></td>
+								<td>Dal</td>
+								<td>belvedere</td>
+								<td>si</td>
+								<td>vedono</td>
+								<td>tante</td>
+								<td></td>
+								<td>case</td>
+								<td></td>
+							</tr>
+						</table>
+						</td>
+						<td>
+						<p>
+						Dalla] dal D<br/>
+						collina] belvedere D<br/>
+						vede] vedono D<br/>
+						una] tante D<br/>
+						grande] om. D<br/>
+						casa] case D<br/>
+						rossa] om. D
+						</p>
+						</td>
+						</tr>
+						</table>
+					</section>
+					
+					<section>
+						<h3>Step 2: the results of the pairwise alignment are merged</h3>
+						<br/>
+						<p style="text-align:left">
+						Dalla] dal <span style="background-color:MistyRose">B</span>, <span style="background-color:PaleGreen">D</span><br/>
+						collina] belvedere <span style="background-color:MistyRose">B</span>, <span style="background-color:PaleGreen">D</span><br/>
+						vede] vedono <span style="background-color:PaleGreen">D</span><br/>
+						una] tante <span style="background-color:PaleGreen">D</span><br/>
+						grande] piccola <span style="background-color:MediumTurquoise">C</span>, om. <span style="background-color:PaleGreen">D</span><br/>
+						casa] case <span style="background-color:PaleGreen">D</span><br/>
+						rossa] azzurra <span style="background-color:MistyRose">B</span>, om. <span style="background-color:PaleGreen">D</span>
+						</p>
+					</section>
+
+				<section>
+					<h3>Alignment complexities</h3>
+						Order effects: pairwise vs multiple (progressive) alignment
+					<img src="images/variant-graph-schmidt.png">
+					<img class="fragment" src="images/variant_graph.png">
+					Progressively compare and merge the result of the comparison into the graph
+				</section>
+
+			
+				<section>
+					<h3>Alignment complexities</h3>
+					<br/><br/>
+					exact vs near (fuzzy) matching
+					<br/><br/>
+					<i>The big gray koala</i>
+					<br/><i>The grey koala</i>
+				</section>
+
+				
+
+
+				<section>
+					<h2>4. Analysis</h2>
+					<br/>
+					computational analysis of the output of the alignment operation, for
+					<br/><br/>
+					<ul>
+						<li>improving it (loop)</li>
+						<li>enrich it</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Analysis in CollateX</h3>
+					<a href="https://github.com/interedition/collatex/blob/master/docs/pythonport.md#the-near_match-parameter" target="_blank">
+						<br/><br/>
+					Near-matching</a>
+				</section>
+
+
+
+				<section>
+					<h2>5. Output and visualization</h2>
+					<ul>
+						<li><a href="http://catview.uzi.uni-halle.de/" target="_blank">Catview</a></li>
+						<li><a href="http://www.traviz.vizcovery.org/" target="_blank">Traviz</a></li>
+						<li><a href="https://vimeo.com/114242362" target="_blank">Apparatus vs. Graph – an Interface as Scholarly Argument</a></li>
+					</ul>
+				</section>
+
+				<section>
+					
+				</section>
+
+				<section>
+					<h3>CollateX outputs</h3>
+					<br/>
+
+
+					<table style="font-size: 0.7em">
+  <thead>
+    <tr>
+      <th><code class="highlighter-rouge">output</code></th>
+      <th><code class="highlighter-rouge">segmentation</code></th>
+      <th><code class="highlighter-rouge">near_match</code></th>
+      <th><code class="highlighter-rouge">layout</code></th>
+      <th><code class="highlighter-rouge">indent</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>table</strong></td>
+      <td>yes</td>
+      <td>yes</td>
+      <td>yes</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <td><strong>html</strong></td>
+      <td>yes</td>
+      <td>yes</td>
+      <td>yes</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <td><strong>html2</strong></td>
+      <td>yes</td>
+      <td>yes</td>
+      <td>no</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <td><strong>svg_simple</strong></td>
+      <td>yes</td>
+      <td>yes</td>
+      <td>no</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <td><strong>svg</strong></td>
+      <td>yes</td>
+      <td>yes</td>
+      <td>no</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <td><strong>xml</strong></td>
+      <td>yes</td>
+      <td>yes</td>
+      <td>no</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <td><strong>tei</strong></td>
+      <td>yes</td>
+      <td>yes</td>
+      <td>no</td>
+      <td>yes</td>
+    </tr>
+  </tbody>
+</table>
+				</section>
+
+
+
+
+
+				<section>
+					<a href="https://www.beckettarchive.org/demo/MS-HRC-SB-5-10/p1?view=text" target="_blank">CollateX in action</a>
+				</section>
+
+
+				<section>
+					These slides reuse materials from 
+					<ul>
+						<li>http://collatex.net/</li>
+						<li>https://github.com/DiXiT-eu/collatex-tutorial</li>
+						<li>https://github.com/interedition/collatex</li>
+					</ul>
+				</section>
+
+				<section>
+					Elena Spadini, <i>The Gothenburg Model and CollateX</i>
+					<br/>CC-BY-NC-SA
+				</section>
+
+				<section>
+					Questions?
+				</section>
+
+
+
+				
 			</div>
 		</div>
 
-		<script src="js/reveal.js"></script>
+		<script src="../reveal/js/reveal.js"></script>
 
 		<script>
 			// More info about config & dependencies:
@@ -38,10 +486,10 @@
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
 				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
+					{ src: '../reveal/plugin/markdown/marked.js' },
+					{ src: '../reveal/plugin/markdown/markdown.js' },
+					{ src: '../reveal/plugin/notes/notes.js', async: true },
+					{ src: '../reveal/plugin/highlight/highlight.js', async: true }
 				]
 			});
 		</script>
