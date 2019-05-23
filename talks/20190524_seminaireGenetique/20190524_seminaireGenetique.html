@@ -36,9 +36,12 @@
 			.grey {color:grey;}
 			.small {font-size: 0.8em}
 			.smaller {font-size: 0.6em}
-			ul, li {
+			ul > li {
 				list-style: circle;
 			}
+			.coloredTitle {
+				background-color:#003333
+			}			}	
 		</style>
 	</head>
 	<body>
@@ -76,54 +79,63 @@
 
 
 				<section>
-					TABLE DE MATIÈRES
+					<h4 style="background-color:#003333">Table de matières</h4>
 					<br/><br/><br/>
 					<ol class="small">
 						<li>Éditions génétiques</li>
-						<li>Gustave Roud, <i>Œuvres complètes</i></li>
+						<li>Gustave Roud, pratiques d'écriture</li>
 						<li>Vers une ontologie des relations génétiques</li>
 					</ol>
 				</section>
 
 
 				<section data-background-color="#003333">
-					1. Éditions génétiques
+					<h3>1. Éditions génétiques</h3>
 				</section>
 
-				<section class="small">
-					<div>
+				<section>
+					<h4>édition</h4><br/><br/>médiation<br/>critique
+				</section>
+
+
+				<section>
+					<h4>Types d'édition génétique</h4>
+					<br/><br/>
+					<div class="small">
 						<ul>
-							<li>éditions horizontales : <span class="grey">étudier une phase précise de la genèse (synchronie)</span></li>
+							<li style="list-style: none">éditions horizontales : <span class="grey">étudier une phase précise de la genèse (synchronie)</span></li>
 							<br/>
-							<li>éditions verticales : <span class="grey">traverser l'épaisseur du dossier de genèse (diachronie)</span></li>
+							<li style="list-style: none">éditions verticales : <span class="grey">traverser l'épaisseur du dossier de genèse (diachronie)</span></li>
 						</ul>
 					</div>
 					<br/><br/>
 					<hr/>
-					<div class="small">Pierre-Marc de Biasi, <i>Génétique des textes</i>, CNRS 2011</div>
+					<div class="smaller">Pierre-Marc de Biasi, <i>Génétique des textes</i>, CNRS 2011</div>
 				</section>
 
-				<section class="small">
-					<div>
+				<section>
+					<h4>Edizione di filologia d'autore</h4>
+					<br/><br/>
+					<div class="small">
 						<ul>
-							<li>apparato orizzontale : <span class="grey">varianti di una fase</span></li>
-							<br/>
-							<li>apparato verticale : <span class="grey">varianti nel dossier</span></li>
+							<li>testo di una redazione (prima, ultima, intermedia)</li>
+							<li>apparato (genetico, evolutivo; verticale, orizzontale)</li>
+							<li>postille</li>
+							<li>varianti</li>
 						</ul>
 					</div>
 					<br/><br/>
 					<hr/>
-					<div class="small">Paola Italia & Giulia Raboni, <i>Che cosa è la filologia d’autore</i>, Carocci 2010</div>
+					<div class="smaller">Paola Italia & Giulia Raboni, <i>Che cosa è la filologia d’autore</i>, Carocci 2010</div>
 				</section>
 
 				<section>
-					ÉDITIONS PAPIERS
+					<h4>éditions papier</h4>
 				</section>
 
 				<section>
-					OUTILS NUMÉRIQUE
-					<br/><br/><br/><br/>
-					<ul>
+					<h4>outils numériques</h4>
+					<br/><br/><br/>					<ul class="small">
 						<li style="list-style: circle">XML-TEI</li>
 						<li style="list-style: circle">collation automatique</li>
 						<li>etc.</li>
@@ -138,13 +150,14 @@
 				</section>
 
 				<section>
-					OUTILS DE COLLATION AUTOMATIQUE
+					<h4>outils de collation automatique</h4>
 					<br/><br/><br/>
+					<div class="small">
 					<p>Parmi les plus utilisés ...</p> 
 					<ul>
 						<li><a href="http://juxtacommons.org/" target="_blank">Juxta Commons</a></li>
 						<li>CollateX (<a href="https://collatex.net/" target="_blank">Java</a> | <a href="https://pypi.python.org/pypi/collatex" target="_blank">Python</a>)</li>
-					</ul>
+					</ul></div>
 				</section>
 
 				<section>
@@ -157,61 +170,154 @@
 					<span>Plateforme <a href="http://variance.ch/" target="_blank">« Variance »</a></span>
 				</section>
 
-				<section>ÉDITIONS NUMÉRIQUES<br/>Catalogues<br/><br/><br/>
-					<ul class="smaller">
-						<li><a href="http://www.digitale-edition.de/">a catalog of Digital Scholarly Editions, compiled by Patrick Sahle</a></li>
-						<li><a href="https://dig-ed-cat.acdh.oeaw.ac.at/">Catalogue Digital Editions, by Greta Franzini</a></li>
-					</ul>
-				</section>
-
-
 				<section>
-					ÉDITIONS NUMÉRIQUES<br/>Exemples<br/><br/><br/>
+					<h4>Éditions numériques (pas numérisées)<br/>Catalogues</h4><br/><br/>
 					<ul class="small">
-						<li><a href="http://www.koeppen-jugend.de/lesetext#Page7_EA">Wolfgang Koeppen, <i>Jugend</i></a></li>
-						<li><a href="https://digital.lib.umd.edu/transition">In Transition: Selected Poems by the Baroness Elsa von Freytag-Loringhoven</a></li>
-						<li><a href="http://shelleygodwinarchive.org/">The Shelley-Godwin Archive</a></li>
+						<li><a href="http://www.digitale-edition.de/">Catalog of Digital Scholarly Editions</a>, compiled by Patrick Sahle</li><br/>
+						<li><a href="https://dig-ed-cat.acdh.oeaw.ac.at/">Catalogue Digital Editions</a>, by Greta Franzini</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h4>Éditions numériques<br/>Exemples</h4><br/><br/>
+					<ul class="small">
+						<li><a href="http://www.koeppen-jugend.de/lesetext#Page7_EA" target="_blank">Wolfgang Koeppen, <i>Jugend</i></a></li>
+						<li><a href="https://digital.lib.umd.edu/transition" target="_blank">In Transition: Selected Poems by the Baroness Elsa von Freytag-Loringhoven</a></li>
+						<li><a href="http://shelleygodwinarchive.org/" target="_blank">The Shelley-Godwin Archive</a></li>
+						<li><a href="http://nagano.upb.de:29999/eb9eaa89" target="_blank">Beethovens Werkstatt</a></li>
 					</ul>
 				</section>
 
 				<section>
-					ÉDITIONS NUMÉRIQUES<br/>Attention!<br/><br/><br/>
+					<h4>Éditions numériques<br/>Attention!</h4><br/><br/>
+					<div class="small">
+						<ul>
 					<li><a href="https://ride.i-d-e.de/">RIDE: A review journal for digital<br/>editions and resources</a></li>
 					<br/><li><a href="https://www.mla.org/Resources/Research/Surveys-Reports-and-Other-Documents/Publishing-and-Scholarship/Reports-from-the-MLA-Committee-on-Scholarly-Editions/MLA-Statement-on-the-Scholarly-Edition-in-the-Digital-Age">
-MLA Statement on the Scholarly<br/>Edition in the Digital Age</a></li>
-				</section>
-
-
-				<section>ÉDITIONS HYBRIDES<br/>Exemples<br/><br/><br/>
-					<ul>
-						<li><a href="https://www.unil.ch/crlr/home/menuinst/projets-de-recherche/gustave-roud-oeuvres-completes.html">Gustave Roud, Œuvres complètes</a></li>
-						<li><a href="http://thalamus.huma-num.fr/index.html">Le Petit Thalamus de Montpellier</a></li>
-						<li>Sartre, <i>Les mots</i></li>
-						<li><a href="http://beckettarchive.org/">Beckett Archive</a></li>
-					</ul>
-				</section>
-
-				<section data-background-color="#003333">
-					2. Gustave Roud, <i>Œuvres complètes</i>
-				</section>
-
-
-				<section data-background-color="#003333">
-					3. Vers une ontologie des relations génétiques
+MLA Statement on the Scholarly<br/>Edition in the Digital Age</a></li></ul></div>
 				</section>
 
 				<section>
-					<h3>ONTOLOGIE<br/>(WEB SEMANTIQUE)</h3>
+				<h4>Éditions hybrides<br/>Exemples</h4><br/><br/>
+					<ul class="small">
+						<li><a href="https://www.unil.ch/crlr/home/menuinst/projets-de-recherche/gustave-roud-oeuvres-completes.html">Gustave Roud, Œuvres complètes</a></li>
+						<li><a href="http://thalamus.huma-num.fr/index.html">Le Petit Thalamus de Montpellier</a></li>
+						<li><a href="http://beckettarchive.org/">Beckett Archive</a></li>
+						<li>Sartre, <i>Les Mots</i></li>
+					</ul>
+				</section>
+
+
+<!--
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+ -->
+
+
+
+				<section data-background-color="#003333">
+					<h3>2. Gustave Roud,<br/>pratiques d'écriture</h3>
+				</section>
+
+				<section>
+					<img width="40%" src="images/roud.png">
+					<br/><span class="small">Gustave Roud, 1897-1976</span>
+				</section>
+
+				<section>
+					<h4>Trois manières de composer un texte</h4>
+					<br/><br/>
+					<ul class="small">
+						<li style="list-style: none" class="fragment"><b><i>A</i></b>. Genèse « classique » : texte et avant-texte</li>
+						<li style="list-style: none" class="fragment"><b><i>B</i></b>. Genèse à partir du Journal : des notes a posteriori génétiques</li>
+						<li style="list-style: none" class="fragment"><b><i>C</i></b>. Genèse à partir textes déjà publiés : reprise et poursuite, des genèses post-éditoriales</li>
+					</ul>
+				</section>
+
+				<section>
+				    Liste « Thèmes p. l’article de la Guilde » 
+				    <img>CRLR GR MS 1 E/7c</img>
+				    <div class="smaller">
+				    « D’une certaine pureté », <i>Bulletin mensuel de la Guilde du livre</i>, no 1, janvier 1940, pp. 2-4
+				    <br/>« Deux fragments d’un hommage à C. F. Ramuz », <i>Suisse romande</i>, no 2, 1er juin 1938, pp. 80-82</div>
+				</section>
+
+				<section>
+				    Brouillon, « L’Hiver au village »
+				    <img>CRLR GR MS 1 E/3a</img>
+				</section>
+
+				<section>
+				    Mise au net, « Le Monde réel »
+				    <img>CRLR GR MS 2 D/7a</img>
+				</section>
+
+				<section>
+				    Brouillon, « Villages » 
+				    <img>MS 106/76, fo 1 (Bibliothèque de La Chaux-de-Fonds)</img>
+				</section>
+
+
+				<section data-background-image="msVillage" class="smaller">
+				        <h3>Transcription linéaire du début<br/>de « Villages », sans les biffures</h3>
+				        <br/><br/>
+				        <div style="text-align: left;line-height: 150%">
+					« (Le sentiment de mes « ressources » poétiques est étroitement lié à mon état spirituel. Suivant l’heure, elles m’apparaissent donc immenses ou infimes ; j’ignore entièrement leur réelle valeur, leur existence absolue.<br/>Parfois une illumination tire de l’ombre d’immenses trésors instantanés. Si je veux les saisir par une approche méthodique, cet or comme celui des fables n’est plus dans ma main que sable et feuilles mortes.<br/>Hier, après une longue période contradictoire et troublée de bien des semaines, un sursaut inespéré m’a rendu contact avec les richesses de ma quête de cet été, alors que je les croyais à jamais évanouies. « Villages » redevient donc possible, et tout de suite, j’en veux faire le centre de mon hiver.)<br/>Pôle de pensée, « chapitres » possibles. Garder la liberté, l’imprévu d’une promenade non machinée. Dédicace à m – sans la nommer.<br/>Pour finir, peut-être, reprendre cette phrase des notes : […] »</div>
+				</section>
+
+				<section>
+					<b>Parcours d’une note de Journal « Missy 11h et demie »</b>
+					<br/><br/>
+					<img>CRLR GR MS 4 A/3a</img>
+					<img>CRLR_GR MS4A1a 7r (tout en bas) et 7v (tout en haut)</img>
+					<img>« Cendre », Aujourd’hui, no 32, 10 juillet 1930, p. 1 (image donnée dans notre article pour Humanistica Digitale)</img>
+				</section>
+
+
+
+
+
+<!--
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+ -->
+
+				<section data-background-color="#003333">
+					<h3>3. Vers une modelisation<br/>des relations génétiques</h3>
+				</section>
+
+				<section>
+					<img src="images/bovary.png">
+					<div class="source"><span class="small"><i>Les manuscrits de Madame Bovary</i>. <a href="http://www.bovary.fr/tableau_genetique.php?tabfen=norm&id=41&mxm=0000010002&tabfen=norm" target="blank">Tableaux génétique des brouillons</a></span></div>
+
+				</section>
+
+				<section>
+					<img src="images/lokalbericht.png">
+					<div class="source"><span class="small"><i>Hermann Burger, Lokalbericht. Digitale Edition</i>. <a href="http://www.lokalbericht.ch/dossier" target="_blank">Das genetische Dossier</a></span></div>
+				</section>
+
+				<section>
+					<h4>Ontologie<br/>(web semantique)</h4>
 					<br/><br/>
 					<i>sujet &emsp;&emsp;&emsp;&emsp;&emsp; -----prédicat---> &emsp;&emsp;&emsp;&emsp;&emsp; objet</i>
 					<br/><br/>
-					<span class="fragment"><i>classe &emsp;&emsp;&emsp; -----proprieté---> &emsp;&emsp;&emsp; classe (ou literal)</i></span>
+					<span class="fragment"><i>classe &emsp;&emsp;&emsp; -----propriété---> &emsp;&emsp;&emsp; classe / literal</i></span>
 					
 
 				</section>
 
 				<section>
-					<h3>CLASSES</h3>
+					<h4>Classes</h4>
 					<br/><br/>
 					<table class="small">
 						<tr>
@@ -230,7 +336,7 @@ MLA Statement on the Scholarly<br/>Edition in the Digital Age</a></li>
 				</section>
 
 				<section>
-					<h3>PROPRIETÉS</h3>
+					<h4>Propriétés</h4>
 				</section>	
 
 
