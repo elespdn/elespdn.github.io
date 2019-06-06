@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>graphSDE2019</title>
+		<title>Krakow 2019</title>
 
 		<link rel="stylesheet" href="../reveal/css/reveal.css">
 		<link rel="stylesheet" href="../reveal/css/theme/night.css">
@@ -65,7 +65,7 @@
 				
 				<section>
 					<h3>Modelling the writing process.</h3>
-					<h4>Gustave Roud, from the diary to the work, from the document to the networks</h4>
+					<h4>Gustave Roud,<br/>from the diary to the work,<br/>from the document to the networks</h4>
 					<br/><br/>
 					<div class="smaller">
 					<i>GENESIS  –  CRACOW 2019</i>
@@ -118,21 +118,29 @@
 					<div class="source" style="width: 60%;float: right;"><span class="small">Daniel Ferrer, « La représentation hypertextuelle des manuscrits. Quelques leçons de douze années d'expériences », <i>L'Edition du manuscrit. De l'archive de création au scriptorium numérique</i>, éd. A. Crasson, 2008</span></div>
 				</section>
 
+				<section data-background-image="images/network.png">
+					Relation between genetic entities
+					<br/><br/><span style="text-decoration: line-through">variants</span>
+				</section>
+
+				<section>2. Semantic web for genetic criticism</section>
+				
 				<section>
-					
+					<p>The goal of semantic web is to organize digital online content in a way that is understandable by machines.<br/>The organization follows rules defined in shared ontologies, which allows the query of big corpora and supervised or unsupervised forms of inferences</p>
+					<p>Example: <a href="https://www.europeana.eu/portal/en">Europeana</a></p>
 				</section>
 
 				<section>
-					<h4>Ontologie<br/>(web semantique)<br/><br/>Triplet RDF</h4>
+					<h4>Ontology<br/><br/><br/>RDF triple</h4>
 					<br/><br/>
-					<span class="fragment"><i>sujet &emsp;&emsp;&emsp;&emsp;&emsp; -----prédicat---> &emsp;&emsp;&emsp;&emsp;&emsp; objet</i></span>
+					<span class="fragment"><i>subject &emsp;&emsp;&emsp;&emsp;&emsp; -----predicate---> &emsp;&emsp;&emsp;&emsp;&emsp; object</i></span>
 					<br/><br/>
-					<span class="fragment"><i>classe &emsp;&emsp;&emsp; -----propriété---> &emsp;&emsp;&emsp; classe / literal</i></span>
+					<span class="fragment"><i>class &emsp;&emsp;&emsp; -----property---> &emsp;&emsp;&emsp; class / literal</i></span>
 					
 
 				</section>
 
-
+				<section>3. Gustave Roud</section>
 
 
 				<section>
@@ -155,6 +163,10 @@
 							</td>
 						</tr>
 					</table>
+				</section>
+
+				<section>
+					<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-1.483154296875%2C42.73894375124379%2C12.282714843750002%2C50.21909462044748&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=7/46.608/5.400">View Larger Map</a></small>
 				</section>
 
 
@@ -190,6 +202,7 @@
 				</section>
 
 				
+				<section>4. Modelling genetic networks</section>
 				
 
 				<section>
@@ -304,164 +317,22 @@
 							</td>
 						</tr>
 					</table>
-				</section>
+				</section>	
 
-				<!--
-				<section>
-					<h4><span style="color:#E5C100">roud-œuvres:reusedIn</span></h4>
-					<br/>
-					<table>
-						<tr>
-							<td width="20%"><span style="font-size: 5em">&#9671;</span><br/><br/>Publication</td>
-
-							<td width="20%"><span style="font-size: 3em;color:#E5C100"> &#8594;</span></td>
-							
-							<td width="20%"><span style="font-size: 5em">&#9675;</span><br/><br/>Genetic Dossier</td>
-							
-							</td>
-						</tr>
-					</table>
-				</section>
-				-->
-
-
-
-
-
-
-
-
+				<section>5. Conclusions</section>
 
 				<section>
-					<h3>FRBRoo ? CIDOC-CRM ?</h3>
-					<br/><br/>
-					A solution for
-					<br/><br/>
-					<ul class="small">
-						<li>avantexte and diary</li>
-						<li>their relationships with other avantexte materials</li>
-						<li>their relationships with publication</li>
-					</ul>
-					<br/><br/>???
-				</section>
-
-				
-				<section class="small">
-					<h3>FRBRoo ?</h3>
-					<br/>
-					<div class="fragment">The concept of an Individual Work (F14) is <span style="color:tomato">completely realised</span> in a single Self-Contained Expression (F22). This  class  comprises  the  immaterial  realisations  of  individual  works  at  a  particular time  that  are  regarded  as  a  complete  whole. [From FRBRoo 2.4]</div>
-					<br/>
-					<div class="fragment"><b>Draft is too incomplete, fragmentary, sketchy to be a Work or its realisation in a Self-Contained Expression</b></div>
-					<br/>
-					<div style="border:1px solid grey;padding:20px">a DRAFT is a written document that prepares a discourse, <span style="color:tomato">without realising it yet</span>.<br/><span class="small">[Working definition by R. Mahrer]</span></div>
-				</section>
-
-				<section class="small">
-					<h3>FRBRoo ?</h3>
-					<img width="80%" src="images/ExpressionCreation.png"/>
-					<div style="text-align: left" class="smaller">
-						<p class="fragment" data-fragment-index="1"><b>Expression Creation (F28)</b>. "When you scribble the first draft of a poem on a sheet of paper, you produce an instance of F4 Manifestation Singleton"</p>
-						<p class="fragment" data-fragment-index="2"><b>Manifestation Singleton (F4)</b>. "Examples of instances of F4 Manifestation Singleton include manuscripts, preparatory sketches and the final clean draft sent by an author or a composer to a publisher."</p>
-						<p style="color: tomato" class="fragment" data-fragment-index="3"><b>Expression (F2)</b>. "if a text is revised or modified, the resulting F2 Expression is considered to be a new F2 Expression."</p>
-						<p style="text-align: center" class="fragment" data-fragment-index="4"><b>"Revised or modified" are not modelled. Start from scratch every time?</b></p>
-					</div>
-				</section>
-
-				<section class="smaller">
-					<h3>Revised or modified (FRBR00, CIDOC-CRM) ?</h3>
-					<br/><br/>
-					<div style="text-align: left">
-						<p><b>is composed of (P106)</b>. parts / all</p>
-						<p><b>incorporates (P165)</b>. parts / all</p>
-						<p><b>has modified (P31)</b>. applies to E24 Physical Mad-Made Thing.<br/><br/><span class="fragment">"This property identifies the E24 Physical Man-Made Thing modified in an E11 Modification. If a  modification is applied to a non-man-made object, it is regarded  as  an  E22  Man-Made Object from that time onwards.."</p>
-					</div>
-				</section>
-
-				<section>
-					<img src="images/InformationObject.svg">
-				</section>
-
-				
-
-				<section>
-					Which resources for which editions?
-					<br/>
-					<span class="fragment">Which <b>ontologies</b> for which editions?<br/>
-					<span class="smaller">works with multiple witnesses</span></span>
-					<br/><br/><br/><br/>
-					<span class="fragment"><span style="color: tomato">upper level ontology</span><br/>for <b>witness relationships</b><br/>in (all kinds of)
-					<b>textual criticism</b></span>
-				</section>
-
-				<section class="small">
-					<table>
-						<tbody>
-						<tr>
-							<td>
-								<h4 style="color:tomato">Classes</h4>
-								<ul>
-									<li>:Witness
-										<br/><span class="grey">diary entries, avantexte, publications; mss and incunabula</span>
-									</li>
-									<li>:Aggregation of witnesses
-										<br/><span class="grey">genetic dossier; family of witnesses</span>
-									</li>
-								</ul>
-								<br/><br/>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class="fragment">
-									<br/>
-									<h4 style="color:tomato">Properties</h4>
-									<ul>
-										<li>:Witness <b>:isPartOf</b> :Aggregation</li> 
-										<li><i>subclass &#8594;</i> :Witness <b>:isReusedIn</b> :Aggregation</li>
-										<li>:Aggregation <b>:resultsIn</b> :Witness</li>
-										<li>:Witness <b>:isBefore</b> :Witness</li>
-										<li>:Witness <b>:dependsOn</b> :Witness</li>
-									</ul>
-								</div>
-							</td>
-						</tr>
-					</tbody>
-					</table>
-				</section>
-
-				<section>
-					<div>upper level ontology for witnesses relationships</div>
-					<br/><br/>
-					<div class="fragment" data-fragment-index="2">
-							&#8593;
-						<br/>CRM<sub><i>inf</i></sub> : the Argumentation Model (<a href="http://www.cidoc-crm.org/crminf/ModelVersion/version-0.9">version 0.9</a>)
-						<p class="smaller">... argumentation, belief, evidences ...</p>
-							&#8593;
-					</div>
-					<br/><br/>
-					<div class="fragment" data-fragment-index="1">upper level ontology for text and document analysis</div>
-				</section>
-
-
-				<section>
-					<div class="fragment fade-out">taxonomy of errors? list of genetic stages?</div>
-					<br/>
-					<div class="fragment"><h3>upper level ontology</h3>general and explicit</div>
-				</section>
-
-
-
-
-
-
-
+					typological network, not only chronological
+					<br/><br/><br/>
+					dossier génétique et avantexte sont notions pertinentes ?
+				</section>			
 
 
 				<section data-background-image="images/roud2.jpg" data-background-opacity="0.2">
 					<div style="text-align: left">
 						<br/><br/><br/><br/><br/><br/><br/><br/>
 						<div style="font-size: 0.4em;padding-right: 50%">
-							Elena Spadini, "Which Resources for Which Editions. Modelling the Relationships between Witnesses", <i>Workshop on Scholarly Digital Editions, Graph Data-Models and Semantic Web Technologies</i>, Université de Lausanne, 3-4 June 2019.<br/><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+							Alessio Christen, Elena Spadini, "Modelling the writing process</i>, GENESIS - CRACOW 2019.<br/><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
 							
 							<br/>Photos: copyright AGR - CLSR (UNIL)</div>
 					</div>
