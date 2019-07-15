@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Diffondere la ricerca online</title>
+
+		<meta name="description" content="Slides for talk at the DiXiT Workshop Rome AIUCD 2017">
+		<meta name="author" content="Elena Spadini">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../reveal/css/reveal.css">
+		<link rel="stylesheet" href="../reveal/css/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<style>
+			div.quote {font-size: 0.8em; text-align: justify;}
+			div.source   {font-size: 0.3em; text-align: right; margin-top: 20px}
+			.left {text-align: left}
+			.small {font-size: 0.8em}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+
+				<!-- TITOLO -->
+				<section data-background-image="images/cadLocandina.jpg" data-background-size="contain">
+				</section>
+
+				
+				<!-- PRESENTAZIONE SCUOLA -->
+				<section>
+					<p class="left small"><b>Prof. Carmen Van den Bergh
+						<br/>Prof.ssa Bart Van Den Bossche</b></p>
+					<img style="border:none;margin-top:150px;width: 30%" src="loghi-aipi-aiucd-univr/LogoAIPIgrande.png">
+				</section>
+
+				<section>
+					<p class="left small"><b>Prof. Marco Rospocher
+						<br/>Prof.ssa Adele Cipolla
+						<br/>Prof.ssa Anna Bognolo</b></p>
+					<img style="border:none;margin-top:130px;width: 40%;background-color: #AEB404" src="loghi-aipi-aiucd-univr/Logo_Univr_BN_2016-1.png">
+				</section>
+
+				<section>
+					<p class="left small"><b>Prof. Fabio Ciotti
+						<br/>Dott.ssa Greta Franzini</b></p>
+					<img style="border:none;margin-top:150px;width: 50%;background-color: white" src="loghi-aipi-aiucd-univr/logo-aiucd-trimmed.svg">
+				</section>
+
+				<section>
+					<p class="left small">
+						<b>
+						<span style="font-size:0.7em">Dott. / Dott.ssa (in ordine alfabetico)</span>
+						<br/>
+						<br/>Stefano Bazzaco
+						<br/>Greta Franzini
+						<br/>Simon Gabay
+						<br/>Simone Rebora
+						<br/>Elena Spadini
+						<br/>Giovanni Pietro Vitali</b></p>
+					<img style="border:none;width: 60%;margin-top: 100px" src="logo/cadLogoBlack.png">
+				</section>
+
+				<section data-background-iframe="https://cadottorato.github.io/sito/program.html" data-background-interactive>
+				</section>
+
+				<section>
+					<h3 style="color:grey">Codice di condotta</h3>
+					<br/><br/>
+					<ul>
+						<li>rispettiamo la diversità delle provenienze e tradizioni</li>
+						<li>pazienza (i laboratori sono per tutti)</li>
+						<li>diamoci del tu</li>
+						<li>chiediamo quando qualcosa non è chiaro</li>
+					</ul>
+				</section>
+
+				<section>
+					<img style="border:none;width: 70%" src="images/CADpipeline.png" width="70%">
+				</section>
+
+				<section data-background-color="white" data-background-image="images/pipeline.png" data-background-opacity="0.3">
+					<img style="border:none;width: 70%" src="images/CADpipelineTransparent.png" width="70%">
+				</section>
+
+				<section>
+					
+				</section>
+
+				
+
+
+
+			</div>
+
+		</div>
+
+		<script src="../reveal/lib/js/head.min.js"></script>
+		<script src="../reveal/js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../reveal/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../reveal/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
