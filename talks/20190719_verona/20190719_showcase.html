@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Showcase</title>
+
+		<meta name="description" content="Slides for talk at the DiXiT Workshop Rome AIUCD 2017">
+		<meta name="author" content="Elena Spadini">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../reveal/css/reveal.css">
+		<link rel="stylesheet" href="../reveal/css/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<style>
+			div.quote {font-size: 0.8em; text-align: justify;}
+			div.source   {font-size: 0.3em; text-align: right}
+			.left {text-align: left}
+			.small {font-size: 0.8em}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+
+				<!-- TITOLO -->
+
+				<section data-background-image="images/database_nb.jpg" data-background-opacity="0.3" class="left">
+					<h3>Diffondere la ricerca online</h3>
+					<br/><br/><br/><br/><br/><br/><br/>
+					CAD Verona
+					<br/>
+					<span class="small">Elena Spadini</span>
+				</section>
+
+				<section data-background-color="#0B3861">
+					<h3>Siti web personali</h3>
+				</section>
+
+				<section>
+					<img src="images/webPerso.png">
+				</section>
+
+
+				<section data-background-color="#0B3861">
+					<h3>Applicazioni web:
+						<br/>Edizioni digitali,
+						<br/>Archivi digitali,
+						<br/>Piattaforme
+					</h3>
+				</section>
+
+				<section>
+					<img src="images/galassiaAriosto.png">
+					<div class="source">galassiaariosto.sns.it</div>
+				</section>
+
+
+				<section>
+					<img src="images/shelley1.png">
+					<img src="images/shelley2.png">
+					<div class="source">shelleygodwinarchive.org</div>
+				</section>
+
+				<section>
+					<img src="images/alcide.png">
+					<div class="source">alcidedigitale.fbk.eu</div>
+				</section>
+
+
+				<section data-background-color="#0B3861">
+					<h3>Blog scientifici</h3>
+				</section>
+
+				<section>
+					<img src="images/hypothesesEditiones.png">
+					<div class="source">editiones.hypotheses.org</div>
+				</section>
+
+				<section data-background-color="#0B3861">
+					<h3>Content Management Systems (CMS):
+					Wordpress, Omeka, Drupal, etc.</h3>
+				</section>
+
+				<section>
+					<table>
+						<tr>
+							<td>
+								<a href="http://www.darwinproject.ac.uk/" target="_blank">
+									<img src="images/drupalDarwin.png" width="400px"/>
+								</a>
+							</td>
+							<td>
+								<a href="https://petrarch.uoregon.edu/" target="_blank">
+									<img src="images/drupalPetrarch.png" width="350px"/>
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="https://www.confessio.ie/#" target="_blank">
+									<img src="images/drupalConfessio.png" width="400px" />
+								</a>
+							</td>
+							<td>
+								<a href="http://schopenhauer.uni.wroc.pl/" target="_blank">
+									<img src="images/drupalSchopenhauer.png" width="350px"/>
+								</a>
+							</td>
+						</tr>
+					</table>
+				</section>
+
+				<section data-background-color="#0B3861">
+					<h3>Altri canali di diffusione: twitter, youtube, etc.</h3>
+				</section>
+
+				<section>
+					<img src="images/twitterDH2019.png" width="40%">
+					<div class="source">twitter.com/hashtag/DH2019</div>
+				</section>
+
+				<section>
+					<img src="images/youTubeLastLetters.png" width="80%">
+					<div class="source">www.youtube.com/channel/UCtDS2GHpOE06BQzha4-yZ0g</div>
+				</section>
+				
+				
+
+				<section>
+					Credits
+					Image : Michael Mandiberg, DATA BASE, 2009 (CC BY-SA 2.0)
+					https://www.flickr.com/photos/theredproject/3332644561/
+
+				</section>
+
+
+				
+
+
+
+			</div>
+
+		</div>
+
+		<script src="../reveal/lib/js/head.min.js"></script>
+		<script src="../reveal/js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../reveal/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../reveal/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
