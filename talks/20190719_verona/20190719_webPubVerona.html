@@ -2,30 +2,30 @@
 <html lang="en">
 
 	<head>
-		<meta charset="utf-8">
+		<meta charset="utf-8"/>
 
 		<title>Diffondere la ricerca online</title>
 
-		<meta name="description" content="Slides for talk at the DiXiT Workshop Rome AIUCD 2017">
-		<meta name="author" content="Elena Spadini">
+		<meta name="description" content="Slides for talk at the DiXiT Workshop Rome AIUCD 2017"/>
+		<meta name="author" content="Elena Spadini"/>
 
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 
-		<link rel="stylesheet" href="reveal/css/reveal.css">
-		<link rel="stylesheet" href="reveal/css/theme/white.css" id="theme">
+		<link rel="stylesheet" href="../reveal/css/reveal.css"></link>
+		<link rel="stylesheet" href="../reveal/css/theme/white.css" id="theme"></link>
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+		<link rel="stylesheet" href="../reveal/lib/css/zenburn.css"></link>
 
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
@@ -35,6 +35,7 @@
 		<style>
 			div.quote {font-size: 0.8em; text-align: justify;}
 			div.source   {font-size: 0.3em; text-align: right; margin-top: 20px}
+			.small {font-size: 0.8em}
 		</style>
 	</head>
 
@@ -45,14 +46,11 @@
 			<div class="slides">
 
 				<section>
-					<h2>Publication web</h2>
+					<h2>Diffondere la<br/>ricerca online</h2>
 					<br/>
-					<p><i>Encoder/Exploiter/Diffuser.<br/>Les humanités numériques dans les projets doctoraux</i></p>
-					<p>Poitiers, 9-11 janvier 2019</p>
+					<p>Codificare, Analizzare, Diffondere: Le Digital Humanities nei progetti di ricerca</p>
+					<p>Verona, 16-19 luglio 2019</p>
 				</section>
-
-
-
 
 
 
@@ -62,29 +60,29 @@
 <!-- ============================================ SECTION 1 ================================================ -->
 <!-- ======================================================================================================= -->
 				
-				<section data-background-color="lightblue">1. Composants d'un projet numérique</section>
+				<section data-background-color="lightblue"><h2>1. Componenti di un progetto digitale</h2></section>
 
 				<section>
-					<img src="images/20190109_webPub/dhProjectComponents.png">
+					<img src="images/dhProjectComponents.png"></img>
 					<br/><br/>
 					<div class="source" style="font-size: 0.6em"><i>Intro to Digital Humanities. <a href="http://dh101.humanities.ucla.edu/?page_id=15" target="_blank">1B: Analysis of DH projects</a></i>. Johanna Drucker, UCLA</div>
 				</section>
 
-				<section data-background-image="images/20181005_fbk/magazzino1.png" data-background-size="contain">
+				<section data-background-image="images/magazzino1.png" data-background-size="contain">
 				</section>
 
-				<section data-background-image="images/20181005_fbk/magazzino2.png" data-background-size="contain">
+				<section data-background-image="images/magazzino2.png" data-background-size="contain">
 				</section>
 
-				<section data-background-image="images/20181025UNIL_master_genetique/magazzino3_fr.png" data-background-size="contain">
+				<section data-background-image="images/magazzino3.png" data-background-size="contain">
 				</section>
 
 				<section>
-					<img src="images/20190109_webPub/dhProjectComponents_magazzino_fr.png">
+					<img src="images/dhProjectComponents_magazzino_fr.png"></img>
 				</section>
 				
 				<section>
-					<img src="images/20190109_webPub/dhProjectComponents_frontendBackend.png">
+					<img src="images/dhProjectComponents_frontendBackend.png"></img>
 				</section>
 
 
@@ -96,36 +94,37 @@
 
 
 
-				<section data-background-color="lightblue">2. Client-server model</section>
+				<section data-background-color="lightblue"><h2>2. Client-server model</h2></section>
 
 				<section>
 					<ul style="list-style: none">
-						<li><b>Navigateur (browser)</b>. Logiciel permettant de consulter des pages Web. Ex : Firefox, Chrome, Safari, Opera, Edge, etc.</li>
+						<li><b>Navigatore (browser)</b>. Programma che permette di consultare pagine web, per esempio: Firefox, Chrome, Safari, Opera, Edge, etc.</li>
 						<br/>
-						<li><b>URL</b>. Uniform Resource Locator, addresse ; permet de localiser une ressource internet. Ex : http://enexdi.sciencesconf.org</li>
+						<li><b>URL</b>. Uniform Resource Locator, indirizzo. Permette di localizzare una risorsa nel web, per esempio: https://cadottorato.github.io/sito</li>
 					</ul>
 				</section>
 
 				<section>
 					<h2>URL</h2>
-					<a href="http://www.univ-poitiers.fr/recherche/ecoles-doctorales/" target="_blank">
-						<img src="images/20190109_webPub/URL.png">
-					</a>
+					<br/><br/>
+					<p><span style="background-color: yellow">https://</span><span style="background-color: #87cefa">www.unil.ch/</span><span style="background-color: orange">clsr/home.html</span></p>
+					<br/>
+					<p><span style="background-color: yellow">protocollo </span><span style="background-color: #87cefa"> dominio </span><span style="background-color: orange"> percorso</span></p>
 				</section>
 
 				<section>
-					<img src="images/20190109_webPub/client-server-model.jpg" width="70%">
+					<img src="images/client-server-model.jpg" width="70%"></img>
 					<div class="source"><a href="https://www.ionos.it/digitalguide/server/know-how/cose-un-server-un-termine-due-definizioni/" target="_blank">www.ionos.it/digitalguide/</a></div>
 				</section>
 
-				<section data-background-image="images/20190109_webPub/DNS.png" data-background-size="contain">
+				<section data-background-image="images/DNS.png" data-background-size="contain">
 				</section>
 
 				<section>
-					View page source ! 
+					Vedi codice sorgente! 
 					<br/>
-					<a href="view-source:http://www.univ-poitiers.fr/recherche/ecoles-doctorales/" target="_blank">
-						<img src="images/20190109_webPub/sourcePage.png" width="60%">
+					<a href="view-source:https://www.unil.ch/clsr/home.html" target="_blank">
+						<img src="images/clsrHomepage.png" width="70%"></img>
 					</a>
 				</section>
 
@@ -136,102 +135,59 @@
 <!-- ======================================================================================================= -->
 
 
-				<section data-background-color="lightblue">3. Sites web</section>
-
-				<section>
-					<ul style="list-style: none">
-						<li>La <b>publication web</b> consiste à rendre disponible sur Internet du contenu. La publication inclut la construction et la mise à jour de sites web (personnels, commerciels, communautaires) et d'e-books. Le contenu de la publication web peut comprendre texte, vidéos, images numériques, musique et autres types de médias.</li>
-					</ul>
-				</section>
-
-				<section>
-					<ul style="list-style: none; font-size: 0.8em">
-						<li>Un <b>site web</b> est un ensemble de pages web reliées par des hyperliens. Les pages peuvent être statiques ou dynamiques.</li>
-						<br/>
-						<li>Le contenu d'une <b>page web statique</b> est enregistré dans un fichier hébergé sur un serveur web. Son contenu est identique à chaque consultation.</li>
-						<li>Le contenu d'une <b>page web dynamique</b> est généré à la demande par le serveur (server-side scripting : PHP, Java, Ruby, etc.) et peut donc varier en fonction d'informations (nom de l'utilisateur, formulaire rempli par l'utilisateur, heure, etc.) qui ne sont connues qu'au moment de sa consultation.</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Exercice</h2>
-					Statique ou dynamique ?
-					<br/><br/>
-					<ul style="list-style: none; font-size: 0.9em">
-						<li><a href="http://peterboot.nl">http://peterboot.nl</a></li>
-						<br/>
-						<li><a href="https://www.zalando.fr/">https://www.zalando.fr</a></li>
-						<br/>
-						<li><a href="http://www.thecure.com/">http://www.thecure.com</a></li>
-						<br/>
-						<li><a href="http://vangoghletters.org/vg/">http://vangoghletters.org</a></li>
-						<br/>
-						<li><a href="https://fr.wikipedia.org/wiki/Site_web">https://fr.wikipedia.org/wiki/Site_web</a></li>
-					</ul>
-				</section>
-
-				<section>
-					Dans ce cours, nous nous occupons seulement des <b>pages web statiques</b>, crées avec HTML + CSS (+ Javascript). Ces technologies sont aussi à la base des pages web dynamiques !
-				</section>
-
-
-
-<!-- ======================================================================================================= -->
-<!-- ============================================ SECTION 4 ================================================ -->
-<!-- ======================================================================================================= -->
-
-				<section data-background-color="lightblue">4. HTML (HyperText Markup Language)</section>
-
 				<section data-background-color="lightblue">
-					<h2>4. HTML (HyperText Markup Language)</h2>
-						<div style="text-align: left; font-size: 0.7em;margin-top: 150px">
-						<p>Sources :<ul>
+					<h2>3. Siti web e<br/>HTML (HyperText Markup Language)</h2>
+					<div style="text-align: left; font-size: 0.7em;margin-top: 150px">
+					<div>Fonti :
+						<ul>
 							<li>Alexandre Niveau, <a href="https://ensweb.users.info.unicaen.fr/pres/html/" target="_blank">HTML : la base du web</a>, CC BY-NC-SA 4.0</li>
 							<li>w3schools.com, <a href="https://www.w3schools.com/html/" target="_blank">HTML5 Tutorial</a></li>
-						</ul></p></div>
-						</section>
+					</ul></div></div>
+				</section>
 
 
 				<section>
 					<h3>SGML (Standard Generalized Markup Langage) - ISO 8879:1986</h3>
 					<div style="text-align: left">
-						Séparation complète entre la <b>structure logique</b> d'un document (titres, chapitres, paragraphes, etc.) et sa <b>mise en forme</b>.
-						<br/><br/>La <b>structure</b> est identifiée par des <b>balises insérées dans le document</b> lui-même.
-						<br/>La <b>mise en forme</b> est définie en dehors du document dans une ou plusieurs <b>feuilles de style</b>.
+						Separazione della <b>struttura logica</b> del documento SGML (titolo, capitoli, paragrafi, etc.) e della sua <b>impaginazione e resa grafica.</b>
+						<br/><br/>La <b>struttura</b> è codificata attraverso dei <b>tags inseriti nel documento</b>.
+						<br/>La <b>resa grafica</b> è definita in un documento esterno, chiamato <b>foglio di stile (stylesheet)</b>.
 					</div>
 				</section>
 
 				<section>
 					<h3>HTML (HyperText Markup Language)</h3>
-					HTML est une application du standard SGML
 					<br/><br/>
 					<ul>
-						<li>HTML : un langage de présentation sur écran adapté à l'hypertexte</li>
-						<li>XML : une version simplifiée et extensible de SGML pour gérer des données</li>
-						<li>HTML5 : dernière version d'HTML</li>
+						<li>XML : una versione semplificata ed estensibile di SGML per gestire i dati</li>
+						<li>HTML : successore di SGML, linguaggio di markup per il web (incluso l'ipertesto)</li>
+						<li>HTML5 : l'ultima versione di HTML</li>
 					</ul>
 				</section>
 
+				<section data-background-image="images/docAndStylesheet.png" data-background-size="contain"></section>
+
 				<section>
-					<img width="50%" src="images/20190109_webPub/html_element.png">
-					<div class="source">Aapo Laitinen, <i>Visual breakdown of the parts of a HTML element</i>, <a href="https://en.wikipedia.org/wiki/File:HTML_element_structure.png">Wikipedia</a></div>
+					<img width="50%" src="images/html_element.png"></img>
+					<div class="source">Aapo Laitinen, <i>Visual breakdown of the parts of a HTML element</i>,
+						<a href="https://en.wikipedia.org/wiki/File:HTML_element_structure.png">Wikipedia</a></div>
 				</section>
 
-				<section data-background-image="images/20190109_webPub/html_basic.png" data-background-size="contain">
+				<section data-background-image="images/html_basic.png" data-background-size="contain">
 					<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 					<a href="https://ensweb.users.info.unicaen.fr/pres/html/demo/mini.html" target="_blank"><button style="background-color: green; color:white; vertical-align: top;">Résultat</button></a>
 					<div class="source">Alexandre Niveau, <a href="https://ensweb.users.info.unicaen.fr/pres/html/" target="_blank">HTML : la base du web</a>, CC BY-NC-SA 4.0</div>
 				</section>
 
 				<section>
-					<h3>Prologue et élément racine</h3>
-					HTML5 : DOCTYPE et élément racine
+					<h3>Prologo e radice</h3>
+					HTML5 : DOCTYPE e radice
 					<br/><br/><br/>
 
 <pre>
 <code class="hljs">
  &lt;!DOCTYPE html&gt;
- &lt;html lang="fr"&gt;
+ &lt;html lang="it"&gt;
 
 </code>
 </pre>
@@ -239,27 +195,27 @@
 				</section>
 
 				<section style="font-size: 0.8em">
-					<h3>En-tête : élément <code>head</code></h3>
+					<h3>Elemento <code>head</code></h3>
 
-						<div>Regroupe les «&nbsp;informations de service&nbsp;» sur le document
+						<div>Raggruppa i metadati e le informazioni di servizio sul documento; contiene:</div>
 
 <pre class="src "><code>
 &lt;head&gt;
-	&lt;title&gt;Titre significatif (pour les moteurs de recherche)&lt;title&gt;
+	&lt;title&gt;Titolo del documento&lt;title&gt;
 	&lt;meta charset="UTF-8" /&gt;
-	&lt;meta name="keywords" content="cours, HTML" /&gt;
+	&lt;meta name="keywords" content="corso, HTML" /&gt;
 	&lt;link rel="stylesheet" media="screen" href="diapos.css" /&gt;
 &lt;/head&gt;
 
-</code></pre>
-					</div>
-					<p>L'en-tête contient</p>
+</code></pre>		
+				
+					
 						<ul>
-							<li>le titre de la page</li>
-							<li>la déclaration du codage des caractères</li>
-							<li>les <em>métadonnées</em> (descriptives, juridiques…)</li>
-							<li>les feuilles de style CSS</li>
-							<li>les scripts (pas obligatoirement)</li>
+							<li>il titolo della pagina</li>
+							<li>la dichiarazione della codifica dei caratteri</li>
+							<li>i <b>metadati</b> (descrittivi, giuridici)</li>
+							<li>i fogli di stile CSS</li>
+							<li>gli script (non per forza)</li>
 						</ul>
 
 					<div class="source">Alexandre Niveau, <a href="https://ensweb.users.info.unicaen.fr/pres/html/" target="_blank">HTML : la base du web</a>, CC BY-NC-SA 4.0</div>
@@ -267,66 +223,69 @@
 				</section>
 
 				<section>
-					<h3 style="font-size: 0.8em">Le corps du document : élément <code>body</code></h3>
+					<h3 style="font-size: 0.8em">Il corpo del documento: elemento <code>body</code></h3>
 <pre class="src "><code>
 &lt;body&gt;
- 	&lt;h2&gt;Un titre de section&lt;/h2&gt;
-  	&lt;p class="intro"&gt;Ici le texte du paragraphe
-  	introductif, qui aura une présentation
-  	spécifique...&lt;/p&gt;
+	&lt;h2&gt;Titolo di una sezione&lt;/h2&gt;
+	&lt;p class="intro"&gt;Ecco il testo del paragrafo
+	introduttivo.&lt;/p&gt;
 
-  	&lt;p&gt;du texte et encore du texte..., 
-	parfois &lt;em&gt;mis en valeur&lt;/em&gt;,
-	parfois non...&lt;/p&gt;
+	&lt;p&gt;Testo e ancora testo: può essere utile
+	&lt;em&gt;mettere in evidenza qualcosa&lt;/em&gt;,
+	ma non sempre. &lt;/p&gt;
 &lt;/body&gt;
-	
+
 </code></pre>
+
+
 					<br/><br/><div class="source">Alexandre Niveau, <a href="https://ensweb.users.info.unicaen.fr/pres/html/" target="_blank">HTML : la base du web</a>, CC BY-NC-SA 4.0</div>
 				</section>
 
 				<section style="font-size: 0.8em">
-					<h3>Interprétation des caractères d'espacement en HTML</h3>
+					<h3>Spazi bianchi in HTML</h3>
 					<ul>
-						<li>Toute suite de caractères d'espacement (espace, saut de ligne, tabulation)
-							est considérée comme <em>un seul caractère espace</em> par le navigateur</li>
-						<li>Si on veut vraiment sauter une ligne au milieu d'une phrase, il faut utiliser la balise <code>&lt;br/&gt;</code></li>
-						<li>Mais <em>attention</em>&nbsp;: il est très rare d'avoir vraiment besoin de sauter une ligne, en général l'utilisation de paragraphes (élément <code>p</code>) suffit et est plus propre</li>
+						<li>Tanti spazi di qualsiasi tipo (spazio, a capo, tab, etc.) uno dopo l'altro di seguito sono interpretati dal navigatore come <b>un solo spazio</b></li>
+						<li>Per fare degli a capo forzati nel mezzo di un testo, usiamo <code>&lt;br/&gt;</code> (break)</li>
+						<li>Ma <b>attenzione</b>&nbsp;! È raro avere bisogno del tag <code>&lt;br/&gt;</code>, l'utilizzo dei paragrafi generalmente è abbastanza e produce un codice più pulito.</li>
 					</ul>
 					<div class="source">Alexandre Niveau, <a href="https://ensweb.users.info.unicaen.fr/pres/html/" target="_blank">HTML : la base du web</a>, CC BY-NC-SA 4.0</div>
 				</section>
 
 
 				<section style="font-size: 0.8em">
-					<h3>Eléments de bloc et inline</h3>
-					Deux principaux types d'éléments
+					<h3>Elementi block e inline</h3>
 					<ul>
-						<li>Elements de <em>bloc</em>&nbsp;: structurent le contenu. Par défaut commencent sur une nouvelle ligne.
-<pre class="src "><code>titres   : &lt;h1&gt;...&lt;/h1&gt; , &lt;h2&gt;...&lt;/h2&gt;
-paragraphe : &lt;p&gt;...&lt;/p&gt;
-séparateur : &lt;hr /&gt;
-listes : &lt;ul&gt; et &lt;ol&gt;, qui contiennent des items de liste &lt;li&gt;
-division générique : &lt;div&gt;...&lt;/div&gt;
-</code></pre>
+						<li>Elementi di tipo <b>block</b>: strutturano il contenuto. Di default cominciano su una nuova linea.<br/>
+<br/>Titoli: <code>&lt;h1&gt;...&lt;/h1&gt; , &lt;h2&gt;...&lt;/h2&gt;</code>
+<br/>Paragrafi: <code>&lt;p&gt;...&lt;/p&gt;</code>
+<br/>Separatori: <code>&lt;hr /&gt;</code>
+<br/>Liste: <code>&lt;ul&gt; et &lt;ol&gt;, qui contiennent des items de liste &lt;li&gt;</code>
+<br/>Divisioni generiche: <code>&lt;div&gt;...&lt;/div&gt;</code>
 						</li>
-						<li>Eléments <em>inline</em>&nbsp;: s'inscrivent dans le flux du texte. Leur taille dépend de leur contenu.
-<pre class="src "><code>image  : &lt;img src="maphoto.jpg" alt="ma photo" /&gt;
-lien («&nbsp;ancre&nbsp;») : &lt;a href="http://www.w3.org"&gt;hypertexte&lt;/a&gt;
-saut de ligne : &lt;br /&gt;
-inline générique : texte &lt;span&gt;texte spécial&lt;/span&gt; texte
+					</ul></section>
+
+					<section>
+						<h3>Elementi block e inline</h3>
+						
+						<p class="small">Elementi di tipo <b>inline</b>&nbsp;: sono all'interno del flusso di testo.</p>
+						Immagine: <pre class="src "><code>&lt;img src="maphoto.jpg" alt="ma photo" /&gt;</code></pre>
+						Link: <pre class="src "><code>&lt;a href="http://www.w3.org"&gt;hypertexte&lt;/a&gt;</code></pre>
+						A capo: <pre class="src "><code>&lt;br /&gt;</code></pre>
+						Inline generico: <pre class="src "><code>il &lt;span&gt;testo nello span&lt;/span&gt; è questo</code></pre>
 </code></pre>
-						</li>
-					</ul>
+						
 					<div class="source">Alexandre Niveau, <a href="https://ensweb.users.info.unicaen.fr/pres/html/" target="_blank">HTML : la base du web</a>, CC BY-NC-SA 4.0</div>
 				</section>
 
 
 				<section>
-					<h3>Commentaire</h3>
+					<h3>Commento</h3>
 					<br/><br/>
 <pre class="src "><code>
-	&lt;!-- ceci est un commentaire.
-	Cette partie du code n'est pas lue
-	par le navigateur. Je peux l'utiliser pour des notes ou des explications --&gt;
+	&lt;!-- Ceci est un commentaire | Questo è un commento.
+	Questa parte del codice non è letta dal navigatore.
+	Si usa per aggiungere spiegazioni sul codice o
+	prendere appunti --&gt;
 
 </code></pre>		
 				</section>
@@ -334,30 +293,34 @@ inline générique : texte &lt;span&gt;texte spécial&lt;/span&gt; texte
 
 
 				<section style="font-size: 0.8em">
-					<h3>Quelques ressources en ligne</h3>
-					<div class="p">Des ressources intéressantes (outre les <a href="http://w3c.org/">specs du W3C</a>, pas forcément faciles à lire pour se documenter rapidement)&nbsp;:
+					<h3>Qualche risorsa online</h3>
+					<div class="p">Delle risorse utili (oltre alle <a href="http://w3c.org/">specificazioni del W3C</a><br/>che non sono sempre facili)&nbsp;:
 						<br/><br/>
 					<ul>
-						<li><a href="https://developer.mozilla.org/en-US/docs/Web">Mozilla Developer Network (MDN)</a>&nbsp;: une bonne référence, généralement très à jour et fiable.
-						Possède une <a href="https://developer.mozilla.org/fr/docs/Web">version en français</a>, moins à jour, mais assez fiable également.</li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web">Mozilla Developer Network (MDN)</a>&nbsp;</li>
 						<br/>
-						<li><a href="http://www.w3schools.com/">w3schools</a>, une référence avec des exemples interactifs bien faits. Attention&nbsp;: ce n'est pas du tout un site officiel du W3C,
-						et il n'est pas toujours à jour. Il peut être risqué de l'utiliser comme référence.</li>
+						<li><a href="http://www.w3schools.com/">w3schools</a> (con esempi interattivi)</li>
 					</ul>
 					</div>
 					<div class="source">Alexandre Niveau, <a href="https://ensweb.users.info.unicaen.fr/pres/html/" target="_blank">HTML : la base du web</a>, CC BY-NC-SA 4.0</div>
 				</section>
 
+
+				<section data-background-image="images/fileSystemSite.png" data-background-size="contain"></section>
+
+				<section data-background-image="images/fileSystemSite2.png" data-background-size="contain"></section>
+
 				<section style="font-size: 0.9em">
-					<h2>Exercise</h2>
+					<h2>Esercizio</h2>
 					<ul>
-						<li>Créer un dossier où on va mettre tous les matériaux de ce cours (pas d'éspace pour les noms des dossiers et des fichiers !)</li>
-						<li>Télécharger le dossier 'exerciseHTML' et le décompresser</li>
-						<li>Ouvrir le fichier <code>index.html</code> dans oXygen</li>
-						<li>Suivre les instructions dans les deux dernières commentaires (bien sûr, vous pouvez ajouter vos propres commentaires où vous voulez !)</li>
+						<li>Creare una cartella dove metteremo tutti i materiali di questo corso. Attenzione: niente spazi nei nomi delle cartelle e dei file!</li>
+						<li>Scaricare la cartella zip 'esercizioHTML'</li>
+						<li>Un-zip</li>
+						<li>Aprire il file <code>index.html</code> in oXygen</li>
+						<li>Seguire le istruzioni nei due ultimi commenti. In questo file potete anche creare i vostri commenti dove volete.</li>
 					</ul>
 
-					<p style="border:1px solid black; font-size: 0.8em; margin:30px 5px; padding:10px">Attention : vous pouvez utiliser autres éditeurs à la place de oXygen, comme Sublime Editor, Notepad++, Wrangler, etc. </p>
+					<p style="border:1px solid black; font-size: 0.8em; margin:30px 5px; padding:10px">Attenzione : potete usare altri editori al posto di oXygen, come Sublime Editor, Notepad++, Wrangler, etc. Questi editori però "non capiscono" la TEI, quindi vi aiuteranno di meno.</p>
 				</section>
 
 				</section>
@@ -375,7 +338,7 @@ inline générique : texte &lt;span&gt;texte spécial&lt;/span&gt; texte
 				<section data-background-color="lightblue">
 					<h2>5. CSS</h2>
 						<div style="text-align: left; font-size: 0.7em;margin-top: 150px">
-						<p>Sources :<ul>
+						<p>Fonti :<ul>
 							<li>Alexandre Niveau, <a href="https://ensweb.users.info.unicaen.fr/pres/css/" target="_blank">Introduction à CSS</a>, CC BY-NC-SA 4.0</li>
 							<li>w3schools.com, <a href="https://www.w3schools.com/css/default.asp" target="_blank">CSS Tutorial</a></li>
 						</ul></p></div>
@@ -384,12 +347,12 @@ inline générique : texte &lt;span&gt;texte spécial&lt;/span&gt; texte
 				<section>
 					<h2>CSS (cascading style sheets)</h2>
 					<br/><br/>
-					Séparation du contenu (HTML) et<br/>de la présentation (CSS).
-					<br/>CSS permet la mise en forme :<br/>layout, couleur, polices, espaces, etc.
+					Separazione del contenuto (HTML) e della presentazione (CSS).
+					<br/>CSS permette di formattare, impaginare, gestire il layout, i colori, etc.
 				</section>
 
 				<section>
-					<h3>Attribut @style</h3>
+					<h3>Attributo @style</h3>
 					<div class="p">
 <pre class="src "><code>
 &lt;h1 style="color:red; font-style:italic;"&gt;Mon titre&lt;/h1&gt;
@@ -397,28 +360,27 @@ inline générique : texte &lt;span&gt;texte spécial&lt;/span&gt; texte
 </code></pre>
 					</div>
 					<div style="text-align: left;font-size: 0.8em">
-						<p>Contient un ou plusieurs couples <em>propriété-valeur</em>,
-						séparés par des points-virgules
-						(ici <code>color:red</code> et <code>font-style:italic</code>)</p>
-						<div class="p">Le nom de la propriété est séparé de la valeur par un deux-points&nbsp;:
+						<p>Contiene una o più coppie <b>proprietà-valore</b>,
+						separate da punti e virgola
+						(qui <code>color:red</code> e <code>font-style:italic</code>)</p>
+						<div class="p">Il nome della proprietà è separato dal valore dai due punti&nbsp;:
 						<ul>
-							<li>la valeur <code>red</code> pour la propriété <code>color</code></li>
-							<li>la valeur <code>italic</code> pour la propriété <code>font-style</code></li>
+							<li>il valore <code>red</code> per la proprietà <code>color</code></li>
+							<li>il valore <code>italic</code> per la proprietà <code>font-style</code></li>
 						</ul>
 						</div>
-						<p>Résultat&nbsp;: le titre sera rouge et en italique</p>
+						<p>Risultato: il titolo sarà rosso in corsivo.</p>
 					</div><br/>
 					<div class="source">Alexandre Niveau, <a href="https://ensweb.users.info.unicaen.fr/pres/css/" target="_blank">Introduction à CSS</a>, CC BY-NC-SA 4.0</div>			
 				</section>
 
 				<section>
-					<h3>Feuilles de style externes</h3>
+					<h3>Fogli di stile esterni</h3>
 					<div style="float: right; padding-left: 30px">
-						<img src="images/20190109_webPub/centralisation-css.jpg" alt="Centralisation des styles">
+						<img src="images/centralisation-css.jpg" alt="Centralisation des styles">
 					</div>
 					<br/><br/>
-					<div>Créer une feuille de style CSS</em> (un fichier
-					qui ne contient que des règles CSS) et lier chaque page du site à cette feuille de style
+					<div>Creare un foglio di stile CSS</b> (un file che contiene solo regole CSS) e attaccarlo al file HTML
 					<br/><br/><br/><br/>
 <pre><code>&lt;link rel="stylesheet" href="mon_style.css" /&gt;</code></pre>
 <div class="source">Alexandre Niveau, <a href="https://ensweb.users.info.unicaen.fr/pres/css/" target="_blank">Introduction à CSS</a>, CC BY-NC-SA 4.0</div>
@@ -426,13 +388,13 @@ inline générique : texte &lt;span&gt;texte spécial&lt;/span&gt; texte
 				</section>
 
 				<section>
-					<h3>Cascade</h3>
-					<br/>Priorité des styles :  
+					<h3>Cascata</h3>
+					<br/>Priorità degli stili :  
 					<br/><br/>
 					<ol>
-						<li>style inline défini par l'attribut @style</li>
-						<li>style externe défini par une feuilles de styles</li>
 						<li>browser default</li>
+						<li>stili esterni definiti nel foglio di stile esterno CSS</li>
+						<li>stili inline definiti con l'attributo @style sugli elementi</li>
 					</ol>
 				</section>
 
@@ -441,86 +403,83 @@ inline générique : texte &lt;span&gt;texte spécial&lt;/span&gt; texte
 				</section>
 
 				<section>
-					<h3>Commentaire</h3>
+					<h3>Commenti</h3>
 					<br/><br/>
 <pre><code>
-	/* ceci est un commentaire.
-	Cette partie du code n'est pas lue
-	par le navigateur. Je peux l'utiliser pour des notes ou des explications */
+	/* Questo è un commento.
+	Questa parte del codice non è letta dal browser.
+	Si può sare per appunti e spiegazioni */
 
 </code></pre>		
 				</section>
 
 				<section>
 					<div style="font-size: 0.7em">
-						<h2>Quelques propriétés CSS</h2>
-						<p>Il y a de nombreuses propriétés CSS (<a href="https://css-tricks.com/almanac/properties/" target="_blank">une liste ici</a>). Par exemple :</p>
+						<h2>Qualche prioprietà CSS</h2>
+						<p>Ci sono tante proprietà CSS (<a href="https://css-tricks.com/almanac/properties/" target="_blank">una lista qui</a>). Per esempio:</p>
 						<ul>
-							<li><code>color</code>, couleur du texte (ex. <code>color: blue</code>)</li>
-							<li><code>background-color</code>, couleur du fond (ex. <code>background-color: black</code>)</li>
-							<li><code>font-family</code>, police du texte (ex. <code>font-family: Verdana</code>)</li>
-							<li><code>font-size</code>, taille de la police (ex. <code>font-size: 120%</code>)</li>
-							<li><code>font-style</code>, style de la police (ex. <code>font-style: italic</code>)</li>
-							<li><code>font-weight</code>, graisse de la police (ex. <code>font-weight: bold</code>)</li>
-							<li><code>border</code>, cadre autour de l'élément (ex. <code>border: 1px solid black</code>)</li>
-							<li><code>text-align</code>, contrôle l'alignement du texte (ex. <code>text-align: center</code>)</li>
-							<li><code>text-decoration</code>, décoration du texte (ex. <code>text-decoration: underline</code>)</li>
+							<li><code>color</code>, colore del testo (ex. <code>color: blue</code>)</li>
+							<li><code>background-color</code>, colore del fondo (ex. <code>background-color: black</code>)</li>
+							<li><code>font-family</code>, font (ex. <code>font-family: Verdana</code>)</li>
+							<li><code>font-size</code>, dimensione dei caratteri (ex. <code>font-size: 120%</code>)</li>
+							<li><code>font-style</code>, stile dei caratteri (ex. <code>font-style: italic</code>)</li>
+							<li><code>border</code>, bordi intorno all'elemento (ex. <code>border: 1px solid black</code>)</li>
+							<li><code>text-align</code>, allineamento del testo (ex. <code>text-align: center</code>)</li>
+							<li><code>text-decoration</code>, decorazione del testo (ex. <code>text-decoration: underline</code>)</li>
 						</ul>
 					</div>
 					<div class="source">Alexandre Niveau, <a href="https://ensweb.users.info.unicaen.fr/pres/css/" target="_blank">Introduction à CSS</a>, CC BY-NC-SA 4.0</div>
 				</section>
 
 				<section>
-					<h3>Modèle de boîte</h3>
-				    <p>Le navigateur représente chaque élément<br/>comme une boîte.
+					<h3>Modello delle scatole</h3>
+				    <p>Il browser rappresenta ogni elemento come una scatola.
 						<ul>
-							<li>La boîte des éléments de type bloc (<code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>) commence sur une nouvelle ligne et prend toute la largeur disponible.</li>
-							<li>La boîte des éléments de type inline (<code>&lt;strong&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;a&gt;</code>) se comporte comme un mot dans le texte, et sa largeur dépend de son contenu.</li>
+							<li>La scatola degli elementi di tipo blocco (<code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>) comincia su una nuova linea e prende tutta la larghezza disponibile.</li>
+							<li>La scatola degli elementi di tipo inline (<code>&lt;strong&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;a&gt;</code>) si comporta come una parola nel flusso del testo e la sua larghezza dipende dal suo contenuto.</li>
 						</ul>
 					</p>
 				</section>
 
 				<section>
-					<h3>On peut changer la propriété <code>display</code> avec CSS</h3>
+					<h3>Possiamo cambiare la proprietà <code>display</code> con CSS</h3>
 					<br/><br/>
 					<p><a href="https://www.w3schools.com/CSSref/pr_class_display.asp" target="_blank">www.w3schools.com/CSSref/pr_class_display.asp</a></p>
 				</section>
 
 
 				<section style="text-align: left">
-					<h3>Couleurs d'un élément</h3>
-					<div class="p">Parmi les propriétés les plus simples qu'on peut appliquer aux boîtes&nbsp;: la couleur
+					<h3>Colori degli elementi</h3>
+					<div class="p">Tra le proprietà più semplici che possiamo applicare alle scatole c'è il colore:
 					<ul>
-						<li>Propriété <code>color</code>: couleur du texte</li>
-						<li>Propriété <code>background-color</code>: couleur du fond</li>
+						<li>Proprietà <code>color</code>: colore del testo</li>
+						<li>Proprietà <code>background-color</code>: colore dell'evidenziazione</li>
 					</ul>
 					</div><br/>
-					<div class="p">Valeurs possibles&nbsp;:
+					<div class="p">Valori possibili&nbsp;:
 					<ul>
-						<li>noms de couleurs (<code>black</code>, <code>red</code>…) dans <a href="http://www.w3.org/TR/css3-color/#svg-color">la liste</a></li>
-						<li>RGB en hexadécimal&nbsp;: <code>#F0B</code>, <code>#FE87B7</code></li>
+						<li>nomi dei colori (<code>black</code>, <code>red</code>…) nella <a href="http://www.w3.org/TR/css3-color/#svg-color">lista</a></li>
+						<li>RGB in hexadecimal&nbsp;: <code>#F0B</code>, <code>#FE87B7</code>; vd. <a href="https://www.rapidtables.com/web/color/RGB_Color.html" target="_blank">sito</a> per trovare codice RGB.</li>
 					</ul>
 					</div>
 					<div class="source">Alexandre Niveau, <a href="https://ensweb.users.info.unicaen.fr/pres/box/" target="_blank">Modèle de boîte CSS3</a>, CC BY-NC-SA 4.0</div>
 				</section>
 
 
-				<section data-background-image="images/20190109_webPub/boiteCSS.gif" data-background-size="contain">
+				<section data-background-image="images/boiteCSS.gif" data-background-size="contain">
 				</section>
 
 				<section>
 					<h3><a href="https://www.w3schools.com/CSSref/tryit.asp?filename=trycss_padding" target="_blank">Padding vs margin<br/></a></h3>(inspect element)
 				</section>
 
-				<section data-background-image="images/20190109_webPub/fileSystemSite.png" data-background-size="contain"></section>
-				
 				<section>
-					<h2>Exercise</h2>
+					<h2>Esercizio</h2>
 					<ul>
-						<li>Téléchargez le dossier 'css' et decompressez-le</li>
-						<li>Ajoutez au fichier 'index.html' cette ligne de code à la fin du <code>head</code> (dedans le <code>head</code>, pas après !)<br/>
+						<li>Download la cartella 'css' et unzip</li>
+						<li>Aggiungere al file 'index.html' questa linea alla fine di <code>head</code> (nel <code>head</code>, non dopo !)<br/>
 <pre><code><link rel="stylesheet" href="css/site.css" /></code></li></pre>
-						<li>Ouvrez le fichier 'site.css' en oXygen et suivez les instructions dans le commentaire.</li>
+						<li>Aprire il file 'site.css' in oXygen e seguire le istruzioni nel commento.</li>
 					</ul>
 				</section>
 
@@ -536,7 +495,7 @@ inline générique : texte &lt;span&gt;texte spécial&lt;/span&gt; texte
 				</section>
 
 				<section>
-					Javascript permet l'interaction de l'utilisateur, qui peut changer certains aspects du contenu ou de la mise en forme de la page (<a href="https://elespdn.github.io/talks/20181025UNIL_master_genetique.html#/6" target="_blank">exemple</a>)
+					Javascript permette l'interazione dell'utente, che può cambiare degli aspetti del contenuto o della formattazione della pagina (<a href="https://elespdn.github.io/talks/20181025UNIL_master_genetique.html#/6" target="_blank">esempio</a>)
 				</section>
 
 
@@ -545,28 +504,28 @@ inline générique : texte &lt;span&gt;texte spécial&lt;/span&gt; texte
 <!-- ======================================================================================================= -->
 
 
-				<section data-background-color="lightblue">7. Publication de documents XML/TEI</section>
+				<section data-background-color="lightblue">7. Pubblicazione di un documento XML/TEI</section>
 
 				<section>
 					<div style="float: left">
-						<img src="images/20190109_webPub/XSLTprocessor.png" width="55%" />
+						<img src="images/XSLTprocessor.png" width="55%" />
 						<div class="source" style="text-align: center">Source: Wikipedia</div>
 					</div>
 					<div style="text-align: left; font-size: 0.9em">
 						<h2>XSLT</h2>
 						Extensible Stylesheet Language Transformations
 						<br/>
-						<br/>Langage qui permet de transformer un document XML (donc aussi XML/TEI) dans un autre document (XML, HTML, CSV, etc.)
+						<br/>Linguaggio di programmazione che permette di trasformare un documento XML (incluso XML/TEI) in un altro documento (XML, HTML, CSV, etc.)
 					</div>
 				</section>
 
-				<section data-background-image="images/20190109_webPub/simpleXSLT.png" data-background-size="contain"></section>
+				<section data-background-image="images/simpleXSLT.png" data-background-size="contain"></section>
 				
 				<section>
-					<h3>Solutions "prêts-à-porter" pour la publication web de documents XML/TEI</h3>
+					<h3>Soluzioni "prêts-à-porter" per la pubblicazione di documenti XML/TEI</h3>
 					<br/>
 					<ul style="font-size: 0.9em">
-						<li><b><a href="https://wiki.tei-c.org/index.php/OXygen" target="_blank">Feuilles de transformation dans oXygen</a></b> ou <b><a href="http://oxgarage.tei-c.org/" target="_blank">OxGarage</a></b>. XSLT</li>
+						<li><b><a href="https://wiki.tei-c.org/index.php/OXygen" target="_blank">Fogli di trasformazione in oXygen</a></b> o <b><a href="http://oxgarage.tei-c.org/" target="_blank">OxGarage</a></b>. XSLT</li>
 					    
 					    <li><b><a href="http://dcl.ils.indiana.edu/teibp/" target="_blank">TEI Boilerplate</a></b>. XSLT, JavaScript, CSS</li>
 					    <!-- NOTES: come funziona? Aggiungere il link a css e a xslt nel file TEI e il browser lo renderizza. C'è esempio con Misanthrope -->
@@ -574,7 +533,7 @@ inline générique : texte &lt;span&gt;texte spécial&lt;/span&gt; texte
 					    <li><b><a href="https://github.com/TEIC/CETEIcean" target="_blank">CETEIcean</a></b>. JavaScript, CSS</li>
 					    <!-- NOTES: come funziona? Aggiungere il link a js nel file TEI e il browser lo renderizza -->
 					    
-					    <li><b><a href="http://teipublisher.com/exist/apps/tei-publisher-home/index.html">TEI Publisher Toolbox</a></b>. eXist database and application platform</li>
+					    <li><b><a href="http://teipublisher.com/exist/apps/tei-publisher-home/index.html">TEI Publisher Toolbox</a></b>. eXist database</li>
 					</ul>
 				</section>
 
@@ -590,51 +549,51 @@ inline générique : texte &lt;span&gt;texte spécial&lt;/span&gt; texte
 
 				<section>
 					<h3>Content Management System (CMS)</h3>
-					Système de gestion de contenu
+					Sistema di gestione dei contenuti
 					<br/>
 					<div style="text-align: left">
 						<br/>
-						Un CMS gère la création et la modification de données numérique.<br/>
-						Un CMS Web sert à la gestion de pages web et permet de créer des sites sans maitriser les langages informatiques.
+						Un CMS gestisce la creazione e modifica di dati digitali.<br/>
+						Un CMS Web serve a gestire delle pagine web e permette di creare dei siti senza vedere troppo codice.
 						<br/><br/>
-						Exemples : Wordpress, Drupal, Joomla, Omeka
+						Esempi : Wordpress, Drupal, Joomla, Omeka
 					</div>
 				</section>
 
 				<section>
-					<p><img src="images/20190109_webPub/wordpressLogo.png" width="50px" style="border:none"> <b>Wordpress</b>. Visual editor</p>
-					<img src="images/20190109_webPub/wordpressVisual.png">
+					<p><img src="images/wordpressLogo.png" width="50px" style="border:none"> <b>Wordpress</b>. Visual editor</p>
+					<img src="images/wordpressVisual.png">
 				</section>
 
 				<section>
-					<p><img src="images/20190109_webPub/wordpressLogo.png" width="50px" style="border:none"><b>Wordpress</b>. Text editor</p>
-					<img src="images/20190109_webPub/wordpressText.png">
+					<p><img src="images/wordpressLogo.png" width="50px" style="border:none"><b>Wordpress</b>. Text editor</p>
+					<img src="images/wordpressText.png">
 				</section>
 
 				<section>
-					<p><img src="images/20190109_webPub/drupalLogo.png" width="50px" style="border:none"> <b>Drupal</b>. Exemples d'éditions numériques</p>
+					<p><img src="images/drupalLogo.png" width="50px" style="border:none"> <b>Drupal</b>. Esempi di edizioni digitali</p>
 					<table>
 						<tr>
 							<td>
 								<a href="http://www.darwinproject.ac.uk/" target="_blank">
-									<img src="images/20190109_webPub/drupalDarwin.png" width="400px"/>
+									<img src="images/drupalDarwin.png" width="400px"/>
 								</a>
 							</td>
 							<td>
 								<a href="https://petrarch.uoregon.edu/" target="_blank">
-									<img src="images/20190109_webPub/drupalPetrarch.png" width="350px"/>
+									<img src="images/drupalPetrarch.png" width="350px"/>
 								</a>
 							</td>
 						</tr>
 						<tr>
 							<td>
 								<a href="https://www.confessio.ie/#" target="_blank">
-									<img src="images/20190109_webPub/drupalConfessio.png" width="400px" />
+									<img src="images/drupalConfessio.png" width="400px" />
 								</a>
 							</td>
 							<td>
 								<a href="http://schopenhauer.uni.wroc.pl/" target="_blank">
-									<img src="images/20190109_webPub/drupalSchopenhauer.png" width="350px"/>
+									<img src="images/drupalSchopenhauer.png" width="350px"/>
 								</a>
 							</td>
 						</tr>
@@ -642,22 +601,22 @@ inline générique : texte &lt;span&gt;texte spécial&lt;/span&gt; texte
 				</section>
 
 				<section>
-					<p><img src="images/20190109_webPub/omekaLogo.png" width="50px" style="border:none"> <b>Omeka</b></p>
+					<p><img src="images/omekaLogo.png" width="50px" style="border:none"> <b>Omeka</b></p>
 					<p>"open-source web publishing platforms<br/>for sharing digital collections and<br/>creating media-rich online exhibits"</p>
 					<a href="https://www.omeka.net/">
-						<img src="images/20190109_webPub/omekaHome.png"/>
+						<img src="images/omekaHome.png"/>
 					</a>
 				</section>
 
 				<section style="font-size: 0.7em">
-					<div><b>Integration de Omeka avec d'autres outils et plateformes</b></div>
+					<div><b>Integrazione di Omeka con altri servizi e piattaforme</b></div>
 					<div>
 						<a href="https://omeka.org/classic/docs/Technical/Using_Omeka_with_Other_Tools_and_Platforms/">
-							<img src="images/20190109_webPub/omekaOtherTools.png" width="60%">
+							<img src="images/omekaOtherTools.png" width="60%">
 						</a>
 					</div>
 					<hr>
-					<div><b>Quelques références </b></div>
+					<div><b>Qualche riferimento</b></div>
 					<div style="text-align: left; font-size: 0.6em">
 						<p>Cuenca EL, Kowaleski M. (2018) "Omeka and Other Digital Platforms for Undergraduate Research Projects on the Middle Ages", <i>Digital Medievalist</i>. Vol. 11 Issue:1/3. DOI: http://doi.org/10.16995/dm.69</p>
 						<p>Rath L., (2016) "Omeka.net as a librarian-led digital humanities meeting place", <i>New Library World</i>, Vol. 117 Issue: 3/4, pp.158-172. DOI: https://doi.org/10.1108/NLW-09-2015-0070</p>
@@ -673,15 +632,15 @@ inline générique : texte &lt;span&gt;texte spécial&lt;/span&gt; texte
 <!-- ======================================================================================================= -->
 
 
-				<section data-background-color="lightblue">8. Depôts et outils de travail<br/>pour les données de recherche</section>
+				<section data-background-color="lightblue">8. Depositi e strumenti di lavoro<br/>per i dati di ricerca</section>
 
 				
 				<section>
-					Plateformes qui offrent 
+					Piattaforme che offrono 
 					<br/><br/>
 					<ul>
-						<li>depôt pour le code source</li>
-						<li>logiciel de gestion de versions</li>
+						<li>deposito per il codice</li>
+						<li>gestione di versioni (versioning)</li>
 						<li>hosting</li>
 					</ul>
 					<br/><br/>
@@ -689,29 +648,29 @@ inline générique : texte &lt;span&gt;texte spécial&lt;/span&gt; texte
 				</section>
 
 				<section>
-					<img src="images/20190109_webPub/githubLogo.png" width="10%"/>
+					<img src="images/githubLogo.png" width="10%"/>
 					<br/>
 					<b>GITHUB</b>
 					<br/>
-					<div class="quote">Service web d'hébergement et de gestion de code source (outil de travail)</div>
+					<div class="quote">Servizio web di hosting e gestione di codice</div>
 					<div class="quote">
 						<b>Exemples</b>
 						<ul style="list-style: none">
-							<li>Développement de Zenodo : <a href="https://github.com/Zenodo/zenodo" target="_blank">github.com/Zenodo/zenodo</a></li>
-							<li>Développement de Stylo : <a href="https://github.com/computationalstylistics/stylo" target="_blank">github.com/computationalstylistics/stylo</a></li>
-							<li>Site web pour la formation <i>CAD</i> : <a href="https://github.com/CADottorato/sito">github.com/CADottorato/sito</a> (source) | <a href="https://cadottorato.github.io/sito/" target="_blank">cadottorato.github.io/sito/</a> (site)</li>
-							<li>Site web perso : <a href="https://github.com/elespdn/elespdn.github.io">github.com/elespdn/elespdn.github.io</a> (source) | <a href="https://elespdn.github.io/io/" target="_blank">elespdn.github.io/io/</a> (site) </li>
+							<li>Sviluppo di Zenodo : <a href="https://github.com/Zenodo/zenodo" target="_blank">github.com/Zenodo/zenodo</a></li>
+							<li>Sviluppo di Stylo : <a href="https://github.com/computationalstylistics/stylo" target="_blank">github.com/computationalstylistics/stylo</a></li>
+							<li>Sito web della formazione <i>CAD</i> : <a href="https://github.com/CADottorato/sito">github.com/CADottorato/sito</a> (source) | <a href="https://cadottorato.github.io/sito/" target="_blank">cadottorato.github.io/sito/</a> (site)</li>
+							<li>Sito web personale : <a href="https://github.com/elespdn/elespdn.github.io">github.com/elespdn/elespdn.github.io</a> (source) | <a href="https://elespdn.github.io/io/" target="_blank">elespdn.github.io/io/</a> (site) </li>
 						</ul>
 					</div>
 				</section>
 
 				<section>
-					Plateformes qui offrent 
+					Piattaforme che offrono 
 					<br/><br/>
 					<ul>
-						<li>entrepôts sécurisés</li>
-						<li>identifiants pérennes (possibilité de citer et de gérer la proprieté intellectuelle)</li>
-						<li>gestion des droits</li>
+						<li>deposito sicuro</li>
+						<li>identificanti duraturi (possibilità di citare e gestire la proprietà intellettuale</li>
+						<li>gestione dei diritti</li>
 					</ul>
 					<br/><br/>
 					... HAL, Zenodo, Nakala ...
@@ -721,7 +680,7 @@ inline générique : texte &lt;span&gt;texte spécial&lt;/span&gt; texte
 				<section>
 					<h3>DOI (Digital Object Identifier)</h3>
 					<ul style="list-style:none">
-						<li>identifiant numérique pérenne d'une ressource</li>
+						<li>identificante duraturo digitale di una risorsa</li>
 						<br/>
 						<li><a href="https://www.doi.org">International DOI Foundation</a> (not-for-profit, member-based, organisation initiated by several publishing trade associations), 1998</li>
 						<li><a href="https://www.iso.org/standard/43506.html">ISO 26324</a>, 2012-2017</li>
@@ -733,7 +692,7 @@ inline générique : texte &lt;span&gt;texte spécial&lt;/span&gt; texte
 				
 
 				<section>
-					<img src="images/20190109_webPub/halLogo.png"/>
+					<img src="images/halLogo.png"/>
 					<br/><br/>
 					<div class="quote" style="text-align: center">Centre pour la Communication Scientifique Directe, CNRS</div>
 					<br/>
@@ -742,7 +701,7 @@ inline générique : texte &lt;span&gt;texte spécial&lt;/span&gt; texte
 				</section>
 
 				<section>
-					<img src="images/20190109_webPub/nakalaLogo.png"/>
+					<img src="images/nakalaLogo.png"/>
 					<br/><br/>
 					<div class="quote" style="text-align: center">Service mis en place par <a href="https://www.huma-num.fr/" target="_blank">HUMA-NUM</a></div>
 					<br/>
@@ -751,7 +710,7 @@ inline générique : texte &lt;span&gt;texte spécial&lt;/span&gt; texte
 				</section>
 
 				<section>
-					<img src="images/20190109_webPub/zenodoLogo.png"/>
+					<img src="images/zenodoLogo.png"/>
 					<br/><br/>
 					<div class="quote" style="text-align: center"><a href="https://www.openaire.eu/" target="_blank">OpenAIRE</a> (EU org) + <a href="https://home.cern/fr" target="_blank">CERN</a></div>
 					<br/>
@@ -764,58 +723,57 @@ inline générique : texte &lt;span&gt;texte spécial&lt;/span&gt; texte
 				
 
 				<section>
-					<h2>Exercice</h2>
+					<h2>Esercizio</h2>
 					<div style="font-size: 0.6em">
-						Quel entrepôt pour quelle ressource ? HAL, Zenodo, Github ?
+						Quale soluzione per quale risorsa? HAL, Zenodo, Github?
 						<br/><br/>
 						<ul>
-							<li>Script R (langage de programmation) pour la création d'une carte <span style="color:red" class="fragment" data-fragment-index="1"><br/>&rarr; Github</span></li>
-							<li>Report d'un projet en cours <span style="color:red;" class="fragment" data-fragment-index="2"><br/>&rarr; HAL, Zenodo</span></li>
-							<li>Fichiers XML/TEI pour une édition 
+							<li>Script R (linguaggio di programmazione) per la creazione di una carta<span style="color:red" class="fragment" data-fragment-index="1"><br/>&rarr; Github</span></li>
+							<li>Report di un progetto in corso <span style="color:red;" class="fragment" data-fragment-index="2"><br/>&rarr; HAL, Zenodo</span></li>
+							<li>File XML/TEI di edizione di un testo 
 								<span style="color:red;" class="fragment" data-fragment-index="3">
 									<br/>&rarr; Zenodo. Exemple : <a href="https://berardier.org/" target="_blank">Bérardier de Bataut, <i>Essai sur le récit</i></a> <a href="https://zenodo.org/record/1098439" target="_blank">[DOI 10.5281/zenodo.1098439]</a>
 									<br/>&rarr; Github. Exemple : <a href="http://faustedition.net/" target="_blank">Faustedition</a> <a href="https://github.com/faustedition/faust-xml" target="_blank">[github.com/faustedition/faust-xml]</a>
 								</span>
 							</li>
-							<li>Données pour un catalogue d'éditions numériques 
+							<li>Dati per catalogo di edizioni digitali
 								<span style="color:red;" class="fragment" data-fragment-index="4">
 									<br/>&rarr; Github. Exemple : <a href="https://dig-ed-cat.acdh.oeaw.ac.at/" target="_blank"><i>Catalogue Digital Editions</i></a> <a href="https://github.com/gfranzini/digEds_cat">[github.com/gfranzini/digEds_cat]</a>
 									<br/>&rarr; Zenodo. Exemple : <a href="https://dig-ed-cat.acdh.oeaw.ac.at/" target="_blank"><i>Catalogue Digital Editions</i></a> <a href="https://zenodo.org/badge/latestdoi/42574907">[DOI 10.5281/zenodo.1161425]</a>
 								</span>
 							</li>
-							<li>Pre-print article scientifique <span style="color:red;" class="fragment" data-fragment-index="5"><br/>&rarr; HAL, Zenodo</span></li>
+							<li>Pre-print articolo scientifico <span style="color:red;" class="fragment" data-fragment-index="5"><br/>&rarr; HAL, Zenodo</span></li>
 						</ul>
 					</div>
 				</section>
 
 
-				<section data-background-color="lightblue">9. Données ouvertes et licences</section>
+				<section data-background-color="lightblue">9. Open science e licenze</section>
 				<section>
-					<h2>open data</h2>
+					<h2>open science</h2>
 					<div style="font-size: 0.8em; text-align: left">
-						Pourquoi ?
+						Perché ?
 						<ul>
-							<li>verifier le resultats obtenus, potentiallement augmenter la qualité de la recherche</li>
-							<li>reutiliser pour découvrir, à travers des études comparatives, data mining, etc.</li>
-							<li>reduire le coûts de la collecte des données et de leur duplication</li>
+							<li>verificare i risultati ottenuti, potenzialmente aumentare la qualità della ricerca</li>
+							<li>riusare per scoprire attraverso studi comparativi, data mining, etc.</li>
+							<li>ridurre i costi della raccolta dati</li>
 						</ul>
 					</div>
 				</section>
 
 				<section>
 					<div style="font-size: 0.7em; text-align: left">
-						Quelques ressources pour trouver la bonne licence et gérer les données de recherche :
+						Qualche riferimento per trovare la licenza giusta e gestire i dati di ricerca:
 						<ul>
 							<br/>
 							<li><a href="https://creativecommons.org/" target="_blank">Creative Commons</a> website</li>
 							<li><a href="https://opendatacommons.org/" target="_blank">Open Data Commons</a> website</li>
-							<br/>
-							<li><a href="https://fr.wikipedia.org/wiki/Licence_Creative_Commons" target="_blank">Wikipedia, <i>Licence Creative Commons</i></a>, @fr</li>
-							<li><a href="https://espacechercheurs.enpc.fr/fr/donnees-recherche-contexte-juridique" target="_blank">Espace chercheurs, <i>Données de la recherche, contexte juridique</i></a>, @fr</li>
-							<br/>
 							<li><a href="https://www.scienceeurope.org/wp-content/uploads/2018/12/SE_RDM_Practical_Guide_Final.pdf" target="_blank">Science Europe, <i>Practical guide to the international alignment of Research Data Management</i></a>, @en</li>
 							<li><a href="https://opensource.guide/legal/" target="_blank">Github + Open Source Guides, <i>The legal side of open source</i></a>, @en (mainly for code)</li>
 							<li><a href="http://www.dcc.ac.uk/sites/default/files/documents/publications/reports/guides/How_To_License_Research_Data.pdf" target="_blank">Digital Curation Centre and JISC Legal, <i>How to License Research Data</i></a>, @en (it concentrates on the UK context, but many aspects apply internationally)</li>
+							<li><a href="https://it.okfn.org/">Open Knowledge Italia</li>
+							<li><a href="https://espacechercheurs.enpc.fr/fr/donnees-recherche-contexte-juridique" target="_blank">Espace chercheurs, <i>Données de la recherche, contexte juridique</i></a>, @fr</li>
+							
 							
 						</ul>
 					</div>
@@ -826,13 +784,13 @@ inline générique : texte &lt;span&gt;texte spécial&lt;/span&gt; texte
 
 
 				<section style="font-size: 0.8em">
-					<p>« Publication web », <i>Encoder/Exploiter/Diffuser. Les humanités numériques dans les projets doctoraux</i> (Poitiers, 9-11 janvier 2019)</p>
+					<p>"Diffondere la ricerca online", <i>CAD - Le Digital Humanities nei progetti di dottorato</i> (Verona, 16-19 luglio 2019)</p>
 					<div style="font-size: 0.6em">
 					<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</div>
 					<br/><br/><br/>
 					<hr>
+					<div style="font-size:0.7em; text-align:left">
 					<p>Elena Spadini</p>
-					<div style="font-size:0.7em">
 					<p>Université de Lausanne</p>
 					<p><i>elena.spadini@unil.ch</i></p>
 					<p><a href="hhtp://elespdn.github.io/io" target="_blank">elespdn.github.io/io</a></p>
@@ -850,8 +808,8 @@ inline générique : texte &lt;span&gt;texte spécial&lt;/span&gt; texte
 
 		</div>
 
-		<script src="reveal/lib/js/head.min.js"></script>
-		<script src="reveal/js/reveal.js"></script>
+		<script src="../reveal/lib/js/head.min.js"></script>
+		<script src="../reveal/js/reveal.js"></script>
 
 		<script>
 
@@ -866,12 +824,12 @@ inline générique : texte &lt;span&gt;texte spécial&lt;/span&gt; texte
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
-					{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'reveal/plugin/zoom-js/zoom.js', async: true },
-					{ src: 'reveal/plugin/notes/notes.js', async: true }
+					{ src: '../reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../reveal/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../reveal/plugin/notes/notes.js', async: true }
 				]
 			});
 
