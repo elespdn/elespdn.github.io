@@ -72,7 +72,8 @@
             return span;
           }
         }});
-      CETEIcean.getHTML5('https://raw.githubusercontent.com/textcreationpartnership/A00689/master/A00689.xml', function(data) {
+      // https://raw.githubusercontent.com/textcreationpartnership/A00689/master/A00689.xml
+      CETEIcean.getHTML5('https://raw.githubusercontent.com/CADottorato/sito/d449e27e81515494ed3a7f7bd936af56584d6fab/TEI-Boilerplate-master/dist/content/Ecerinis.xml', function(data) {
         document.getElementById("TEI").innerHTML = "";
         document.getElementById("TEI").appendChild(data);
         CETEIcean.addStyle(document, data);
