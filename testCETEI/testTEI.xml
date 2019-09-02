@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Scheda del manoscritto BnF fr. 354</title>
+                <respStmt>
+                    <resp>Creazione scheda e codifica TEI</resp>
+                    <name>E.S.</name>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Net7</publisher>
+                <availability status="free" n="cc-by">
+                    <licence target="https://creativecommons.org/licenses/by/4.0">
+                        <p>
+                            Creative Commons Attribution 4.0 International (CC BY 4.0)
+                        </p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>France</country>
+                        <settlement>Paris</settlement>
+                        <institution>Bibliothèque Nationale de France</institution>
+                        <repository>Département des manuscrits</repository>
+                        <collection>Fonds français</collection>
+                        <idno>354</idno>
+                        <msName>BnF f.fr. 354</msName>
+                    </msIdentifier>
+                    <head>
+                        <title>Lancelot du Lac</title>
+                        <origPlace>Genova</origPlace>
+                        <origDate notBefore="1284" notAfter="1299">Fine XIII secolo</origDate>
+                    </head>
+                    <msContents>
+                        <msItem>
+                            <author>Anonimo</author>
+                            <title>Lancelot duc Lac</title>
+                            <incipit>atendoit iusque a XL iors por avoir la bataille de Lancelot et li noma en la quarentaine le ior et quant il seroit et lor revint li messages a sa dame et li conta ce qu'il avoit trove acoit et elle li dist tant tost a Lancelot</incipit>
+                            <explicit>Par Deu, damoisele, fait il, s'il fust tens de herbergier il ne vos convenist ia a prier que volentier le feisse et debonerement, mes il ne sera en piece nuit et ie ai mout</explicit>
+                        </msItem>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc form="codex">
+                            <supportDesc material="parch">
+                                <support>Membranaceo. Pergamena di media qualità, presenta fori originali (es. cc. <locus>37</locus>, <locus>55</locus>, <locus>66</locus>, <locus>70</locus>) e cuciture (es. cc. <locus>3</locus>, <locus>16</locus>, <locus>28</locus>, <locus>32</locus>)</support>
+                                <extent>
+                                    <measure type="leavesCount" n="81">81 carte</measure> <!-- check -->
+                                    <measure type="pageDimensions" n="?? x ?? mm">???</measure>
+                                </extent>
+                                <foliation>Numerazione moderna 1-81</foliation>   
+                                <collation>
+                                    <!-- VIII + VIII + VIII + VIII + VIII + ? + ? + VIII + VIII + VIII + VIII + VIII -->
+                                    <catchwords>Richiami di fascicolo alle cc. <locus>14v</locus>, <locus>20v</locus>, <locus>26v</locus>, <locus>34v</locus>, <locus>42v</locus>, <locus>50v</locus>, <locus>58v</locus>, <locus>66v</locus>, <locus>72v</locus></catchwords>
+                                </collation>
+                                <condition>Mutilo all'inizio e alla fine</condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout columns="2" writtenLines="44">Due colonne di 44 ll.</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc hands="1"> 
+                            <handNote xml:id="copista" scope="sole">Il copista scrive l'intero testo</handNote>
+                        </handDesc>
+                        <scriptDesc> <!-- o si può sviluppare di più utilizzando <summary> per le considerazini generali e <scriptNote> per cose specifiche tipo le lettere, bisognerebbe trovare esempi in tal senso, chiedere a Hannah o P. Stokes -->
+                            <scriptNote>Scrittura <term>gotica italiana</term></scriptNote>
+                        </scriptDesc>
+                        <decoDesc>
+                            <decoNote type="ornata">Iniziali ornate, su dieci o undici righe, alle cc. <locus>24r</locus>, <locus>26r</locus>, <locus>40v</locus>, <locus>70v</locus></decoNote>
+                            <decoNote type="filigranata">Iniziali filigranate, su due righe, alle cc. <locus>37v</locus>, <locus>54v</locus></decoNote>
+                            <decoNote type="miniatura">Miniature alle cc. <locus>4v</locus>, <locus>6r</locus>, <locus>10v</locus>, <locus>14r</locus>, <locus>17r</locus>, <locus>20r</locus>, <locus>27v</locus>, <locus>29r</locus>, <locus>35r</locus>, <locus>41r</locus>, <locus>43r</locus>, <locus>46r</locus>, <locus>50v</locus>, <locus>52r</locus>, <locus>57r</locus>, <locus>61r</locus>, <locus>64r</locus>, <locus>68v</locus>, <locus>72r</locus></decoNote>
+                        </decoDesc>
+                        <additions>
+                            <p>Disegni a penna: ancora a c. <locus>6v</locus>; fiore a c. <locus>37v</locus>; busto con manicula a c. <locus>54v</locus>; testa a c. <locus>45r</locus> </p>
+                        </additions>
+                    </physDesc>
+                    <history>
+                        <origin notBefore="1284" notAfter="1299">Prodotto in un atelier genovese con la partecipazione di copisti pisani nell'ultimo quindicennio del XIII secolo</origin>
+                    </history>
+                    <additional>
+                        <surrogates>Facsimile digitale <ref target="http://gallica.bnf.fr/ark:/12148/btv1b52504852q">gallica.bnf.fr/ark:/12148/btv1b52504852q</ref>                    
+                        </surrogates>
+                        <listBibl>
+                            <bibl xml:id="Avril1">
+                                <author>F. Avril</author><author>M.Th. Gousset</author><author>C. Rabel</author>
+                                <title>Manuscrits enluminés de la Bibliothèque Nationale. Manuscrits d’origine italienne, 2. XIIIe siècle</title>
+                                <publisher>Bibliothèque Nationale</publisher>
+                                <pubPlace>Paris</pubPlace>
+                                <date when="1984">1984</date>
+                            </bibl>
+                            <bibl xml:id="Hasenohr1">
+                                <author>G. Hasenohr</author>
+                                <title level="a">Copistes italiens du Lancelot: le manuscrit fr. 354 de la Bibl. Nationale</title>
+                                in
+                                <title level="m">Lancelot-Lanzelet: Hier et aujourd'hui</title>
+                                <editor>D. Buschinger</editor>
+                                <editor>M. Zink</editor>
+                                <publisher>Reineke</publisher>
+                                <pubPlace>Greifswald</pubPlace>
+                                <date when="1995">1995</date>
+                                <biblScope unit="page">219-226</biblScope>
+                            </bibl>
+                        </listBibl>
+                    </additional>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <include xmlns="http://www.w3.org/2001/XInclude" href="../auxiliary/listPerson.xml"/>
+            </particDesc>
+            <settingDesc>
+                <include xmlns="http://www.w3.org/2001/XInclude" href="../auxiliary/listPlace.xml"/>
+            </settingDesc>
+        </profileDesc>
+        <include xmlns="http://www.w3.org/2001/XInclude" href="../auxiliary/encodingDesc.xml"/>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+                <p><pb n="26v"/><cb n="a"/>tant qui vint a l'issue de la forest, si vint devant lui une maison de religion et il torne cele part por herbergier et quant il vint a la porte si troeve IIII des freres qui avoient chante conplie estoient venu au serain. Si saillent encontre lui por li descendre et dient qui bien soit il venus. Si le font entrer laienz et li demandent s'il a mangé et il dit que nenil et il firent maintenant metre la tauble, mes sil dit qui ne mangera devant qu'il ait esté au mostier qu'il n'i entra hui. Lors entre en l'iglise por orer et en ce qui se fu agenoilliez regarde a destre et voit unes prunez trop richement dorees a floretes d'or et as oisiaus et a bestes et dedens avoit V chevalier armez, les haumes as testes et l'espee en sa mains aus aprestes de defendre, si com les vousist assaillir. De ce se mervoille mout Lancelot, si se drece erraument et voit cele part, si salue le chevaliers et il dient que bien soit il venuz. Et il entre dedens les prunes par un guichet et esgardes les prunes qui tant sont riches qu'il ne cuide mie que nus rois les peust eslegier. Puis vit deles les chevaliers une tumbe la plus riche qu'il onques eust veuez, car elle iert tote d'or fin a pieres precieousez qui plus valoient de I grant reaume. Si la toube fu de grant biauté niant ne monte la bonté envers la richese dont ele estoient e ovec ce estoit la greignor qu'il onques vit. Si se mervoille mout qui puet estre li prince qui dedens fu <cb n="b"/>mis. Il demande as chevaliers qu'il font illeques. <said who="#chrs">Sire, font il, nos guardons le cors qui en ceste tombe gist, qui ne soit porté de caienz. Si en somes V por li garder chascun ior, par nuit en i a V qui font autretel servise com nos faison le ior.</said><said who="#Lanc">E por coi, fait Lancelot, avez vos paor que il soit ostez?</said><said who="#chrs">Sire, font il, un des freres de caiens qui mout est proudome et de sainte vie nos dist n'a encore gueres que un chevaliers venroit ceste part qui a force l'osteroit e fors de ceste pais l'en feroit porter. E nos gens de ceste terre voudroient miaus morir qu'il fust remues d'entre nos. Por ce le gardons si com vos vees.</said><said who="#Lanc">Or me dites, fait Lancelot, ne fu cil mout riches princes a qui l'on fist si riche sepulture?</said><said who="#chrs">Sire, font il, hauz hom fu il et le plus preudom qui onques fust a son tens.</said><said who="#Lanc">Hai, Dex!, fait <persName ref="#Lanc">Lancelot</persName>, qui fu il?</said><said who="#chrs">Sire, font il, se vos conoisies letres, veir le poez, car ses nom est esscrit el chief de cele lame.</said> Lors vait Lancelot cele part, si regarde les letres qui dient: <q>Ci gist Galehout, li fils a la Iaiande, li sires de Lontaines Isles, qui por l'amor <persName ref="#Lanc">Lancelot</persName> morut</q>. Et quant il vit ce, si chai tos pasmes et iut grant piece a terre sanz mot dire. Et li chevaliers li corent relever, si se mervoilla<unclear>???</unclear> que ce puet estre. Et quant il revint si dist: <said who="#Lanc">Hai, las! Quel dolor e quel domage!</said>, et lors fiert l'un poing a l'autre et esracine son viare, si qu'il en fait le sanc saglir de toutes pars, si se prent as cheviaus et se fiert grant coup des poing en mi le vis et <pb n="27r"/><cb n="a"/>mi le pis et crie si durement qui n'i a selui cui tote pitié ne preigne. Si se paigne et maudit l'ore qu'il fu nez et dit: <said who="#Lanc">Ha, Dex! Quel domage et quel perte dou plus proudome de Rome qui morz est por le plus vil chevalier et por le plus mauves qi onques fust!</said></p>
+                <p>Tant fait <persName ref="#Lanc">Lancelot</persName> grant del que tuit cil del laienz le vienent regarder a mervoille</p>
+            </div>
+        </body>
+    </text>
+</TEI>
