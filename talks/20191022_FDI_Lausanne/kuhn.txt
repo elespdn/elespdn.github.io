@@ -1,0 +1,111 @@
+“paradigms.” These I take to be universally
+recognized scientific achievements that for a time provide model problems and
+solutions to a community of practitioners. 
+
+
+scientific revolution alters the historical perspective of the community that
+experiences it, then that change of perspective should affect the structure of
+postrevolutionary textbooks and research publications. One such effect—a shift
+in the distribution of the technical literature cited in the footnotes to research
+reports—ought to be studied as a possible index to the occurrence of revolutions.
+
+
+scientific
+revolutions 
+Each produced a consequent shift in the problems available for scientific
+scrutiny and in the standards by which the profession determined what should
+count as an admissible problem or as a legitimate problem-solution	
+
+
+
+Aristotle’s Physica, Ptolemy’s Almagest,
+Newton’s Principia and Opticks, Franklin’s Electricity, Lavoisier’s Chemistry,
+and Lyell’s Geology—these and many other works served for a time implicitly to
+define the legitimate problems and methods of a research field for succeeding
+generations of practitioners. They were able to do so because they shared two
+essential characteristics. Their achievement was sufficiently unprecedented to
+attract an enduring group of adherents away from competing modes of scientific
+activity. Simultaneously, it was sufficiently open-ended to leave all sorts of
+problems for the redefined group of practitioners to resolve.
+Achievements that share these two characteristics I shall henceforth refer to as
+‘paradigms,’
+
+
+The study of
+paradigms, including many that are far more specialized than those named
+illustratively above, is what mainly prepares the student for membership in the
+particular scientific community with which he will later practice. Because he
+there joins men who learned the bases of their field from the same concrete
+models, his subsequent practice will seldom evoke overt disagreement over
+fundamentals. 
+
+
+
+History also suggests, however, some reasons for the difficulties encountered
+on that road. In the absence of a paradigm or some candidate for paradigm, all of
+the facts that could possibly pertain to the development of a given science are
+likely to seem equally relevant. As a result, early fact-gathering is a far more
+nearly random activity than the one that subsequent scientific development
+makes familiar. Furthermore, in the absence of a reason for seeking some
+particular form of more recondite information, early fact-gathering is usually
+restricted to the wealth of data that lie ready to hand. The resulting pool of facts
+contains those accessible to casual observation and experiment together with
+some of the more esoteric data retrievable from established crafts like medicine,
+calendar making, and metallurgy. 
+< TOOLS >Because the crafts are one readily accessible
+source of facts that could not have been casually discovered, technology has
+often played a vital role in the emergence of new sciences.
+
+
+When the individual scientist can take a paradigm for granted, he need no longer,
+in his major works, attempt to build his field anew, starting from first principles
+and justifying the use of each concept introduced. Th
+
+
+
+In a science, on the other hand, a paradigm is rarely
+an object for replication. Instead, like an accepted judicial decision in the
+common law, it is an object for further articulation and specification under new
+or more string
+
+
+
+paradigma -> scienza normale
+
+These three classes of problems —determination of significant fact, matching
+of facts with theory, and articulation of theory— exhaust, I think, the literature of
+normal science, both empirical and theoretical.
+
+No part of the aim of normal science is to call forth
+new sorts of phenomena; indeed those that will not fit the box are often not seen
+at all. Nor do scientists normally aim to invent new theories, and they are often
+intolerant of those invented by others.1 Instead, normal-scientific research is
+directed to the articulation of those phenomena and theories that the paradigm
+already supplies.
+some scientists have acquired great reputations, not from any novelty
+of their discoveries, but from the precision, reliability, and scope of the methods
+they developed for the redetermination of a previously known sort of fact.
+
+- quali sono i fatti significativi
+First is that class of facts
+that the paradigm has shown to be particularly revealing of the nature of things.
+By employing them in solving problems, the paradigm has made them worth
+determining both with more precision and in a larger variety of situations.
+esempio: per un certo tipo di critica testuale la materialità dell'oggetto non è importante, mentre per altri si
+
+- la corrispondenza tra i fatti e la teoria
+A second usual but smaller class of factual determinations is directed to those
+facts that, though often without much intrinsic interest, can be compared directly
+with predictions from the paradigm theory. 
+esempio: la collazione automatica, permettendo di non scegliere un testo di base, produce risultati migliori - edizione in cui questo succede
+esempio: l'analisi di big data ci permette di collegare la letteratura alla società - analisi in cui questo succede
+< TOOLS >The existence of the paradigm sets the problem to be solved; often the
+paradigm theory is implicated directly in the design of apparatus able to solve
+the problem. 
+
+- articolazione della teoria
+It consists of empirical work undertaken
+to articulate the paradigm theory, resolving some of its residual ambiguities and
+permitting the solution of problems to which it had previously only drawn
+attention.
+
