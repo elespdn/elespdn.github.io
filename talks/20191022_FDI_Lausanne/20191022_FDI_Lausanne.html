@@ -31,13 +31,18 @@
 		</script>
 
 		<style>
-			div.quote {text-align: justify;}
+			div.quote {font-size: 0.7em; margin-bottom: 1.5em; margin-top:1.5em;}
 			div.quote::before {content: "“";}
 			div.quote::after {content: "”";}
 			div.source   {font-size: 0.6em; text-align: right; margin-top: 20px}
 			.grey {color:grey;}
 			.small {font-size: 0.8em}
 			.smaller {font-size: 0.6em}
+
+			b {color:#d0513a;}
+			p {font-size: 0.8em}
+
+			.back {background-color: white}
 			
 			.coloredTitle {
 				background-color:#003333
@@ -62,15 +67,15 @@
 
 							
 				
-				<section>
-					<h3>L'édition scientifique numérique.</h3>
-					<h4>Modèles et perspectives de recherche</h4>
+				<section data-background-color="white">
+					<h3 class="back">L'édition scientifique numérique.</h3>
+					<h4 class="back">Modèles et perspectives de recherche</h4>
 					<br/><br/>
-					<div class="smaller">
+					<div class="smaller back">
 					<i>Formation doctorale interdisciplinaire</i>
-					<br/><br/>
+					<br/>
 					Elena Spadini (Université de Lausanne)
-					<br/><br/>
+					<br/>
 					Presentation online at: <span style="text-decoration: underline; text-decoration-color: grey"><a href="https://elespdn.github.io/talks/20191022_FDI_Lausanne/20191022_FDI_Lausanne.html#/">elespdn.github.io/talks/20191022_FDI_Lausanne/20191022_FDI_Lausanne.html</a></span></div>
 				</section>
 
@@ -98,7 +103,7 @@
  						</li>
  						<li>Outils
  							<ul>
- 								<li><i>Software studies</i> et <i>DH tool criticism</i></li>
+ 								<li>Definitions</li>
  								<li>Exemples</li>
  							</ul></li>
  						<li>Conclusions</li>
@@ -107,28 +112,72 @@
 
  				<section data-background-color="tomato">
  					<h3 style="color:black">1. Changement de paradigme ?</h3>
+ 					<h4><i>Paradigm shift?</i></h4>
+ 					<img width="20%" src="images/kuhn_cover.png">
+ 				</section>
 
- 					Each [of the scientific revolutions] produced a consequent shift in the problems available for scientific scrutiny and in the standards by which the profession determined what should count as an <b>admissible problem</b> or as a <b>legitimate problem-solution</b>
+ 				<section>
+ 					<h3>Quels problèmes et quelles solutions</h3>
+ 					<div class="quote">Each [of the scientific revolutions] produced a consequent shift in the problems available for scientific scrutiny and in the standards by which the profession determined what should count as an <b>admissible problem</b> or as a <b>legitimate problem-solution</b></div>
+ 					<div class="quote fragment">paradigms [...] I take to be universally recognized scientific achievements that for a time provide <b>model problems and solutions</b> to a <b>community of practitioners</b>.</div>
 
+ 					<div class="source">Kuhn 1962</div>
+ 				</section>
 
- 					“paradigms.” These I take to be universally recognized scientific achievements that for a time provide model problems and solutions to a community of practitioners. 
+ 				<section>
+ 					<h3>Communété et pratique scientifiques</h3>
 
+ 					<div class="quote">The study of paradigms [...] is what mainly prepares the student for <b>membership in the particular scientific community</b> with which he will later practice.</div>
 
- 					Cambio di paradigma: Baricco, "The game", p. 27: Rivoluzione è un termine piuttosto generico, che usiamo con una certa spensieratezza. [...] In ogni caso vuol dire che qualcuno, invece di inventarsi una buona mossa, ha modificato la scacchiera: si chiama cambio di paradigma.
+ 					<div class="quote fragment">if I am right that each scientific revolution alters the historical perspective of the community that experiences it, then that change of perspective should affect the structure of postrevolutionary <b>textbooks and research publications</b></div>
+ 					<div class="source">Kuhn 1962</div>
+ 				</section>
+
+ 				<!--
+ 				<section>
+ 					<div class="quote">These three classes of problems [...] exhaust, I think, the literature of normal science, both empirical and theoretical</div>
+ 						<ul>
+ 							<li>determination of significant facts,</li>
+ 							<li>matching of facts with theory,</li>
+ 							<li>articulation of theory.</li>
+ 						</ul>
+ 						<div class="source">Kuhn 1962</div>
+ 				</section>
+
+ 				<section>
+ 					<h3>Determination of significant facts</h3>
+ 					<div class="quote">First is that class of facts that the paradigm has shown to be particularly revealing of the nature of things.</div>
+
+ 					<div>Exemple : la matierialité du document qui est le support du texte est très important pour certaines écoles, comme la philologie materielle, par rapport à d'autres, comme la philologie lachmannienne qui se pratiquait à la fin du XIX siècle.</div>
+ 				</section>
+ 			-->
+
+ 				<section>
+ 					<h3>Technologies</h3>
+ 					<div class="quote">The existence of the paradigm sets the problem to be solved; often the paradigm theory is implicated directly in the <b>design of apparatus</b> able to solve the problem.</div>
+ 					<div class="quote fragment">The resulting pool of facts [from early fact-gathering] contains those accessible to casual observation and experiment together with some of the more esoteric data retrievable from established crafts like medicine, calendar making, and metallurgy. Because the crafts are one readily accessible source of facts that could not have been casually discovered, <b>technology has often played a vital role in the emergence of new sciences</b>.</div>
+ 					<div class="source">Kuhn 1962</div>
+ 					
+ 				</section>
+
+ 				<section>
+ 					<h3>Échiquier</h3>
+ 					<div class="quote">Rivoluzione è un termine piuttosto generico, che usiamo con una certa spensieratezza. [...] In ogni caso vuol dire che qualcuno, invece di inventarsi una buona mossa, <b>ha modificato la scacchiera</b>: si chiama cambio di paradigma.</div>
+ 					<div class="source">Baricco 2018: 27 (merci @mr56k)</div>
  				</section>
 
 
 
  				<section data-background-color="tomato">
  					<h3 style="color:black">2. Éditions scientifiques numériques</h3>
- 					<p>Definitions</p>
+ 					<div>Definitions</div>
  				</section>
 
  				<section>
 					<h3>Édition scientifique</h3>
 					<p><i>Scholarly edition</i></p>
 					<br/>
-					<div>Une édition critique a pour but d'établir un texte fiable, en suivant des principes explicités.<br/>Elle rend compte de la transmission d'une œuvre et/ou de sa genèse, et des circonstances de sa rédaction.<br/>L'édition critique est généralement commentée grâce à des notes, des introductions, etc.</div>
+					<div><p>Une édition critique a pour but d'établir un texte fiable, en suivant des principes explicités. Elle rend compte de la transmission d'une œuvre et/ou de sa genèse, et des circonstances de sa rédaction. L'édition critique est généralement commentée grâce à des notes, des introductions, etc.</p></div>
 				</section>
 
 				<section>
@@ -163,11 +212,7 @@
 					<p style="font-size: 0.5em">(Sahle 2016/2: 149)</p>  
 				</section>   
 
-				<section>
-					<div class="quote">The digital edition is guided by a different paradigm. If the paradigm of an edition is limited to the two dimensional space of the ‘page’ and to typographic means of information representation, than it’s not a digital edition.</div>
-					<div class="source">2008, Online</div>
-				</section>   
-
+				
 
 				<section>
 					<h2>Catalogues</h2>
@@ -189,37 +234,125 @@
 				</section>
 
 				<section>
-					digital archive | edition | project | thematic research collection
+					<p>digital archive | edition | project | thematic research collection</p>
 					<div class="source">Price 2009</div>
 				</section>
 
-				<section>
-					Price 2009:
-					multimedia (images)
-					capacious (va)
-					space instead of page (symoltaneous)
-					design choice made by the editor
+				<section data-background-image="images/PieterBruegelElder_TheTowerBabel_Vienna.jpg" data-background-opacity="0.4">
+					<b>copy-text | bedierisme | neo-lachmannian school | genetic criticism | filologia d'autore | new bibliography | Historisch-kritische Ausgabe | etc. </b>
 				</section>
 
 				<section>
 					<div class="quote">By means of this new tool [Tustep], which we have in electronic data processing, new and higher standards are imposed not only on the results of others sciences, but also on critical editions - standards which can scarcely be satisfied by traditional methods. This is , in my view, the main reason why electronic data processing should be employed in the preparation of critical editions, especially in large and complex projects. The question whether it is possible or not to save time and / or money by these methods is only of secondary importance. The expenses necessary for future critical editions may possibly be even higher than they have been in the past when these tools were not yet available.</div>
 					<div class="source">Ott 1973</div>
 				</section>
-				
+
+
+				<section data-background-color="tomato">
+ 					<h3 style="color:black">2. Éditions scientifiques numériques</h3>
+ 					<div>Exemples</div>
+ 				</section>
+
+
+ 				<section>
+ 					<h3>Forme et contenu</h3>
+ 					<div class="quote">The ability to create a <b>plurality of interfaces for any given dataset</b> is a major advantage that the digital medium affords us. [...] . Digital scholarly edition projects in which data and interface are tightly coupled and data is not easily representable in rival displays pushes us <b>back to the paradigm of the print medium where form and content are inseparable</b>. </div>
+ 					<div class="source">Witt 2018: 219-20</div>
+ 				</section>
+
+ 				<section>
+ 					<a href="http://www.deutschestextarchiv.de/book/view/auerbach_sanders_1880?p=1">http://www.deutschestextarchiv.de/book/view/auerbach_sanders_1880?p=1</a>
+ 				</section>
+
+ 				<section>
+ 					<a href="https://www.beckettarchive.org/demo/MS-HRC-SB-5-10/01r?view=imagetext">https://www.beckettarchive.org/demo/MS-HRC-SB-5-10/01r?view=imagetext</a>
+ 				</section>
+
+ 				<section>
+ 					http://scta.lombardpress.org/text/lectio77#l77-qcsomr
+					http://mirador.scta.info/
+					https://scta.info/
+ 				</section>
+
+ 				<section>
+ 					>>Serie
+					http://deba.unideb.hu/deba/kazinczy_muvei/tarsportalok.php and others
+					https://acdh.oeaw.ac.at/abacus/ and others
+					http://elec.enc.sorbonne.fr/
+
+
+					http://pelavicino.labcd.unipi.it/
+					http://tarsian.vital-it.ch/
+					https://lib.trinity.edu/lament/index.html
+ 				</section>
+
+ 				<section>
+					<h3>Forme: Supérer le paradigme de la page et du livre</h3>
+					<div class="quote">The digital edition is guided by a different paradigm. If the paradigm of an edition is limited to the two dimensional space of the ‘page’ and to typographic means of information representation, than it’s not a digital edition.</div>
+					<div class="source">Sahle 2008, Online</div>
+				</section>  
+
 				<section>
-					sfatiamo 3 miti: edizioni digitali non costano meno, non sono piu rapidi e non durano di più (differenza dati/interfaccia)
-				</section>
-				
-
-				<section data-background-image="images/PieterBruegelElder_TheTowerBabel_Vienna.jpg" data-background-opacity="0.4">
-					<b>copy-text | bedierisme | neo-lachmannian school | genetic criticism | filologia d'autore | new bibliography | Historisch-kritische Ausgabe | etc. </b>
-				</section>
-
+					https://edition-humboldt.de/index.xql
+					https://blog.bham.ac.uk/estoriadigital/
+					http://wjc.bodleian.ox.ac.uk/HTML/WJC.html#
+				</section> 
 
 				<section>
+ 					>>Data (Forme et contenu + paradigme numérique)
+					http://alcidedigitale.fbk.eu/
+					http://www.lokalbericht.ch/
+					https://uclab.fh-potsdam.de/ff/
+					http://atlantecalvino.unige.ch/lische/
+ 				</section>
+
+
+				
+
+				<section>
+					<h3>Contenu. Différentes objectives
+						<img src="images/ruotaSahle.png">
+					http://ps.clul.ul.pt/index.php?action=treequeries
+					http://txm.bfm-corpus.org/?command=documentation&path=/GRAAL
+				</section>
+
+				<section>
+					<h3>Contenu. L'importance des données</h3>
+					<div class="quote">leur utilité [des interfaces] est en partie limitée dans le temps et certainement limitée face à la richesse des <b>réutilisations</b> possibles des <b>données</b>, qui sont, elles, en tant que <b>production scientifique</b>, pérennes et susceptibles d’une vie beaucoup plus longue et de multiples renaissances.</div>
+				</section>
+
+				<section>
+					https://sturm-edition.de/
+					https://sturm-edition.de/ressourcen/software.html
+					https://sturm-edition.de/quellen/briefe/chronologie/Q.01.19190509.JVH.01.html
+
+					http://www.nietzschesource.org
+
+					https://www.ub.unibas.ch/bernoulli/index.php/Hauptseite
+
+					http://orosius.monumenta.ch/
+				</section>
+
+
+
+
+
+				
+				
+			
+				
+
+
+
+				<section data-background-color="tomato">
+ 					<h3 style="color:black">3. Technologies et outils</h3>
+ 					<div>Definitions</div>
+ 				</section>
+
+
+ 				<section>
 					<div class="quote">the <b>method of production</b>, rather than the published form that the resulting edition take, is the practice wherein lies most of the <b>promised revolution within textual scholarship</b></div>
 					<div class="source">Andrews 2013</div>
-					<br/><br/>
 					<div class="fragment">
 						<div class="quote">We argued that digital scholarly editions will be composites of <b>three types of digital web services</b>: data sources, processing services, and interfaces</div>
 						<div class="source">Boot and Van Zundert 2011: 150</div>
@@ -228,56 +361,171 @@
 
 				<section>
 					<div class="quote">Perhaps we should just stop trying to map digital editions to printed ones and instead recognize that we are producing a different type of object [...]. This new object necessarily comprises all three components of a digital publication —<b>the source, the output and the tools to produce and display it</b>— and it is worth emphasizing again that <b>all three are scholarly products that result from editorial practice</b></div>
-					<div class="source">Pierazzo 2011, p. 474-5</div>
+					<div class="source">Pierazzo 2011: 474-5</div>
+				</section>
+				
+				<section>
+					<h3>Exemple de tâche d'un logiciel : parsing</h3>
+					<div>Je t'aime</div>
+					<div class="fragment">
+						<div class="quote">While various systems of modern society speak in different languages and have different goals, they all share the syntaxes of software: control statements "if then" and "while do", operators and data types, data strucutres such as lists, and interface conventions encompassing menus and dialog boxes.</div>
+						<div class="source">Manovich 2013</div>
+					</div>
+				</section>
+
+				<section>
+					<h3>Software studies</h3>
+					<div class="quote">Software has become our interface to the world, to others, to our memory and our imagination -a universal language through which the world speaks, and a universal engine on which the world runs.</div>
+					<div class="quote">The school and the hospital, the military base and the scientific laboratory, the airport and the city -all social, economic, and cultural systems of modern society- run on software.</div>
+						<div class="source">Manovich 2013</div>
+				</section>
+
+				<section data-background-image="images/newMediaReader_all.png" data-background-size="contain">
+					<br/><br/><br/><br/><br/><br/><br/><br/>
+					<div style="text-align: left;"><p>Ed. by Wardrip-Fruin and Montfort
+						<br/>
+					MIT Press, 2003</p></div>
+				</section>
+
+				<section>
+					<div class="quote"> Les textes qui ont orienté le développement d’outils destinés à aider la recherche en sciences humaines et sociales proposent en même temps une réinterprétation des structures conceptuelles à travers lesquelles l’homme se rapporte au monde et, surtout, structure et organise sa connaissance. En d’autres mots, nous sommes face à un changement de paradigme dans la façon d’agencer les contenus et, par ce fait même, à une nouvelle conception du savoir et de sa circulation dans la société.</div>
+					<div class="source">Vitali-Rosati and Sinatra 2014: chap.3</div>
+				</section>
+
+				<section>
+					<div class="quote">Pour rendre accessible la quantité d’informations et d’articles donnés chaque jour dans la presse quotidienne, dans les revues, pour conserver les brochures, comptes rendus, prospectus, les documents officiels, pour retrouver les matières éparses dans les livres, pour faire un tout homogène de ces masses incohérentes, il faut des procédés nouveaux, très distincts de ceux de l’ancienne bibliothéconomie, tels qu’ils sont appliqués.</div>
+					<div class="source">Otler 1934: 6</div>
+				</section>
+
+				<section>
+					<div class="quote">Nous devons avoir un complexe de machines associées qui réalise simultanément ou à la suite les opérations suivantes: 1° transformation du son en écriture; 2° multiplication de cette écriture tel nombre de fois qu’il est utile; 3° établissement des documents de manière que chaque donnée ait son individualité propre et dans ses relations avec celles de tout l’ensemble, qu’elle y soit rappelée là où il est nécessaire; 4° index de classement attaché à chaque donnée; perforation du document en corrélation avec ses indices; 5° classement automatique de ces documents et mise en place dans les classeurs; 6° récupération automatique des documents à consulter et présentation, soit sous les yeux ou sous la partie d’une machine ayant à y faire des inscriptions additionelles; 7° manipulation mécanique à volonté de toutes les données enregistrées pour obtenir de nouvelles combinaisons de faits, de nouveaux rapports d’idées, de nouvelles opérations à l’aide des chiffres.</div>
+					<div class="source">Otlet 1934: 391</div>
+				</section>
+
+				<section data-background-image="images/bush.jpg" data-background-size="contain">
+				</section>
+
+				<section>
+					<h3>Logiciels de traitement de texte et l'explosions des papiers</h3>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/_IZw2CoYztk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<p>Publicité de MT/ST de IBM. Jim Henson, 1967.
+						<br/>Le premier roman écrit avec un logiciel de traitement de texte est <i>Bomber</i> de Lan Deighton, tapé par Ellenor Handley.</p>
+					<div class="source">Cf. Kirschenbaum 2016</div>
+				</section>
+
+				<section data-background-image="images/IBMmtst1.jpg" data-background-size="contain">					
+				</section>
+
+
+				<section data-background-image="images/IBMmtst3.jpg" data-background-size="contain">					
 				</section>
 
 
 				<section data-background-color="tomato">
- 					<h3 style="color:black">1. Éditions scientifiques numériques</h3>
- 					<p>Exemples</p>
+ 					<h3 style="color:black">3. Technologies et outils</h3>
+ 					<div>Exemples</div>
  				</section>
 
+ 				<section>
+ 					<h3>Transcribo</h3>
+ 					<img src="images/transcribo0.png">
+ 					<p><a href="http://transcribo.org/en/">Transcribo</a> offre la possibilité de transcrire des textes de manière productive et rapide.</p>
+ 				</section>
+
+ 				<section data-background-image="images/transcribo1.png" data-background-size="contain">					
+				</section>
+
+				<section data-background-image="images/transcribo2.png" data-background-size="contain">					
+				</section>
+
+ 				<section data-background-image="images/poilus0.png" data-background-size="contain">	
+					<div class="back">https://testaments-de-poilus.huma-num.fr</div>
+				</section>
+
+				<section data-background-image="images/poilus1.png" data-background-size="contain">					
+				</section>
+
 				<section>
-					http://deba.unideb.hu/deba/kazinczy_muvei/tarsportalok.php and others
-					https://acdh.oeaw.ac.at/abacus/ and others
-					http://ps.clul.ul.pt/index.php?action=treequeries
+				ADD CWRC
+			</section>
 
-					http://pelavicino.labcd.unipi.it/
-					http://tarsian.vital-it.ch/
-					https://lib.trinity.edu/lament/index.html
-					
-					https://edition-humboldt.de/index.xql
-					https://blog.bham.ac.uk/estoriadigital/
-					http://wjc.bodleian.ox.ac.uk/HTML/WJC.html#
+				<section>					
+					<img src="images/collatex0.png" width="80%">
+					<div class="back"><a href="https://collatex.net/">CollateX</a> est un outil de collation.</div>
+				</section>
 
-					http://alcidedigitale.fbk.eu/
-					http://www.lokalbericht.ch/
+				<section data-background-image="images/collatex1.png" data-background-size="contain">					
+				</section>
 
-					https://testaments-de-poilus.huma-num.fr/#!/
-					https://uclab.fh-potsdam.de/ff/
-
-					http://atlantecalvino.unige.ch/lische/
-
-					beckett ?
+				<section>					
+					<img src="images/juxta0.png">
+					<div class="back"><a href="http://juxtacommons.org/">Juxta commons</a> est un outil de collation en ligne.</div>
 					
 				</section>
 
-				
-				
-
-
-
-				<section data-background-color="tomato">
- 					<h3 style="color:black">2. Outils</h3>
- 				</section>
-				
-				<section>
-					computer non capisce neanche come dividere una parola, fare esempio di segmentation --> the user has a fair degree of freedom; thus, it is crucial that she maintains a clear understanding of the data and of its eventual application ... e tutto il paragrafo dell'articolo con Sonia.
-Altro esempio dall'articolo è quello degli identifier, fino della parte mia prima delle conclusioni
+				<section data-background-image="images/juxta1.png" data-background-size="contain">					
 				</section>
 
 
 
+				<!--
+				<section>
+					XML document-centric
+					RDF data-centric
+				</section>
+				
+
+				<section>
+					Manovich: I argue that in the process of the translation from physical and electronic media technologies to software, all individual techniques and tools that were previously unique to different media "met" within the same software environment. This meeting had fundamental consequences for human cultural development and for the media evolution. [...] this ability to combine previously separate media techniques represrnts a fundamentally new szage in the history of human media, human semiosis, and human communication
+				</section>
+				-->
+
+
+				<section>
+					<h3>eLaborate</h3>
+					<p>eLaborate is an online work environment in which scholars can upload scans, transcribe and annotate text, and publish the results as on online text edition which is freely available to all users. It allows editors with little computer literacy to create digital scholarly editions and enables collaborative editing</p>
+				</section>
+
+				<section data-background-image="images/elaborate2.png"></section>
+				<section data-background-image="images/elaborate5.png"></section>
+				<section>
+					<div class="quote">For textual scholaship and scholarly editing I would argue that the loss of the 'analogue representation' of an index and even the lexical reference to it does indeed constitute a methodological change.</div>
+					<div class="source">van Zundert 2018: 92</div>
+				</section>
+
+
+				<section>
+					<h3>Changements</h3>
+					<div>Les liens entre les documents ou des parties de documents ;
+						<br/>Transcription du texte en lien avec l'image ;
+						<br/>Transcription collaborative
+						<br/>Collation sans texte de base</div>
+					<h3>Persistence</h3>
+					<div>Les outils sont organisé autour du document ;
+						<br/>ils offrent peu de moyen de visualisation et de calcul
+				</section>
+
+
+
+
+				<!--
+				<section>
+ 					<div class="quote">These three classes of problems [...] exhaust, I think, the literature of normal science, both empirical and theoretical</div>
+ 						<ul>
+ 							<li>determination of significant facts,</li>
+ 							<li>matching of facts with theory,</li>
+ 							<li>articulation of theory.</li>
+ 						</ul>
+ 						<div class="source">Kuhn 1962</div>
+ 				</section>
+
+ 				<section>
+ 					<h3>Determination of significant facts</h3>
+ 					<div class="quote">First is that class of facts that the paradigm has shown to be particularly revealing of the nature of things.</div>
+
+ 					<div>Exemple : relation entre les elements dans le numérique !!</div>
+ 				</section>
+ 				-->
 
 				<section>
 					Questa riflessione sul futuro va fatta: vogliamo cambiare qualcosa? Tanto qualcosa cambierà, allora: come e in che direzione? Per questo è importante che ci siano persone con formazioni miste, che possano immaginare nei due sensi. Altrimenti sceglierà sempre per noi l'ignegnere

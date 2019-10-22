@@ -52,8 +52,7 @@ restricted to the wealth of data that lie ready to hand. The resulting pool of f
 contains those accessible to casual observation and experiment together with
 some of the more esoteric data retrievable from established crafts like medicine,
 calendar making, and metallurgy. 
-< TOOLS >Because the crafts are one readily accessible
-source of facts that could not have been casually discovered, technology has
+< TOOLS >Because the crafts are one readily accessible source of facts that could not have been casually discovered, technology has
 often played a vital role in the emergence of new sciences.
 
 
