@@ -72,7 +72,7 @@
 					<br/><br/>
 					Alessio Christen, Elena Spadini (Université de Lausanne)
 					<br/><br/>
-					Presentation online at: <span style="text-decoration: underline; text-decoration-color: grey"><a href="https://elespdn.github.io/talks/20190612_Krakow/20190612_Krakow.html#/">http://small.cat/hat</a></span></div>
+					Presentation online at: <span style="text-decoration: underline; text-decoration-color: grey"><a href="https://elespdn.github.io/talks/20190612_Krakow/20190612_Krakow.html#/">elespdn.github.io/talks/20190612_Krakow/20190612_Krakow.html</a></span></div>
 				</section>
 
 
@@ -151,7 +151,6 @@
 
 				<section data-background-image="images/NDIGORP042968_page-0002.jpg" data-background-opacity="0.1">
 					<h4>Semantics in RDF triple</h4>
-					<br/>
 					<table style="table-layout: fixed;width: 100%;font-weight: bold;color:tomato" class="small">
 						<tr>
 							<td>subject</td>
@@ -160,23 +159,26 @@
 						</tr>
 					</table>
 					<br/>
-					<table class="fragment smaller" style="table-layout: fixed;width: 100%">
-						<tr>
-							<td>ms BJ Rkp. Przyb. 9/19</td>
-							<td>&#9135; has author &#10141;</td>
-							<td>Wisława Szymborska</td>
-						</tr>
-						<tr>
-							<td>ms BJ Rkp. Przyb. 9/19</td>
-							<td>&#9135; is preserved in &#10141;</td>
-							<td>Biblioteka Jagiellońska</td>
-						</tr>
-						<tr>
-							<td>ms BJ Rkp. Przyb. 9/19</td>
-							<td>&#9135; has digital copy identifier &#10141;</td>
-							<td><a href="https://jbc.bj.uj.edu.pl/dlibra/publication/655374/edition/621451/content">NDIGORP042968</a></td>
-						</tr>
-					</table>
+					<div class="fragment smaller">
+						<div style="color:tomato; font-weight: bold;text-align: left">Dataset</div><br/>
+						<table style="table-layout: fixed;width: 100%">
+							<tr>
+								<td>ms BJ Rkp. Przyb. 9/19</td>
+								<td>&#9135; has author &#10141;</td>
+								<td>Wisława Szymborska</td>
+							</tr>
+							<tr>
+								<td>ms BJ Rkp. Przyb. 9/19</td>
+								<td>&#9135; is preserved in &#10141;</td>
+								<td>Biblioteka Jagiellońska</td>
+							</tr>
+							<tr>
+								<td>ms BJ Rkp. Przyb. 9/19</td>
+								<td>&#9135; has digital copy identifier &#10141;</td>
+								<td><a href="https://jbc.bj.uj.edu.pl/dlibra/publication/655374/edition/621451/content">NDIGORP042968</a></td>
+							</tr>
+						</table>
+					</div>
 					<br/>
 					<div class="fragment smaller">
 						<div style="color:tomato; font-weight: bold;text-align: left">Ontology (rules)</div><br/>
@@ -185,6 +187,16 @@
 								<td>manuscript</td>
 								<td>&#9135; has author &#10141;</td>
 								<td>person</td>
+							</tr>
+							<tr>
+								<td>manuscript</td>
+								<td>&#9135; is preserved in &#10141;</td>
+								<td>library</td>
+							</tr>
+							<tr>
+								<td>manuscript</td>
+								<td>&#9135; has digital copy identifier &#10141;</td>
+								<td>id</td>
 							</tr>
 						</table>
 					</div>
