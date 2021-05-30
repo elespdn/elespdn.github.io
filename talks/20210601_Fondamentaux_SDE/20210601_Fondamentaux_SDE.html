@@ -1,0 +1,548 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>SDE</title>
+
+		<link rel="stylesheet" href="../reveal/css/reveal.css">
+		<link rel="stylesheet" href="../reveal/css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<script>
+			Reveal.initialize({
+					// More info https://github.com/hakimel/reveal.js#dependencies
+					dependencies: [
+						{ src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					]
+				});
+		</script>
+
+		<style>
+			div.quote {font-size: 0.7em; margin-bottom: 1.5em; margin-top:1.5em;}
+			div.quote::before {content: "“";}
+			div.quote::after {content: "”";}
+			div.source   {font-size: 0.6em; text-align: right; margin-top: 20px}
+			.grey {color:grey;}
+			.small {font-size: 0.8em}
+			.smaller {font-size: 0.6em}
+
+			b {color:#d0513a;}
+			p {font-size: 0.8em}
+
+			.back {background-color: white}
+			
+			.coloredTitle {
+				background-color:#003333
+			}			}	
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+
+							
+				
+				<section data-background-color="white">
+					<h3 class="back">Les éditions numériques</h3>
+					<h4 class="back">Standards et bonnes pratiques pour leur création et utilisation</h4>
+					<br/><br/>
+					<div class="small back">
+					<i>Fondamentaux des humanités numériques pour la recherche, Université de Genève</i>
+					<br/>
+					Elena Spadini (Université de Lausanne)
+					<br/>
+					Presentation online at: <span style="text-decoration: underline; text-decoration-color: grey"><a href="https://elespdn.github.io/talks/20210601_Fondamentaux_SDE/20210601_Fondamentaux_SDE.html">elespdn.github.io/talks/20210601_Fondamentaux_SDE/20210601_Fondamentaux_SDE.html</a></span></div>
+
+					RECIPE
+				</section>
+
+				
+
+
+				<!--
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+ -->
+
+ 				<section>
+ 					<h3 style="color: tomato">Table des matières</h3>
+ 					<br/>
+ 					<ol style="font-size: 0.9em">
+ 						<li>Édition scientifique numérique</li>
+ 						<li>Création</li>
+ 						<li>Utilisation</li>
+ 						<li>Conclusions</li>
+ 					</ol>
+ 				</section>
+
+
+
+<! - #############################################################################################################################
+	##################################################################################################################################
+	###################################################### 1. Definition ###############################################################
+	##################################################################################################################################
+	##################################################################################################################################
+	################################################################################################################################ ->
+
+ 				<section data-background-color="tomato">
+ 					<h3 style="color:black">1. Éditions scientifiques numériques</h3>
+ 					<div>Definitions</div>
+ 				</section>
+
+ 				<section>
+					<h3>Édition scientifique</h3>
+					<p><i>Scholarly edition</i></p>
+					<br/>
+					<div><p>Une édition critique a pour but d'établir un texte fiable, en suivant des principes explicites. Elle rend compte de la transmission d'une œuvre et/ou de sa genèse, et des circonstances de sa rédaction. L'édition critique est généralement commentée grâce à des notes, des introductions, etc.</p></div>
+				</section>
+
+				<section>
+					<h3>Édition scientifique num&#233;rique</h3>
+					<p><i>Scholarly Digital Edition</i></p>
+					<br/> 
+					<p>Une &#233;dition num&#233;rique ne peut pas être convertie dans une &#233;dition papier sans une perte substantielle de contenu ou de fonctionnalit&#233;</p>
+				</section>
+
+				<section id="digital">
+					<div>
+						<img src="images/editio-Sahle-Bd_7.png" width="20%"/>
+						<img src="images/editio-Sahle-Bd_8.png" width="20%"/>
+						<img src="images/editio-Sahle-Bd_9.png" width="20%"/>
+					</div>  
+					
+					<p style="font-size: 0.7em">Patrick Sahle, <a href="http://www.i-d-e.de/publikationen/schriften/s7-9-digitale-editionsformen/" target="_blank"><i>Digitale Editionsformen, Zum Umgang mit der Überlieferung unter den Bedingungen des Medienwandels</i></a>, 3 Bände, Norderstedt: Books on Demand 2013 </p>
+				</section> 
+
+				<section>
+					<p>Digital scholarly editions are not just scholarly editions in digital media: digital ≠ digitized</p>
+					<br/>
+					<p style="font-size: 0.5em">"Wiedergabe ohne Erschließung ist keine Edition. Eine bloße Reproduktion, ein  einfaches Faksimile, eine digitale Bibliothek ist keine Edition"</p>					
+					<p style="font-size: 0.5em">"Deshalb kann eine digitale Edition nicht einfach die digitale Fassung einer auch im Druck realisierbaren Edition sein – zu ihrem Wesen gehört, dass sie über die Beschränkungen der typografischen Edition hinweggeht"</p>
+					<p style="font-size: 0.5em">(Sahle 2016/2: 141-142; 149)</p>                                                                                 
+				</section>      
+				
+				<section >
+					<p>A digital edition can not be printed without a loss of information and/or functionality</p>
+					<br/>					
+					<p style="font-size: 0.5em">"Eine digitale Edition ist dadurch bestimmt, dass sie nicht ohne wesentliche Informations- und Funktionsverluste in eine typografi sche Form gebracht werden kann – und in diesem Sinne über die druckbare Edition hinausgeht."</p>
+					<p style="font-size: 0.5em">(Sahle 2016/2: 149)</p>  
+				</section>   
+
+				
+
+				<section>
+					<h2>Catalogues</h2>
+					<br/>
+					<ul>
+						<li>Patrick Sahle, <a href="http://www.digitale-edition.de/" target="_blank">A catalogue Digital Scholarly Editions</a></li>
+						<li>Greta Franzini, <a href="https://dig-ed-cat.acdh.oeaw.ac.at/" target="_blank">Catalogue Digital Editions</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Comptes-rendus et critères</h2>
+					<br/>
+					<ul>
+						<li>MLA (Modern Language Association), <a href="https://scholarlyeditions.commons.mla.org/2015/09/02/cse-white-paper/" target="_blank">White Paper of the MLA’s Committee on Scholarly Editions</a></li>
+						<br/>
+						<li>IDE, <i><a href="http://ride.i-d-e.de/" target="_blank">RIDE. A review journal for digital editions and resources</a></i>. <a href="http://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1/" target="_blank">Criteria</a> (de|en|it|es)</li>
+					</ul>
+				</section>
+
+
+				<!--
+				<section>
+					<p>digital archive | edition | project | thematic research collection</p>
+					<div class="source">Price 2009</div>
+				</section>
+
+				<section data-background-image="images/PieterBruegelElder_TheTowerBabel_Vienna.jpg" data-background-opacity="0.4">
+					<b>copy-text | bedierisme | neo-lachmannian school | genetic criticism | filologia d'autore | new bibliography | Historisch-kritische Ausgabe | etc. </b>
+				</section>
+			-->
+
+
+				<! - #############################################################################################################################
+	##################################################################################################################################
+	###################################################### 2. Pipeline ###############################################################
+	##################################################################################################################################
+	##################################################################################################################################
+	################################################################################################################################ ->
+
+ 				<section data-background-color="tomato">
+ 					<h3 style="color:black">2. Une pipeline numérique</h3>
+ 				</section>
+
+
+
+				<section data-markdown data-background-image="images/pipeline.png" data-background-opacity="0.2">
+					<textarea data-template>
+						- identifier et décrire les sources
+						- gérer les images des sources
+						- OCR/HTR + correction | transcription
+						- encodage
+						- collation
+						- stemmatics
+						- établissement du texte
+						- annotation linguistique (POS, NER, etc.)
+						- annotation du contenu
+						- visualisation des données
+						- publication
+
+						(alcune messe insieme, come trascrizione e codifica; tutti sono più fasi nella stessa fase)
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						## Identifier les sources
+
+						Catalogues en ligne
+						- ecodices
+						- http://www.manuscriptorium.com/en
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						## Décrire les sources
+
+						Text Encoding Initiative (TEI)
+						
+						Encoded Archival Description (EAD)
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						![ecodices](images/ecodices1.png)
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						![ecodices](images/ecodices2.png)
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						![ecodices](images/ecodices3.png)
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						https://manus.iccu.sbn.it/opac_SchedaScheda.php?ID=244757
+					</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+						## Transcription des sources
+
+						Disponibilité des sources > plus de transcriptions de documents
+						(Tradition philologiques anglophones > plus de temoins uniques)
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						## Digital documentary edition
+
+						Esempio, Pierazzo
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						## Encodage
+						Text Encoding Initiative
+
+						source - output
+
+						xml, linguaggio di markup più diffuso (suite office)
+
+						svantaggi: no overlapping, complessità schema
+
+						modelling: risposta formale alla domanda di ricerca (p. 92)
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						## Collation
+						
+						svantaggi: trascrivere tutti testimoni, no distinzione varianti formali e sostanza, errori e non
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						## Stemmatics
+						Handbook
+						
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						## établissement du texte
+						(paola italia, cat marjorie)
+						
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						## Annotation du contenu
+
+						rdf in xml
+						
+						xml in rdf
+						
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						## Visualisation des données
+
+						fontanes
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						## Publication
+
+						teiPublisher
+						ad hoc o pret à porter
+					</textarea>
+				</section>
+
+
+				<! - #############################################################################################################################
+	##################################################################################################################################
+	###################################################### 3. user ###############################################################
+	##################################################################################################################################
+	##################################################################################################################################
+	################################################################################################################################ ->
+
+ 				<section data-background-color="tomato">
+ 					<h3 style="color:black">3. Du point de vue de l'utilisation</h3>
+ 				</section>
+
+ 				<section data-markdown>
+					<textarea data-template>
+						### Qui lit et utilise les éditions numériques ?
+
+						- User Experience Design (Roud)
+						- Focus groups (LdoD)
+					</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+						interfaccia come statement scientifico, scegliere quale delle varie visualizzazioni possibili mostrare 
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						
+						how to cite, versioning
+						- devonshire (piattaforma wiki)
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						
+						USER fair
+
+						copyright, Wout
+					</textarea>
+				</section>
+
+				
+
+				<section data-markdown>
+					<textarea data-template>
+						corresp search
+					</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+						## API
+						- DTS
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						[Carl-Maria-von-Weber-Gesamtausgabe (WeGA)](https://weber-gesamtausgabe.de)
+
+						esempio, edizione di testi di Johanna Schopenhauer, prende dati biografici da WeGA
+						API permet d'utiliser GND IDs (vd. https://weber-gesamtausgabe.de/en/Help/API_Documentation.html#d12e151)
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						## Données linguistiques (Wilhelm 2012)
+						- NO EASY WAY TO DOWNLOAD - Bewulf  https://ebeowulf.uky.edu/ebeo4.0/CD/main.html (options) (http://ebeowulf.uky.edu/ebeo4.0/CD/search/ed.xml)
+						- Monella, https://umanisticadigitale.unibo.it/article/view/7286 (vd. abstract)
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						## Éditions comme source pour la paléographie
+						- Monella, https://umanisticadigitale.unibo.it/article/view/7286
+					</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+						http://digitalhumanities.org:8081/dhq/vol/14/2/000475/000475.html
+
+						https://www.romanrepublic.ac.uk/rdf
+
+
+						```
+					PREFIX : <http://romanrepublic.ac.uk/rdf/ontology#>
+					PREFIX owl: <http://www.w3.org/2002/07/owl#>
+					PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+					PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+					PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+					PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+					PREFIX vocab: <http://romanrepublic.ac.uk/rdf/ontology#>
+					PREFIX map: <http://romanrepublic.ac.uk/rdf/entity/#>
+					PREFIX db: <http://romanrepublic.ac.uk/rdf/entity/>
+					select ?women where { 
+							?women :isSex <http://romanrepublic.ac.uk/rdf/entity/Sex/Female> ;
+					    			:hasHighestOffice ?office .
+					  filter contains(?office, "vestal")
+					} limit 10
+					```
+					</textarea>
+				</section>
+
+
+
+
+				
+
+
+
+
+
+
+<! - #############################################################################################################################
+	##################################################################################################################################
+	###################################################### 3. conclusions ###############################################################
+	##################################################################################################################################
+	##################################################################################################################################
+	################################################################################################################################ ->
+
+				
+
+				<section data-markdown>
+					<textarea data-template>
+
+						scientifique ... un objet nouveau ?
+
+						verificabile e riproducibile
+						esplicito
+
+						provare e riprodurre, servono dati, philologie des données
+
+						più prassi e formati editoriali insieme
+
+						tei ha creato una comunità internazionale
+
+						filologia digitale = disciplina a sé stante (p. 68)
+
+						ordine gerarchico tra gli elementi viene a mancare (es. apparato critico)
+
+						 It also problematizes the very definition
+of data, considering their complexities, their inherent biases, their contextual and historical
+natures, in a critical and nuanced way (e.g. Drucker, 2011
+					</textarea>
+				</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<script src="../reveal/lib/js/head.min.js"></script>
+		<script src="../reveal/js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../reveal/plugin/markdown/marked.js' },
+					{ src: '../reveal/plugin/markdown/markdown.js' },
+					{ src: '../reveal/plugin/notes/notes.js', async: true },
+					{ src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
