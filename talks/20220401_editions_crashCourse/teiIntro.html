@@ -6,11 +6,12 @@
 
 		<title>Intro TEI</title>
 
-		<link rel="stylesheet" href="../reveal/css/reveal.css">
-		<link rel="stylesheet" href="../reveal/css/theme/white.css">
+		<link rel="stylesheet" href="../reveal/dist/reset.css">
+		<link rel="stylesheet" href="../reveal/dist/reveal.css">
+		<link rel="stylesheet" href="../reveal/dist/theme/white.css">
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
+		<link rel="stylesheet" href="../reveal/plugin/highlight/zenburn.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -21,15 +22,7 @@
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
-		<script>
-			Reveal.initialize({
-					// More info https://github.com/hakimel/reveal.js#dependencies
-					dependencies: [
-						{ src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					]
-				});
-		</script>
-
+		
 		<style>
 			div.quote {font-size: 0.7em; margin-bottom: 1.5em; margin-top:1.5em;}
 			div.quote::before {content: "“";}
@@ -67,48 +60,91 @@
 				</section>
 
 
-		
 				<section>
-					<h1>Intro TEI</h1>
+					<h3><b>Table of contents</b></h3>
+					<br/>
+					<ol style="font-size: 0.9em">
+						<li>Markup</li>
+					   <li>XML</li>
+						<li>TEI</li>
+					</ol>
+				</section>
+
+
+
+				<section data-background-color="#b2ebf2">
+					<h3>1.<br/>Markup</h3>
+				</section>
+
+
+				<section data-background-image="teiIntro_images/interreg_markup-xml-tei.png" data-background-size="contain">
 				</section>
 
 				<section>
-					<h2>Markup make explicit</br>(to a machine)</br>what is implicit</br>(to a person)</h2>
+					<img src="teiIntro_images/markup.gif">
+					<div class="source">https://www.ncbi.nlm.nih.gov/staff/beck/xml/markup/I-A.html</div>
+				</section>
+
+
+				<section>
+					Make <b>explicit</b> (to a machine) what is implicit (to a person).
+					<br/><br/>
+					It is a way of naming and characterizing the parts of a
+					text in a formalized way.
+					<!--
+					<br/>
+					-> To facilitate multiple annotations or readings of the same material
+					<br/>
+					-> To facilitate re-use of the same material for multiple purposes (in different formats and contexts, by different users)-->
 				</section>
 
 				<section>
-					<h3>XML vs. HTML</h3>
-					<ul>
-						<li>XML is extensible: it does not consist of a fixed set of tags;</li>
-						<li>XML documents must be well-formed according to a defined syntax;</li>
-						<li>XML documents can be formally validated against a schema;</li>
-						<li>XML is more about the meaning of data than about presentation.</li>
-					</ul>
-				</section>
-
-				<section>
-					<h5>"<b>Miguel de Cervantes</b> escribió el <i>Quijote</i>"</h5>
-					</br>
 					<h3>Procedural MARKUP</h3>
-					<pre><code><bold>Miguel de Cervantes</bold> escribió el <italic>Quijote</italic></code></pre>
+					<pre><code><bold>Jane Austen</bold> wrote <italic>Price and Prejudice</italic></code></pre>
 					</br>
 					<h3>Descriptive MARKUP</h3>
-					<pre> Markup<code><name>Miguel de Cervantes</name> escribió el <title>Quijote</title></code></pre>
+					<pre> Markup<code><name>Jane Austen</name> wrote <title>Price and Prejudice</title></code></pre>
 					<pre> Visualization<code>name {font-weight: bold;} title {font-style: italic;} </code></pre>
-					<pre> Process<code>&lt;xsl:for-each select="//title"&gt;</code></pre>
+					<pre> Process<code>&lt;xsl:for-each select="//name"&gt;</code></pre>
 				</section>  <!--end example quijote-->
 
 				<section>
-					<div>
-						<img style="border: 1px solid" width="80%" src="teiIntro_teiIntro_teiIntro_images/markup-xml-tei.png"/>
-						<div style="font-size: 0.6em">C. Schöch <a class="fuente" href="https://de.dariah.eu/tei-tutorial">Digitale Textedition mit TEI (Tutorial)</a></div>
-					</div>	
-				</section> 
+					Descriptive markup allows for the<br/><b>separation of form and content</b>
+					<br/><br/>
+					<ul>
+						<li>multiple forms possible</li>
+						<li>easier reuse (in different contexts)</li>
+						<li>easier preservation</li>
+					</ul>
+				</section>
+
+				<section data-background-color="#b2ebf2">
+					<h3>2.<br/>XML</h3>
+				</section>
 
 				<section>
-					<a href="http://www.tei-c.org/"><h2>Text Encoding Initiative</h2></a>
+					XML is <b>structured data</b> represented as strings of text
+					<!--
+						<item>XML looks like HTML, except that:-<list>
+								<item>XML is <hi>extensible</hi>
+								</item>
+								<item>XML must be <hi>well-formed</hi>
+								</item>
+								<item>XML can be <hi>validated</hi>
+								</item>
+							</list>
+						</item>
+						-->
+					<br/>
+					XML is application-, platform-, and vendor- independent
+					<br/>
+					it is used in all fields and is widely supported by a vast range of tools and
+						infrastructures
+					<br/>it facilitates the long-term preservation of data
 				</section>
-		
+
+
+				
 				<section>
 					<h3>XML Golden Rules </h3>
 					<pre> An element consists of a <b>start-tag</b>, optional <b>content</b>, and an <b>end-tag</b>.<code> <persName>Miguel de Cervantes</persName></code></pre>
@@ -118,6 +154,49 @@
 					<pre> Elements and attributes are <b>case sensitive</b>.<code> &lt;name&gt; ≠ &lt;Name&gt;</code></pre>			
 					<pre> <b>Empty elements</b> can use a minimized tag syntax.<code> &lt;pb/&gt; = <pb></pb>  </code></pre>								
 				</section>
+
+				<section>
+					<ul>
+						<li>An XML document is <b>well formed</b> when it complies with the XML syntax
+						<br/><br/></li>
+						<li>An XML document is <b>valid</b> against a schema
+							</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<pre><code>
+					<?xml version="1.0"?><greetings
+					xmlns="http://www.example.org/greetings">
+
+					<hello type="jovial" xml:lang="en">hello world!</hello>
+					<hello type="jovial" xml:lang="fr">salut monde!</hello>
+					</greetings>
+					</code></pre>
+
+					<ul>
+                        <li>the XML declaration</li>
+                        <li>a namespace declaration</li>
+                        <li>a root element</li>
+                        <li>other elements, which have <li>
+                                <li>content</li>
+                                <li>attributes, which have <li>
+                                        <item>li</item>
+                                        <item>and li</item>
+								</ul></li>
+					</ul>
+				</section>
+
+				<section>
+					TEI
+				</section>
+
+
+			
+
+
+
 
 				<section>
 					<h3>TEI basic structure</h3>
@@ -176,32 +255,70 @@
 					<a href="http://www.tei-c.org/Roma/startroma.php?mode=main"><h2>TEI modules</h2></a>
 				</section>
 
-				<section>
-					<p><i>Materials from Digital Humanities Oxford Summer School 2015 (L. Burnard, M. Turska, E. Spadini, M. Broughton)</i></p>
-					<h3>TEI Basic Structure and Core Elements</h3>
-					<p>See <a href="http://tei.it.ox.ac.uk/Talks/2015-07-dhoxss/2-teibasic.pdf" target="_blank">presentation</a></p>
-					<h3>Transcription, Editorial Interventions and Critical Apparatus</h3>
-					<p>See <a href="http://tei.it.ox.ac.uk/Talks/2015-07-dhoxss/Talks/3-transcription-and-criticapp.pdf" target="_blank">presentation</a></p>
-					<h3>Encoding Names, People, Places and Dates</h3>
-					<p>See <a href="http://tei.it.ox.ac.uk/Talks/2015-07-dhoxss/Talks/4-name-place-date.pdf" target="_blank">presentation</a></p>
 
+				<section>ADD CUSTOMIZATION
+					file:///home/elena/Github/elespdn/elespdn.github.io/talks/20190425_TEIcustomization/slides/TEIcustomizationSlides-rpubs.html
 
 				</section>
-			
+
 				<section>
-					<h4>This presentation reuses materials from: </h4>
-					<div>
-						<a href="http://www.ifr.uni.wroc.pl/pl/nasz-instytut/pracownicy/dr-jose-luis-losada-palenzuela">José Luis Losada Palenzuela</a>,
-						<i>Markup, XML, TEI. Character, structure, guidelines</i>,
-						<a href="http://editio.github.io/slides/xml-tei">&lt;http://editio.github.io/slides/xml-tei&gt;</a>, 
-						2016.
+					MORE IN THE COMMENT
+					<!--
+					<div rend="slide">
+						<head>XML validation</head>
+						<p>A <hi>valid</hi> XML document is well formed, and also conforms to some additional
+							<term>structural</term> rules, which make up what we call a <term>schema</term>. </p>
+						<p>A schema allows you to specify: <list>
+							<item>which elements can appear as the root element of a document</item>
+							<item>which elements and attributes can appear where</item>
+							<item>names, datatypes, and default values for all attributes</item>
+						</list></p>
+						<p>A schema thus allows you to check that <q>every chapter must begin with a heading</q> or
+							<q>recipes must include an ingredient list</q> or <q>values for the attribute
+								<att>when</att> are all valid dates</q>
+						</p>
+						<p>A namespace by contrast just allows you to label elements as being somehow related. A
+							schema provides a formal specification and is written in a formal language. </p>
 					</div>
+					
+					
+					<div rend="slide">
+						<head>Schema languages</head>
+						<p>A schema can be expressed using:
+							<list>
+								<item>DTD: an older ISO standard</item>
+								<item>RNG:  ISO standard RELAXNG</item>
+								<item>WSD: the W3C Schema language</item>
+							</list>
+							All have different tool kits, different syntaxes, and different
+							methods of doing things, particularly for content validation.</p>
+						<p>The TEI uses RELAXNG </p>
+						
+						<p>        <graphic width="2in" url="../../Graphics/relax.png"/></p>
+					</div>-->
+					
 				</section>
 
-				<section id="impressum">	
-			 		<div><a href="http://elenaspadini.com">Elena Spadini</a>, <i>Intro TEI</i>, <a href="https://elespdn.github.io/labMonaci1-xmlTei.html#/">&lt;https://elespdn.github.io/labMonaci1-xmlTei.html#/&gt;</a>, 2016.</div>
-			 		<div ><a href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="licencia" alt="License Creative Commons" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"></a></div>
-		 		</section> 
+				 <section>RECAP</section>
+
+				 <section>
+					<head>Markup as a scholarly activity</head>
+					<ul>
+						<li>The application of markup to a document is an intellectual activity</li>
+						<li>Deciding exactly what markup to apply and why is much the same as editing
+							a text </li>
+						<li>Markup is rarely neutral, objective, or deterministic : interpretation is
+							needed</li>
+						<li>Because it obliges us to confront difficult ontological questions, markup
+							can be considered a research activity in itself</li>
+						<li>Good textual encoding is never as easy or quick as people would believe --
+							do things better, not necessarily quicker</li>
+						<li>The markup scheme used for a project should result from a detailed
+							analysis of the properties of the objects the project aims to use or
+							create</li>
+						</ul>
+				</section>
+				
 
 
 				 <!--
@@ -293,6 +410,30 @@
 					
 
 
+				<!--
+				<section>
+					<p><i>Materials from Digital Humanities Oxford Summer School 2015 (L. Burnard, M. Turska, E. Spadini, M. Broughton)</i></p>
+					<h3>TEI Basic Structure and Core Elements</h3>
+					<p>See <a href="http://tei.it.ox.ac.uk/Talks/2015-07-dhoxss/2-teibasic.pdf" target="_blank">presentation</a></p>
+					<h3>Transcription, Editorial Interventions and Critical Apparatus</h3>
+					<p>See <a href="http://tei.it.ox.ac.uk/Talks/2015-07-dhoxss/Talks/3-transcription-and-criticapp.pdf" target="_blank">presentation</a></p>
+					<h3>Encoding Names, People, Places and Dates</h3>
+					<p>See <a href="http://tei.it.ox.ac.uk/Talks/2015-07-dhoxss/Talks/4-name-place-date.pdf" target="_blank">presentation</a></p>
+
+
+				</section>
+			
+				<section>
+					<h4>This presentation reuses materials from: </h4>
+					<div>
+						<a href="http://www.ifr.uni.wroc.pl/pl/nasz-instytut/pracownicy/dr-jose-luis-losada-palenzuela">José Luis Losada Palenzuela</a>,
+						<i>Markup, XML, TEI. Character, structure, guidelines</i>,
+						<a href="http://editio.github.io/slides/xml-tei">&lt;http://editio.github.io/slides/xml-tei&gt;</a>, 
+						2016.
+					</div>
+				</section>
+				-->
+
 				
 
 			</div>
@@ -300,27 +441,24 @@
 
 		
 
-		<script src="reveal/lib/js/head.min.js"></script>
-		<script src="reveal/js/reveal.js"></script>
 
+		<script src="../reveal/dist/reveal.js"></script>
+		<script src="../reveal/plugin/notes/notes.js"></script>
+		<script src="../reveal/plugin/markdown/markdown.js"></script>
+		<script src="../reveal/plugin/highlight/highlight.js"></script>
 		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
 			Reveal.initialize({
-				history: true,
+				hash: true,
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'reveal/plugin/markdown/marked.js' },
-					{ src: 'reveal/plugin/markdown/markdown.js' },
-					{ src: 'reveal/plugin/notes/notes.js', async: true },
-					{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
 		</script>
 
-		<div class="footer">
-			<p>Elena Spadini · Huygens ING / Sapienza</p>
-		</div>
+		
 
 	</body>
 </html>
