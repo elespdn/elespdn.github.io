@@ -46,33 +46,46 @@
 			<div class="slides">
 
 				<section>
-					<h3><b>Introduction to TEI</b></h3>
-					<div class="small" style="text-align: left">
-						<br/>1.04.2022, RISE Crash course
+					<h2><b>Introduction to TEI</b></h2>
+					<div class="small" style="text-align: left;background-color: #a5d7d2;padding:50px;margin:50px">
+						1.04.2022, RISE Crash course
 						<br/><br/>
 						<div class="smaller">
-						Elena Spadini
-						<br/>
-						Presentation online at: <a href="https://elespdn.github.io/talks/20220401_editions_crashCourse/teiIntro.html">https://elespdn.github.io/talks/20220401_editions_crashCourse/teiIntro.html</a></div>
+							Elena Spadini
+							<br/>
+							Presentation online at: <a href="https://elespdn.github.io/talks/20220401_editions_crashCourse/teiIntro.html">https://elespdn.github.io/talks/20220401_editions_crashCourse/teiIntro.html</a>
+							
+						</div>
 					</div>
-					<br/>
-					<img style="border:0px;box-shadow: none;" width="30%" src="images/UniBas_Logo_EN_Schwarz_RGB_65.jpg"/>
+					<div>
+						<img style="border:0px;box-shadow: none;" width="20%" src="images/UniBas_Logo_EN_Schwarz_RGB_65.jpg"/>
+					</div>
 				</section>
 
 
 				<section>
 					<h3><b>Table of contents</b></h3>
-					<br/>
 					<ol style="font-size: 0.9em">
 						<li>Markup</li>
 					   <li>XML</li>
 						<li>TEI</li>
+						<ol>
+							<li>TEI basic structure</li>
+							<li>Examples of TEI encoding</li>
+							<li>TEI customization</li>
+							<li>Software for working with TEI</li>
+							<li>Multiple outputs</li>
+							<li>Text encoding recap</li>
+						</ol>
+						<li>Modelling</li>
+						<li>TEI in action</li>
+						<li>Workflow</li>
 					</ol>
 				</section>
 
 
 
-				<section data-background-color="#b2ebf2">
+				<section data-background-color="#a5d7d2"> 
 					<h3>1.<br/>Markup</h3>
 				</section>
 
@@ -118,7 +131,7 @@
 					</ul>
 				</section>
 
-				<section data-background-color="#b2ebf2">
+				<section data-background-color="#a5d7d2">
 					<h3>2.<br/>XML</h3>
 				</section>
 
@@ -167,80 +180,150 @@
 
 				<section>
 					<pre><code>
-					<?xml version="1.0"?><greetings
-					xmlns="http://www.example.org/greetings">
-
-					<hello type="jovial" xml:lang="en">hello world!</hello>
-					<hello type="jovial" xml:lang="fr">salut monde!</hello>
+					<?xml version="1.0"?>
+					<greeting xmlns="http://www.example.org/greetings">
+					    <hello type="jovial" xml:lang="en">hello world!</hello>
+					    <hello type="jovial" xml:lang="fr">salut monde!</hello>
 					</greetings>
 					</code></pre>
+					<div class="small">
+						<ul>
+							<li>the XML declaration</li>
+							<li>a namespace declaration</li>
+							<li>a root element</li>
+							<li>other elements, which might have content and attributes</li>
+							<li>attributes, with names and values</li>
+						</ul>
+					</div>
+				</section>
 
+				<section data-background-color="#a5d7d2"> 
+					<h3>3.<br/>Text Encoding Initiative</h3>
+				</section>
+
+				<section>
+					<div class="quote">The TEI was established in 1987 to develop, maintain, and promulgate hardware- and software-independent methods for encoding humanities data in electronic form. </div>
+					<div class="source">https://tei-c.org/about/history/</div>
+
+					<img width="50%" src="teiIntro_images/1987-11-vassar.jpg">
+
+				</section>
+
+				<section>
+					Since 1999, the TEI is led by a consortium that maintains and develops <b>guidelines</b> for text encoding.
+					<div>
+						<img src="teiIntro_images/tei-website.png">
+					</div>
+				</section>
+
+				<section>
+				<a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html"><img width="50%" src="teiIntro_images/tei-guidelines1.png"></a>
+				</section>
+
+				<section data-background-color="#a5d7d2"> 
+					<h3>3.1.<br/>TEI basic structure</h3>
+				</section>
+
+				<section data-background-image="teiIntro_images/teiBasic.jpg" data-background-size="contain">
+				</section>
+
+				<section data-background-image="teiIntro_images/teiBasic2.jpg" data-background-size="contain">
+				</section>
+
+				<section data-background-image="teiIntro_images/teiHeader.jpg" data-background-size="contain">
+				</section>
+
+				<section data-background-image="teiIntro_images/teiText.jpg" data-background-size="contain">
+				</section>
+
+				<section>
+					<table>
+						<tr>
+							<td width="40%">
+								<img src="teiIntro_images/guy.png">
+							</td>
+							<td width="60%">
+								<img src="teiIntro_images/guyTei.jpg">
+							</td>
+						</tr>
+					</table>
+				</section>
+		
+				<section data-background-color="#a5d7d2"> 
+					<h3>3.2.<br/>Examples of TEI encoding</h3>
+				</section>
+
+				<section>
+					<table>
+						<tr>
+							<td width="40%">
+								<img src="teiIntro_images/mistress.png">
+							</td>
+							<td width="60%">
+								<img src="teiIntro_images/mistressTei.jpg">
+							</td>
+						</tr>
+					</table>
+				</section>
+
+				<section>
+					<div><img src="teiIntro_images/andTowards.png"></div>
+					<div><img width="70%" src="teiIntro_images/andTowardsTei.jpg"></div>
+				</section>
+
+				<section data-background-image="teiIntro_images/teiDramaExample.jpg" data-background-size="contain">
+				</section>
+
+
+
+				<section data-background-color="#a5d7d2"> 
+					<h3>3.3.<br/>TEI customization</h3>
+				</section>
+
+				<section>
+					<div class="small left">
+						<p>XML document is <b>well formed</b> when it complies to XML syntax rules.</p>
+						<p>XML document is <b>valid</b> when it conforms to structural rules defined in a schema. </p>
+						<p>A <b>schema</b> allows to specify: <ul style="font-size:0.8em;">
+							<li>which elements can appear as the root element of a document</li>
+							<li>which elements and attributes can appear where</li>
+							<li>names, datatypes, and default values for all attributes</li>
+						</ul></p>
+						<p>In practice, a schema allows you to check the consistency of the encoding, for example every chapter must begin with a heading, or every strophe must include lines, or a reference to a persistent ID should be specified for each person.
+						</p>
+					</div>
+				</section>
+
+				<section>
+					<h3>Community-maintained TEI schemas</h3>
 					<ul>
-                        <li>the XML declaration</li>
-                        <li>a namespace declaration</li>
-                        <li>a root element</li>
-                        <li>other elements, which have <li>
-                                <li>content</li>
-                                <li>attributes, which have <li>
-                                        <item>li</item>
-                                        <item>and li</item>
-								</ul></li>
+						<li>tei_all </li>
+						<li>tei_lite (light and basic encoding)</li>
+						<li>tei_drama (performance texts)</li>
+						<li>tei_speech (speech and spoken texts)</li>
 					</ul>
+					<p>
+					More at <a href="http://www.tei-c.org/Guidelines/Customization/">http://www.tei-c.org/Guidelines/Customization/</a></p>
 				</section>
 
 				<section>
-					TEI
+					<div class="left">
+						<p>Each project should define its own <b>schema</b>, which represents in a structured and formalized way
+						the understanding of and approach towards the text to be encoded (<b>scientific</b> choices).</p>
+
+						<p>The TEI <b>modular</b> system (modules and classes) helps in customizing the schema.</p>
+
+						<p>There are different schema languages (DTD, RNG, WSD) and the TEI uses RELAXNG (.rng, .rnc).</p>
+					</div>
 				</section>
 
+				<!-- file:///home/elena/Github/elespdn/elespdn.github.io/talks/20190425_TEIcustomization/slides/TEIcustomizationSlides-rpubs.html -->
 
-			
+				
 
 
-
-
-				<section>
-					<h3>TEI basic structure</h3>
-					<img src="http://editio.github.io/slides/imagenes/editio-tei_basic-1.png"/>
-				</section>
-		
-				<section>
-					<h3>TEI basic structure</h3>
-					<h5>&lt;teiHeader&gt;</h5>
-					<img src="http://editio.github.io/slides/imagenes/editio-tei_basic-2.png"/>
-				</section>
-		
-				<section>
-					<h3>TEI basic structure</h3>
-					<h5>&lt;teiHeader&gt;</h5>
-					<img src="http://editio.github.io/slides/imagenes/editio-tei_basic-3.png"/>
-				</section>
-		
-				<section>
-					<h3>Content in the &lt;teiHeader&gt;</h3>
-					<p>see <a href="https://github.com/elespdn/laboratorio-monaci/blob/master/lezione1/basicTEI.xml" target="_blank">basic example</a></p>
-				</section>
-		
-				<section>
-					<h3>TEI basic structure</h3>
-					<h5>&lt;text&gt;</h5>
-					<img src="http://editio.github.io/slides/imagenes/editio-tei_basic-4.png"/>
-				</section>
-		
-				<section>
-					<h3>TEI basic structure</h3>
-					<h5>&lt;text&gt;</h5>
-					<img src="http://editio.github.io/slides/imagenes/editio-tei_basic-5.png"/>
-				</section>
-			
-				<section>
-					<h3>TEI basic structure</h3>
-					<h5>&lt;text&gt;</h5>
-					<img src="http://editio.github.io/slides/imagenes/editio-tei_basic-6.png"/>
-				</section>
-			
-				<section>
-					<h3>Content in the &lt;text&gt;</h3>
-					<p>see <a href="https://github.com/elespdn/laboratorio-monaci/blob/master/lezione1/basicTEI.xml" target="_blank">basic example</a></p>
+				<section data-background-color="#a5d7d2"> 
+					<h3>3.4.<br/>Software for working with TEI</h3>
 				</section>
 
 				<section>
@@ -248,77 +331,67 @@
 				</section>
 
 				<section>
-					<a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html"><h2>TEI Guidelines</h2></a>
+					<a href="https://roma.tei-c.org/" target="_blank">
+					<img src="teiIntro_images/roma-new.png"></a>
 				</section>
 
 				<section>
-					<a href="http://www.tei-c.org/Roma/startroma.php?mode=main"><h2>TEI modules</h2></a>
+					<a href="https://tei-c.org/" target="_blank"><h2>TEI mailing list</h2></a>
+					<img width="50%" src="teiIntro_images/tei-mailingList.png">
 				</section>
 
 
-				<section>ADD CUSTOMIZATION
-					file:///home/elena/Github/elespdn/elespdn.github.io/talks/20190425_TEIcustomization/slides/TEIcustomizationSlides-rpubs.html
-
+				<section data-background-color="#a5d7d2"> 
+					<h3>3.5.<br/>Multiple outputs</h3>
 				</section>
 
-				<section>
-					MORE IN THE COMMENT
-					<!--
-					<div rend="slide">
-						<head>XML validation</head>
-						<p>A <hi>valid</hi> XML document is well formed, and also conforms to some additional
-							<term>structural</term> rules, which make up what we call a <term>schema</term>. </p>
-						<p>A schema allows you to specify: <list>
-							<item>which elements can appear as the root element of a document</item>
-							<item>which elements and attributes can appear where</item>
-							<item>names, datatypes, and default values for all attributes</item>
-						</list></p>
-						<p>A schema thus allows you to check that <q>every chapter must begin with a heading</q> or
-							<q>recipes must include an ingredient list</q> or <q>values for the attribute
-								<att>when</att> are all valid dates</q>
-						</p>
-						<p>A namespace by contrast just allows you to label elements as being somehow related. A
-							schema provides a formal specification and is written in a formal language. </p>
-					</div>
-					
-					
-					<div rend="slide">
-						<head>Schema languages</head>
-						<p>A schema can be expressed using:
-							<list>
-								<item>DTD: an older ISO standard</item>
-								<item>RNG:  ISO standard RELAXNG</item>
-								<item>WSD: the W3C Schema language</item>
-							</list>
-							All have different tool kits, different syntaxes, and different
-							methods of doing things, particularly for content validation.</p>
-						<p>The TEI uses RELAXNG </p>
-						
-						<p>        <graphic width="2in" url="../../Graphics/relax.png"/></p>
-					</div>-->
-					
+				<section data-markdown>
+					<textarea data-template>
+						### Again on form and content
+
+						<img width="80%" src="teiIntro_images/source-output.png">
+
+						<div class="source">Ciula and Pierazzo, "Encoding Texts",<br/>in <em>Medieval/Modern Manuscript Studies in the Digital Age</em>, London, 2014.</div>
+					</textarea>
 				</section>
 
-				 <section>RECAP</section>
+
+
+
+				
+				<section data-background-color="#a5d7d2"> 
+					<h3>3.6.<br/>Text encoding recap</h3>
+				</section>
+
 
 				 <section>
-					<head>Markup as a scholarly activity</head>
+					 <div class="small">
+						<ul>
+							<li>TEI is a vocabulary expressed using the XML syntax</li>
+							<li>an XML document should be well-formed (XML rules) and valid (schema rules)</li>
+							<li>a basic TEI document is composed of a <code>teiHeader</code> and a <code>text</code></li>
+							<li>the TEI Guidelines are organized in chapters corresponding to the modules</li>
+						</ul>
+					</div>
+				 </section>
+				 
+
+				 <section data-background-color="#a5d7d2"> 
+					<h3>4.<br/>Data modelling</h3>
+				</section>
+
+				 <section>
+					 <div class="small">
 					<ul>
-						<li>The application of markup to a document is an intellectual activity</li>
-						<li>Deciding exactly what markup to apply and why is much the same as editing
-							a text </li>
-						<li>Markup is rarely neutral, objective, or deterministic : interpretation is
+						<li>The application of markup to a document is a <b>scholarly</b> activity</li>
+						<li>Markup is never neutral or objective : <b>interpretation</b> is
 							needed</li>
-						<li>Because it obliges us to confront difficult ontological questions, markup
-							can be considered a research activity in itself</li>
-						<li>Good textual encoding is never as easy or quick as people would believe --
-							do things better, not necessarily quicker</li>
 						<li>The markup scheme used for a project should result from a detailed
-							analysis of the properties of the objects the project aims to use or
+							analysis of the <b>properties of the objects</b> the project aims to use or
 							create</li>
 						</ul>
+					</div>
 				</section>
-				
 
 
 				 <!--
@@ -330,6 +403,11 @@
 					#########################################################################
 				 -->
 
+				
+
+				<section data-background-color="#a5d7d2"> 
+					<h3>5.<br/>TEI in action</h3>
+				</section>
 
 
 				 <section data-markdown>
@@ -338,9 +416,6 @@
 
 						<div class="left">
 						
-						Standard for the encoding of manuscript descriptions: 					
-						[Text Encoding Initiative](https://tei-c.org/) (XML-TEI)
-
 						Example of digital catalogues of manuscripts: [e-codices](https://www.e-codices.unifr.ch/en/), [Manuscriptorium](http://www.manuscriptorium.com/en), [MANUS](https://manus.iccu.sbn.it/index.php)
 						
 						</div>
@@ -352,47 +427,41 @@
 
 				<section data-markdown>
 					<textarea data-template>
-						![ecodices](teiIntro_teiIntro_images/ecodices1.png)
+						![ecodices](teiIntro_images/ecodices1.png)
 					</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-						![ecodices](teiIntro_teiIntro_images/ecodices2.png)
+						![ecodices](teiIntro_images/ecodices2.png)
 					</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
-						![ecodices](teiIntro_teiIntro_images/ecodices3.png)
+						![ecodices](teiIntro_images/ecodices3.png)
 					</textarea>
 				</section>
+
+				<section data-background-image="teiIntro_images/ecodicesXML1.jpg" data-background-size="contain"></section>
+
+				<section data-background-image="teiIntro_images/ecodicesXML2.jpg" data-background-size="contain"></section>
 
 				<section data-markdown>
 					<textarea data-template>
 						<a href="https://manus.iccu.sbn.it/opac_SchedaScheda.php?ID=244757">
-							<img src="teiIntro_teiIntro_images/manus.png">
+							<img src="teiIntro_images/manus.png">
 						</a>
 					</textarea>
 				</section>
 
+				<section data-background-image="teiIntro_images/manusXML1.jpg" data-background-size="contain"></section>
 
-				<section data-markdown>
-					<textarea data-template>
-						<img src="teiIntro_images/xml.png" width="80%">
-					</textarea>
-				</section>
+				<section data-background-image="teiIntro_images/manusXML2.jpg" data-background-size="contain"></section>
 
-				<section data-markdown>
-					<textarea data-template>
-						### Source / output
 
-						<img width="80%" src="teiIntro_images/source-output.png">
 
-						<div class="source">Ciula and Pierazzo, "Encoding Texts",<br/>in <em>Medieval/Modern Manuscript Studies in the Digital Age</em>, London, 2014.</div>
-					</textarea>
-				</section>
-
+				
 
 				<section id="Shelley">
 					<section data-background-image="teiIntro_images/Shelley/Picture-1.png" data-background-size="contain"></section>
@@ -407,7 +476,50 @@
 <!--				<section data-background-image="teiIntro_images/faust.gif" data-background-size="contain"></section> -->
 				<section data-background-image="teiIntro_images/gongora.gif" data-background-size="contain"></section>
 				<section data-background-image="teiIntro_images/jeanpaul.gif" data-background-size="contain"></section>
-					
+				
+				<section data-background-color="#a5d7d2"> 
+					<h3>6.<br/>Digital workflows</h3>
+				</section>
+
+				<section data-background-image="teiIntro_images/workflow_20220221.png" data-background-size="contain">
+				</section>
+
+
+				<section data-background-color="#a5d7d2"> 
+					<p>Thank you.</p>
+					<p>For more information, contact us at rise@unibas.ch</p>
+					<img src="teiIntro_images/rise.png">
+				</section>
+
+				<section>
+					<div class="left">
+						<p>This presentation reuses materials from: </p>
+						<p>José Luis Losada Palenzuela, <em>Markup, XML, TEI</em>,
+							<a href="https://editio.github.io/presentations/intro_sde_tei">https://editio.github.io/presentations/intro_sde_tei</a>, 
+							2021.</p>
+						<p>Lou Burnard, <em>What do we mean by markup and why do we do it?</em>, DHOXSS 2015.</p>
+						<p>Lou Burnard, <em>TEI Basic Structure and Core Elements</em>, DHOXSS 2015.</p>
+					</div>
+				</section>
+
+				<section>
+					<h4>To know more</h4>
+					<div class="left">
+						<p>Burnard, Lou. <em>What is the Text Encoding Initiative? How to add intelligent markup to digital resources</em>. Marseille : OpenEdition Press, 2014. <a href="http://books.openedition.org/oep/679">http://books.openedition.org/oep/679</a>. </p>
+						<p>Burghart, Marjorie, and Elena Pierazzo. <em>Digital Scholarly Editions: Manuscripts, Texts and TEI Encoding</em>. <a href="https://teach.dariah.eu/course/view.php?id=32">https://teach.dariah.eu/course/view.php?id=32</a>.</p>
+						<p>TEI Consortium. <em>Learn the TEI</em>. <a href="https://tei-c.org/support/learn/#section-2">https://tei-c.org/support/learn/#section-2</a>.</p>
+					</div>
+				</section>
+
+				<section>
+					<div class="left small">
+				<div>
+					<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://elespdn.github.io/talks/20220401_editions_crashCourse/teiIntro.html">Introduction to TEI</a> by <span property="cc:attributionName">Elena Spadini</span><br/>(RISE Crash Course, 01.04.2022, University of Basel)<br/>is licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p> 
+				</div>
+			</div>
+			
+			</section>
+
 
 
 				<!--
@@ -423,15 +535,7 @@
 
 				</section>
 			
-				<section>
-					<h4>This presentation reuses materials from: </h4>
-					<div>
-						<a href="http://www.ifr.uni.wroc.pl/pl/nasz-instytut/pracownicy/dr-jose-luis-losada-palenzuela">José Luis Losada Palenzuela</a>,
-						<i>Markup, XML, TEI. Character, structure, guidelines</i>,
-						<a href="http://editio.github.io/slides/xml-tei">&lt;http://editio.github.io/slides/xml-tei&gt;</a>, 
-						2016.
-					</div>
-				</section>
+				
 				-->
 
 				
