@@ -1,0 +1,994 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		<title>Reuse editions</title>
+
+		<meta name="description" content="Reusing digital editions">
+		<meta name="author" content="Elena Spadini">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="../reveal/css/reset.css">
+		<link rel="stylesheet" href="../reveal/css/reveal.css">
+		<link rel="stylesheet" href="../reveal/css/theme/white.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+
+		
+		<style>
+			div.quote {font-size: 0.8em; margin-bottom: 1.5em; margin-top:1.5em;}
+			div.quote::before {content: "“";}
+			div.quote::after {content: "”";}
+			div.source   {font-size: 0.6em; text-align: right; margin-top: 20px}
+			.grey {color:grey;}
+			.small {font-size: 0.8em}
+			.smaller {font-size: 0.6em}
+
+			b {color:#d0513a;}
+			p {font-size: 0.8em}
+
+			.coloredTitle {
+				background-color:#003333
+			}				
+			div.left {text-align: left}
+			h1, h2, h3, h4 {color:#d0513a !important;}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+
+
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+
+							
+				
+				<section> <!-- data-background-image="https://images.pexels.com/photos/4959831/pexels-photo-4959831.jpeg?cs=srgb&dl=pexels-kseniia-lopyreva-4959831.jpg&fm=jpg" data-background-opacity="0.4">-->
+					<h3><b><em>Reusing digital editions</em></b></h3>
+					<b>Open data and APIs</b>
+					<div class="smaller" style="text-align: left;padding:50px;margin:50px">
+						Atelier "Éditions critiques numériques et multilinguisme"<br/>26-27 septembre 2022, Université de Montréal
+						<br/><br/>
+						Elena Spadini (University of Basel)
+						<!--
+						<br/>
+						Presentation online at: <a href="https://elespdn.github.io/talks/20220401_editions_crashCourse/teiIntro.html">https://elespdn.github.io/talks/20220401_editions_crashCourse/editions.pdf</a>-->
+					</div>
+				</section>
+
+				
+
+				<!--
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+ -->
+
+ 				<section>
+ 					<div class="small left">
+ 					<h3>Table of contents</h3>
+ 					<br/>
+ 					<div>
+						<div>Why and what to reuse</div>
+						<div>Measures that enable reuse</div>
+						<div>APIs</div>
+						<div>Open questions</div>
+					</div>
+ 				</section>
+
+				 <section>
+					<div class="small">
+						<h2>Why considering reuse?</h2>
+						<br/>
+
+						<div class="left">
+							Enabling reuse
+							<ul>
+								<li>facilitates data sharing and collaborations</li>
+								<li>increases the visibility of research and can lead to more citations</li>
+								<li>improves the transparency, reliability and reproducibility of research </li>
+								<li>[...]</li>
+							</ul>
+						</div>
+						<br/>
+						<div class="left">
+							and thereby
+							<div>
+								<ul>
+									<li>maximises potential from data assets</li>
+									<li>maximises research impact</li>
+								</ul>
+							</div>
+						</div>
+						<div class="source">https://www.howtofair.dk/why-fair/</div>
+					</div>
+				</section>
+
+
+				<section>
+					<div>
+						<b>Conditions that apply to digital scholarly editions</b>
+						<div class="quote">where possible, it should attend to possibilities<br/>
+											of <strong>sampling, reuse, and remix</strong>, supporting approaches
+											<br/>to the formation and curation of the edition such as
+											<br/>reconstructing and documenting instances of texts
+											<br/>and textual change over time, like algorithmic
+											<br/>construction and reconstruction (with possible
+											<br/>extensibility, including external data)</div>
+						<div class="source" style="font-size:0.5em">Modern Language Association of America. 2016. ‘MLA Statement on the Scholarly Edition in the Digital Age’.
+</div>
+					</div>
+				</section>
+
+
+
+				<section>
+					<div class="small">
+						<h2>Example of reuse</h2>
+						<div>
+							<img width="60%" src="images/oldBailey_digitalProjects.png" />
+						</div>
+						<div class="source">Clive Emsley, Tim Hitchcock and Robert Shoemaker, "Old Bailey Online - Digital Projects Using Old Bailey Online Data ", <i>Old Bailey Proceedings Online</i> (www.oldbaileyonline.org, version 7.0, 21 September 2022 )</div>
+
+					</div>
+				</section>
+
+				<section>
+					<div class="small">
+						<h2>What to reuse</h2>
+						<br/><br/>
+						<ul>
+							<li>Code / tools</li>
+							<li><strong>Data</strong></li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<div class="small">
+						<h2>For what to reuse</h2>
+						<br/><br/>
+						<ul>
+							<li>extract information from the data for reusing in a non computational context. E.g.: writing an article, preparing a print dictionary. <b>Human consumption</b></li>
+							<br/>
+							<li><strong>reuse the data in a digital context. E.g.: further processing or annotating, compiling with other dataset. <b>Machine consumption</b></strong></li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<div class="small">
+						<h2>What to reuse and for what (examples)</h2>
+						<br/><br/>
+						<div>
+							<ul>
+								<li>Text (documentary, diplomatic, critical, etc.) → text analysis (literary, linguistic, historical), scholarly editing (collation, larger corpus), training data</li>
+								<li>Archival documents (manuscripts, publications, etc.) → catalogues</li>
+								<li>Entities → prosopography, gazetteers</li>
+								<li>All → reproducibility (peer review, update)</li>
+								<li>...</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="small">
+						<h2>How to retrieve data</h2>
+						<br/>
+						<div class="left">
+							<strong>all</strong>
+							<div>
+									<ul>
+										<li>web scraping</li>
+										<li>accessible dump (most common)</li>
+									</ul>
+								</div>
+								<br/>
+							<strong>selection</strong>
+							<div>
+									<ul>
+										<li>API</li>
+										<li>other query endpoints</li>
+									</ul>
+								</div>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="small">
+						<h2>Web scraping</h2>
+						<br/><br/>
+						<div class="left">
+							<div>when no access to data is provided</div>
+							<br/>
+							<div><em>Limitations:</em></div>
+							<li>no metadata (including no IDs)</li>
+							<li>no documentation</li>
+							<li>difficult to manipulate without being familiar with the data structure</li>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="small">
+						<h2>Data dumps</h2>
+						<br/><br/>
+						<div class="left">
+							<div>xml-tei (most common)</div>
+							<div>other formats: json, rdf, txt, tabular formats</div>
+							<br/>
+							<div><em>Limitations:</em></div>
+							<li>difficult to manipulate without being familiar with the data structure, even if documentation is provided</li>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="small">
+						<h2>APIs and other query endpoints</h2>
+						<br/><br/>
+						<div class="left">
+							<div>API (most common)</div>
+							<div>SPARQL endpoint</div>
+							<br/>
+							<div><em>Limitations of APIs:</em></div>
+							<li>only limited operations possible</li>
+						</div>
+					</div>
+				</section>
+
+
+				<section>
+					<div class="small">
+						<h2>API</h2>
+						<div class="left">
+							<div>Future ?</div><br/>
+							<div>It seems so ...</div>
+							<div class="small">See for example: Witt, Jeffrey C. 2018. ‘Digital Scholarly Editions and API Consuming Application’. In <em>Digital Scholarly Editions as Interfaces</em>. Norderstedt: Schriften des Instituts für Dokumentologie und Editorik</div>
+							<br/>
+							<div>... already for sometime</div>
+							<div class="small">See for example: Guéret, Christophe. 2015. ‘Stop Making Tools! Nobody Likes Them Anyway...’ Presented at the eHumanities.nl. https://www.ehumanities.nl/christophe-gueret-ehg-dans-vu</div>
+							<div class="small">Boot, Peter, and Joris van Zundert. 2011. ‘The Digital Edition 2.0 and the Digital Library: Services, Not Resources’. <em>Digitale Edition Und Forschungsbibliothek</em>, 44: 141–52.</div>
+					</div>
+					</div>
+				</section>
+
+
+				<section>
+					<div class="small">
+						<h2>Some available APIs	</h2>
+						<br/>
+						<div class="left">
+							<ul>
+								<li>TEI Publisher</li>
+								<li>Distributed Text Services (DTS) - <em>Perseus Project</em></li>
+								<li>DaSCH Service Platform (DSP) - <em>Gustave Roud. Textes & Archives</em></li>
+								<em>
+								<li>CorrespSearch</li>
+								<li>Carl Maria von Weber Gesamtausgabe</li>
+								<li>edition humboldt digital</li>
+								<li>Registres de la Comédie-Française</li>
+								<li>Sandrart.net</li>
+								<li>The Folger Shakespeare</li>
+								<li>The Proceedings of the Old Bailey</li>
+								</em>
+							</ul>
+						</div>
+					</div>
+					<div class="source">Thanks to: Franzini, Greta. 2012. <em>Catalogue of Digital Editions</em></div>
+				</section>
+
+				<section>
+					<div class="small">
+						<h2>Generic or specific to an edition</h2>
+						<br/>
+						<div class="small">
+							<table>
+					            <tr>
+					                <td>DSP</td>
+					                <td>Generic</td>
+					            </tr>
+					            <tr>
+					                <td>DTS</td>
+					                <td>Generic</td>
+					            </tr>
+					            <tr>
+					                <td>TEI Publisher</td>
+					                <td>Generic</td>
+					            </tr>
+					            <tr>
+					                <td><em>CorrespSearch</em></td>
+					                <td>Specific</td>
+					            </tr>
+					            <tr>
+					                <td><em>Carl Maria von Weber Gesamtausgabe</em></td>
+					                <td>Specific</td>
+					            </tr>
+					            <tr>
+					                <td><em>edition humboldt digital</em></td>
+					                <td>Specific</td>
+					            </tr>
+					            <tr>
+					                <td><em>Registres de la Comédie-Française</em></td>
+					                <td>Specific</td>
+					            </tr>
+					            <tr>
+					                <td><em>Sandrart.net</em></td>
+					                <td>Specific</td>
+					            </tr>
+					            <tr>
+					                <td><em>The Folger Shakespeare</em></td>
+					                <td>Specific</td>
+					            </tr>
+					            <tr>
+					                <td><em>The Proceedings of the Old Bailey</em></td>
+					                <td>Specific</td>
+					            </tr>
+					        </table>
+					    </div>
+					</div>
+				</section>
+
+				<section>
+					<div class="small">
+						<h2>Documentation</h2>
+						<br/>
+						<div class="small">
+							<table>
+					            <tr>
+					                <td>DSP</td>
+					                <td><a href="https://docs.dasch.swiss/2022.09.01/DSP-API/03-apis/api-v2/">doc</a></td>
+					            </tr>
+					            <tr>
+					                <td>DTS</td>
+					                <td><a href="https://distributed-text-services.github.io/specifications/">doc</a></td>
+					            </tr>
+					            <tr>
+					                <td>TEI Publisher</td>
+					                <td><a href="https://teipublisher.com/exist/apps/tei-publisher/doc/documentation.xml?odd=docbook.odd&id=api">doc</a> | <a href="https://teipublisher.com/exist/apps/tei-publisher/api.html">open API doc</a></td>
+					            </tr>
+					            <tr>
+					                <td><em>CorrespSearch</em></td>
+					                <td><a href="https://correspsearch.net/en/api.html">doc</a></td>
+					            </tr>
+					            <tr>
+					                <td><em>Carl Maria von Weber Gesamtausgabe</em></td>
+					                <td><a href="https://weber-gesamtausgabe.de/en/Help/API_Documentation.html">doc</a> | <a href="https://weber-gesamtausgabe.de/api/v1/index.html">open API doc</a></td>
+					            </tr>
+					            <tr>
+					                <td><em>edition humboldt digital</em></td>
+					                <td><a href="https://edition-humboldt.de/about/index.xql?id=api&l=en">doc</a></td>
+					            </tr>
+					            <tr>
+					                <td><em>Registres de la Comédie-Française</em></td>
+					                <td><a href="https://hack.cfregisters.org/fr/">doc</a> | <a href="Provides request examples as Postman collection: https://hack.cfregisters.org/en/receipts/api#postman">Postman collection</a></td>
+					            </tr>
+					            <tr>
+					                <td><em>Sandrart.net</em></td>
+					                <td><a href="http://ta.sandrart.net/en/info/services/rest/">doc</a></td>
+					            </tr>
+					            <tr>
+					                <td><em>The Folger Shakespeare</em></td>
+					                <td><a href="https://www.folgerdigitaltexts.org/api">doc</a></td>
+					            </tr>
+					            <tr>
+					                <td><em>The Proceedings of the Old Bailey</em></td>
+					                <td><a href="https://www.oldbaileyonline.org/static/DocAPI.jsp">doc</a></td>
+					            </tr>
+					        </table>
+					    </div>
+					</div>
+				</section>
+
+				<section data-background-image="images/weberOpenAPI1.png" data-background-size="contain"></section>
+				<section data-background-image="images/weberOpenAPI2.png" data-background-size="contain"></section>
+
+
+				<!--
+				<section>
+					<div class="small">
+						<h2>Data and metadata</h2>
+						<br/>
+						<div class="small">
+							<table>
+					            <tr>
+					                <td>DSP</td>
+					                <td>Data and metadata</td>
+					            </tr>
+					            <tr>
+					                <td>DTS</td>
+					                <td>Data and metadata</td>
+					            </tr>
+					            <tr>
+					                <td>TEI Publisher</td>
+					                <td>Data and metadata</td>
+					            </tr>
+					            <tr>
+					                <td><em>CorrespSearch</em></td>
+					                <td>Metadata</td>
+					            </tr>
+					            <tr>
+					                <td><em>Carl Maria von Weber Gesamtausgabe</em></td>
+					                <td>Data and metadata</td>
+					            </tr>
+					            <tr>
+					                <td><em>edition humboldt digital</em></td>
+					                <td>Metadata</td>
+					            </tr>
+					            <tr>
+					                <td><em>Registres de la Comédie-Française</em></td>
+					                <td>Metadata</td>
+					            </tr>
+					            <tr>
+					                <td><em>Sandrart.net</em></td>
+					                <td>Metadata</td>
+					            </tr>
+					            <tr>
+					                <td><em>The Folger Shakespeare</em></td>
+					                <td>Data and metadata</td>
+					            </tr>
+					            <tr>
+					                <td><em>The Proceedings of the Old Bailey</em></td>
+					                <td>Data and metadata</td>
+					            </tr>
+					        </table>
+					    </div>
+					</div>
+				</section>
+
+				
+				<section>
+					<div class="small">
+						<h2>Data and metadata formats</h2>
+						<div style="font-size:0.7em">
+							<table>
+					            <tr>
+					                <td>DSP</td>
+					                <td>Data and metadata</td>
+					                <td>xml-tei, json-ld, xml-rdf, turtle</td>
+					            </tr>
+					            <tr>
+					                <td>DTS</td>
+					                <td>Data and metadata</td>
+					                <td>xml-tei</td>
+					            </tr>
+					            <tr>
+					                <td>TEI Publisher</td>
+					                <td>Data and metadata</td>
+					                <td>xml-tei (through DTS), html, pdf, tex, epub, </td>
+					            </tr>
+					            <tr>
+					                <td><em>CorrespSearch</em></td>
+					                <td>Metadata</td>
+					                <td>xml-tei, json-tei, beacon, csv</td>
+					            </tr>
+					            <tr>
+					                <td><em>Carl Maria von Weber Gesamtausgabe</em></td>
+					                <td>Data and metadata</td>
+					                <td>xml-tei, json-ld, beacon, html, txt</td>
+					            </tr>
+					            <tr>
+					                <td><em>edition humboldt digital</em></td>
+					                <td>Metadata</td>
+					                <td>oai dc, BEACON ?? CHECK</td>
+					            </tr>
+					            <tr>
+					                <td><em>Registres de la Comédie-Française</em></td>
+					                <td>Metadata</td>
+					                <td>json</td>
+					            </tr>
+					            <tr>
+					                <td><em>Sandrart.net</em></td>
+					                <td>Data</td>
+					                <td>xml, json</td>
+					            </tr>
+					            <tr>
+					                <td><em>The Folger Shakespeare</em></td>
+					                <td>Data</td>
+					                <td>txt, html</td>
+					            </tr>
+					            <tr>
+					                <td><em>The Proceedings of the Old Bailey</em></td>
+					                <td>Data and metadata</td>
+					                <td>xml-tei, json, zip</td>
+					            </tr>
+					        </table>
+					    </div>
+					</div>
+				</section>
+			-->
+
+
+
+				<section>
+					<div class="small">
+						<h2>Data and metadata formats</h2>
+						<div style="font-size:0.5em">
+							<table>
+								<tr>
+									<th></th>
+									<th>API</th>
+									<th>on page</th>
+									<th>dump</th>
+					            <tr>
+					                <td>DSP and DSP-APP</td>
+					                <td>Data and metadata (xml-tei, json-ld, xml-rdf, turtle)</td>
+					                <td>no</td>
+					                <td>no</td>
+					            </tr>
+					            <tr>
+					                <td>DTS</td>
+					                <td>Data and metadata (xml-tei, json)</td>
+					                <td>n/a</td>
+					                <td>n/a</td>
+					            </tr>
+					            <tr>
+					                <td>TEI Publisher</td>
+					                <td>Data and metadata (tei-xml, html, pdf, tex, epub)</td>
+					                <td>Data and metadata (tei-xml, pdf, tex, epub)</td>
+					                <td>n/a</td>
+					            </tr>
+					            <tr>
+					                <td><em>CorrespSearch</em></td>
+					                <td>Metadata (xml-tei, json-tei, beacon, csv)</td>
+					                <td>n/a</td>
+					                <td>Metadata (xml-tei, json-tei, beacon, csv)</td>
+					            </tr>
+					            <tr>
+					                <td><em>Carl Maria von Weber Gesamtausgabe</em></td>
+					                <td>Data and metadata (xml-tei, json-ld, beacon, html, txt)</td>
+					                <td>Data and metadata (xml-tei, txt)</td>
+					                <td>no</td>
+					            </tr>
+					            <tr>
+					                <td><em>edition humboldt digital</em></td>
+					                <td>Metadata (oai-dc, xml, beacon)</td>
+					                <td>Data and metadata (xml-tei)</td>
+					                <td>Data and metadata (xml-tei)</td>
+					            </tr>
+					            <tr>
+					                <td><em>Registres de la Comédie-Française</em></td>
+					                <td>Metadata (json)</td>
+					                <td>no</td>
+					                <td>Metadata (PostgreSQL)</td>
+					            </tr>
+					            <tr>
+					                <td><em>Sandrart.net</em></td>
+					                <td>Metadata (xml, json)</td>
+					                <td>no</td>
+					                <td>Data and metadata (xml-tei, rdf)</td>
+					            </tr>
+					            <tr>
+					                <td><em>The Folger Shakespeare</em></td>
+					                <td>Data and metadata (txt, html)</td>
+					                <td>Data and metadata (xml-tei, html, txt, pdf, doc)</td>
+					                <td>Data and metadata (xml-tei, html, txt, pdf, doc)</td>
+					            </tr>
+					            <tr>
+					                <td><em>The Proceedings of the Old Bailey</em></td>
+					                <td>Data and metadata (xml-tei, json, zip)</td>
+					                <td>Data and metadata (xml-tei, print)</td>
+					                <td>Data and metadata (xml-tei)</td>
+					            </tr>
+					        </table>
+					    </div>
+					</div>
+				</section>
+
+				<!--
+				<section>
+					<div class="small">
+						<h2>Data and metadata formats</h2>
+						<br/>
+						<div class="small">
+							<table>
+					            <tr>
+					                <td>DSP</td>
+					                <td>xml-tei, json-ld, xml-rdf, turtle</td>
+					            </tr>
+					            <tr>
+					                <td>DTS</td>
+					                <td>xml-tei</td>
+					            </tr>
+					            <tr>
+					                <td>TEI Publisher</td>
+					                <td>xml-tei (through DTS), html, pdf, tex, epub, </td>
+					            </tr>
+					            <tr>
+					                <td><em>CorrespSearch</em></td>
+					                <td>xml-tei, json-tei, beacon, csv</td>
+					            </tr>
+					            <tr>
+					                <td><em>Carl Maria von Weber Gesamtausgabe</em></td>
+					                <td>xml-tei, json-ld, beacon, html, txt</td>
+					            </tr>
+					            <tr>
+					                <td><em>edition humboldt digital</em></td>
+					                <td>oai dc, BEACON ?? CHECK</td>
+					            </tr>
+					            <tr>
+					                <td><em>Registres de la Comédie-Française</em></td>
+					                <td>json</td>
+					            </tr>
+					            <tr>
+					                <td><em>Sandrart.net</em></td>
+					                <td>xml, json</td>
+					            </tr>
+					            <tr>
+					                <td><em>The Folger Shakespeare</em></td>
+					                <td>txt, html</td>
+					            </tr>
+					            <tr>
+					                <td><em>The Proceedings of the Old Bailey</em></td>
+					                <td>xml-tei, json, zip</td>
+					            </tr>
+					        </table>
+					    </div>
+					</div>
+				</section>-->
+
+
+
+				<section>
+					<div class="small">
+						<h2>API requests</h2>
+						<div style="font-size:0.8em">
+							<table>
+								<tr>
+									<th></th>
+									<th>scope within text document</th>
+									<th>parameters</th>
+					            <tr>
+					                <td>DSP</td>
+					                <td>content and structure (elements)</td>
+					                <td>yes</td>
+					            </tr>
+					            <tr>
+					                <td>DTS</td>
+					                <td>structure (anchors)</td>
+					                <td>yes</td>
+					            </tr>
+					            <tr>
+					                <td>TEI Publisher</td>
+					                <td>content</td>
+					                <td>yes</td>
+					            </tr>
+					            <tr>
+					                <td><em>CorrespSearch</em></td>
+					                <td>content</td>
+					                <td>yes</td>
+					            </tr>
+					            <tr>
+					                <td><em>Carl Maria von Weber Gesamtausgabe</em></td>
+					                <td>content and structure (elements)</td>
+					                <td>yes</td>
+					            </tr>
+					            <tr>
+					                <td><em>edition humboldt digital</em></td>
+					                <td>content</td>
+					                <td>yes</td>
+					            </tr>
+					            <tr>
+					                <td><em>Registres de la Comédie-Française</em></td>
+					                <td>content</td>
+					                <td>yes</td>
+					            </tr>
+					            <tr>
+					                <td><em>Sandrart.net</em></td>
+					                <td>content</td>
+					                <td>no</td>
+					            </tr>
+					            <tr>
+					                <td><em>The Folger Shakespeare</em></td>
+					                <td>content</td>
+					                <td>yes</td>
+					            </tr>
+					            <tr>
+					                <td><em>The Proceedings of the Old Bailey</em></td>
+					                <td>content</td>
+					                <td>yes</td>
+					            </tr>
+					        </table>
+					    </div>
+					</div>
+				</section>
+
+
+				<section>
+					<div class="small">
+						<h2>Accepted IDs</h2>
+						<div style="font-size:0.7em">
+							<table>
+					            <tr>
+					                <td>DSP</td>
+					                <td>internal</td>
+					            </tr>
+					            <tr>
+					                <td>DTS</td>
+					                <td>internal</td>
+					            </tr>
+					            <tr>
+					                <td>TEI Publisher</td>
+					                <td>internal</td>
+					            </tr>
+					            <tr>
+					                <td><em>CorrespSearch</em></td>
+					                <td>GND, VIAF, BNF, LC, NDL, Geonames</td>
+					            </tr>
+					            <tr>
+					                <td><em>Carl Maria von Weber Gesamtausgabe</em></td>
+					                <td>internal, GND, VIAF, Wikidata</td>
+					            </tr>
+					            <tr>
+					                <td><em>edition humboldt digital</em></td>
+					                <td>internal</td>
+					            </tr>
+					            <tr>
+					                <td><em>Registres de la Comédie-Française</em></td>
+					                <td>internal</td>
+					            </tr>
+					            <tr>
+					                <td><em>Sandrart.net</em></td>
+					                <td>Arachne, BritishMuseum, Census, GeoNames, GKD, GoogleBooks, KHM, NationalGallery, PND, Rijksmuseum, SWD, TGN, ULAN, VD16, VD17, VIAF, VKK</td>
+					            </tr>
+					            <tr>
+					                <td><em>The Folger Shakespeare</em></td>
+					                <td>internal</td>
+					            </tr>
+					            <tr>
+					                <td><em>The Proceedings of the Old Bailey</em></td>
+					                <td>internal</td>
+					            </tr>
+					        </table>
+					    </div>
+					</div>
+				</section>
+
+				<section>
+					<div class="small left">
+						<h2>Example</h2>
+						<div><b>Search multiple datasets with authority records</b>
+						<br/>Project on Johanna Schopenhauer
+						</div>
+						<br/>
+						<div>
+							Reuse of data from:
+							<br/><em>Carl Maria von Weber Gesamtausgabe</em> and <em>CorrespSearch</em></div>
+						</div>
+				</section>
+
+				<section data-background-image="images/weber1.png" data-background-size="contain"></section>
+
+				<section data-background-image="images/weberJS.png" data-background-size="contain"></section>
+
+				<section data-background-image="images/weberJS2.png" data-background-size="contain"></section>
+
+				<section>
+					<img src="images/GNDjs.png"></section>
+
+				<section>
+						<code>curl -L -H<br/>"Accept: application/tei+xml"<br/>https://weber-gesamtausgabe.de/en/gnd/118610473</code>
+				</section>
+
+				<section data-background-image="images/weberJSxml.png" data-background-size="contain"></section>
+
+
+				<section data-background-image="images/correspSearch.png" data-background-size="contain"></section>
+
+				<section data-background-image="images/correspSearchJS.png" data-background-size="contain"></section>
+
+
+				<section>
+					<div class="small left">
+						<h2>Example</h2>
+						<div><b>Retrieve structural divisions of XML texts</b>
+							<br/>Collation of texts available locally with texts available online</div>
+						<br/>
+						<div>
+							Reuse of data from:
+							<br/><em>Perseus Project</em> (DTS)
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<img style="border:0px; margin:0px;" width="80%" src="images/collateX_dts.png">
+				</section>
+
+
+
+				<section>
+					<div class="small left">
+						<h2>Example</h2>
+						<div><b>Retrieve content of XML elements</b>
+							<br/>Sociolinguistic analysis on salute formulation over time</div>
+						<br/>
+						<div>
+							Reuse of data from:
+							<br/><em>Carl Maria von Weber Gesamtausgabe</em></div>
+					</div>
+				</section>
+
+				<section>
+					<code>
+						https://weber-gesamtausgabe.de/api/v1/code/findByElement/
+						salute?namespace=http%3A%2F%2Fwww.tei-c.org%2Fns%2F1.0
+						&docType=letters</code>
+				</section>
+
+				<section data-background-image="images/weberSalutes.png" data-background-size="contain"></section>
+
+
+				<section>
+					<div class="small left">
+						<h2>Example</h2>
+						<div><b>SPARQL queries</b>
+							<br/>Study of genetic processes</div>
+						<br/>
+						<div>
+							Reuse of data from:
+							<br/><em>Gustave Roud. Textes & Archives</em></div>
+					</div>
+				</section>
+
+				<section>
+					<div class="smaller">
+					<pre style="width:inherit;box-shadow: none;">
+					<code style="background:inherit;color: black">
+						PREFIX knora-api: &lt;http://api.knora.org/ontology/knora-api/v2#&gt;
+						PREFIX roud-oeuvres: &lt;http://api.ls-prod-server.dasch.swiss/ontology/0112/roud-oeuvres/v2#&gt;
+						CONSTRUCT &#123;
+						    ?dossier knora-api:isMainResource true .
+						    ?dossier roud-oeuvres:geneticDossierResultsInPublication ?pub .
+						&#125; WHERE &#123;
+						    ?dossier a roud-oeuvres:GeneticDossier .
+						    ?dossier roud-oeuvres:geneticDossierResultsInPublication ?pub .
+						    ?diaryNote roud-oeuvres:msPartIsReusedInDossier ?dossier .
+						&#125;
+					</code>
+					</pre>
+						</div>
+				
+				</section>
+
+				<section data-background-image="images/roudDossiers.png" data-background-size="contain"></section>
+
+				<section>
+					<div class="small">
+						<h2>From the APIs analysis ...</h2>
+						<br/>
+						<div class="left">
+							<ul>
+								<li><strong>Variety of formats</strong>: xml-tei, but also different flavours of json; limited support for txt (cf. Franzini et al. 2019, 6.16)</li>
+								<br/>
+								<li><strong>Retrieve by content or by structure</strong>: ideally DTS combined with project API for metadata, fulltext search, specific content</li>
+								<br/>
+								<li><strong>Authority file records</strong>: enrichment and linking of the dataset</li>
+								<br/>
+								<li><strong>Curated or raw data</strong>: consider human and machine consumption</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+
+				<section>
+					<div class="small">
+						<h2>The open question of versioning</h2>
+						<br/>
+						<div class="quote">Much of the OBAPI documentation is also useful for understanding the XML files, as the API is based on the same data. However, please note that sometimes the files on ORDA and the API might represent slightly different versions of the data.</div>
+						<div class="source"><em>The Proceedings of the Old Bailey</em>, https://www.oldbaileyonline.org/static/Data.jsp</div>
+						<br/>
+						<div class="quote">NB: That dump file is a snapshot of the database, from a point in time, and is not most recent version of the live database; to access the most recent data, please refer to the REST API.</div>
+						<div class="source"><em>Registres de la Comédie-Française</em>, https://hack.cfregisters.org/en/receipts/database.html</div>
+					</div>
+				</section>
+
+				
+				<section>
+					<div class="small">
+						<h2>Conclusions (1)</h2>
+						<br/>
+						
+						<div><strong>Versioning and reproducibility</strong>: API, content of data dump and website may change over time, which limits reproducibility</div>
+						<br/><br/>
+						<div>The <strong>multi-tasking</strong> textual scholar: should scholars become familiar <span style="text-decoration: underline;">also</span> with APIs consumption (and development)?</
+					</div>
+				</section>
+
+				<section>
+					<div class="small">
+						<h2>Conclusions (2)</h2>
+						<div>Toward standardization in editions APIs?</div>
+						<div style="margin:20px"><img style="border:0; box-shadow: none; margin:0" width="20%" src="images/standards-reuse.drawio.png"/></div>
+						<br/>
+						<div>For <strong>xml-tei texts</strong>: DTS!</div>
+						<br/>
+						<div>For <strong>content</strong> queries: does it make sense to define a common set of entities (e.g. FRBR and named entities)?
+						</div>
+					</div>
+				</section>
+
+				<section data-background-image="images/weberOpenAPI1.png" data-background-size="contain"></section>
+
+				<section>
+					<img width="60%" src="images/database.jpg" style="border:0px; margin:0px" />
+					<div style="font-size: 0.4em; margin:0px">Image : Michael Mandiberg, <a href="https://www.flickr.com/photos/theredproject/3332644561/">DATA BASE</a>, 2009 (CC BY-SA 2.0)</div>
+					<br/>
+					<div class="left" style="font-size:0.6em">
+						<div xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/" property="dct:title" rel="cc:attributionURL">Elena Spadini, <em>Reusing digital editions. Open data and APIs</em>, Atelier "Éditions critiques numériques et multilinguisme", 26 septembre 2022, Université de Montréal. <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0</a></div>
+					</div>
+					<br/>
+					<div class="left" style="font-size:0.5em">Thanks to RISE colleagues, Matteo Romanello, José Luis Losada Palenzuela</div>
+					
+					
+				</section>
+
+				
+				
+				
+			</div> <!-- end slides -->
+		</div> <!-- end reveal -->
+
+
+		<script src="../reveal/js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal/plugin/highlight/highlight.js', async: true },
+					{ src: '../reveal/plugin/search/search.js', async: true },
+					{ src: '../reveal/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../reveal/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+
+
+	</body>
+</html>
