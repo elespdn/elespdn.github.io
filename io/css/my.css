@@ -5,24 +5,34 @@
 }
 
 .pubtitle {
-	background-color: #f1ffc4;
+	background-color: #c8e6c9; /*AECEEA*/
 }
 
 .slidetitle {
-	background-color: #b3c5d7;
+	background-color: #c8e6c9; /*FFC09F*/
 }
 
 .ongoingtitle {
-	background-color: #ffcad4;
+	background-color: #c8e6c9; /*FFEE93*/
 }
 
 .teachingtitle {
-	background-color: #97ead2;
+	background-color: #c8e6c9; /*FFB7FF*/
+}
+
+
+.studytitle {
+	background-color: #c8e6c9; /*ADF7B6*/
 }
 
 .news {
   padding: 5% 14% 0% 13%;
 }
+
+.toTop {
+	width: 1.5%;
+	transform: rotate(180deg);
+	}
 
 
 
@@ -65,4 +75,12 @@ a:hover {
 a:active {
     color: #737373;
     text-decoration: underline;
+}
+
+.nav-link {
+color: white !important; 
+}
+
+.navbar-brand {
+color: #c8e6c9 !important; 
 }
