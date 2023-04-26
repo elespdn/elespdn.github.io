@@ -1,0 +1,922 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Semantic editions</title>
+
+		<link rel="stylesheet" href="../reveal/css/reveal.css">
+		<link rel="stylesheet" href="../reveal/css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+
+		<style>
+			div.quote {font-size: 0.7em; margin-bottom: 0.5em; margin-top:1.5em;}
+			div.quoteOrig {font-size: 0.5em; margin-bottom: 0.5em;}
+			div.quote::before, div.quoteOrig::before {content: "“";}
+			div.quote::after, div.quoteOrig::after {content: "”";}
+			div.source   {font-size: 0.5em; text-align: right}
+			.grey {color:grey;}
+			.small {font-size: 0.8em}
+			.smaller {font-size: 0.6em}
+			.smallest {font-size: 0.4em}
+
+			b {color:#d0513a;}
+			p {font-size: 0.8em}
+			ul {font-size: 0.8em}
+			ol {font-size: 0.8em}
+
+			.coloredTitle {
+				background-color:#003333
+			}				
+			div.left {text-align: left}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+
+							
+				
+				<section>
+					<h3><b>Semantic web and scholarly editions: where are we?</b></h3>
+					<h4><b>Towards a philological web of data</b></h4>
+					<br/>
+					<div class="small" style="text-align: left">
+						Newcastle University, 26 April 2023
+						<br/><i>ATNU Virtual Visiting Speaker series</i>
+						<br/><br/><br/>
+						Elena Spadini (University of Basel)
+						<br/>
+					</div>
+				</section>
+				
+
+
+				<!--
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+ -->
+
+ 				<section>
+ 					<ol style="font-size: 0.9em">
+ 						<li>Background</li>
+ 						<li>What is a semantic edition</li>
+ 						<li>A tentative state-of-the-art
+ 							<ol>
+ 								<li>The first decade</li>
+ 								<li>Extension of indices</li>
+ 								<li>Interpretation, provenance and knowledge creation</li>
+ 								<li>Resources</li>
+ 								<li>Examples</li>
+ 							</ol>
+ 						</li>
+ 						<li>Towards a philological web of data
+ 							<ol>
+ 								<li>RDF stemmata: reuse of OpenStemmata</li>
+ 								<li>Genetic networks and GENO</li>
+ 							</ol>
+ 						</li>
+ 						<li>Conclusions</li>
+ 					</ol>
+ 				</section>
+
+
+<!-- ######################################################### -->
+<!-- #################     BACKGROUND     #################### -->
+<!-- ######################################################### -->
+
+				<section data-background-color="#ffb6a9">
+					<h3>Background</h3>
+				</section>
+
+				<section>
+					<table>
+						<tr>
+							<td>
+								<p><strong>Gustave Roud,<br/>« Œuvres complètes »</strong></p>
+								<br/>
+								<div class="small">
+									Projet FNS, 2017-2021</li>
+									<br/><b>Direction</b> : Claire Jaquier et Daniel Maggetti
+									<br/><b>Collaborateurs et collaboratrices</b> : Alessio Christen, Bruno Pellegrino, Elena Spadini, Julien Burri, Raphaëlle Lacord
+								</div>
+							</td>
+							<td>
+								<img width="50%" src="images/roud-books.jpg">
+								<img width="100%" src="images/roud-site.png">
+							</td>
+						</tr>
+					</table>
+					
+				</section>
+
+				<section>
+					<a href="https://zenodo.org/record/3402173" target="_blank"><img width="50%" src="images/graphSDEWorkshop.png">
+					<a href="https://www.i-d-e.de/publikationen/schriften/bd-15-graph-data-models/" target="_blank"><img src="images/graphSDEBook.jpg"></a>
+				</section>
+
+<!-- ######################################################### -->
+<!-- ##########     WHAT IS A SEMANTIC EDITION      ########## -->
+<!-- ######################################################### -->
+
+				<section data-background-color="#ffb6a9">
+					<h3>What is a semantic edition</h3>
+				</section>
+
+				<section>
+					<h3>Web of data</h3>
+
+					<p>From web of documents to <b>web of data</b>, for humans and <b>machines</b>. Tim Berners-Lee and collaborators in 2001.</p>
+					<p>Statements expressed in <b>RDF</b> triples (subject, predicate, object). <b>URIs</b>, unique identifiers for resources (persons, concepts, books, web pages, etc.), can be used at each position of the triple.</p>
+				</section>
+
+				<section>
+					<h4>Semantic edition</h4>					
+						<ul>
+							<li>uses <b>persistent URIs</b> to identify resources and the relationships between them [...];</li>
+							<li>uses <b>existing ontologies</b> for the organization of information [...];</li>
+							<li>serves data through <b>content negotiation</b> and makes them searchable through a <b>SPARQL</b> endpoint equipped with a graphical interface.</li>
+						</ul>
+
+					<div class="source">
+						<a href="http://projects.dharc.unibo.it/bufalini-notebook/introduction" target="_blank">http://projects.dharc.unibo.it/bufalini-notebook/introduction</a> (highlighting is mine)
+						<br/>Daquino, M., Dello Buono, M., Giovannetti, F., & Tomasi, F. (2020). Paolo Bufalini, Appunti (1981-1991) [Semantic Scholarly Digital Edition]. Digital Humanities Advanced Research Centre (/DH.arc), <a href="https://doi.org/10.6092/unibo/amsacta/6415" target="_blank">https://doi.org/10.6092/unibo/amsacta/6415</a>
+					</div>
+				</section>
+
+				<section>
+					<h3>Advantages of SW in editing</h3>
+				</section>
+
+<!-- ######################################################### -->
+<!-- ############    STATE OF THE ART     #################### -->
+<!-- ######################################################### -->
+
+				<section data-background-color="#ffb6a9">
+					<h3>A tentative state of the art</h3>
+				</section>
+
+				<section>
+					<h3>The first decade of SW technologies for editions</h3>
+
+					<!--
+
+					- Establishment of the TEI Ontology SIG, 2004
+					- First ADHO Conference 2006
+						- Poupeau
+						- Eide and Ore
+					- TEI-P5 2007 (introduction of person, event, place, ms desc)
+					- Prosopography of Anglo-Saxon England (PASE) 2000-2008
+					- Henry III Fine Rolls 2005-2009
+					- Sandrart.net 2007-2012
+					- Vespasiano da Bisticci 2013
+				-->
+
+					<div style="position: relative; width: 100%; height: 0; padding-top: 46.5116%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFhJFRTKlM&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFhJFRTKlM&#x2F;view?utm_content=DAFhJFRTKlM&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Beige Minimal Business Timeline Diagram Graph (860 × 400px)</a> by Elena
+				</section>
+
+
+				<section>
+					<h3>Extension of indices</h3>
+
+					<div class="quote">An increasing number of digital scholarly editions use Semantic Web technologies to solve naming issues. The most prominent method is the extension of classical indices</div>
+					<div class="source">Vogeler 2019</div>
+
+					<div class="left"><b>Goals</b></div>
+					<ul>
+						<li>identify authorities, including implied ones (human and machine inferences)</li>
+						<li>express unambiguously the relationships between them</li>
+					</ul>
+					
+
+					<div class="left">
+						<p>Impact on search functionalities (example of "the wife of")</p>
+						<p>See Eide and Ore 2006, Ciula et al. 2008, Tomasi 2012</p>
+					</div>
+				</section>
+
+				<section>
+					<h3>Example of expressing relationships between entities</h3>
+					<img src="images/Sphaera1.jpg">
+
+					<div class="source">Project: “The Sphere. Knowledge System Evolution and the Shared Scientific Identity of Europe” PI: Prof. Dr. Matteo Valleriani; Data Science: Hassan El-Hajj; Website: ANIKA MERKLEIN<br/><a href="http://db.sphaera.mpiwg-berlin.mpg.de/resource/:search" target="_blank">http://db.sphaera.mpiwg-berlin.mpg.de/resource/:search</a></div>					
+				</section>
+
+
+				<section>
+					<h3>Example of expressing relationships between entities</h3>
+					<img src="images/Sphaera2.jpg">
+
+					<div class="source">Project: “The Sphere. Knowledge System Evolution and the Shared Scientific Identity of Europe” PI: Prof. Dr. Matteo Valleriani; Data Science: Hassan El-Hajj; Website: ANIKA MERKLEIN<br/><a href="http://db.sphaera.mpiwg-berlin.mpg.de/resource/:search" target="_blank">http://db.sphaera.mpiwg-berlin.mpg.de/resource/:search</a></div>					
+				</section>
+
+				<!--<section>
+					From authority lists to knowledge graphs (step further)
+
+					Triplestores, SPARQL, LOD
+				</section>-->
+
+
+				
+				<section>
+					<h3>Interpretation and knowledge creation</h3>
+					<b>
+						<ul>
+							<li>separation of interpretation and source</li>
+							<li>explicit the semantic</li>
+						</ul>
+					</b>
+
+					<div class="quote">An interpretation of the kind I have arrived at, has two distinguishing characteristics: first, <strong>all statements</strong> are, directly or indirectly, <strong>linked to the text locations</strong> they discuss; and second, all <strong>categories</strong> employed in the interpretation have been <strong>explicitly defined</strong>, and the interpretation is formulated in terms of these definitions. [...] The point of this is not that my interpretation of the metaphor is necessarily a good one. On the contrary; the point is that its possible weaknesses are being exposed [...] It is likely that this exposition will increase our <strong>interpretations’ robustness</strong>.</div>
+					<div class="source">Boot 2006; cf. Ciula et al. 2008</div>
+
+				</section>
+
+				<section>
+					<h3>Interpretation and knowledge creation</h3>
+					<b>
+						<ul>
+							<li>separation of interpretation and source</li>
+							<li>explicit the semantic</li>
+						</ul>
+					</b>
+					<div class="quote">Using this default [TEI] markup together with an <strong>annotation linking to an external ontology</strong> embeds data structures into the text of scholarly editions. […] The editors have done their work: they created a digital representation of the source by scholarly standards including their interpretation of the facts which could be extracted from the archival documents in a way that the data representing these facts can be shared via the semantic web and still <strong>retraced to the source supporting their interpretation</strong>.</div>
+					<div class="source">Vogeler 2020</div>
+
+				</section>
+
+				<section>
+					<h3>Interpretation, <b>provenance</b> and knowledge creation</h3>
+
+							
+					<div class="quote">the description of a cultural resource cannot avoid to state the <i>provenance</i> of that description</div>
+					<div class="quoteOrig">la descrizione di una risorsa culturale non può esimersi dal dichiarare la <i>provenance</i> di quella descrizione</div>	
+					<div class="source">Tomasi 2022, p. 84 (all translations are mine)</div>	
+
+					<div class="quote">There is no data without the interpretation that has generated that data</div><div class="quoteOrig">Non c’è dato senza l’interpretazione che quel dato ha generato</div>
+					<div class="source">Tomasi 2022, p. 61</div>
+
+				</section>
+
+				<section>
+					
+					<div class="quote">Attributing <b>context</b> is the action that typically, from a computational perspective, allows <b>data</b> to become <b>information</b> and information to become <b>knowledge</b></div>
+					<div class="quoteOrig">Attribuire contesto è l’azione che tipicamente, dal punto di vista computazionale, consente ai dati di diventare informazione e all’informazione di diventare conoscenza</div>
+					<br/>
+
+
+					<p><b>Context</b>, from archival science, means at least:</p>
+					<ul>
+						<li>creator</li>
+						<li>provenance</li>
+						<li>position in the hierarchy/graph</li>
+					</ul>
+					<br/><br/>
+					<div class="source">Tomasi 2022, pp. 76-78</div>
+
+				</section>
+
+				<section>
+					<div class="quote">Formalize the hermeneutic act and translate the information provided through markup into explicit, computable knowledge</div>
+					<div class="quoteOrig">formalizzare l’atto ermeneutico e tradurre in conoscenza esplicita e computabile l’informazione fornita attraverso il markup</div>
+
+					<img src="images/hico.jpg" width="50%" />
+					<div class="source"><a href="https://hico.sourceforge.net/">Historical Context Ontology (HiCO)</a></div>
+
+				</section>	
+
+
+				<section>
+					<h3>Resources</h3>
+				</section>			
+
+
+				<section>					
+					<b>Assertive</b> vs philological <b>editions</b>
+
+					<div class="quote">In terms of Patrick Sahle’s text wheel (Sahle 2013:III,45-49), the assertive edition is the editorial practice dedicated to the ‘<strong>text as content</strong>’ perspective</div>
+
+					<div class="quote">assertive editions [...] are scholarly representations of historical documents in which the <strong>information on facts asserted by the transcription</strong> is in the focus of editorial work. They help the user/reader understand the text and use the information conveyed in the text as <strong>structured data</strong>.</div>
+					
+					<div class="quote">I suggest calling this combined method ‘assertive editing’ to avoid the impression that this method can only be used by historians.</div>	
+
+					<div class="source">Vogeler 2019</div>
+				</section>				
+
+				<section>
+					<b>Philological</b> vs assertive <b>editions</b>
+
+					<div class="quote">The majority of scholarly editors, on the other hand, employ traditional methods of textual scholarship; they ponder complex <strong>transcription problems</strong>, evaluate <strong>variants</strong>, and include <strong>textual materiality</strong>.</div>
+
+					<div class="source">Vogeler 2019</div>
+				</section>
+
+				<section>
+					<h3>(MORE OR LESS) Semantic Editions</h3>
+					<br/>
+
+					<p><strong>First decade</strong>: <a href="https://finerollshenry3.org.uk/home.html">Henry III Fine Rolls Project</a> (history), <a href="http://sandrart.net/">Sandrart.net</a> (art history), <a href="https://ancientwisdoms.ac.uk/index.html">Sharing Ancient Wisdoms</a> (text collection, classics), <a href="http://vespasianodabisticciletters.unibo.it/">Vespasiano da Bisticci Lettere</a> (Renaissance humanism, codicology).</p>
+
+					<p><strong>Second decade</strong>: <a href="http://xml-portal.symogih.org/index.html">Symogih XML portal</a> (history), <a href="https://www.geovistory.org/">Geovistory editions</a> (history), <a href="https://gams.uni-graz.at/context:depcha">Digital Edition Publishing Cooperative for Historical Accounts</a> (history), <a href="http://projects.dharc.unibo.it/bufalini-notebook">Paolo Bufalini's Notebook</a> (contemporary history, philology), <a href="https://aldomorodigitale.unibo.it/">National Edition of Aldo Moro's Works</a> (contemporary history).</p>
+				</section>
+
+
+				<section>
+					<h3>Ontologies used in these editions</h3>
+					<br/>
+
+					<div class="left">
+						<p><strong>Generic</strong>: <a href="http://purl.org/dc/terms/">DCTerms</a>, <a href="http://xmlns.com/foaf/0.1/">FOAF</a>, <a href="https://cidoc-crm.org">CIDOC-CRM</a> (history), <a href="https://www.ifla.org/resources/?oPubId=591">FRBR</a> (philology), <a href="https://www.w3.org/TR/annotation-model/">Web Annotation Data Model</a>.</p>
+
+						<p><strong>Bibliography</strong>: <a href="https://www.dublincore.org/specifications/bibo/bibo/bibo.rdf.xml#">BIBO</a>, <a href="http://purl.org/spar/biro">BIRO</a>.</p>
+
+						<p><strong>Context (interpretation and provenance)</strong>: <a href="https://hico.sourceforge.net/">HiCO</a>, <a href="https://www.w3.org/TR/prov-o/">PROV-O</a>.</p>
+
+						<p><strong>Document components and rhetoric</strong>: <a href="http://purl.org/spar/doco">DOCO</a>, <a href="http://purl.org/spar/deo">DEO</a>.</p>
+
+						<p><strong>Citation</strong>: <a href="http://purl.org/spar/c4o">C4O</a>, <a href="https://sparontologies.github.io/cito/current/cito.html">CITO</a>.</p>
+
+						<p><strong>Space and time</strong>: <a href="http://www.w3.org/2003/01/geo/">Geo</a>, <a href="http://www.geonames.org/ontology/documentation.html">Geonames</a>, <a href="http://www.w3.org/TR/owl-time/">Time</a>, <a href="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#">TI</a>, <a href="http://purl.org/spar/tvc/">TVC</a> .</p>
+
+						<p>Project specific ontologies.</p>
+					</div>
+				</section>
+
+				<section>
+					<h3>Other potentially interesting ontologies and vocabularies</h3>
+					<br/>
+					<div class="left">
+						<p><strong>HTR</strong>: <a href="https://segmonto.github.io/">Segmonto</a>.</p>
+
+						<p><strong>Codicology</strong>: <a href="https://w3id.org/irnerio/ontology/memo">MeMO</a>, <a href="https://doc.biblissima.fr/_archives/ontologie-biblissima/">Bibma</a> (legacy?), <a href="https://gams.uni-graz.at/archive/objects/o:voccod/methods/sdef:SKOS/get">CodiKos</a>.</p>
+
+						<p><strong>CRM world</strong>: <a href="https://cidoc-crm.org/crminf/home-4">CRMinf</a>, <a href="https://cidoc-crm.org/crmtex/home-8">CRMtex</a>.</p>
+
+						<p><strong>Philology (variants, witnesses relations, citations, intertextuality, etc.)</strong>: <a href="https://fgiovannetti.github.io/cao/">CAO</a>, <a href="https://gen-o.github.io/">GENO</a>, <a href="https://github.com/lawdi/LAWD">LAWD</a>, <a href="https://github.com/mromanello/hucit">HuCit</a>, <a href="https://github.com/BOberreither/INTRO">INTRO</a>.</p>
+
+						<p><strong>Generic</strong>: <a href="https://github.com/nie-ine/Ontologies/tree/master/Nie-ontologies/Generic-ontologies">NIE-INE Ontologies</a> (legacy).</p>
+					</div>
+				</section>
+
+				<section>
+					<h3>How to</h3>
+
+					<div class="quote">If scholars are to take full advantage of the potential that RDF/OWL provides for formalizing complex associations, it is crucial that the tool kit they use facilitates the editing process</div>
+					<div class="source">Ciula et al. 2008</div>
+
+					<div class="left">
+						<p><strong>XML to RDF</strong>: XSLT, <a href="https://linked-data-from-tei.readthedocs.io/en/latest/">LIFT</a>.</p>
+
+						<p><strong>Ontology building</strong>: <a href="https://protege.stanford.edu/">Protege</a>.</p>
+
+						<p><strong>Research and publication environments</strong>: <a href="https://gams.uni-graz.at/">GAMS</a>, <a href="https://www.geovistory.org/">Geovistory</a>.</p>
+
+						<p><strong>Encoding and annotation</strong>: <a href="https://leaf-writer.leaf-vre.org/">LEAF-Writer</a>, <a href="https://github.com/pelagios/pelagios.github.io/wiki">Recogito</a>.</p>
+					</div>
+				</section>
+
+
+				<section>
+					<h3>Human consumption</h3>
+					<p><b>From text- to data-centric approach</b></p>
+
+					<div style="margin-top:0px" class="quote">There is still a long way to go in the realization of applications that are able to wisely use data and return them to the user in the form of new knowledge. Consider that LOD are not originally designed for the user, but for processing by the machine.</div>
+					<div class="quoteOrig">ancora tanta strada c’è da fare nella realizzazione di applicazioni che siano in grado di utilizzare in modo sapiente quei dati per restituire all’utente sotto forma di nuova conoscenza. Partiamo dal presupposto che i LOD non sono pensati originariamente per l’utente, ma per l’elaborazione da parte della macchina.</div>
+					<div class="source">Tomasi 2022, p. 125</div>
+
+					<div class="left">
+						<p><strong>Interfaces</strong>: content-oriented navigation (indices, maps, timeline), multiple forms of representation (already in the pre-digital assertive editions), faceted search.</p>
+						
+						<p><strong>SPARQL endpoints</strong>: half of the editions reviewed, 4/9.</p>
+					</div>
+
+					
+				</section>
+
+
+				<section>
+					<h3>Examples</h3>
+				</section>
+
+				<section>
+					<p>
+						<i>Digital Edition Publishing Cooperative for Historical Accounts (DEPCHA)</i>, dir. by Georg Vogeler, Centre for Information Modeling – Austrian Centre for Digital Humanities (financed by the The Andrew W. Mellon Foundation), CC-BY 4.0. Permalink: <a href="https://gams.uni-graz.at/depcha">http://gams.uni-graz.at/depcha</a>
+					</p>
+				</section>
+
+				<!-- tei + ontology bookkeeping integrated in the xml through the attribute @ana used on any element -->
+
+				<section data-background-image="images/depcha1.jpg" data-background-size="contain">
+				</section>
+
+				<section data-background-image="images/depcha2.jpg" data-background-size="contain">
+				</section>
+
+				<section data-background-image="images/depcha3.jpg" data-background-size="contain">
+				</section>
+
+				<section data-background-image="images/depcha4.jpg" data-background-size="contain">
+				</section>
+
+				<section data-background-image="images/depcha5.jpg" data-background-size="contain">
+				</section>
+
+				<section data-background-image="images/depcha6.jpg" data-background-size="contain">
+				</section>
+
+				<section>
+					<div class="quote">Digital <b>assertive editions</b> can be identified by the user interface and in the data structures, which try to combine the <strong>transcription</strong> with a <strong>database of statements</strong> made in the text.</div>
+					<div class="source">Vogeler 2019</div>
+				</section>
+
+
+				<section>
+					<p>Daquino, M., Dello Buono, M., Giovannetti, F., & Tomasi, F. (2020). <i>Paolo Bufalini, Appunti (1981-1991) [Semantic Scholarly Digital Edition]</i>. Digital Humanities Advanced Research Centre (/DH.arc). <a href="http://projects.dharc.unibo.it/bufalini-notebook/">Project homepage</a> | <a href="https://doi.org/10.6092/unibo/amsacta/6415" target="_blank">DOI</a>
+					</p>
+				</section>
+
+				<section data-background-image="images/bufalini1.jpg" data-background-size="contain">
+				</section>
+
+				<section data-background-image="images/bufaliniEditionHomepage.jpg" data-background-size="contain">
+				</section>
+
+				<section data-background-image="images/bufaliniFilters1.jpg" data-background-size="contain">
+				</section>
+
+				<section data-background-image="images/bufaliniFilters2.jpg" data-background-size="contain">
+				</section>
+
+				<section data-background-image="images/bufaliniQuotationInfluence1.jpg" data-background-size="contain">
+				</section>
+
+
+
+				<section data-background-image="images/bufaliniTranslation.jpg" data-background-size="contain">
+
+				</section>
+
+				<section data-background-image="images/bufaliniQuotationInfluence1.jpg" data-background-size="contain">
+				</section>
+				<section data-background-image="images/bufaliniQuotationInfluence2.jpg" data-background-size="contain">
+				</section>
+
+				<section data-background-image="images/bufaliniDoc.jpg" data-background-size="contain">
+				</section>
+
+
+
+
+				<section>
+					<div class="quote">The digital scholarly edition of Paolo Bufalini's notebook features <strong>two interpretative layers</strong>: <strong>the author</strong>, who juxtaposed texts and highlighted mutual influences, and <strong>the editors</strong>, who have analysed and formalized Bufalini's choices.</div>
+					<div class="source">http://projects.dharc.unibo.it/bufalini-notebook/introduction</div>
+						<!--<br/>In order to distinguish the different layers and associate each RDF statement with its provenance, we employed named graphs and, in particular:
+						<ul style="font-size:inherit;">
+							<li>RDF statements concerning the entities of the text, such as comments, mentioned people, cited texts, bibliographic references, are part of a single graph (<a href="https://w3id.org/bufalinis-notebook/edition/">URI</a>);</li>
+							<li>RDF statements expressing interpersonal relationships and relationships between cited works are stored in separate graphs.</li>
+						</ul>-->
+				</section>
+
+				<section>
+				<img src="images/bufaliniTechStack.jpg">
+				</section>
+
+
+				
+
+				<!-- 
+
+					## LAYER OF THE TEXT
+
+					http://projects.dharc.unibo.it/bufalini-notebook/introduction#intro_title32
+					Web Annotation data model to represent texts (quotes, translations, comments)
+					+ ontologies to describe sources and citations
+
+
+
+					## LAYER OF THE EDITORS
+
+					Nanopublications allow for the representation of linked open data along with their provenance and publication details. [...] The model adopted make it possible to cite each single RDF statement separately from the edition, but in such a way that there is no loss of context. Furthermore, an integrity key is associated to the nanopublications so allow for references to a particular version of the edition through time.
+					Nanopublication image and snippet http://projects.dharc.unibo.it/bufalini-notebook/introduction#intro_title31					
+
+					Mechanism of nanopublication:
+					Each is a named graph providing information about
+					- the assertion itself
+					- its provenance
+					- its publication
+					For example:
+					- the assertion graph states that there is an influence from  a passage of Lucretius to a passage of Manzoni, both of which are quoted in the notebook [actually one after the other, but I cannot see this in the snippet http://projects.dharc.unibo.it/bufalini-notebook/viewer#quot-007]
+					- the provenance graph (HiCO) states that the assertion was generated by an interpretation act, made by Bufalini, extracted from the two text passages in the notebook, using the criteria of (based on) text comparison and similarity between them.
+					- the publication graph states when and who created the nanopublication, for instance 'cspc' in 2018.
+				-->
+
+
+				
+				
+
+
+				
+				<!--
+				<section>
+
+					FROM DOCUMENTS TO ...
+					Despite the desiderata of Otel or V.Bush, we are still in this situation:
+					- Les outils sont organisé autour du document
+					- Ils offrent peu de moyen de visualiser et mettre en relation les elements
+
+					Pundit, Pliny, LiquidText
+
+					Is it really a problem of tools or of mentality?
+
+					We can link a lot of information in our head but seem not to be able to make explicit this linking. Process that need to slow down, to make the steps machine-readable, and not only the result.
+
+					Focus on the process instead of on the result .. learn from our kids?
+					"the nature of research as a process plays a rather more prominent role." Bradley 2017
+
+					But it is indeed true that digital scholarship claims to make EXPLICIT what is IMPLICIT, and consider that to be a value.
+
+					Example of that ... philological web of data
+
+				</section>
+				-->
+
+
+				
+				<section>
+					<h3>Left out</h3>
+
+					<p>Linguistics, musicology, heraldry, prosopography, and more ...</p>
+
+					<div class="quote">Yet, what is still missing are fully resolvable URIs for texts and their citable units. Such URIs are of the highest importance for this emerging graph of data, considering that cited primary sources are an area where existing datasets often overlap</div>
+					<div class="source">Cayless and Romanello 2021</div>
+
+					<p class="smaller">&#8594; Distributed Text Services (<a href="https://distributed-text-services.github.io/specifications/">DTS</a>)</p>
+				</section>
+
+
+
+<!-- ######################################################### -->
+<!-- ######  TOWARDS A PHILOLOGICAL WEB OF DATA  ############# -->
+<!-- ######################################################### -->
+
+				<section data-background-color="#ffb6a9">
+					<h3>Towards a philological web of data</h3>
+					<p>Critical and genetic editions</p>
+				</section>
+
+				<!--
+				<section>
+					Textual scholarship also, on top of the advantages of SW, let's highlight
+					- data-centric approach
+					- beyond the document
+
+					<b>Resources</b>
+					<ul>
+						<li>intertextuality onto</li>
+						<li>cao</li>
+						<li>ine nie ontos</li>
+						<li></li>
+					</ul>
+				</section>
+			-->
+
+				<section>
+					<b>Example: ordering witnesses (<i>classement des manuscrits</i>, recensio)</b>
+					<br/><br/>
+
+					<p>Use of computational tools in the Humanities involves making <strong>explicit</strong> what is often implicit
+						<br/>&#8594; create a data model and populate it, operationalise</p>
+
+					<p>The <strong>ordering of witnesses</strong> is often an implicit process, also in digital textual scholarship (the collation process is a step before or after the ordering itself).</p>
+				</section>
+
+				<section>
+					<b>Example: ordering witnesses (<i>classement des manuscrits</i>, recensio)</b>
+					<br/><br/>
+
+					<ul>
+						<li><a href="https://gen-o.github.io/" target="_blank">GENO</a>, a OWL2 ontology for genetic criticism and editing</li>
+						<li><a href="https://github.com/elespdn/RDF-OpenStemmata" target="_blank">Reuse</a> of OpenStemmata data</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>RDF stemmata: reuse of OpenStemmata</h3>
+				</section>
+				
+
+
+				<section data-background-image="images/openStemmataHomepage.jpg" data-background-size="contain">
+					<div style="background-color:tomato; padding:10px">https://openstemmata.github.io/</div>
+				</section>
+
+				<section>
+					<h3>RDF-OpenStemmata</h3>
+					<p><a href="https://github.com/elespdn/RDF-OpenStemmata" target="_blank">https://github.com/elespdn/RDF-OpenStemmata</a></p>
+					<br/>
+					<p>
+						<ol>
+							<li><b>transform</b> DOT Graphviz transcriptions of the stemmata from OpenStemmata <b>into RDF</b>, according to a test ontology, to <b>enrich their semantic structure</b></li>
+							<li>query the RDF data with <b>SPARQL</b> to gain new insights into the dataset</li>
+						</ol>
+					</p>
+
+					
+				</section>
+
+
+				<section>
+					<iframe width="100%" height="600px" src="images/stemma-onto.html"></iframe>
+				</section>
+
+				<section data-background-image="images/openStemmataRDFdataset.jpg" data-background-size="contain">
+					<p style="background-color:tomato; padding:10px">Snippet of the RDF data</p>
+				</section>
+
+				<section data-background-image="images/RDF-OpenStemmata_example1.jpg" data-background-size="contain">
+					<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+					<div class="source"><a  style="background-color:#ffb6a9" href="https://github.com/elespdn/RDF-OpenStemmata/blob/main/openStemmata_SPARQL.ipynb">https://github.com/elespdn/RDF-OpenStemmata</a></div>
+				</section>
+
+				<section data-background-image="images/RDF-OpenStemmata_example2.jpg" data-background-size="contain">
+					<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+					<div class="source"><a  style="background-color:#ffb6a9" href="https://github.com/elespdn/RDF-OpenStemmata/blob/main/openStemmata_SPARQL.ipynb">https://github.com/elespdn/RDF-OpenStemmata</a></div>
+				</section>
+
+
+
+				<section>
+					<h3>Genetic networks and GENO</h3>
+				</section>
+
+
+		
+
+				<section>
+					<table>
+						<tr>
+							<td>
+								<p><strong>Gustave Roud,<br/>« Œuvres complètes »</strong></p>
+								<br/>
+								<div class="small">
+									Projet FNS, 2017-2021</li>
+									<br/><b>Direction</b> : Claire Jaquier et Daniel Maggetti
+									<br/><b>Collaborateurs et collaboratrices</b> : Alessio Christen, Bruno Pellegrino, Elena Spadini, Julien Burri, Raphaëlle Lacord
+								</div>
+							</td>
+							<td>
+								<img width="50%" src="images/roud-books.jpg">
+								<img width="100%" src="images/roud-site.png">
+							</td>
+						</tr>
+					</table>
+					
+				</section>
+				
+				<section>
+					<h4>Three ways to compose his texts</h4>
+					<br/><br/>
+					<ul class="small">
+						<li style="list-style: none" class="fragment"><b><i>A</i></b>. Classical genesis: text and avant-textes</li>
+						<li style="list-style: none" class="fragment"><b><i>B</i></b>. From the diary: diary entries, genetic materials a posteriori</li>
+						<li style="list-style: none" class="fragment"><b><i>C</i></b>. Genesis from previously published texts: reuse and continuation, post-editorial or epi- genesis</li>
+					</ul>
+				</section>
+
+				
+
+
+				<section data-background-image="images/roud_materiali_fr.png" data-background-size="contain">
+				</section>
+
+				<section data-background-iframe="images/AirSolitude_barchart/piechart_saisons.png" data-background-size="contain" data-background-interactive>
+					<h4 style="text-align: right">Exemple.<br/><em>Air de la solitude</em></h4>
+				</section>
+
+				<section data-background-iframe="images/AirSolitude_barchart/barchart_mots.html" data-background-size="contain" data-background-interactive>
+				</section>
+
+				<!--
+
+				<section data-background-iframe="images/AirSolitude_barchart/barchart_revue.html" data-background-size="contain" data-background-interactive>
+				</section>
+			-->
+
+				
+
+
+				<section data-background-image="images/cendreALL.png">
+				</section>
+
+				<section data-background-image="images/graphCendre1.png" data-background-size="contain">
+				</section>
+
+				
+
+
+				<section>
+					<h3>From the document to the network</h3>
+					<div>
+						<img src="images/genBovaryMss.png"/>
+						<div class="source"><a href="https://www.bovary.fr/">Les manuscrits de Madame Bovary</a>. Tableau génétique des brouillons</div>
+					</div>	
+				</section>
+
+				<section>
+					<div>
+						<img width="40%" src="images/genDurrenmattNet.png"/>
+						<div class="source"><a href="https://fd-stoffe-online.ch/">Friedrich Dürrenmatt, Das <i>Stoffe</i>-Project</a>. Einzelblatt-Stemma <i>Der Tod des Sokrates</i></div>
+					</div>	
+				</section>
+
+				<section>
+					<div>
+						<img width="80%" src="images/genLokalberichtNet.png"/>
+						<div class="source"><a href="http://www.lokalbericht.ch">Hermann Burger: Lokalbericht</a>. Digitale Edition. Herausgegeben von Peter Dängeli, Magnus Wieland, Irmgard M. Wirtz und Simon Zumsteg. Version. Bern 2016</div>
+					</div>	
+				</section>
+
+				<section data-background-image="images/genValery.jpg" data-background-size="contain">
+					<div class="source"><a href="https://eman-archives.org/Valery-Robinson/graphall">Robinson de Paul Valéry : édition génétique</a></div>
+					<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				</section>
+
+
+				
+
+				<!-- 
+	Roud website
+
+	- show archives Pour un moissonneur, Essai
+	- Search through DaSCH, all mssParts that are reused in dossierPartie_II. Année
+	- 
+-->
+
+				
+				<section>
+					<p><a href="https://gen-o.github.io/" target="_blank">GENO</a>, an ontology for the field of Genetic Criticism and Editing.</p>
+				</section>
+
+				<section>
+					<a href="https://roud.unil.ch" target="_blank"><img width="100%" src="images/roud-site.png"></a>
+				</section>
+
+				<section data-background-image="images/designProcess.png" data-background-size="contain"></section>
+
+
+				<section data-background-image="images/geno2High.jpg" data-background-size="contain"></section>
+				
+
+		
+
+
+
+
+<!-- ######################################################### -->
+<!-- ##################  CONCLUSIONS  ######################## -->
+<!-- ######################################################### -->
+				
+				
+				<section data-background-color="#ffb6a9">
+					<h3>Conclusions</h3>
+				</section>
+
+				<!--
+				<section>
+					<h3>Extending the philological web of data</h3>
+					<div class="left">
+						<p><strong>Connect datasets</strong>: ordering of witnesses and manuscript descriptions, ordering of witnesses and variants (with inferences)
+						</p>
+					</div>
+				</section>
+			-->
+
+				<section>
+					<h3>Combination of XML/TEI and RDF</h3>
+					<b> is becoming mainstream or at least widely accepted and sometimes practiced</b>
+					<br/>
+					<div class="quote">The DH community should indeed consider standing-off the idea that trees and graphs are fundamentally in opposition to one another. It should consider them rather as metaphors more helpful for one scholarly editing task than for others.</div>
+					<div class="source">Vogeler 2021</div>				
+				</section>
+
+
+				<section>
+					<h3>Advantages of using a SW approach in <b>scholarly editing</b></h3>
+					<ul>
+						<li>data is identifiable</li>
+						<li>model is explicit</li>
+						<li>query the semantic structure</li>
+						<li>interpretation and text</li>
+						<li>multilingualism</li>
+						<li>machine readable</li>
+						<li>linked data</li>
+						<li>think beyond the document</li>
+						<li>from digital library to knowledge graph</li>
+					</ul>
+
+				</section>
+
+				<!--
+				<section>					
+					<div class="quote">CRM conforming models [...] will improve the usability of TEI documents as information sources as well as simplifying the process of adding more information, such as event elements, into such documents.</div>
+					<div class="source">Eide and Ore 2006</div>
+					
+					<div class="quote">the use of an ontological approach [...] represents a powerful technical framework for historical projects, which balances respect for the text as unique witness with the need to represent its historical context and interpretation.</div>
+					<div class="source">Ciula et al. 2008</div>
+
+					
+					<div class="quote">reasoning about data, with the aim of creating suitable information and extracting knowledge from the source.</div>
+					<div class="source">Tomasi 2011</div>
+				</section>
+-->
+
+
+
+		
+
+
+				<section>
+					<div class="left">
+					<p>
+						Thank you.
+						<br/><br/>
+						<a href="biblio.pdf" target="_blank">Bibliography</a>
+						<br/><br/>
+						elena.spadini@unibas.ch
+						<br/><br/>
+					</p>
+				</div>
+
+				</section>
+
+
+				<section data-background-image="images/roud_AllNetworks.png" data-background-size="contain"></section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<script src="../reveal/lib/js/head.min.js"></script>
+		<script src="../reveal/js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../reveal/plugin/markdown/marked.js' },
+					{ src: '../reveal/plugin/markdown/markdown.js' },
+					{ src: '../reveal/plugin/notes/notes.js', async: true },
+					{ src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
