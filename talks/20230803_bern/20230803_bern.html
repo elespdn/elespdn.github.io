@@ -1,0 +1,886 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>SDE</title>
+
+		<link rel="stylesheet" href="../reveal/css/reveal.css">
+		<link rel="stylesheet" href="../reveal/css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<script>
+			Reveal.initialize({
+					// More info https://github.com/hakimel/reveal.js#dependencies
+					dependencies: [
+						{ src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					]
+				});
+		</script>
+
+		<style>
+			div.quote {font-size: 0.7em; margin-bottom: 1.5em; margin-top:1.5em;}
+			div.quote::before {content: "“";}
+			div.quote::after {content: "”";}
+			div.source   {font-size: 0.6em; text-align: right; margin-top: 20px}
+			.grey {color:grey;}
+			.small {font-size: 0.8em}
+			.smaller {font-size: 0.6em}
+			.smallest {font-size: 0.4em}
+
+			b {color:#d0513a;}
+			p {font-size: 0.8em}
+
+			.coloredTitle {
+				background-color:#003333
+			}				
+			div.left {text-align: left}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+
+							
+				
+				<section>
+					<h3><b>Modelli e contesti per una filologia digitale</b></h3>
+					<br/>
+					<div class="small" style="text-align: left">
+						Sapienza Università di Roma, 25 novembre 2022
+						<br/>Dottorato in Italianistica
+						<br/><br/><br/>
+						Elena Spadini (Università di Basilea)
+						<br/>
+						<!--
+						Presentazione online: 
+						<span>
+							<a href="https://elespdn.github.io/talks/20221125_phdSapienza/20221125_phdSapienza.html">https://tinyurl.com/397chkrr</a> oppure <a href="https://elespdn.github.io/talks/20221125_phdSapienza/20221125_phdSapienza.html">elespdn.github.io/talks/20221125_phdSapienza/20221125_phdSapienza.html</a></span>
+						-->
+					</div>
+				</section>
+
+				
+
+
+				<!--
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+ -->
+
+ 				<section>
+ 					<ol style="font-size: 0.9em">
+ 						<li>Premessa: come funziona un progetto digitale</li>
+ 						<li>Edizione digitale</li>
+ 						<li>Criteri per la recensione di edizioni digitali</li>
+ 						<li>Paradigma digitale, filologia digitale</li>
+ 					</ol>
+ 				</section>
+
+
+
+<!-- #############################################################################################################################
+	##################################################################################################################################
+	###################################################### Definition ###############################################################
+	##################################################################################################################################
+	##################################################################################################################################
+	################################################################################################################################ -->
+
+				<section>
+ 					<h3>Come funziona un progetto digitale?</h3>
+					<img src="images/DHprojectComponents.png">
+					<br/><br/>
+					<div class="source">Drucker 2021</div>
+				</section>
+
+				<section>
+ 					<img src="images/DHprojectComponents_magazzino.png">
+				</section>
+
+				<section>
+ 					<img src="images/magazzino1.png">
+				</section>
+
+				<section>
+ 					<img src="images/magazzino2.png">
+				</section>
+
+				<section>
+ 					<img src="images/magazzino3.png">
+				</section>
+
+				<section>
+ 					<img src="images/DHprojectComponents_magazzino.png">
+
+ 					<p>dati prodotti, trattati, analizzati</p>
+				</section>
+
+
+
+ 				<section data-background-color="tomato">
+ 					<h3>Edizione digitale</h3>
+ 				</section>
+
+ 				<section>
+					<p>Digital scholarly editions are not just scholarly editions in digital media: digital ≠ digitized</p>
+					<br/>
+					<p style="font-size: 0.5em">"Wiedergabe ohne Erschließung ist keine Edition. Eine bloße Reproduktion, ein  einfaches Faksimile, eine digitale Bibliothek ist keine Edition"</p>					
+					<p style="font-size: 0.5em">"Deshalb kann eine digitale Edition nicht einfach die digitale Fassung einer auch im Druck realisierbaren Edition sein – zu ihrem Wesen gehört, dass sie über die Beschränkungen der typografischen Edition hinweggeht"</p>
+					<p style="font-size: 0.5em">(Sahle 2016/2: 141-142; 149)</p>                                                                                 
+				</section>      
+				
+				<section >
+					<p>A digital edition can not be printed without a loss of information and/or functionality</p>
+					<br/>					
+					<p style="font-size: 0.5em">"Eine digitale Edition ist dadurch bestimmt, dass sie nicht ohne wesentliche Informations- und Funktionsverluste in eine typografi sche Form gebracht werden kann – und in diesem Sinne über die druckbare Edition hinausgeht."</p>
+					<p style="font-size: 0.5em">(Sahle 2016/2: 149)</p>  
+				</section>   
+
+				
+
+				<section>
+					<h2>Cataloghi</h2>
+					<br/>
+					<ul>
+						<li>Patrick Sahle, <a href="http://www.digitale-edition.de/" target="_blank">A catalogue Digital Scholarly Editions</a></li>
+						<li>Greta Franzini, <a href="https://dig-ed-cat.acdh.oeaw.ac.at/" target="_blank">Catalogue Digital Editions</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Linee guida e recensioni</h2>
+					<ul>
+						<li>MLA, <i>Statement on the Scholarly Edition in the Digital Age</i>, 2016</li>
+						<li>MLA, <i>Guidelines for Editors of Scholarly Editions</i>, last revised 2022</li>
+						<li>Christiane Fritze et al., <i><a href="https://dhd-blog.org/?p=17563" target="_blank">Manifest für digitale Editionen</a></i>. 2022</li>
+						<li>IDE, <i><a href="http://ride.i-d-e.de/" target="_blank">RIDE. A review journal for digital editions and resources</a></i>. <a href="http://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1/" target="_blank">Criteria</a> (de|en|it|es)</li>
+					</ul>
+				</section>
+
+
+				
+				
+<!--
+				<section data-background-image="images/PieterBruegelElder_TheTowerBabel_Vienna.jpg" data-background-opacity="0.4">
+					<b>copy-text | bedierisme | neo-lachmannian school | genetic criticism | filologia d'autore | new bibliography | Historisch-kritische Ausgabe | etc. </b>
+				</section>
+			-->
+
+			
+
+
+
+
+
+<!-- #############################################################################################################################
+	##################################################################################################################################
+	###################################################### RIDE Criteria ###############################################################
+	##################################################################################################################################
+	##################################################################################################################################
+	################################################################################################################################ -->
+				<section data-background-color="tomato">
+ 					<h3>Criteri per la recensione delle edizioni digitali</h3>
+ 				</section>
+
+
+				<section>
+					<h3>Portata</h3>
+					<br/>
+					<div class="left small"><b>3.3. Mission.</b> Quali obiettivi si propone di raggiungere l’EDS? Essa riesce a raggiungerli? Cosa promette di rappresentare in modo esplicito? E cosa suggerisce di rappresentare, implicitamente, ad esempio sulla base di come l’EDS viene classificata (“edizione”, “edizione critica”, “portale”, “opera omnia”, “archivio digitale”, ecc.)? A quale pubblico si rivolge l’EDS?</div>
+					<div class="source">RIDE Criteria</div>
+				</section>
+
+				<section>
+					<h3>Quale approccio critico</h3>
+					<br/>
+					<div class="left small">
+					<b>3.4. Metodo<br/>
+					3.5. Rappresentazione di documenti e di testi<br/>
+					3.6. Critica, indicizzazione e commento</b></div>
+					<div class="source">RIDE Criteria</div>
+				</section>
+
+				<section>
+					<p>digital archive | edition | thematic research collection |<br/> project | arsenal | text collection</p>
+					<div class="source">Price 2009</div>
+				</section>
+
+
+
+				<section>
+					<b>archivio</b> come collezione di documenti storici<br/>
+					<b>edizione</b> come analisi e ipotesi su quei documenti
+										<br/><br/>
+					<div class="left smaller">
+						The Shelley-Godwin Archive<br/>
+						Emily Dickinson's Archive<br/>
+						Deutsche Textarchiv<br/></div>
+						<div class="smaller" style="text-align:right">
+						Faust Edition<br/>
+						Édition des journaux d'Alexandre Dumas<br/>
+					La Entretenida Digital Edition</div>
+					<br/>
+					archivio ----------------------------------- edizione
+
+					<div class="quote">every expression of the <b>archival impulse</b> is to some extent editorial [...] every expression of the <b>editorial impulse</b> is to some extent archival</div>
+					<div class="source">Eggert 2017; cfr. Dillen 2019</div>
+				</section>
+
+				
+
+				<section>
+					Testo critico, ad esempio <i><a href="http://faustedition.net/">FaustEdition</a></i>
+					<br/><br/>
+					Nessun testo critico, ad esempio <i><a href="https://www.dantecommedia.it/">Commedia</a></i> ed. <shadow></shadow>
+				</section>
+
+
+
+				<section>
+					<div class="quote">Yet, there is one thing missing from Shaw’s edition. She does not provide her own edited text. This absence strikes me as the single most remarkable element of the edition. It shifts the focus away from the editor, as maker of a text, to the documents themselves and what we might learn from them. The centre of the edition is not the product: the edited text, with all else seen as <b>ancillary, preparatory, and explanatory</b>. The centre of the edition is the <b>process</b>: the search for understanding of all these documents and how they relate to each other.</div>
+					<div class="source">Robinson 2016</div>
+						
+					
+				</section>
+
+<section data-markdown>
+					<textarea data-template>
+						
+						<p>Parallelo con la giustizia: il lettore non può avere il compito di costituire il testo critico. Sarebbe come chiedere ai cittadini di analizzare i materiali del processo al posto del giudice </p>
+						<div class="source">Italia 2020; cfr. Dahlström 2000</div>
+
+					</textarea>
+				</section>
+
+
+				<section>
+					<h3>Interfaccia</h3>
+					<br/>
+					<div class="left small">
+					<b>4.2. Interfaccia e fruibilità<br/>
+					4.3. Navigazione<br/>
+					4.4. Ricerca</b></div>
+					<div class="source">RIDE Criteria</div>
+				</section>
+
+
+				<section>
+					<div class="left">
+						<b>Esercizio</b>
+						<br/>
+						Presentazione del testo
+						<br/>
+						<a href="https://docs.google.com/forms/d/e/1FAIpQLSfN_3OXJp972c1t8r1hi-PDVS2czIDvvGcZgq9GZkF1RQGzwA/viewform?usp=sf_link">https://tinyurl.com/3x53ndty</a>
+					</div>
+				</section>
+
+				
+				<section>
+					<h3>Presentazione</h3>
+					<div class="left small"><b>4.6. Qualità della presentazione.</b> Nel caso in cui siano presenti delle immagini, la loro qualità è sufficiente per soddisfare i principali interessi di ricerca? [...] L’utente può usufruire di differenti presentazioni dello stesso materiale, ad esempio può passare dalla trascrizione diplomatica a quella normalizzata?</div>
+					<div class="source">RIDE Criteria</div>
+				</section>
+
+				<section>
+ 					<h3>Separazione di dati (contenuto) e presentazione (forma)</h3>
+ 					<div class="quote">The ability to create a <b>plurality of interfaces for any given dataset</b> is a major advantage that the digital medium affords us. [...] . Digital scholarly edition projects in which data and interface are tightly coupled and data is not easily representable in rival displays pushes us <b>back to the paradigm of the print medium where form and content are inseparable</b>. </div>
+ 					<div class="source">Witt 2018, p. 219</div>
+ 				</section>
+
+ 				<section>
+ 					<div class="left">
+ 					Esempio dal Deutsche Textarchiv
+ 					<br/><br/>
+ 					<a href="https://www.deutschestextarchiv.de/book/view/auerbach_sanders_1880?p=1">https://www.deutschestextarchiv.de/book/view/auerbach_sanders_1880?p=1</a>
+ 				</div>
+ 				</section>
+
+
+				
+	
+
+				<section>
+					<h3>Citazione</h3>
+					<br/>
+					<div class="left small">
+						<b>1.2. Identificazione bibliografica dell’EDS recensita <br/>
+						4.8. Identificazione e citazione</b></div>
+						<div class="source">RIDE Criteria</div>
+				</section>
+
+				<section>
+					<div class="left">
+						<b>Esercizio</b>
+						<br/>
+						Citazione
+						<br/>
+						<a href="https://docs.google.com/forms/d/e/1FAIpQLSfN_3OXJp972c1t8r1hi-PDVS2czIDvvGcZgq9GZkF1RQGzwA/viewform?usp=sf_link">https://tinyurl.com/3x53ndty</a>
+					</div>
+				</section>
+
+				
+				
+				<!--
+				<section>
+					Esercizio
+
+					Créer une fiche (max 5 champs)
+					pour chaque document 
+					<br/>
+					https://www.epistolariodegasperi.it/#/archivio_digitale/lettera?id=346b790a-ed9c-4cc2-92c0-e87ea36e818f
+					<br/>
+					TEI Header
+				</section>
+
+				
+				<section>
+					Esercizio
+
+					Définir des étiquettes (max 5) pour marquer des éléments significatifs du contenu de la lettre, de la structure de son texte ou de sa mise en page (ex. noms, signature, retour à la ligne, etc.) 
+
+				-> TEI Body
+				</section>-->
+
+				<section>
+					<h3>Dati e modelli di dati</h3>
+					<div class="left small">
+						<b>3.7. Data modelling</b>. Come viene implementata dal punto di vista tecnico la metodologia di edizione? Quale data model viene applicato? Le informazioni relative al data model sono sufficienti? [...]<br/>
+						<b>4.9. Interfacce tecniche<br/>
+						4.12. Accesso ai dati<br/>
+					4.13. Diritti e licenze</b></div>
+						<div class="source">RIDE Criteria</div>
+				</section>
+
+				<section>
+					<div class="quote">it should be remembered at every point that the "data" were not given, but "taken" and are actually "<b>capta</b>", information captured through a process of <b>abstraction and structuring</b> that depends upon decisions that are already <b>acts of interpretation</b></div>
+					<div class="source">Drucker 2021, p. 26</div>
+					<br/>
+
+					<div class="left">
+					<p><b>></b> Decidere cosa entra nel magazzino e come organizzarlo</p>
+
+					<p>Dati (strutturati) sono espressione di un <b>modello</b> e di un'<b>interpretazione</b></p></div>
+				</section>
+
+				<section>
+					<h3>Modello di dati</h3>
+					<div class="quote">The models provide <b>formalized perspectives</b> on their subjects, expressed in a way that makes possible to gather specific information about the subject. In short, the formalized model determines <b>which aspects of the subject will be computable and in what form</b>.</div>
+					<div class="source">Flanders and Jannidis, “Data Modeling”, in <i>A New Companion to Digital Humanities</i>, 2016</div>
+				</section>
+
+<!--
+			<section>
+				<div class="quote">Il pregio maggiore dell'impiego dell'elaboratore in linguistica è quindi
+nell'obbligare lo studioso a dichiarare in modo non equivoco tutti i criteri di cui
+intenderà servirsi in una certa ricerca</div>
+<div class="source">Zarri 1971, p. 398</div>
+</section>-->
+
+
+				<!-- Tomasi 2012 Francesca Tomasi, L’edizione digitale e la rappresentazione della conoscenza, “Ecdotica”, n. 9 (2012), pp. 113-124. ?? -->
+				<section>
+					<div class="quote"><b>Un modello [...] consiste nella specificazione formale delle proprietà astratte degli oggetti rappresentati, insieme con le operazioni definibili su tali elementi</b> e le restrizioni che si applicano alle diverse classi di oggetti</div>
+					<div class="quote">i requisiti fondamentali per garantirne [alla rappresentazione digitale del testo] l'adegualezza funzionale debbono essere assicurati dalla definizione di <b>un modello di dati in grado di formalizzare i procedimenti analitici e critici applicabili allo studio del testo</b></div>
+					<div class="source">Dino Buzzetti, “Rappresentazione digitale e modello del testo” 1999</div>
+				</section>
+
+				<section>
+					<div class="quote">I modelli [...] rappresentano costrutti dotati di un significato più circoscritto di quello delle leggi e delle teorie scientifiche e hanno una <b>connotazione strumentalistica</b>. In altri termini, si suole ritenere che il modello non abbia portata generale, ma limitata a un contesto, e possa essere giudicato «buono» quando si rivela <b>utile a scopi precisi (descrittivi, esplicativi o previsionali)</b> non necessariamente quando lo si ritiene «vero».</div>
+					<div class="source">Maria Carla Galavotti, “Leggi, modelli causali e manipolabilità” 1999</div>
+				</section>
+				
+				<section>
+					<div class="quote">Del ruolo dei modelli nella scienza rende invece adeguatamente conto il modello analitico. Ciò dipende dal fatto che <b>formulare un modello di certi fenomeni equivale a formulare un'ipotesi su quei fenomeni</b>, e la formulazione del modello avviene in base a quegli stessi procedimenti logici, quali l'induzione e l'analogia, che il modello analitico pone alla base della formulazione delle ipotesi.</div>
+					<div class="source">Carlo Cellucci, “I modelli, l'analogia e la metafora” 1999</div>
+				</section>
+
+				<section>
+					<div class="left">
+						<b>Esempi</b>
+						<br/>Cosa includere nei dati, quale modello, per rispondere a quale domanda di ricerca.
+					</div>
+				</section>
+
+				<section>
+				<div>
+					<img src="images/shelley_Picture-1.png"/>
+					<div class="source"><i>The Shelley-Godwin Archive </i><a href="http://shelleygodwinarchive.org/">shelleygodwinarchive.org/</a></div>
+					</div>	
+				</section>
+
+				<section>
+				<div>
+					<img src="images/shelley_Picture-3.png"/>
+					<div class="source"><i>The Shelley-Godwin Archive </i><a href="http://shelleygodwinarchive.org/">shelleygodwinarchive.org/</a></div>
+					</div>	
+				</section>
+
+				<section>
+				<div>
+					<img src="images/shelley_Picture-4.png"/>
+					<div class="source"><i>The Shelley-Godwin Archive </i><a href="http://shelleygodwinarchive.org/">shelleygodwinarchive.org/</a></div>
+					</div>	
+				</section>
+
+				<section>
+				<div>
+					<img src="images/shelley_Picture-5.png"/>
+					<div class="source"><i>The Shelley-Godwin Archive </i><a href="http://shelleygodwinarchive.org/">shelleygodwinarchive.org/</a></div>
+					</div>	
+				</section>
+
+				<section>
+				<div>
+					<img src="images/shelley_Picture-6.png"/>
+					<div class="source"><i>The Shelley-Godwin Archive </i><a href="http://shelleygodwinarchive.org/">shelleygodwinarchive.org/</a></div>
+					</div>	
+				</section>
+
+				<section>
+				<div>
+					<img src="images/shelley_Picture-7.png"/>
+					<div class="source"><i>The Shelley-Godwin Archive </i><a href="http://shelleygodwinarchive.org/">shelleygodwinarchive.org/</a></div>
+					</div>	
+				</section>
+
+
+				
+
+				<section>
+					<h3>Dal documento alla rete di documenti</h3>
+					<div>
+						<img src="images/genBovaryMss.png"/>
+						<div class="source"><a href="https://www.bovary.fr/">Les manuscrits de Madame Bovary</a>. Tableau génétique des brouillons</div>
+					</div>	
+				</section>
+
+				<section>
+					<div>
+						<img width="40%" src="images/genDurrenmattNet.png"/>
+						<div class="source"><a href="https://fd-stoffe-online.ch/">Friedrich Dürrenmatt, Das <i>Stoffe</i>-Project</a>. Einzelblatt-Stemma <i>Der Tod des Sokrates</i></div>
+					</div>	
+				</section>
+
+				<section>
+					<div>
+						<img width="80%" src="images/genLokalberichtNet.png"/>
+						<div class="source"><a href="http://www.lokalbericht.ch">Hermann Burger: Lokalbericht</a>. Digitale Edition. Herausgegeben von Peter Dängeli, Magnus Wieland, Irmgard M. Wirtz und Simon Zumsteg. Version. Bern 2016</div>
+					</div>	
+				</section>
+
+				<section>
+					<h3>Dalla visualizzazione alla visualizzazione di dati</h3>
+					<img width="60%" src="images/genRoud_1941moissonneur.png">
+					<p><a href="https://gen-o.github.io/">https://gen-o.github.io/</a></p>
+				</section>
+
+
+
+
+
+				<!--
+				- wikidata: https://wdqs-tutorial.toolforge.org/
+				- esempio di Roud reti genetiche con o senza dati (Dürrenmatt, Lokalbericht vs Roud)</section>
+			-->
+
+
+
+
+
+				<!--(esempi di dati accessibili: Der Sturm, Carl Maria von Weber)-->
+
+					
+					
+
+				<!--
+				<section>
+					
+		- 4.11 cartaceo (o altro formato) + digitale
+		- 4.13 diritti e licenze
+		- 4.16 long term preservation
+				</section>
+-->
+
+
+					<!--
+						<section>
+					<h3>Collation assistée par ordinateur</h3>
+					
+						<img width="60%" src="images/froger1968_2.png" />
+						<img width="60%" src="images/froger1968_3.png" />
+					
+					
+					<div class="source">Froger, Dom Jacques. <em>La critique des textes et son automatisation</em>. Dunod, 1968.</div>
+				</section>
+-->
+
+
+
+
+
+ 				<!-- #############################################################################################################################
+	##################################################################################################################################
+	###################################################### Paradigma digitale ###############################################################
+	##################################################################################################################################
+	##################################################################################################################################
+	################################################################################################################################ -->
+
+				<section data-background-color="#d0513a">
+					<h1>Paradigma digitale, filologia digitale</h1>
+				</section>
+
+ 				
+				
+ 				<section>
+ 					<h3>Quali problemi/domande di ricerca e quali soluzioni</h3>
+ 					<div class="quote">paradigms [...] I take to be universally recognized scientific achievements that for a time provide <b>model problems and solutions</b> to a <b>community of practitioners</b>.</div>
+
+ 					<div class="quote fragment">The existence of the paradigm sets the problem to be solved; often the paradigm theory is implicated directly in the <b>design of apparatus</b> able to solve the problem. [...] <b>technology has often played a vital role in the emergence of new sciences</b></div>
+ 					<div class="source">Kuhn 1962</div>
+ 				</section>
+
+ 				<section>
+ 					<img src="images/tecnica-dati-problemi.png" width="70%" />
+
+ 					<div class="smallest">“paradigms [...] I take to be universally recognized scientific achievements that for a time provide <b>model problems and solutions</b> to a <b>community of practitioners</b>.”</div>
+
+ 					<div class="smallest">“The existence of the paradigm sets the problem to be solved; often the paradigm theory is implicated directly in the <b>design of apparatus</b> able to solve the problem. [...] <b>technology has often played a vital role in the emergence of new sciences</b>”</div>
+ 					<div class="smallest">Kuhn 1962</div>
+ 				</section>
+
+ 				
+
+ 				<section>
+ 					<h3>Cambio di paradigma</h3>
+ 					<div class="quote">Rivoluzione è un termine piuttosto generico, che usiamo con una certa spensieratezza. [...] In ogni caso vuol dire che qualcuno, invece di inventarsi una buona mossa, <b>ha modificato la scacchiera</b>: si chiama cambio di paradigma.</div>
+ 					<div class="source">Baricco 2018, p. 27</div>
+ 				</section>
+
+ 				<section>
+ 					<h3>Per l'ecdotica?</h3>
+ 					<br/><b>Continuità</b>: edizione come ipotesi di lavoro, interpretazione
+					<br/><br/><b>Rottura</b>: pratiche filologiche basate sui dati, descrizione e processi espliciti e riproducibili, comunità più internazionale (polarizzazione mondo anglofono), diversi approcci e interfacce possono convivere, ordinamento meno gerarchico degli elementi
+				</section>
+
+				<section>
+ 					<h3>Per l'ecdotica?</h3>
+ 					<br/>Continuità: edizione come ipotesi di lavoro, interpretazione
+					<br/><br/>Rottura: <b>pratiche filologiche basate sui dati</b>, descrizione e processi espliciti e riproducibili, <b>comunità più internazionale</b> (polarizzazione mondo anglofono), diversi approcci e interfacce possono convivere, ordinamento meno gerarchico degli elementi
+				</section>
+
+				<section data-background-image="images/PieterBruegelElder_TheTowerBabel_Vienna.jpg" data-background-opacity="0.4">
+					<b>copy-text | Bédierism | neo-lachmannismo | critique génétique | filologia d'autore | new bibliography | Historisch-kritische Ausgabe | etc. </b>
+					<!-- https://nbviewer.org/github/DiXiT-eu/collatex-tutorial/blob/master/unit2/part1-theory-collation/unit-2-Editorial-theory-and-collation.ipynb -->
+				</section>
+
+				<section>
+					<p><a href="https://lexiconse.uantwerpen.be">A Lexicon for Scholarly Editing</a></p>
+					<p><a href="https://wiki.helsinki.fi/display/stemmatology/Parvum+lexicon+stemmatologicum">Parvum lexicon stemmatologicum</a></p>
+				</section>
+
+				<!--
+ 					contatto tra scuole e tradizioni 
+ 					(problema delle traduzioni italiane)
+ 					usare quello che vogliamo, strumenti di lavoro-->
+
+
+ 				<section>
+ 					<div class="quote">Alla scuola del Rajna non s'imparava nessun sistema […] Eran sempre
+esercitazioni su casi concreti, e la conclusione era sempre : - così si vede che
+procedendo razionalmente i problemi si pongono nei giusti termini, e una soluzione
+soddisfacente, più o meno perfetta, secondo i dati di cui si dispone, non può mai
+mancare. - Noi uscivamo pertanto colla giusta idea che <b>ogni testo ha il suo problema
+critico, ogni problema la sua soluzione</b></div>
+<div class="source">Barbi 1938, p. X</div>
+ 				</section>
+
+				
+
+ 				<section>
+ 					<h3>Philologie des données | Pratiche filologiche basate sui dati | Data-driven philology</h3>
+ 					<div class="quote">Ce glissement du regard, du numérique comme medium de diffusion et de lecture d’une philologie traditionnelle, au <b>computationnel comme vecteur d’une transformation méthodologique profonde</b>, mène naturellement vers une philologie qui place en son centre <b>les données (et leurs modèles)</b>, par la redéfinition de leur amont (<b>production</b>), comme de leur aval (<b>analyse</b>).</div>
+ 					<!--
+ 					<div class="quote">leur utilité [des interfaces] est en partie limitée dans le temps et certainement limitée face à la richesse des <b>réutilisations</b> possibles des <b>données</b>, qui sont, elles, en tant que <b>production scientifique</b>, pérennes et susceptibles d’une vie beaucoup plus longue et de multiples renaissances.</div>-->
+ 					<div class="source">Camps 2018</div>
+ 					<br/><br/>
+ 					<div class="fragment"><b>paradigma digitale</b></div>
+ 				</section>
+
+ 				<section>
+ 					<h3>Trascrizione e collazione</h3>
+ 					<br/>
+ 					<div class="left">
+	 					<p><strong>Manuale</strong>: trascrizione di un testimone, collazione per loci o integrale<br/><b>&#8594;</b> testo critico + apparato</p>
+
+	 					<p class="fragment"><strong>Digitale</strong>: trascrizione semi-automatica di tutti i testimoni, collazione integrale semi-automatica<br/><b>&#8594; dati</b> (per stabilire testo critico, analisi, visualizzazione, remix)</p>
+	 				</div>
+ 				</section>
+
+ 				<section>
+ 					<h3>Collazione semi-automatica</h3>
+ 					<ul>
+ 						<li>senza testo di base</li>
+ 						<li>nessuna distinzione tra errore e variante</li>
+ 						<li>possibile categorizzazione su base linguistica (forma e contenuto)</li>
+ 					</ul>
+ 				</section>
+
+ 				<section>
+ 					<img src="images/falconLogo.png">
+ 					<p><a href="https://github.com/CondorCompPhil/falcon">https://github.com/CondorCompPhil/falcon</a>
+ 						<br/>Camps, Ing and Spadini 2019</p>
+ 				</section>
+
+ 				<section>
+ 					<img src="images/falconWorkflow.png"/>
+ 				</section>
+
+ 				<section>
+ 					<img src="images/falconOutput1.png"/>
+ 				</section>
+
+ 				<section>
+ 					<div class="left">
+ 					
+ 					Esempio
+ 					<br/><br/>
+ 					<ul>
+ 						<li>il fanciullo mangiava una mela</li>
+ 						<li>il ragazzo mangiava la mela</li>
+ 						<li>il fanciullo mangiava due mele</li>
+ 					</ul>
+ 				</div>
+ 				</section>
+
+
+ 				<section>
+ 					<img src="images/falconOutput3.png"/>
+ 				</section>
+
+ 				<section>
+ 					<div class="left smaller">
+ 					
+ 					Esempio
+ 					<br/><br/>
+ 					<ul>
+ 						<li>Se ne raccontano di cotte e di crude, sul fuoco del N.o 14. Ma la verità è che
+neanche S. E. Filippo Tommaso Marinetti potrebbe simultanare tutto quel che
+stava succedendo in quel casamento
+Se ne contano di cotte e di crude sul fuoco del numero quattordici. Ma neppur S.
+E. Filippo Tommaso Marinetti potrebbe simultanare tutto quel che stava
+succedendo in quel casamento</li>
+ 						<li>Se ne contano di cotte e di crude sul fuoco del numero quattordici. Ma neppur S.
+E. Filippo Tommaso Marinetti potrebbe simultanare tutto quel che stava
+succedendo in quel casamento</li>
+ 					</ul>
+ 				</div>
+
+ 					<div class="source">Fasi testuali di Gadda, <i>L'incendio di via Keplero</i> (Italia 2017, p. 110)</div>
+ 				</section>
+				
+				<section>
+ 					<img src="images/falconOutput2.png"/>
+ 				</section>
+
+
+ 				
+
+
+ 				
+ 				
+
+
+ 				
+
+ 				
+
+ 
+
+				
+<!-- #############################################################################################################################
+	##################################################################################################################################
+	###################################################### 3. conclusions ###############################################################
+	##################################################################################################################################
+	##################################################################################################################################
+	################################################################################################################################ -->
+
+				
+ 				<section>
+ 					<img src="images/sfereDH.png">
+ 					<div class="source">Sahle 2013</div>
+ 				</section>
+
+ 				<section>
+ 					<h3>Contesto</h3>
+ 					<ul>
+ 						<li>Dottorato</li>
+ 						<li>Collaborazione</li>
+ 						<li>Risorse e competenze</li>
+ 					</ul>
+ 				</section>
+
+
+ 				<section>
+					<div class="quote">By means of this new tool [Tustep], which we have in electronic data processing, new and higher standards are imposed not only on the results of others sciences, but also on critical editions - standards which can scarcely be satisfied by traditional methods. This is, in my view, the main reason why electronic data processing should be employed in the preparation of critical editions, especially in large and complex projects. The question <b>whether it is possible or not to save time and / or money</b> by these methods is only of secondary importance. The expenses necessary for future critical editions may possibly be even <b>higher</b> than they have been in the past when these tools were not yet available.</div>
+					<div class="source">Ott 1973</div>
+				</section>
+
+
+ 				<!--
+ 				<section>
+ 					<div class="quote">alcuni dei problemi teorici con cui si confronta lo studioso di scienze letterarie [...] sono molto simili a quelli di cui si occupa l'informatica [...] intesa come scienza teorica che si occupa del trattamento automatico dell'informazione</div>
+ 					<div class="source">Ciotti, in Gigliozzi</div>
+ 				</section>
+ 			-->
+
+ 				<!-- non basta scrivere data base in un libro per fare un database, non basta mettere un libro online per fare un database-->
+	 			<section data-background-image="images/database.jpg">
+					<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+					<div class="source" style="font-size: 0.4em">Image : Michael Mandiberg, <a href="https://www.flickr.com/photos/theredproject/3332644561/">DATA BASE</a>, 2009 (CC BY-SA 2.0)</div>
+				</section>
+
+ 				
+ 				
+
+				<section>
+					<h3>Filologia protagonista in un paradigma digitale</h3>
+					<div class="quote"><b>productively integrate the new methods without surrendering control over the conceptual infrastructure of our work</b></div>
+					<div class="source">Rieder and Rhöle : 71. Cf. Burdick et al. 2012: 101</div>
+				</section>
+
+				<section>
+					
+						<div class="quote">Yet it seems impossible to imagine a future when the scholars will cease to use and produce digital resources. Therefore, either the scholarly community <b>engages</b> with the digital framework, or the key decisions and models will be established <b>elsewhere</b> (by publishing houses and software developers, for instance), and imposed <b>top-down</b>. This book intends, therefore, to promote the <b>empowerment of the (digital) editors</b>, a sort of call to arms to become <b>protagonists of digital textual scholarship</b>, setting <b>agendas and goals</b> dictated by research purposes and not by the possibilities offered by the medium.</div>
+						<div class="source">Pierazzo 2015: 5</div>
+					
+
+				</section>
+
+				<section>
+
+						<div class="quote">Probabilmente ci volevano ingegneri per scassinare il '900 e farlo esplodere, ma se <i>l'altra intelligenza</i> non entra al più presto nei processi di <b>produzione</b> del Game, è difficile che il futuro ci riservi un habitat sostenibile. C'è bisogno di cultura femminile, di <b>sapere umanistico</b>, di memoria non americana, di talenti cresciuti nella sconfitta e di intelligenze che vengono dai margini.</div>
+						<div class="source">Barricco 2018: 323</div>
+				</section>
+
+
+
+				<section>
+					<div class="quote">
+						La differenza tra l'età nostra e la passata sta
+						nel rigore del metodo.
+						Si è sostituita la
+						logica inflessibile e la precisione scientifica
+						ad un procedere intuitivo; la macchina alla
+						mano libera.
+						Così avviene che possan
+						fornire un lavoro soddisfacente anche
+						artefici mediocri.
+						Badiam bene tuttavia.
+						Non per ciò divien superfluo l'ingegno
+					</div>
+					<div class="source">Rajna 1907</div>
+				</section>
+
+				
+
+
+
+
+				<section>
+					<div class="left">
+						<span style="font-size: 0.8em"><a href="biblio.pdf">Riferimenti bibliografici</a></span>
+						<br/>
+						<span style="font-size: 0.8em"><a href="basicBiblio.pdf">Bibliografia di base sulle edizione digitali</a></span>
+						<br/><br/>
+
+						<div class="smaller">
+						<b>Modelli e contesti per una filologia digitale</b>
+						
+							
+							<br/>Sapienza Università di Roma, 25 novembre 2022
+							<br/>Dottorato in Italianistica
+							<br/>Elena Spadini (Università di Basilea)
+							<br/><br/>
+							Presentazione online:<br/><a href="https://elespdn.github.io/talks/20221125_phdSapienza/20221125_phdSapienza.html">https://tinyurl.com/397chkrr</a><br/>oppure
+							<br/><a href="https://elespdn.github.io/talks/20221125_phdSapienza/20221125_phdSapienza.html">elespdn.github.io/talks/20221125_phdSapienza/20221125_phdSapienza.html</a></span>
+							<div><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a></div>
+
+						</div>
+
+					</div>
+				</section>
+
+
+				<!-- #############################################################################################################################
+	##################################################################################################################################
+	###################################################### bonus track ###############################################################
+	##################################################################################################################################
+	##################################################################################################################################
+	################################################################################################################################ -->
+
+				
+
+				<section><b>4.16. Utilizzo a lungo termine</b>. Quali sono le prospettive dell’EDS per un suo utilizzo a lungo termine? L’edizione è conclusa o è in fieri (e necessita quindi di ulteriori modifiche e di aggiunte)? Esiste un supporto istituzionale che si prenda cura dell’edizione e della sua sostenibilità? I basic data sono archiviati? Esiste un progetto per garantire un accesso duraturo all’edizione?</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<script src="../reveal/lib/js/head.min.js"></script>
+		<script src="../reveal/js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../reveal/plugin/markdown/marked.js' },
+					{ src: '../reveal/plugin/markdown/markdown.js' },
+					{ src: '../reveal/plugin/notes/notes.js', async: true },
+					{ src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
