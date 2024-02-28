@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<link rel="stylesheet" href="../reveal/dist/reset.css"/>
+		<link rel="stylesheet" href="../reveal/dist/reveal.css"/>
+		<link rel="stylesheet" href="../reveal/dist/theme/white.css" id="theme"/>
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/zenburn.css"/>
+
+		<title>Lancelot</title>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		
+
+		<style>
+			div.quote {font-size: 0.7em; margin-bottom: 1.5em; margin-top:1.5em;}
+			div.quote::before {content: "“";}
+			div.quote::after {content: "”";}
+			div.source   {font-size: 0.6em; text-align: right; margin-top: 20px}
+			.grey {color:grey;}
+			.small {font-size: 0.8em}
+			.smaller {font-size: 0.6em}
+			.smallest {font-size: 0.4em}
+
+			b {color:#d0513a;}
+			p {font-size: 0.8em}
+
+			.coloredTitle {
+				background-color:#003333
+			}				
+			div.left {text-align: left}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+
+							
+				
+				<section>
+					<h3><b>Contare e vedere<br/>la mouvance nel <em>Lancelot</em></b></h3>
+					<br/>
+					<div class="small" style="text-align: left">
+						Sapienza Università di Roma, 14 novembre 2023
+						<br/>Per Arianna Punzi
+						<br/><br/><br/>
+						Elena Spadini (Università di Basilea)
+						<br/>
+					</div>
+				</section>
+
+				
+
+
+				<!--
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+ -->
+
+ 				
+
+
+
+<!-- #############################################################################################################################
+	##################################################################################################################################
+	###################################################### Definition ###############################################################
+	##################################################################################################################################
+	##################################################################################################################################
+	################################################################################################################################ -->
+
+				<section>
+ 					<img src="images/punziBookOmbra.jpg" width="45%"/>
+				</section>
+
+				<section>
+					<div class="quote">La prédominance, dans le corpus, de l'anonymat constitue un indice, certes en partie accidentel, mais non dépourvu de sens. Le rôle de l'individu dans la genèse de l'œuvre nous apparaît mal, et sans doute, les contemporains lui attribuèrent-ils peu de valeur.</div>
+					<div class="source">Zumthor 1972, p. 68</div>
+					<br/><br/>
+					<div class="quote">L'œuvre est fondamentalement mouvante</div>
+						<div class="source">Zumthor 1972, p. 73</div>
+				</section>
+
+				<section>
+					<h3>Composizione ciclo</h3>
+					<ul>
+						<li>un autore (Lot)</li>
+						<li>un autore per <em>Lancelot</em>, <em>Queste</em> e <em>Mort Artu</em> (Micha, Combes)</li>
+						<li><b>un architetto</b> (Frappier)</li>
+						<li><em>Lancelot</em> non ciclico (Kennedy)</li>
+						<li><s>Gautier Map</s></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Blocchi del <em>Lancelot</em></h3>
+					<ul>
+						<li>Marche de Gaule</li>
+						<li>Galehaut</li>
+						<li>Charrette</li>
+						<li>Meleagant</li>
+						<li>Agravain</li>
+					</ul>
+					<br/><br/>
+					<div>
+					Ricezione e circolazione per blocchi.
+					<br/>Composizione?
+					<div class="smaller">(Punzi, "Riflessioni sulla prima sezione del Lancelot en prose",<br/><em>Forme letterarie del Medioevo romanzo</em>, 2016)</div>
+				</div>
+				</section>
+
+				<section>
+					<h3>Stilometria</h3>
+					<img src="https://raw.githubusercontent.com/RISE-UNIBAS/stylometry_R/main/images/delta_2016_003.png" width="30%">
+					<div class="quote">It is a truth not generally acknowledged that, in most discussions of works of English fiction, we proceed as if a third, two-fifths, a half of our material were not really there</div>
+					<div class="source">John Burrows. <em>Computation into criticism. A Study of Jane Austen's novels and an experiment in methods</em>. Clarendon Press, 1987.</div>
+				</section>
+
+				<section>
+					<h3>Unsupervised learning</h3>
+					vs supervised
+					<br/><br/>
+					Esempio: individuare gruppi di testi simili in un corpus di testi anonimi
+					<br/><br/>
+					Metodi: Hierarchical Agglomerative Clustering, Principal Component Analysis, ...
+				</section>
+
+				<section>
+					<img src="images/Tristan-Lancelot.png"/>
+					<div class="smallest"><em>Tristan en prose</em> (ed. Ménard), <em>Lancelot en prose</em> (ed. Micha) > blocchi random di 10'000 parole > lemmatizzazione (<code>pie-extended</code>) > Stylo in R (Cluster Analysis, Classic Delta, 600 MFW)</div>
+				</section>
+
+				<section>
+					<h3>Workflow</h3>
+					<table>
+						<tr>
+							<td width="50%">
+								<div class="small">
+									<b>Ed. Micha [lunga]</b>
+									<br/>
+									- Recuperare testi da <a href="https://textes-litteraires-francais.droz.org">DL di Droz</a> via <code>curl</code>
+									<br>
+									- Pulire testi (note, numeri, caratteri speciali) via script
+									<br/>
+									- Lemmatizzare via <a href="https://pypi.org/project/pie-extended/"><code>pie-extended</code></a>
+									<br/>
+									- Dividere in blocchi da 10'000 parole via script
+								</div>
+							</td>
+							<td>
+								<div class="small">
+									<b>Ed. Poirion-Walter (Pléiade) [breve]</b>
+									<br/>
+									- Da PDF, riconoscimento automatico della scrittura, via software HTR <a href="https://test2.fondue.unige.ch">eScriptorium</a> (Kraken)
+									<br>
+									- Estrarre testo in antico francese (samples) via script
+									<br/>
+									- Dividere in blocchi da 6'000 parole via script
+								</div>
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<div class="small">Eder, M., Rybicki, J. and Kestemont, M. (2016). "<b>Stylometry with R</b>: a package for computational text analysis". <em>R Journal</em> 8(1): 107-121.</div>
+				</section>
+
+				<section data-background-image="images/Lancelot_Micha_lemmatised.png"
+				data-background-size="contain"></section>
+
+				<section data-background-image="images/Lancelot_Pleiade.png"
+				data-background-size="contain"></section>
+
+				<section>
+					<img src="images/alignment.png" width="70%"/>
+				</section>
+
+				<section>
+					<p style="font-size: 1.2em;"><strong>REDAZIONE β (BREVE)</strong></p>
+					<div class="quote">La sua omissione [del gesto di prendere l'amato tra le braccia e baciargli gli occhi e la bocca] [...] mostra da parte del redattore di β una scelta di <b>tenere in ombra il sentimento che ha tutte le caratteristiche della passione d'amore</b> che divora il cuore del gigante o viceversa da parte di α la scelta di amplificare questo aspetto.</div>
+					<div class="source">Punzi, <em>All'ombra di Lancillotto</em>, p. 73</div>
+					<div class="quote">[...] i temi che ricorrono nella redazione breve, o meglio nei
+						punti in cui essa diverge dalla lunga, come emerso dal confronto: <b>la religione e la morale</b>, oltre ad un attenzione per le <b>pratiche di governo</b>. [...] Sembra dunque trattarsi[...] di una <b>religiosità ecclesiastica</b>, che menziona a più riprese le istituzioni e i precetti della Chiesa</div>
+						<div class="source">Spadini, <em>Studi sul</em> Lancelot en prose [tesi dottorato], p. 65</div>
+				</section>
+
+				<section>
+					<h3>Workflow</h3>
+					<img src="images/workflowAll.png" width="80%"/>
+					<div class="smaller">
+					Camps, Jean-Baptiste, Lucence Ing, and Elena Spadini. “Collating Medieval Vernacular Texts. Aligning Witnesses, Classifying Variants.” <em>DH2019</em></div>
+					<div class="smaller">
+					<b>Lemmatizzazione</b>: <code>pie-extended</code>. <b>Collazione</b>: <code>CollateX</code></div>
+				</section>
+
+				<section data-background-image="images/outputCollationCateg.jpg" data-background-size="contain"></section>
+
+				<section>ed. Micha, vol. III (52 e 52bis, breve)
+					<br/><br/>
+					<div class="small">[β] Et lors ont pris congiet et s’en vont en Sorelois. Et Galahos fist la gregnor aumosne del monde ne que il onques feist jor de sa vie comme de povres revestir et de marier orfenins et de douner a toute mesaisie gent et de rendre toutes tailles
+						et d’apaier toutes descordes et les guerres a son pooir. Et avoec tout çou fist il estorer <b>.VI. abaies dont les .IIII. sont de le ordene saint Augustin</b> et les autres .II. sont de noirs
+						moignes.</div>
+						<br/>
+						<div class="smaller">Cf. I (IX 52, lunga)</div> 
+				</section>
+
+				<section>
+					ed. Micha, vol. I e III (XVI 39)
+					<div class="small">[α] li Sains Esperist le demostra <b>a un saint hermite</b> ki faisoit
+						le servise de matines</div>
+						<br/><br/>
+
+						<div class="small">[β] il avoit el moustier <b>.I. saint homme de l’ordene saint Augustin</b> et ce fu uns ermites. Et a celuy descouvri li Sains Esperis la desloiauté que cil faisoient en Sainte Eglyse </div>
+				</section>
+
+				<section>
+					ed. Micha, vol. I (XVI 38) e III (XVI 46)
+					<div class="small" >[α] lieus ou vos veés de la clarté entor si est li cimetieres ou
+il gist les cors de maint preudome ki en lor vie furent saint et religios.</div>
+<br/>
+<div class="small">[β] 
+mes li chimetiere n’i perdi riens de la clarté, car il i gisent maint cors saint dont nous creons que les ames soient tout devant Jhesu Crist.</div>
+				</section>
+
+				<section>
+					ed. Micha, vol. I (IX 4) e III (IX 1-4)
+					
+					<div class="smaller"> [α] alerent les choses que
+					le
+					pape de Rome qui lors tenoit le siege le sot, si le tint a molt grant despit, quant si haus hom com li rois de Bretaigne avoit deguerpie sa feme sans le seu de Sainte Iglise : si a commandé que la venjance Nostre Seignor soit espandue par la terre ou il prist sa premiere feme, tant que il fust racordés par Sainte Iglise. En ceste maniere fu entredite la terre le roi Artu vint et un mois.</div>
+<br/>
+					<div class="smaller">[β] 
+					Et tant corut la novele del roi Artu de ce que il avoit sa feme encachie de lui et en avoit une autre
+reprise que <b>li apostoiles de Rome
+Estevenes qui a cel tans avoit la chité de Rome</b> en sot auques la verité de ce que il s’estoit ensi departis de sa feme sans le commandement de Sainte Eglyse et bien dist que molt chier le comperra, que li autre desloial ne presissent a luy example.
+<br/>
+Lors li manda li apostoiles de Rome comme par obedience comme a son fill que il laissast sa feme que il avoit novelement prise et presist l’autre dusques adont que par le signe de Rome fust esprové que il le deust encachier et celi que il tient reprendre, car bien estoit drois et raisons que chou qui estoit assamblés par le conseil et par le wait de Sainte Eglise qu’il en
+ovrast aussi avant par Sainte Eglise,
+ne onques por ceste cose que li apostoilles li manda ne vaut li rois sa premiere feme reprendre ne l’autre layer. Et quant li apostoilles sot chou, si le fist escumineer et toute la terre de Bretaigne fu .XXI. mois. Et anchois que il le comenchast, avoit li rois Artus tenu sa feme .X. mois et plus.</div>
+
+
+				</section>
+
+
+				<section>
+					ed. Micha, vol. I e III (XXIX 10)
+					<div class="small">[α] Et por ce se fist confés tot en oiance de si vil pechié et si orible comme de son seignor, ki ci est, qu’il avoit longuement honi et de sa feme, et issi me commanda il que je le
+deisse en ceste cort, kar je estoie en la place ou il se fist confés.</div>
+<br/>
+
+<div class="small">[β] 
+					Et la damoisele dist au roi : « Il fu voirs que quant Lancelos fit retornés de la Dolorouse Tour, si fu navrés d’un glaive
+par mi le cors et molt ot grant paor de morir <b>sans confession ; mes toutes voies
+fu il confés, la Dieu merci. Et li fu encargiés que il se feist confés devant tout le comun de vostre cort u par sa bouce u par l’autrui</b>. Et il me requist por Dieu que jou li feisse ceste voie </div>
+				</section>
+
+				<section>
+
+				</section>
+				
+
+
+
+
+
+
+				<!--
+				############## BONUS TRACK ##############
+				-->
+				<section data-background-image="images/cycle_Pleiade.png"
+			          data-background-size="contain"></section>
+
+				<section data-background-image="images/cycle_Pleiade_PCA.png"
+				data-background-size="contain"></section>
+
+
+
+
+				
+				
+
+				
+
+
+</div>
+</div>
+
+
+
+
+<script src="../reveal/dist/reveal.js"></script>
+		<script src="../reveal/plugin/zoom/zoom.js"></script>
+		<script src="../reveal/plugin/notes/notes.js"></script>
+		<script src="../reveal/plugin/search/search.js"></script>
+		<script src="../reveal/plugin/markdown/markdown.js"></script>
+		<script src="../reveal/plugin/highlight/highlight.js"></script>
+		<script>
+
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+			});
+
+		</script>
+
+
+
+
+
+	</body>
+</html>

@@ -1,0 +1,930 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<link rel="stylesheet" href="../reveal/dist/reset.css"/>
+		<link rel="stylesheet" href="../reveal/dist/reveal.css"/>
+		<link rel="stylesheet" href="../reveal/dist/theme/white.css" id="theme"/>
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/zenburn.css"/>
+
+		<title>SDE</title>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+
+		
+		<style>
+			div.quote {font-size: 0.7em; margin-bottom: 1.5em; margin-top:1.5em;}
+			div.quote::before {content: "“";}
+			div.quote::after {content: "”";}
+			div.source   {font-size: 0.6em; text-align: right; margin-top: 20px}
+			.grey {color:grey;}
+			.small {font-size: 0.8em}
+			.smaller {font-size: 0.6em}
+
+			b {color:#d0513a;}
+			p {font-size: 0.8em}
+
+			.coloredTitle {
+				background-color:#003333
+			}				
+			div.left {text-align: left}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+
+
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+<!-- ==================================================================================================  -->
+
+							
+				
+				<section>
+					<h3><b>Introduction to<br/>Digital Scholarly Editions</b></h3>
+					<div class="smaller" style="text-align: left;background-color: #a5d7d2;padding:50px;margin:50px">
+						Elena Spadini
+					</div>
+				</section>
+
+				
+
+				<!--
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
+ -->
+
+ 				<section>
+ 					<h3><b>Table of contents</b></h3>
+					<div class="small">
+						<ol style="font-size: 0.9em">
+							<li>Scholarly digital editions</li>
+							<li>Form and content</li>
+								<ol>
+									<li>Multiple forms</li>
+									<li>Multiple contents</li>
+								</ol>
+							<li>Beyond the print paradigm</li>
+								<ol>
+									<li>Beyond formal limits</li>
+									<li>Beyond content limitations</li>
+								</ol>
+							<li>Data!</li>
+							<li>Data visualization</li>
+							<li>Single vs multiple witnesses</li>
+								<ol>
+									<li>Digital documentary editions</li>
+									<li>Critical and genetic editions</li>
+								</ol>
+							<li>Reuse digital editions</li>
+							<li>Conclusions</li>
+						</ol>
+					</div>
+ 				</section>
+
+				<section>
+					<div class="small left">
+						<p>This presentation is available in HTML <a href="https://elespdn.github.io/talks/20220401_editions_crashCourse/editions.html" target="_blank">here</a>.<br/>
+							Download it in PDF <a href="https://raw.githubusercontent.com/elespdn/elespdn.github.io/master/talks/20220401_editions_crashCourse/pdfExport/RISE_editions.pdf" target="_blank">here</a>.</p>
+						
+						<div class="smaller">
+						<p>
+								<span style="font-weight: bold;">Attention!</span>
+						<br/>
+						
+						The presentation in HTML embeds many websites.
+						It takes sometime to load them all, some of them may not be available or blocked by your browser for security reasons (served through HTTP instead of HTTPS protocol).
+						<span style="font-weight: bold;">When the content is not loaded yet or blocked, a blank slide will be displayed: follow the link in the previous slides to arrive to the same content.</span> You can also disable the browser protection
+						(on this page only!) and the content should appear: in Firefox, clicking on the person symbol to the left of the address bar, then on Connection secure and Disable; in Chrome, clicking on the locker to the left of the address bar, then allow Insecure content in the Site setting.
+						<br/>The PDF export have links to the websites and static images, instead of embedded content.</p>
+				</div>
+				</div>
+				</section>
+
+
+
+<!-- #############################################################################################################################
+	##################################################################################################################################
+	###################################################### 1. Definition ###############################################################
+	##################################################################################################################################
+	##################################################################################################################################
+	################################################################################################################################ -->
+
+ 				<section data-background-color="#a5d7d2">
+ 					<h3>1.<br/>Scholarly digital editions</h3>
+ 				</section>
+
+ 				<section>
+					<h3>Scholarly edition</h3>
+					<br/>
+					<div><p>A scholarly edition aims to establish a reliable text, following explicit principles. It gives an account of the circumstances of the creation of the work and of its transmission and/or its genesis. A scholarly edition usually offers notes, introductions, and other materials to provide relevant information for the reader.</p></div>
+				</section>
+
+				<section id="digital">
+					<div>
+						<img src="editions_images/editio-Sahle-Bd_7.png" width="20%"/>
+						<img src="editions_images/editio-Sahle-Bd_8.png" width="20%"/>
+						<img src="editions_images/editio-Sahle-Bd_9.png" width="20%"/>
+					</div>  
+					
+					<p style="font-size: 0.7em">Patrick Sahle, <a href="http://www.i-d-e.de/publikationen/schriften/s7-9-digitale-editionsformen/" target="_blank"><i>Digitale Editionsformen, Zum Umgang mit der Überlieferung unter den Bedingungen des Medienwandels</i></a>, 3 Bände, Norderstedt: Books on Demand 2013 </p>
+				</section> 
+
+				<section>
+					<p>Digital scholarly editions are not just scholarly editions in digital media: digital ≠ digitized</p>
+					<br/>
+					<p style="font-size: 0.5em">"Wiedergabe ohne Erschließung ist keine Edition. Eine bloße Reproduktion, ein  einfaches Faksimile, eine digitale Bibliothek ist keine Edition"</p>					
+					<p style="font-size: 0.5em">"Deshalb kann eine digitale Edition nicht einfach die digitale Fassung einer auch im Druck realisierbaren Edition sein – zu ihrem Wesen gehört, dass sie über die Beschränkungen der typografischen Edition hinweggeht"</p>
+					<p style="font-size: 0.5em">(Sahle 2016/2: 141-142; 149)</p>                                                                                 
+				</section>      
+				
+				<section >
+					<p>A digital edition can not be printed without a loss of information and/or functionality</p>
+					<br/>					
+					<p style="font-size: 0.5em">"Eine digitale Edition ist dadurch bestimmt, dass sie nicht ohne wesentliche Informations- und Funktionsverluste in eine typografische Form gebracht werden kann – und in diesem Sinne über die druckbare Edition hinausgeht."</p>
+					<p style="font-size: 0.5em">(Sahle 2016/2: 149)</p>  
+				</section>   
+
+				
+
+				<section>
+					<h2>Catalogues</h2>
+					<br/>
+					<ul>
+						<li>Patrick Sahle, <a href="http://www.digitale-edition.de/" target="_blank">A catalogue Digital Scholarly Editions</a></li>
+						<li>Greta Franzini, <a href="https://dig-ed-cat.acdh.oeaw.ac.at/" target="_blank">Catalogue Digital Editions</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Criteria, reviews and manifesto</h2>
+					<br/>
+					<ul>
+						<li>IDE, <i><a href="http://ride.i-d-e.de/" target="_blank">RIDE. A review journal for digital editions and resources</a></i>. <a href="http://www.i-d-e.de/publikationen/weitereschriften/criteria-version-1-1/" target="_blank">Criteria</a> (de|en|it|es). 2014.</li>
+						<li>MLA (Modern Language Association), <a href="https://scholarlyeditions.commons.mla.org/2015/09/02/cse-white-paper/" target="_blank">White Paper of the MLA’s Committee on Scholarly Editions</a>. 2015.</li>
+						<li>Christiane Fritze et al., <i><a href="https://dhd-blog.org/?p=17563" target="_blank">Manifest für digitale Editionen</a></i>. 2022</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<p>digital archive | edition | project | thematic research collection</p>
+					<div class="source">Price 2009</div>
+				</section>
+
+				<section data-background-image="editions_images/PieterBruegelElder_TheTowerBabel_Vienna.jpg" data-background-opacity="0.4">
+					<b>copy-text | bedierisme | neo-lachmannian school | genetic criticism | filologia d'autore | new bibliography | Historisch-kritische Ausgabe | etc. </b>
+				</section>
+
+
+<!-- #############################################################################################################################
+	##################################################################################################################################
+	###################################################### 2. Form and content ###############################################################
+	##################################################################################################################################
+	##################################################################################################################################
+	################################################################################################################################ -->
+
+				<section data-background-color="#a5d7d2">
+					<h3>2.<br/>Form and content, or
+					<br/>presentation and data</h3>
+				</section>
+
+				<section>
+					<div class="quote">The ability to create a <b>plurality of interfaces for any given dataset</b> is a major advantage that the digital medium affords us. [...] . Digital scholarly edition projects in which data and interface are tightly coupled and data is not easily representable in rival displays pushes us <b>back to the paradigm of the print medium where form and content are inseparable</b>. </div>
+					<div class="source">Witt 2018: 219-20</div>
+				</section>
+
+				<section data-background-color="#a5d7d2">
+					<h3>2.1.<br/>Multiple forms</h3>
+				</section>
+
+				<section>
+					<div class="back"><a href="https://burckhardtsource.org/collection/5/495">Burckhardt Source</a></div>
+				</section>
+
+				<section data-background-iframe="https://burckhardtsource.org/collection/5/495" data-background-interactive></section>
+
+				<section>
+					<div class="back"><a href="https://www.beckettarchive.org/krapp/MS-HRC-SB-4-2-1/1r?view=imagetext">Samuel Beckett Digital Manuscript Project</a></div>
+				</section>
+
+				<section data-background-iframe="https://www.beckettarchive.org/krapp/MS-HRC-SB-4-2-1/1r?view=imagetext" data-background-interactive></section>
+
+
+				<section data-background-color="#a5d7d2">
+					<h3>2.2.<br/>Multiple contents</h3>
+				</section>
+
+				<section>
+					<div style="font-size: 0.8em">
+						<div class="back"><a href="http://deba.unideb.hu/deba/kazinczy_muvei/tarsportalok.php">MTA–DE Textological Research Group of 18-19th Century Hungarian Literature - Debrecen University Press</a></div>
+						<br/>
+						<div class="back"><a href="http://elec.enc.sorbonne.fr/">Éditions en ligne de l'École des chartes</a></div>
+						<!--
+						<br/>
+						<div class="back"><a href="https://acdh.oeaw.ac.at/abacus/">Austrian Centre for Digital Humanities</a></div>-->
+					</div>
+				</section>
+
+				<section data-background-iframe="http://deba.unideb.hu/deba/kazinczy_muvei/" data-background-interactive></section>
+				<section data-background-iframe="http://elec.enc.sorbonne.fr/" data-background-interactive></section>
+				
+							
+				<section>
+					<h3>Publication platforms</h3>
+					<ul>
+						<li class="back"><a href="https://teipublisher.com/index.html">TEI Publisher</a></li>
+						<li class="back"><a href="http://evt.labcd.unipi.it/">Edition Visualization Technology</a> (EVT)</li>
+						<li>...</li>
+					</ul>
+				</section>
+
+				<section>
+					<div class="left">Examples of projects using EVT</div> 
+					<br/>
+					<ul>
+						<li><a href="https://tarsian.vital-it.ch/about/#page-top">Tarsian project</a> (<a href="http://tarsian.vital-it.ch/">EVT edition</a>)</li>
+						<li><a href="http://soledades.uni-koeln.de/#/collation?d=doc_1&e=critical&ws=C">«Soledades» de Luis de Góngora. Edición crítica digital</a></li>
+						</ul>
+				</section>
+
+				<section data-background-iframe="https://tarsian.vital-it.ch/about/#page-top" data-background-interactive></section>
+				<section data-background-iframe="http://tarsian.vital-it.ch/" data-background-interactive></section>
+
+				<section data-background-iframe="http://soledades.uni-koeln.de/#/collation?d=doc_1&e=critical&ws=C" data-background-interactive></section>
+
+				<section>
+					<div class="left">Examples of projects using TEI Publisher</div> 
+					<br/>
+					<ul>
+						<li><a href="https://www.ssrq-sds-fds.ch/exist/apps/ssrq/">Sammlung Schweizerischer Rechtsquellen online</a></li>
+						<li><a href="https://editiot.finlit.fi/exist/apps/gottlund/index.html">Forest Finns' Letters to Gottlund</a></li>
+					</ul>
+				</section>
+			
+				<section data-background-iframe="https://www.ssrq-sds-fds.ch/exist/apps/ssrq/" data-background-interactive></section>
+				<section data-background-iframe="https://editiot.finlit.fi/exist/apps/gottlund/index.html" data-background-interactive></section>
+
+				<section data-background-color="#a5d7d2">
+					<h3>3.<br/>Beyond the print paradigm</h3>
+				</section>
+
+				<section>
+				   <div class="quote">The digital edition is guided by a different paradigm. If the paradigm of an edition is <b>limited</b> to the <b>two dimensional space of the ‘page’</b> and to <b>typographic means of information representation</b>, than it’s not a digital edition.</div>
+				   <div class="source">a catalog of Digital Scholarly Editions, edited by Patrick Sahle et al.</div>
+			   </section>
+
+			   <section data-background-color="#a5d7d2">
+				<h3>3.1.<br/>Beyond formal limits</h3>
+				</section>
+
+			   <section>
+					<ul>
+						<li><a href="http://estoria.bham.ac.uk/edition/">Estoria de Espanna Digital</a></li>
+						<li><a href="http://wjc.bodleian.ox.ac.uk/HTML/WJC.html">The Wandr'ring Jew's Chronicle</a></li>
+						<!--<a href="http://xanadu.com/xanademos/MoeJusteOrigins.html">Xanadu, by Ted Nelson (<i>ce n'est pas une édition </i>!)</a><br/>-->
+						<li><a href="http://alcidedigitale.fbk.eu/">Alcide Digitale</a></li>
+						<li><a href="http://www.lokalbericht.ch/dossier">Lokalbericht</a></li>
+					<!--	<a href="http://www.lokalbericht.ch/dossier">Fontanes Handbibliothek</a><br/>
+						<a href="http://www.lokalbericht.ch/dossier">Atlante Calvino</a><br/>-->
+						<br/>
+					</ul>
+				</section>  
+
+			   <section data-background-iframe="http://estoria.bham.ac.uk/edition/" data-background-interactive></section>
+			   <section data-background-iframe="http://wjc.bodleian.ox.ac.uk/HTML/WJC.html#" data-background-interactive></section>
+			   <section data-background-iframe="http://alcidedigitale.fbk.eu/" data-background-interactive></section>
+			   <section data-background-iframe="http://www.lokalbericht.ch/dossier#" data-background-interactive></section>
+			   
+
+			   <section data-background-color="#a5d7d2">
+					<h3>3.2.<br/>Beyond content limitations</h3>
+				</section>
+
+
+			   <section>
+				   	<img src="editions_images/ruotaSahle.png">
+					<div class="source">Sahle 2013</div>
+			   </section>
+
+			   <section>
+				   <div class="left">Exemple: encoding of linguistic features</div>
+				   <br/>
+				   <ul>
+					   <li><a href="http://ps.clul.ul.pt/index.php?action=home">Project P.S. Post Scriptum</a><br/></li>
+					   <li><a href="http://txm.bfm-corpus.org/?command=documentation&path=/GRAAL">Queste del Saint Graal</a><br/></li>
+				   </ul>
+			   </section>
+
+			   <section data-background-iframe="http://ps.clul.ul.pt/index.php?action=home" data-background-interactive></section>
+			   <section data-background-iframe="http://txm.bfm-corpus.org/?command=documentation&path=/GRAAL" data-background-interactive></section>
+
+			   <section data-background-color="#a5d7d2">
+					<h3>4.<br/>Data!</h3>
+				</section>
+
+			   <section>
+				<h3>Data-driven philology</h3>
+				<div class="quote">Ce glissement du regard, du numérique comme medium de diffusion et de lecture d’une philologie traditionnelle, au <b>computationnel comme vecteur d’une transformation méthodologique profonde</b>, mène naturellement vers une philologie qui place en son centre <b>les données (et leurs modèles)</b>, par la redéfinition de leur amont (<b>production</b>), comme de leur aval (<b>analyse</b>).</div>
+				<div class="source">Camps 2018</div>
+			</section>
+		
+			<!--
+			<section>
+				   <h3>Contenu. L'importance des données</h3>
+				   <div class="quote">leur utilité [des interfaces] est en partie limitée dans le temps et certainement limitée face à la richesse des <b>réutilisations</b> possibles des <b>données</b>, qui sont, elles, en tant que <b>production scientifique</b>, pérennes et susceptibles d’une vie beaucoup plus longue et de multiples renaissances.</div>
+				   <div class="source">Camps 2018</div>
+			   </section>-->  
+
+			   <section>
+				   <div class="quote">We should make it as <b>easy</b> as we can for others to <b>take</b> what we have made, to <b>adapt</b> it and <b>augment</b> it in any way they wish, and then <b>republish</b> it. [...] We all know the topos that we are standing on the shoulders of the scholars who have preceded us. The digital age offers a variant on this. As well as stand on the shoulders of others, we should help others to stand on our shoulders. This will change who we are. Now, that would be revolutionary.</div>
+				   <div class="source">Robinson 2016: 199</div>
+			   </section>
+
+			   <section>
+				<div class="left">Examples of editions providing access to the data</div> 
+				<br/>
+				<ul>
+					<li><a href="https://sturm-edition.de/">Der Sturm</a></li>
+					<!--<li><a href="http://www.nietzschesource.org">Nietzsche Source</a></li>-->
+					<li><a href="https://www.weber-gesamtausgabe.de/en/Index">Carl Maria von Weber Gesamtausgabe</a></li>
+						
+			   </section>
+
+			   <section data-background-iframe="https://sturm-edition.de/" data-background-interactive></section>
+			   <section data-background-iframe="https://www.weber-gesamtausgabe.de/en/Index" data-background-interactive></section>
+			   <!--
+			   https://sturm-edition.de/
+			   https://sturm-edition.de/ressourcen/software.html
+			   https://sturm-edition.de/quellen/briefe/chronologie/Q.01.19190509.JVH.01.html
+			   -->
+   
+
+
+				<!--- #############################################################################################################################
+	##################################################################################################################################
+	###################################################### 3. Steps ###############################################################
+	#############################################
+	################################################################################### -->
+
+				<section data-background-color="#a5d7d2">
+					<h3>5.<br/>Data visualization</h3>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						<a href="https://www.beckettarchive.org/writingsequenceofinnommable.jsp"><img src="editions_images/beckett_writingSequence.png"></a>
+
+						<div class="source" style="font-size: 0.4em">Beckett, Samuel. <em>L'Innommable / The Unnamable</em>: a digital genetic edition (Series 'The Beckett Digital Manuscript Project', module 2). Edited by Dirk Van Hulle, Shane Weller and Vincent Neyt. Brussels: University Press Antwerp (ASP/UPA), 2013, http://www.beckettarchive.org</div>
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						<a href="https://uclab.fh-potsdam.de/ff"><img src="editions_images/fontanes1.png"></a></a>
+
+						<div class="source" style="font-size: 0.4em">Bludau et al. 2020. https://uclab.fh-potsdam.de/ff</div>
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						<a href="https://uclab.fh-potsdam.de/ff"><img src="editions_images/fontanes2.png"></a></a>
+
+						<div class="source" style="font-size: 0.4em">Bludau et al. 2020. https://uclab.fh-potsdam.de/ff</div>
+					</textarea>
+				</section>
+
+
+				<section data-background-image="editions_images/1933essaiParadis.jpg" data-background-size="contain"></section>
+
+				<section data-background-color="#a5d7d2">
+					<h3>6.<br/>Single vs multiple witnesses</h3>
+				</section>
+
+				<section data-background-color="#a5d7d2">
+					<h3>6.1.<br/>Digital documentary editions</h3>
+				</section>
+				
+
+				<section data-markdown>
+					<textarea data-template>
+						<div class="quote">
+							we could
+define this new type of editorial object, the <b>documentary
+digital edition</b>, as the recording of as many
+features of the original document as are considered
+meaningful by the editors, displayed in all the ways
+the editors consider useful for the readers, including
+all the tools necessary to achieve such a purpose.</div>
+<div class="source">Pierazzo 2011</div>
+
+<br/>
+<div class="small">
+
+ex. : <em>"[Lo Stufaiuolo](https://scholarlyediting.org/2015/editions/intro.stufaiuolo.html)" by Anton Francesco Doni. A Scholarly Edition</em>,<br/>Elena Pierazzo (ed.), 2015.
+
+</div>
+					</textarea>
+				</section>
+
+				<section><a href="http://pelavicino.labcd.unipi.it/evt/#doc=C03&page=fol_015r">Codice Pelavicino</a></section>
+				<section data-background-iframe="http://pelavicino.labcd.unipi.it/evt/#doc=C03&page=fol_015r" data-background-interactive></section>
+
+				<section><a href="https://www.berliner-intellektuelle.eu/manuscript?Brief111BoeckhanAssing+de#1">Briefe und Texte
+					aus dem intellektuellen
+					Berlin um 1800</a></section>
+				<section data-background-iframe="https://www.berliner-intellektuelle.eu/manuscript?Brief111BoeckhanAssing+de#1"></section>
+				
+				<section><a href="https://testaments-de-poilus.huma-num.fr/#!/">Testaments de Poilus</a> </section>
+				<section data-background-iframe="https://testaments-de-poilus.huma-num.fr/#!/" data-background-interactive></section>
+				
+				<section data-markdown>
+					<textarea data-template>
+						<div class="left">
+							<br/>
+
+						Increase of diplomatic editions
+
+						&#8592; perception of the medium
+
+						&#8592; sources availability
+
+						&#8592; philological traditions working on single witness texts
+					</div>
+					</textarea>
+				</section>
+
+				
+				<section data-background-color="#a5d7d2">
+					<h3>6.2.<br/>Critical and genetic editions</h3>
+				</section>
+
+				<!--
+				<section>
+					<h3>Computer-assisted collation</h3>
+					<table>
+						<tr>
+							<td width="50%" ><img width="80%" src="editions_images/froger1968_2.png" /></td>
+							<td width="50%"><img width="100%" src="editions_images/froger1968_3.png" />
+					</td>
+						</tr>
+					</table>
+						<img width="60%" src="editions_images/froger1968_2.png" />
+						<img width="60%" src="editions_images/froger1968_3.png" />
+					
+					
+					<div class="source">Froger, Dom Jacques. <em>La critique des textes et son automatisation</em>. Dunod, 1968.</div>
+					
+					
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					### Computer-assisted collation
+					<br/>
+					<div class="left">
+
+					Requirement: digital text of the witnesses
+					
+					Features: no base text, no distinction between error and variants, possible to categorize variants using linguistic information (form vs content)
+				</div>
+				</textarea>
+				</section>
+				-->
+
+				<section data-background-image="editions_images/beckett-3.png" data-background-size="contain"></section>
+				<section data-background-image="editions_images/beckett-4.png" data-background-size="contain"></section>
+				<section data-background-image="editions_images/beckett-5.png" data-background-size="contain"></section>
+				<section data-background-image="editions_images/beckett-6.png" data-background-size="contain"></section>
+
+				<section data-background-image="editions_images/travizDeCivitateDei.jpeg" data-background-size="contain"></section>
+
+				<section data-background-image="editions_images/lera.png" data-background-size="contain"></section>
+				<section data-background-image="editions_images/varianceViewer.png" data-background-size="contain"></section>
+
+
+				
+
+				<section>
+					<h3>ESTABLISHING THE CRITICAL TEXT</h3>
+					Critical text. Example: <i><a href="http://faustedition.net/">FaustEdition</a></i>
+					<br/><br/>
+					No critical text. Example: <i><a href="https://www.dantecommedia.it/">Commedia</a></i>
+				</section>
+
+
+
+				<section>
+					<div class="quote">Yet, there is one thing missing from Shaw’s edition. She does not provide her own edited text. This absence strikes me as the single most remarkable element of the edition. It shifts the focus away from the editor, as maker of a text, to the documents themselves and what we might learn from them. The centre of the edition is not the product: the edited text, with all else seen as <b>ancillary, preparatory, and explanatory</b>. The centre of the edition is the <b>process</b>: the search for understanding of all these documents and how they relate to each other.</div>
+					<div class="source">Robinson 2016</div>
+						
+					
+				</section>
+
+<section data-markdown>
+					<textarea data-template>
+						
+						<div class="quote">The reader cannot have the task of establishing the text. It would be as if the citizens analyze the documents of a trial instead of the judge.</div>
+						<div class="source">Paola Italia, "Testi come beni comuni: per una filologia digitale sostenibile", <em><br/>Intersections. New perspectives for public humanities</em>, 2020.</div>
+
+					</textarea>
+				</section>
+
+
+				
+				
+				
+
+				<!--- #############################################################################################################################
+	##################################################################################################################################
+	###################################################### 3. user ###############################################################
+	##################################################################################################################################
+	##################################################################################################################################
+	################################################################################################################################ -->
+
+ 				<section data-background-color="#a5d7d2">
+ 					<h3 style="color:black">8. Reuse digital editions</h3>
+ 				</section>
+
+ 				<section data-markdown>
+					<textarea data-template>
+						### Who read and use digital editions ?
+						
+						<br/>
+						<ul class="small">
+							<li><b>persons</b> (read, query, download, quote)
+								<ul style="list-style: none">
+									<li>- GUI (interface graphique)</li>
+								</ul>
+								<br/>
+							</li>
+							<li><b>machines</b> (query, download, quote)
+								<ul style="list-style: none">
+									<li>- APIs</li>
+									<li>- query endpoints (SQL, SPARQL, XPath, XQuery, Cypher, etc.)</li>
+								</ul>
+							</li>
+						</ul>
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					<b>Use and reuse by persons</b>
+				</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+					### GUI as a scientific argument and a guide
+
+					<div class="quote">an interface (GUI or API) of a DSE is always closely linked to the <b>data model</b> of the underlying data and the editorial principles expressed in this data model, in that regard it is a form of pre-selective data management. Interfaces are an <b>interpretation of knowledge</b> and provide users with a more or less “guided tour” through the data and its general presentational setting. Furthermore, they allow the user to <b>answer research questions</b> and aim at supporting the generation of knowledge.</div>
+					<div class="source">Bleier et al. 2020, Intro</div>
+
+					<!-- Interface is a space of affordances and possibilities structured into organiz-ation for use. An interface is a set of conditions, structured relations, thatallow certain behaviors, actions, readings, events to occur. 
+					DRUCKER, cited in Bleier et al -->
+				</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+						### Who and how create GUIs
+
+						<br/>
+						
+						- Part of the scientific work (great diversity)
+						- Use methods such as User Experience Design, Focus groups
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						### Download data (XML-TEI) 
+						 
+						 <div class="left"><br/>
+						
+						<b>aggregator</b>. E.g. : [CorrespSearch](https://correspsearch.net/) (Dumont 2016)
+
+						<b>Creation of a larger corpus</b>. E.g. : [Distant Reading for European Literary History](https://www.distant-reading.net/) (COST Action CA16204) 
+
+						Linguistic, paleographical or other type of <b>analysis</b>, based on the encoding. E.g. : [Ursus de Bénévent, *De Nomine*, a cura di Paolo Monella, 2017](https://www1.unipa.it/paolo.monella/ursus/transcription.html)
+
+						Only possible if data is available ... Counter-example : <em>[Electronic Bewulf](https://ebeowulf.uky.edu/ebeo4.0/CD/main.html). Fourth Edition</em>, Kiernan and Iacob (eds.), 2015
+
+						<!--(utiliser options)-->
+						</div>
+
+					</textarea>
+					<!--  https://umanisticadigitale.unibo.it/article/view/7286 (vd. abstract) -->
+				</section>
+
+				
+
+				<section data-markdown>
+					<textarea data-template>
+					<b>Use by persons and machines</b>
+				</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						### How to quote digital editions
+
+						<div class="left">
+						
+						See <b>instructions</b> in each edition.
+
+						What about updates? &#8594; <b>Versioning</b>
+						
+						<ul style="font-size: 0.7em">
+							<li>Versioning as documentation. Ex. :
+								<ul style="list-style: none">
+									<li>- Tim Hitchcock, Robert Shoemaker, Clive Emsley, Sharon Howard and Jamie McLaughlin, et al., <em>The Old Bailey Proceedings Online, 1674-1913</em> (www.oldbaileyonline.org, version 8.0, March 2018)</li>
+									<li>- Ainsworth, Peter, and Godfried Croenen, ed., <em>The Online Froissart</em>, version 1.5 (Sheffield: HRIOnline, 2013), http://www.dhi.ac.uk/onlinefroissart</li>
+								</ul>
+							</li>
+							<li>Versioning as version management (git)</li>
+							<li>Versioning as retrievable milestone versions (IRI)</li>
+						</ul>
+						<div class="source">Bürgermeister 2020; cf. Broyles 2020</div>
+					</div>
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						## How to quote digital editions
+
+						<br/>
+						<div class="left">
+
+						Absence of the page &#8594; [CTS](http://cts.informatik.uni-leipzig.de/Canonical_Text_Service.html) and [DTS](https://distributed-text-services.github.io/specifications/) protocols.
+
+						<div class="quote">DTS provides a standard way for clients to interact with
+collections of TEI documents</div>
+<div class="source">Romanello 2020</div>
+</div>
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+					<b>Use and reuse by machines</b>
+				</textarea>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+						### Application Programming Interfaces (API)
+
+						<br/><div class="left">
+
+						<b>Generic</b>. DTS, implemented in presentation platform : ex. <a href="https://teipublisher.com/exist/apps/vangogh/$app/index.html">TEI Publisher Demo Van Gogh Letters</a> 
+
+						<b>Specific</b>. Ex. : Complete Works of Carl Maria von Weber. Digital Edition, http://weber-gesamtausgabe.de/A070002 (Version 4.3.0 of February 1, 2021)
+
+</div>
+						<!--
+						esempio, edizione di testi di Johanna Schopenhauer, prende dati biografici da WeGA
+						API permet d'utiliser GND IDs (vd. https://weber-gesamtausgabe.de/en/Help/API_Documentation.html#d12e151) -->
+					</textarea>
+				</section>
+
+				<section>
+					<img src="editions_images/vangogh.png">
+				</section>
+
+				<section data-background-image="editions_images/vangoghDTS.png" data-background-size="contain"></section>
+
+				<section data-markdown>
+					<textarea data-template>
+
+						<div class="left">
+
+						Example : project about Johanna Schopenhauer
+
+						<br/><b>use existing data</b>
+
+						Sources : <em>Carl Maria von Weber Gesamtausgabe</em> and <em>CorrespSearch</em>
+
+						</div>
+				</textarea>
+				</section>
+
+				<section data-background-image="editions_images/weber1.png" data-background-size="contain"></section>
+
+				<section data-background-image="editions_images/weberJS.png" data-background-size="contain"></section>
+
+				<section data-background-image="editions_images/weberJS2.png" data-background-size="contain"></section>
+
+				<section>
+					<img src="editions_images/GNDjs.png"></section>
+
+				<section data-background-color="black">
+
+						<pre style="color: yellow">curl -L -H "Accept: application/tei+xml"<br/>https://weber-gesamtausgabe.de/en/gnd/118610473</pre>
+				</section>
+
+				<section data-background-image="editions_images/weberJSxml.png" data-background-size="contain"></section>
+
+				<section data-background-image="editions_images/correspSearch.png" data-background-size="contain"></section>
+
+				<section data-background-image="editions_images/correspSearchJS.png" data-background-size="contain"></section>
+
+
+
+				
+				
+				<section data-markdown>
+					<textarea data-template>
+
+						### Query endpoints
+
+
+						<br/><div class="left">
+
+						Directly query the database.
+
+						Example : network analysis on Dante's sources
+
+
+
+
+						<!--
+
+						## Languages de requête
+
+						http://digitalhumanities.org:8081/dhq/vol/14/2/000475/000475.html
+
+						https://www.romanrepublic.ac.uk/rdf
+
+
+						```
+					PREFIX : <http://romanrepublic.ac.uk/rdf/ontology#>
+					PREFIX owl: <http://www.w3.org/2002/07/owl#>
+					PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+					PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+					PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+					PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+					PREFIX vocab: <http://romanrepublic.ac.uk/rdf/ontology#>
+					PREFIX map: <http://romanrepublic.ac.uk/rdf/entity/#>
+					PREFIX db: <http://romanrepublic.ac.uk/rdf/entity/>
+					select ?women where { 
+							?women :isSex <http://romanrepublic.ac.uk/rdf/entity/Sex/Female> ;
+					    			:hasHighestOffice ?office .
+					  filter contains(?office, "vestal")
+					} limit 10
+					```
+
+				-->
+					</textarea>
+				</section>
+
+				<section data-background-image="editions_images/danteSources1.png" data-background-size="contain"></section>
+				<section data-background-image="editions_images/danteSourcesSPARQL.png" data-background-size="contain"></section>
+				<section data-background-image="editions_images/danteSourcesResults.png" data-background-size="contain"></section>
+
+
+
+
+				
+
+
+
+
+
+
+<! - #############################################################################################################################
+	##################################################################################################################################
+	###################################################### 3. conclusions ###############################################################
+	##################################################################################################################################
+	##################################################################################################################################
+	################################################################################################################################ ->
+
+				<section data-background-color="#a5d7d2">
+ 					<h3 style="color:black">8. Conclusions</h3>
+ 				</section>
+
+
+				 <section>
+					<div class="quote">By means of this new tool [Tustep], which we have in electronic data processing, new and higher standards are imposed not only on the results of others sciences, but also on critical editions - standards which can scarcely be satisfied by traditional methods. This is, in my view, the main reason why electronic data processing should be employed in the preparation of critical editions, especially in large and complex projects. The question <b>whether it is possible or not to save time and / or money</b> by these methods is only of secondary importance. The expenses necessary for future critical editions may possibly be even <b>higher</b> than they have been in the past when these tools were not yet available.</div>
+					<div class="source">Ott 1973</div>
+				</section>
+
+				
+				<section>
+					
+						<h3>Digital scholarly edition.<br/>Features?</h3>
+							<div class="left">
+						<br/><b>Edition</b>: a scientific hypothesis among others, interpretation is central
+
+						<br/><b>Digital edition</b> : data-driven philology, explicit and reproducible, international community, different approaches possibles, less hierarchy among the elements
+
+						<!--
+
+						più prassi e formati editoriali insieme
+
+						tei ha creato una comunità internazionale
+
+						filologia digitale = disciplina a sé stante (p. 68)
+
+						ordine gerarchico tra gli elementi viene a mancare (es. apparato critico)
+
+						 It also problematizes the very definition
+of data, considering their complexities, their inherent biases, their contextual and historical
+natures, in a critical and nuanced way (e.g. Drucker, 2011
+
+
+FAIR--></div>
+					
+				</section>
+
+				
+				<section data-background-image="editions_images/database.jpg">
+					<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+					<div class="source" style="font-size: 0.4em">Image : Michael Mandiberg, <a href="https://www.flickr.com/photos/theredproject/3332644561/">DATA BASE</a>, 2009 (CC BY-SA 2.0)</div>
+				</section>
+
+
+
+						
+
+				<section>
+					Thank you.<br/><br/>
+					<div class="left small">
+						<span>List of <a href="https://raw.githubusercontent.com/elespdn/elespdn.github.io/master/talks/20220401_editions_crashCourse/biblio/worksCited.pdf">works cited</a>.</span>
+						<br/>
+						<span>Basic <a href="https://raw.githubusercontent.com/elespdn/elespdn.github.io/master/talks/20220401_editions_crashCourse/biblio/basicBiblio.pdf">bibliography</a> about SDEs.</span>
+					</div><br/><br/>
+					<div class="left smaller">
+						<div xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://elespdn.github.io/talks/20220401_editions_crashCourse/editions.html">Introduction to digital scholarly editions</a> by <span property="cc:attributionName">Elena Spadini</span><br/>(RISE Crash Course, University of Basel)<br/>is licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0</a></div>
+						<div>
+							<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></div> 
+					</div>
+				</section>
+
+			</div>
+		</div>
+
+
+		
+<script src="../reveal/dist/reveal.js"></script>
+<script src="../reveal/plugin/zoom/zoom.js"></script>
+<script src="../reveal/plugin/notes/notes.js"></script>
+<script src="../reveal/plugin/search/search.js"></script>
+<script src="../reveal/plugin/markdown/markdown.js"></script>
+<script src="../reveal/plugin/highlight/highlight.js"></script>
+<script>
+
+	// Also available as an ES module, see:
+	// https://revealjs.com/initialization/
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		center: true,
+		hash: true,
+
+		// Learn about plugins: https://revealjs.com/plugins/
+		plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+	});
+
+</script>
+
+
+
+
+
+</body>
+</html>
