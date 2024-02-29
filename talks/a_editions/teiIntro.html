@@ -1,0 +1,582 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		<title>TEI intro</title>
+
+		<meta name="description" content="Introduction to the Text Encoding Initiative (TEI)">
+		<meta name="author" content="Elena Spadini">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="../reveal/css/reset.css">
+		<link rel="stylesheet" href="../reveal/css/reveal.css">
+		<link rel="stylesheet" href="../reveal/css/theme/white.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<style>
+			div.quote {font-size: 0.7em; margin-bottom: 1.5em; margin-top:1.5em;}
+			div.quote::before {content: "“";}
+			div.quote::after {content: "”";}
+			div.source   {font-size: 0.6em; text-align: right; margin-top: 20px}
+			.grey {color:grey;}
+			.small {font-size: 0.8em}
+			.smaller {font-size: 0.6em}
+
+			b {color:#d0513a;}
+			p {font-size: 0.8em}
+
+			.coloredTitle {
+				background-color:#003333
+			}				
+			div.left {text-align: left}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<h2><b>Introduction to TEI</b></h2>
+					<div class="smaller" style="text-align: left;background-color: #a5d7d2;padding:50px;margin:50px">
+						1.04.2022, RISE Crash course
+						<br/>
+						Elena Spadini
+						<!--
+						<br/>
+						Presentation online at: <a href="https://elespdn.github.io/talks/20220401_editions_crashCourse/teiIntro.html">https://elespdn.github.io/talks/20220401_editions_crashCourse/teiIntro.pdf</a>-->
+					</div>
+					<div>
+						<img style="border:0px;box-shadow: none;" width="20%" src="editions_images/UniBas_Logo_EN_Schwarz_RGB_65.jpg"/>
+					</div>
+				</section>
+
+
+				<section>
+					<h3><b>Table of contents</b></h3>
+					<ol style="font-size: 0.9em">
+						<li>Markup</li>
+					   <li>XML</li>
+						<li>TEI</li>
+						<ol>
+							<li>TEI basic structure</li>
+							<li>Examples of TEI encoding</li>
+							<li>TEI customization</li>
+							<li>Software for working with TEI</li>
+							<li>Multiple outputs</li>
+						</ol>
+						<li>Modelling</li>
+						<li>TEI in action</li>
+						<li>Workflow</li>
+					</ol>
+				</section>
+
+				<section>
+					<div class="small left">
+						<p>This presentation is available in HTML <a href="https://elespdn.github.io/talks/20220401_editions_crashCourse/teiIntro.html" target="_blank">here</a>.<br/>
+							Download it in PDF <a href="https://raw.githubusercontent.com/elespdn/elespdn.github.io/master/talks/20220401_editions_crashCourse/pdfExport/teiIntro.pdf" target="_blank">here</a>.</p>
+							<p>
+				</div>
+				</section>
+
+
+
+				<section data-background-color="#a5d7d2"> 
+					<h3>1.<br/>Markup</h3>
+				</section>
+
+
+				<section data-background-image="teiIntro_images/interreg_markup-xml-tei.png" data-background-size="contain">
+				</section>
+
+				<section>
+					<img src="teiIntro_images/markup.gif">
+					<div class="source">https://www.ncbi.nlm.nih.gov/staff/beck/xml/markup/I-A.html</div>
+				</section>
+
+
+				<section>
+					Make <b>explicit</b> (to a machine) what is implicit (to a person).
+					<br/><br/>
+					It is a way of naming and characterizing the parts of a
+					text in a formalized way.
+					<!--
+					<br/>
+					-> To facilitate multiple annotations or readings of the same material
+					<br/>
+					-> To facilitate re-use of the same material for multiple purposes (in different formats and contexts, by different users)-->
+				</section>
+
+				<section>
+					<h3>Procedural MARKUP</h3>
+					<pre><code><bold>Jane Austen</bold> wrote <italic>Price and Prejudice</italic></code></pre>
+					</br>
+					<h3>Descriptive MARKUP</h3>
+					<pre> Markup<code><name>Jane Austen</name> wrote <title>Price and Prejudice</title></code></pre>
+					<pre> Visualization<code>name {font-weight: bold;} title {font-style: italic;} </code></pre>
+					<pre> Process<code>&lt;xsl:for-each select="//name"&gt;</code></pre>
+				</section>  <!--end example quijote-->
+
+				<section>
+					Descriptive markup allows for the<br/><b>separation of form and content</b>
+					<br/><br/>
+					<ul>
+						<li>multiple forms possible</li>
+						<li>easier reuse (in different contexts)</li>
+						<li>easier preservation</li>
+					</ul>
+				</section>
+
+				<section data-background-color="#a5d7d2">
+					<h3>2.<br/>XML</h3>
+				</section>
+
+				<section>
+					<div class="left">
+					XML is <b>structured data</b> represented as strings of text
+					<!--
+						<item>XML looks like HTML, except that:-<list>
+								<item>XML is <hi>extensible</hi>
+								</item>
+								<item>XML must be <hi>well-formed</hi>
+								</item>
+								<item>XML can be <hi>validated</hi>
+								</item>
+							</list>
+						</item>
+						-->
+					<br/>
+					XML is application-, platform-, and vendor- independent
+					<br/>
+					it is used in all fields and is widely supported by a vast range of tools and
+						infrastructures
+					<br/>it facilitates the long-term preservation of data
+				</div>
+				</section>
+
+
+				
+				<section>
+					<h3>XML Golden Rules </h3>
+					<pre> An element consists of a <b>start-tag</b>, optional <b>content</b>, and an <b>end-tag</b>.<code> <persName>Miguel de Cervantes</persName></code></pre>
+					<pre> An element may have <b>attributes</b>, each consisting of a name and a value.<code> <name type="person">Miguel de Cervantes</name></code></pre>
+					<pre> An XML document may contain <b>processing</b> instructions or <b>comments</b>.<code> &lt;? xml-stylesheet type="text/css" href="visualize-tei-xml.css"?></code>
+					<code>     <!-- This is a comment: here starts the first sonnet --></code></pre>
+					<pre> Elements and attributes are <b>case sensitive</b>.<code> &lt;name&gt; ≠ &lt;Name&gt;</code></pre>			
+					<pre> <b>Empty elements</b> can use a minimized tag syntax.<code> &lt;pb/&gt; = <pb></pb>  </code></pre>								
+				</section>
+
+				
+
+				<section>
+					<pre><code>
+					<?xml version="1.0"?>
+					<greeting xmlns="http://www.example.org/greetings">
+					    <hello type="jovial" xml:lang="en">hello world!</hello>
+					    <hello type="jovial" xml:lang="fr">salut monde!</hello>
+					</greetings>
+					</code></pre>
+					<div class="small">
+						<ul>
+							<li>the XML declaration</li>
+							<li>a namespace declaration</li>
+							<li>a root element</li>
+							<li>other elements, which might have content and attributes</li>
+							<li>attributes, with names and values</li>
+						</ul>
+					</div>
+				</section>
+
+				<section data-background-color="#a5d7d2"> 
+					<h3>3.<br/>Text Encoding Initiative</h3>
+				</section>
+
+				<section>
+					<div class="quote">The TEI was established in 1987 to develop, maintain, and promulgate hardware- and software-independent methods for encoding humanities data in electronic form. </div>
+					<div class="source">https://tei-c.org/about/history/</div>
+
+					<img width="50%" src="teiIntro_images/1987-11-vassar.jpg">
+
+				</section>
+
+				<section>
+					Since 1999, the TEI is led by a consortium that maintains and develops <b>guidelines</b> for text encoding.
+					<div>
+						<img src="teiIntro_images/tei-website.png">
+					</div>
+				</section>
+
+				<section>
+				<a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html"><img width="50%" src="teiIntro_images/tei-guidelines1.png"></a>
+				</section>
+
+				<section data-background-color="#a5d7d2"> 
+					<h3>3.1.<br/>TEI basic structure</h3>
+				</section>
+
+				<section data-background-image="teiIntro_images/teiBasic.jpg" data-background-size="contain">
+				</section>
+
+				<section data-background-image="teiIntro_images/teiBasic2.jpg" data-background-size="contain">
+				</section>
+
+				<section data-background-image="teiIntro_images/teiHeader.jpg" data-background-size="contain">
+				</section>
+
+				<section data-background-image="teiIntro_images/teiText.jpg" data-background-size="contain">
+				</section>
+
+				<section>
+					<table>
+						<tr>
+							<td width="40%">
+								<img src="teiIntro_images/guy.png">
+							</td>
+							<td width="60%">
+								<img src="teiIntro_images/guyTei.jpg">
+							</td>
+						</tr>
+					</table>
+				</section>
+		
+				<section data-background-color="#a5d7d2"> 
+					<h3>3.2.<br/>Examples of TEI encoding</h3>
+				</section>
+
+				<section>
+					<table>
+						<tr>
+							<td width="40%">
+								<img src="teiIntro_images/mistress.png">
+							</td>
+							<td width="60%">
+								<img src="teiIntro_images/mistressTei.jpg">
+							</td>
+						</tr>
+					</table>
+				</section>
+
+				<section>
+					<div><img src="teiIntro_images/andTowards.png"></div>
+					<div><img width="70%" src="teiIntro_images/andTowardsTei.jpg"></div>
+				</section>
+
+				<section data-background-image="teiIntro_images/teiDramaExample.jpg" data-background-size="contain">
+				</section>
+
+
+
+				<section data-background-color="#a5d7d2"> 
+					<h3>3.3.<br/>TEI customization</h3>
+				</section>
+
+				<section>
+					<div class="small left">
+						<p>XML document is <b>well formed</b> when it complies to XML syntax rules.</p>
+						<p>XML document is <b>valid</b> when it conforms to structural rules defined in a schema. </p>
+						<p>A <b>schema</b> allows to specify: <ul style="font-size:0.8em;">
+							<li>which elements can appear as the root element of a document</li>
+							<li>which elements and attributes can appear where</li>
+							<li>names, datatypes, and default values for all attributes</li>
+						</ul></p>
+						<p>In practice, a schema allows you to check the consistency of the encoding, for example every chapter must begin with a heading, or every strophe must include lines, or a reference to a persistent ID should be specified for each person.
+						</p>
+					</div>
+				</section>
+
+				<section>
+					<h3>Community-maintained TEI schemas</h3>
+					<ul>
+						<li>tei_all </li>
+						<li>tei_lite (light and basic encoding)</li>
+						<li>tei_drama (performance texts)</li>
+						<li>tei_speech (speech and spoken texts)</li>
+					</ul>
+					<p>
+					More at <a href="http://www.tei-c.org/Guidelines/Customization/">http://www.tei-c.org/Guidelines/Customization/</a></p>
+				</section>
+
+				<section>
+					<div class="left">
+						<p>Each project should define its own <b>schema</b>, which represents in a structured and formalized way
+						the understanding of and approach towards the text to be encoded (<b>scientific</b> choices).</p>
+
+						<p>The TEI <b>modular</b> system (modules and classes) helps in customizing the schema.</p>
+
+						<p>There are different schema languages (DTD, RNG, WSD) and the TEI uses RELAXNG (.rng, .rnc).</p>
+					</div>
+				</section>
+
+				<!-- file:///home/elena/Github/elespdn/elespdn.github.io/talks/20190425_TEIcustomization/slides/TEIcustomizationSlides-rpubs.html -->
+
+				
+
+
+				<section data-background-color="#a5d7d2"> 
+					<h3>3.4.<br/>Software for working with TEI</h3>
+				</section>
+
+				<section>
+					<a href="http://wiki.tei-c.org/index.php/OXygen" target="_blank"><h2>oXygen</h2></a><p>XML editor with support for TEI encoding</p>
+				</section>
+
+				<section>
+					<a href="https://roma.tei-c.org/" target="_blank">
+					<img src="teiIntro_images/roma-new.png"></a>
+				</section>
+
+				<section>
+					<a href="https://tei-c.org/" target="_blank"><h2>TEI mailing list</h2></a>
+					<img width="50%" src="teiIntro_images/tei-mailingList.png">
+				</section>
+
+
+				<section data-background-color="#a5d7d2"> 
+					<h3>3.5.<br/>Multiple outputs</h3>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						### Again on form and content
+
+						<img width="80%" src="teiIntro_images/source-output.png">
+
+						<div class="source">Ciula and Pierazzo, "Encoding Texts",<br/>in <em>Medieval/Modern Manuscript Studies in the Digital Age</em>, London, 2014.</div>
+					</textarea>
+				</section>
+
+
+
+
+			<!--
+				<section data-background-color="#a5d7d2"> 
+					<h3>3.6.<br/>Text encoding recap</h3>
+				</section>
+
+
+				 <section>
+					 <div class="small">
+						<ul>
+							<li>TEI is a vocabulary expressed using the XML syntax</li>
+							<li>an XML document should be well-formed (XML rules) and valid (schema rules)</li>
+							<li>a basic TEI document is composed of a <code>teiHeader</code> and a <code>text</code></li>
+							<li>the TEI Guidelines are organized in chapters corresponding to the modules</li>
+						</ul>
+					</div>
+				 </section>
+				 
+-->	
+				 <section data-background-color="#a5d7d2"> 
+					<h3>4.<br/>Data modelling</h3>
+				</section>
+
+				 <section>
+					 <div class="small">
+					<ul>
+						<li>The application of markup to a document is a <b>scholarly</b> activity</li>
+						<li>Markup is never neutral or objective : <b>interpretation</b> is
+							needed</li>
+						<li>The schema used for a project should result from a detailed
+							analysis of the <b>properties of the objects</b> the project aims to use or
+							create</li>
+						</ul>
+					</div>
+				</section>
+
+
+				 <!--
+					#########################################################################
+					#########################################################################
+					#########################################################################
+					#########################################################################
+					#########################################################################
+					#########################################################################
+				 -->
+
+				
+
+				<section data-background-color="#a5d7d2"> 
+					<h3>5.<br/>TEI in action</h3>
+				</section>
+
+
+				 <section data-markdown>
+					<textarea data-template>
+						### Collect and describe sources
+
+						<div class="left">
+						
+						Example of digital catalogues of manuscripts: [e-codices](https://www.e-codices.unifr.ch/en/), [Manuscriptorium](http://www.manuscriptorium.com/en), [MANUS](https://manus.iccu.sbn.it/index.php)
+						
+						</div>
+					</textarea>
+					<!--[Encoded Archival Description](https://loc.gov/ead/tei-c.org/) (XML-EAD)
+
+						New! : [The Medieval Manuscript Ontology](https://w3id.org/irnerio/ontology/memo) (MeMO)-->
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						![ecodices](teiIntro_images/ecodices1.png)
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						![ecodices](teiIntro_images/ecodices2.png)
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						![ecodices](teiIntro_images/ecodices3.png)
+					</textarea>
+				</section>
+
+				<section data-background-image="teiIntro_images/ecodicesXML1.jpg" data-background-size="contain"></section>
+
+				<section data-background-image="teiIntro_images/ecodicesXML2.jpg" data-background-size="contain"></section>
+
+				<section data-markdown>
+					<textarea data-template>
+						<a href="https://manus.iccu.sbn.it/opac_SchedaScheda.php?ID=244757">
+							<img src="teiIntro_images/manus.png">
+						</a>
+					</textarea>
+				</section>
+
+				<section data-background-image="teiIntro_images/manusXML1.jpg" data-background-size="contain"></section>
+
+				<section data-background-image="teiIntro_images/manusXML2.jpg" data-background-size="contain"></section>
+
+
+
+				
+
+				<section id="Shelley">
+					<section data-background-image="teiIntro_images/Shelley/Picture-1.png" data-background-size="contain"></section>
+					<section data-background-image="teiIntro_images/Shelley/Picture-2.png" data-background-size="contain"></section>
+					<section data-background-image="teiIntro_images/Shelley/Picture-3.png" data-background-size="contain"></section>
+					<section data-background-image="teiIntro_images/Shelley/Picture-4.png" data-background-size="contain"></section>
+					<section data-background-image="teiIntro_images/Shelley/Picture-5.png" data-background-size="contain"></section>
+					<section data-background-image="teiIntro_images/Shelley/Picture-6.png" data-background-size="contain"></section>
+					<section data-background-image="teiIntro_images/Shelley/Picture-7.png" data-background-size="contain"></section>
+				</section>
+
+				<section data-background-image="teiIntro_images/jeanpaul.gif" data-background-size="contain"></section>
+				
+				<section data-background-color="#a5d7d2"> 
+					<h3>6.<br/>Digital workflows</h3>
+				</section>
+
+				<section data-background-image="teiIntro_images/workflow_20220221.png" data-background-size="contain">
+				</section>
+
+
+				<section data-background-color="#a5d7d2"> 
+					<p>Thank you.</p>
+					<p>For more information, contact us at rise@unibas.ch</p>
+					<img src="teiIntro_images/rise.png">
+				</section>
+
+				<section>
+					<div class="left">
+						<p>This presentation reuses materials from: </p>
+						<p>José Luis Losada Palenzuela, <em>Markup, XML, TEI</em>,
+							<a href="https://editio.github.io/presentations/intro_sde_tei">https://editio.github.io/presentations/intro_sde_tei</a>, 
+							2021.</p>
+						<p>Lou Burnard, <em>What do we mean by markup and why do we do it?</em>, DHOXSS 2015.</p>
+						<p>Lou Burnard, <em>TEI Basic Structure and Core Elements</em>, DHOXSS 2015.</p>
+					</div>
+				</section>
+
+				<section>
+					<h4>To know more</h4>
+					<div class="left">
+						<p>Burnard, Lou. <em>What is the Text Encoding Initiative? How to add intelligent markup to digital resources</em>. Marseille : OpenEdition Press, 2014. <a href="http://books.openedition.org/oep/679">http://books.openedition.org/oep/679</a>. </p>
+						<p>Burghart, Marjorie, and Elena Pierazzo. <em>Digital Scholarly Editions: Manuscripts, Texts and TEI Encoding</em>. <a href="https://teach.dariah.eu/course/view.php?id=32">https://teach.dariah.eu/course/view.php?id=32</a>.</p>
+						<p>TEI Consortium. <em>Learn the TEI</em>. <a href="https://tei-c.org/support/learn/#section-2">https://tei-c.org/support/learn/#section-2</a>.</p>
+					</div>
+				</section>
+
+				<section>
+					<div class="left small">
+				<div>
+					<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://elespdn.github.io/talks/20220401_editions_crashCourse/teiIntro.html">Introduction to TEI</a> by <span property="cc:attributionName">Elena Spadini</span><br/>(RISE Crash Course, 01.04.2022, University of Basel)<br/>is licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p> 
+				</div>
+			</div>
+			
+			</section>
+
+
+
+				<!--
+				<section>
+					<p><i>Materials from Digital Humanities Oxford Summer School 2015 (L. Burnard, M. Turska, E. Spadini, M. Broughton)</i></p>
+					<h3>TEI Basic Structure and Core Elements</h3>
+					<p>See <a href="http://tei.it.ox.ac.uk/Talks/2015-07-dhoxss/2-teibasic.pdf" target="_blank">presentation</a></p>
+					<h3>Transcription, Editorial Interventions and Critical Apparatus</h3>
+					<p>See <a href="http://tei.it.ox.ac.uk/Talks/2015-07-dhoxss/Talks/3-transcription-and-criticapp.pdf" target="_blank">presentation</a></p>
+					<h3>Encoding Names, People, Places and Dates</h3>
+					<p>See <a href="http://tei.it.ox.ac.uk/Talks/2015-07-dhoxss/Talks/4-name-place-date.pdf" target="_blank">presentation</a></p>
+
+
+				</section>
+			
+				
+				-->
+
+				
+
+			</div>
+		</div>
+
+		
+
+
+		<script src="../reveal/js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal/plugin/highlight/highlight.js', async: true },
+					{ src: '../reveal/plugin/search/search.js', async: true },
+					{ src: '../reveal/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../reveal/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+
+
+
+
+	</body>
+</html>
