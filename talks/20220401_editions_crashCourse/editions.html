@@ -13,9 +13,10 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<link rel="stylesheet" href="../reveal/css/reset.css">
-		<link rel="stylesheet" href="../reveal/css/reveal.css">
-		<link rel="stylesheet" href="../reveal/css/theme/white.css" id="theme">
+		<link rel="stylesheet" href="../reveal/dist/reset.css"/>
+		<link rel="stylesheet" href="../reveal/dist/reveal.css"/>
+		<link rel="stylesheet" href="../reveal/dist/theme/white.css" id="theme"/>
+
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
@@ -295,12 +296,12 @@
 					<div class="left">Examples of projects using TEI Publisher</div> 
 					<br/>
 					<ul>
-						<li><a href="https://www.ssrq-sds-fds.ch/exist/apps/ssrq/">Sammlung Schweizerischer Rechtsquellen online</a></li>
+						<li><a href="https://editio.ssrq-online.ch/">Sammlung Schweizerischer Rechtsquellen online</a></li>
 						<li><a href="https://editiot.finlit.fi/exist/apps/gottlund/index.html">Forest Finns' Letters to Gottlund</a></li>
 					</ul>
 				</section>
 			
-				<section data-background-iframe="https://www.ssrq-sds-fds.ch/exist/apps/ssrq/" data-background-interactive></section>
+				<section data-background-iframe="https://editio.ssrq-online.ch/" data-background-interactive></section>
 				<section data-background-iframe="https://editiot.finlit.fi/exist/apps/gottlund/index.html" data-background-interactive></section>
 
 				<section data-background-color="#a5d7d2">
@@ -469,13 +470,13 @@ ex. : <em>"[Lo Stufaiuolo](https://scholarlyediting.org/2015/editions/intro.stuf
 				<section><a href="http://pelavicino.labcd.unipi.it/evt/#doc=C03&page=fol_015r">Codice Pelavicino</a></section>
 				<section data-background-iframe="http://pelavicino.labcd.unipi.it/evt/#doc=C03&page=fol_015r" data-background-interactive></section>
 
-				<section><a href="https://www.berliner-intellektuelle.eu/manuscript?Brief111BoeckhanAssing+de#1">Briefe und Texte
+				<section><a href="https://www.berliner-intellektuelle.eu/exist/apps/discholed/index.html">Briefe und Texte
 					aus dem intellektuellen
 					Berlin um 1800</a></section>
-				<section data-background-iframe="https://www.berliner-intellektuelle.eu/manuscript?Brief111BoeckhanAssing+de#1"></section>
+				<section data-background-iframe="https://www.berliner-intellektuelle.eu/exist/apps/discholed/bi/corpus/Brief006Boeckh.xml?view=page&odd=myodd&panels=0"></section>
 				
-				<section><a href="https://testaments-de-poilus.huma-num.fr/#!/">Testaments de Poilus</a> </section>
-				<section data-background-iframe="https://testaments-de-poilus.huma-num.fr/#!/" data-background-interactive></section>
+				<section><a href="https://edition-testaments-de-poilus.huma-num.fr/">Testaments de Poilus</a> </section>
+				<section data-background-iframe="https://edition-testaments-de-poilus.huma-num.fr/" data-background-interactive></section>
 				
 				<section data-markdown>
 					<textarea data-template>
@@ -827,22 +828,7 @@ collections of TEI documents</div>
 				<section data-background-image="editions_images/danteSourcesResults.png" data-background-size="contain"></section>
 
 
-
-
-				
-
-
-
-
-
-
-<! - #############################################################################################################################
-	##################################################################################################################################
-	###################################################### 3. conclusions ###############################################################
-	##################################################################################################################################
-	##################################################################################################################################
-	################################################################################################################################ ->
-
+				<!-- Conclusions -->
 				<section data-background-color="#a5d7d2">
  					<h3 style="color:black">8. Conclusions</h3>
  				</section>
@@ -902,6 +888,7 @@ FAIR--></div>
 						<div xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://elespdn.github.io/talks/20220401_editions_crashCourse/editions.html">Introduction to digital scholarly editions</a> by <span property="cc:attributionName">Elena Spadini</span><br/>(RISE Crash Course, University of Basel)<br/>is licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0</a></div>
 						<div>
 							<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></div> 
+							<div>Last update: October 2024</div>
 					</div>
 				</section>
 
@@ -909,32 +896,27 @@ FAIR--></div>
 		</div>
 
 
-		<script src="../reveal/js/reveal.js"></script>
-
+		<script src="../reveal/dist/reveal.js"></script>
+		<script src="../reveal/plugin/zoom/zoom.js"></script>
+		<script src="../reveal/plugin/notes/notes.js"></script>
+		<script src="../reveal/plugin/search/search.js"></script>
+		<script src="../reveal/plugin/markdown/markdown.js"></script>
+		<script src="../reveal/plugin/highlight/highlight.js"></script>
 		<script>
 
-			// More info https://github.com/hakimel/reveal.js#configuration
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
 			Reveal.initialize({
 				controls: true,
 				progress: true,
 				center: true,
 				hash: true,
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
-
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: '../reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../reveal/plugin/highlight/highlight.js', async: true },
-					{ src: '../reveal/plugin/search/search.js', async: true },
-					{ src: '../reveal/plugin/zoom-js/zoom.js', async: true },
-					{ src: '../reveal/plugin/notes/notes.js', async: true }
-				]
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
 			});
 
 		</script>
-
 
 
 
