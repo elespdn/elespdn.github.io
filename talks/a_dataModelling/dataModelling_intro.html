@@ -1,0 +1,389 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Data modelling</title>
+		
+		<link rel="stylesheet" href="../reveal.js-master/dist/reset.css">
+		<link rel="stylesheet" href="../reveal.js-master/dist/reveal.css">
+		<link rel="stylesheet" href="../reveal.js-master/dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+
+
+		<style>
+			div.quote {font-size: 0.8em; text-align: justify;}
+			div.source   {font-size: 0.6em; text-align: right; margin-top: 20px}
+			div.section-title {background-color: orange;text-align: left;padding-left: 1em;}
+			.small {font-size: 0.8em;}
+			.smaller {font-size: 0.7em;}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+							
+				
+				<section data-background-image="../images/20181005_fbk/plastilinaRoom.jpg" data-background-opacity="0.7" data-background-size="contain">
+					<br/><br/><br/><br/><br/><br/><br/><br/>
+					<h4 style="background-color: white;">Introduction to<br/>data modelling<br/>in the Humanities </h4>
+				</section>
+
+
+
+				
+
+<!-- ==================================================================================================  -->
+<!-- 										SECTION 1                                                    -->
+<!-- ==================================================================================================  -->
+
+				<section>
+					<img src="../images/model-building.jpg" width="40%"/>
+					<img src="../images/model-map.jpeg" width="40%"/>
+				</section>
+
+				<section>
+					<p>
+						
+						Information management
+						<br/><br/>
+						Information architecture
+						<br/><br/>
+						
+						Information systems
+					</p>
+				</section>
+
+				<section style="text-align: left;" class="small">
+					<p>
+						<h3>Models</h3>
+						<br/>
+						<ul>
+							<li>A <b>computational model</b> is a representation of the object of study that is understandable by a computer.</li>
+							<li class="fragment">A <b>data model</b>, in particular, is a structured representation of the object of study that organise and describe the knowledge about that object.</li>
+							<li class="fragment"><b>Statistical models</b>, used in machine learning, learn from data and are not human-interpretable.</li>
+						</ul>
+						</p>
+				</section>
+
+				<section style="text-align: left;" class="small">
+					<p><b>Primary sources in the humanities</b>: manuscripts, diaries, letters, speeches, memoirs, historical documents, government records, works of art, music, films, photographs, architecture, performances, artifacts, objects, archival materials, newspaper articles, etc.</p>
+				</section>
+
+				<section>
+					<div class="section-title">
+						<h2>Information architecture</h2></div>
+				</section>
+
+				<section>
+					<img src="../images/20181005_fbk/DHprojectComponents.png">
+					<br/><br/>
+					<div class="source"><i>Intro to Digital Humanities. <a href="https://archive.org/details/IntroductionToDigitalHumanities" target="_blank">1B: Analysis of DH projects</a></i>. Johanna Drucker, UCLA</div>
+				</section>
+
+				<section>
+					<img src="../images/20181005_fbk/DHprojectComponents_highlighted.png">
+				</section>
+
+				<section data-background-image="../images/20181005_fbk/magazzino1.png" data-background-size="contain">
+				</section>
+
+				<section data-background-image="../images/20181005_fbk/magazzino2.png" data-background-size="contain">
+				</section>
+
+				<section data-background-image="../images/20181005_fbk/magazzino3.png" data-background-size="contain">
+				</section>
+
+				<section>
+					<img src="../images/dhProjectComponents_en.drawio.png">
+				</section>
+
+
+
+
+
+
+<!-- ==================================================================================================  -->
+<!-- 										SECTION 2                                                    -->
+<!-- ==================================================================================================  -->
+
+
+				<section>
+					<div class="section-title">
+						<h2>Example</h2></div>
+				</section>
+
+				<section>
+					<img src="../images/20181005_fbk/commediaBoccaccio_bocc.jpg">
+					<br/>
+					La <i>Commedia</i> di Boccaccio
+					
+					<p class="small">See <a href="https://journal.digitalmedievalist.org/article/id/7019/">https://journal.digitalmedievalist.org/article/id/7019/</a></p>
+				</section>		
+				
+				<section  class="small">
+					<a href="https://www.danteonline.it/italiano/codici_frames/codici_nav.asp?img=321/Img/004R">Riccardiano</a>  |  Chigiano  |  Toledano
+					<br/><img src="../images/msCommediaBoccaccio_chigiano.png" width="33%"/>
+					<img src="../images/msCommediaBoccaccio_riccardiano.jpg" width="30%"/>
+					<p style="text-align: left;">Brainstorming: how to describe them? Which of their characteristics, qualities, features, aspects, information are relevant for describing and representing them, for example in a db?</p>
+				</section>
+
+				<section data-background-image="../images/20181005_fbk/commediaBoccaccio_tradizioneAnticaVulgata.jpg" data-background-size="contain"></section>
+
+				<section data-background-image="../images/20181005_fbk/commediaBoccaccio_website.png" data-background-size="contain" data-background-opacity="0.4">
+					https://boccacciocommedia.it
+				</section>
+
+				
+				<section data-background-image="../images/20181005_fbk/commediaBoccaccio_conceptual.png" data-background-size="contain"></section>
+
+				<section>
+					<img src="../images/model_conceptualAndLogic.png">
+				</section>
+
+
+				<section data-background-image="../images/20181005_fbk/commediaBoccaccio_process.png" data-background-size="contain"></section>
+
+				<section data-background-image="../images/20181005_fbk/commediaBoccaccio_searchRyhme.png" data-background-size="contain"></section>
+
+				<section data-background-image="../images/20181005_fbk/commediaBoccaccio_searchRhymeResults.png" data-background-size="contain"></section>
+
+				<section data-background-image="../images/20181005_fbk/commediaBoccaccio_searchInversion.png" data-background-size="contain"></section>
+
+				<section data-background-image="../images/20181005_fbk/commediaBoccaccio_searchInversionResults.png" data-background-size="contain"></section>
+
+				<section data-background-image="../images/20181005_fbk/commediaBoccaccio_marginsAlternatives.png" data-background-size="contain"></section>
+
+				<section data-background-image="../images/20181005_fbk/commediaBoccaccio_conceptual.png" data-background-size="contain"></section>
+
+
+
+<!-- ==================================================================================================  -->
+<!-- 										SECTION 2                                                    -->
+<!-- ==================================================================================================  -->
+
+<section style="text-align: left;">
+					<div class="section-title">
+						<h2>Theory</h2></div>
+				</section>
+
+
+				<section>
+					
+					<div class="quote">By "modeling" I mean the heuristic process of
+constructing and manipulating models, a "model" I take to be either a representation of
+something for purposes of study, or a design for realizing something new.</div>
+						
+
+						<div class="quote">[...] modeling has two phases: first, construction; second,
+manipulation. Examples come readily to mind from ordinary technical practice, e.g., building
+a relational database, then querying the data thus shaped to explore emergent patterns.</div>
+
+<div class="source">McCarty 2004</div>
+<br/><br/>
+
+				 			<div class="small">
+Analytical models, common in some scientific practices, necessary for computing -> computational models.
+</div>
+
+					
+				</section>
+
+
+				<!-- ==================================================================================================  -->
+<!-- 										SECTION 2                                                    -->
+<!-- ==================================================================================================  -->
+
+				<section style="text-align: left;">
+					<div class="section-title">
+						<h2>Exercise</h2></div>
+				</section>
+				
+				<!--
+				<section class="small" style="text-align: left;">
+					
+					Example from <i><a href="https://roud.unil.ch">Gustave Roud. Textes & Archives</a></i>
+					<br/>"Visite à C. F. Ramuz" (CLSR GR MS 2 C9a)
+					<p style="font-size: 0.5em;">https://ark.dasch.swiss/ark:/72163/1/0112/=gpxdusmR3u0dtUgEGAqMAG.20180831T1412546Z</p>					
+					
+					<img src="../images/roud_visiteRamuz.png" style="width: 50%; border: none;"/>
+
+					
+					<p> REMOVE START
+					Example from the Faust edition:
+					<br/>
+					https://faustedition.net/document?sigil=1_H.12&page=9&view=facsimile_text
+					<br/>
+					not before: 1806-03-01
+					<br/>
+					not after: 	1806-05-31
+					REMOVE END
+					</p>
+				</section>
+
+
+
+				<section class="smaller" style="text-align: left;">
+					Example from <a href="https://roud.unil.ch"><em>Gustave Roud (1897-1976). Textes & Archives</em></a>
+					<br/>Document: "Visite à C. F. Ramuz" (CLSR GR MS 2 C9a)
+					<br/>Date: not after 24.12.1935 (date of publication)
+					<p><b>Exercise</b>:
+					<ul>
+						<li>Draw a (time)line. Place the publication and the document on the line.</li>
+						<li class="fragment">Imagine to have a range slider like this one: <img width="30%" src="../images/timeSlider.png"/>.
+							<ul>
+								<li>Should the document appear if the user selects the range 1930-1935?</li>
+								<li>Should the document appear if the user selects the range 1930-1940?</li>
+								<li>Should the document appear if the user selects the range 1940-1945?</li>
+							</ul></li>
+						<li class="fragment">What happens behind the screen when the user moves the slider?</li>
+						<li class="fragment">How should the datation of the document be modelled in order for the slider to work?</li>
+					</ul>
+					
+				</p>
+				</section>
+				-->
+
+				<section style="text-align: left;">
+					<h2>1</h2>
+					<p>You are creating a database of artworks from a museum exhibition.
+						<br/><br/>
+						In groups, define at least 3 descriptors (characteristic, quality, feature, aspect, information...) to describe and represent each artwork (video sculptures) in the database.</p>
+				</section>
+
+				<section>
+					<p>Nam June Paik
+						<ul>
+							<li>TV Buddha (1974)</li>
+							<li>Family of Robot: Baby (1986)</li>
+							<li>Internet Dream (1994)</li>
+						</ul>
+					</p>
+				</section>
+
+				<section style="text-align: left;">
+					<h2>2</h2>
+					<p>You are creating a digital edition of Van Gogh's letters.
+						<br/><br/>
+						In groups, define at least 3 descriptors (characteristic, quality, feature, aspect, information...) to describe and represent each letter in the edition.</p>
+				</section>
+
+				<section>
+					<img src="../images/vanGogh_VGM001000100_01_nRf.png" width="40%"/>
+					<img src="../images/vanGogh_VGM001000100_01_nLf.png" width="40%"/>
+					</section>
+
+				
+				
+			
+<!-- ==================================================================================================  -->
+<!-- 										SECTION 3                                                   -->
+<!-- ==================================================================================================  -->
+
+				<section>
+					<div class="section-title">
+						<h2>Theory</h2></div>
+				</section>
+
+				<section>
+					<i>Il ruolo del modello nella scienza e nel sapere (Roma, 27-28 ottobre 1998)</i>, Sergio Carrà (ed.), Accademia nazionale dei Lincei, Roma 1999.
+				</section>
+
+				<section>
+					<div class="quote">Models [...] represent constructs with a more limited meaning than laws and scientific theories and have an instrumental connotation. In other words, it is generally believed that <b>the model does not have general applicability, but is limited to a specific context, and can be judged "good" when it proves useful for specific purposes (descriptive, explanatory, or predictive), not necessarily when it is considered "true."</b></div>
+					<br/>
+					<div class="source">Maria Carla Galavotti, “Leggi, modelli causali e manipolabilità”</div>
+				</section>
+
+				<!--
+				<section>
+					<div class="quote"><b>Nelle scienze esatte [...] il modello non è una semplificazione della realtà, ma una libera posizione mentale</b> e, come tale, non osservabile nel laboratorio, che permette di unificare tra di loro e quindi di dare un significato a tutte le misure fatte nel laboratorio, e che permette previsioni per ulteriori misure.</div>
+					<br/>
+					<div class="quote"><b>io penso che il modello sia quella posizione mentale che resta fuori dalla scena osservata</b>, ma che ha la funzione di integrare tra di loro e quindi di rendere comprensibili i fatti che si osservano dentro alla scena. <b>Il modello può giungere ad essere l'elemento invisibile che rende visibile il mondo</b>.</div>
+					<br/>
+					<div class="source">Giorgio Careri, “Intervento”</div>
+				</section>-->
+
+				<section>
+					<div class="quote">The role of models in science is adequately explained by the analytical model. This is because <b>formulating a model of certain phenomena is equivalent to formulating a hypothesis about those phenomena</b>, and the formulation of the model is based on the same logical procedures, such as induction and analogy, that the analytical model uses as the basis for the formulation of hypotheses.</div>
+					<br/><br/>
+					<!-- Del ruolo dei modelli nella scienza rende invece adeguatamente conto il modello analitico. Ciò dipende dal fatto che <b>formulare un modello di certi fenomeni equivale a formulare un'ipotesi su quei fenomeni</b>, e la formulazione del modello avviene in base a quegli stessi procedimenti logici, quali l'induzione e l'analogia, che il modello analitico pone alla base della formulazione delle ipotesi. -->
+					<div class="source">Carlo Cellucci, “I modelli, l'analogia e la metafora”</div>
+				</section>
+
+				
+				<!--
+
+				<section>
+					<div class="quote"><b>Un modello [...] consiste nella specificazione formale delle proprietà astratte degli oggetti rappresentati, insieme con le operazioni definibili su tali elementi</b> e le restrizioni che si applicano alle diverse classi di oggetti</div>
+					<br/>
+					<div class="quote">i requisiti fondamentali per garantirne [alla rappresentazione digitale del testo] l'adegualezza funzionale debbono essere assicurati dalla definizione di <b>un modello di dati in grado di formalizzare i procedimenti analitici e critici applicabili allo studio del testo</b></div>
+					<br/>
+					<div class="source">Dino Buzzetti, “Rappresentazione digitale e modello del testo”</div>
+				</section>-->
+
+				
+			
+
+				<section>
+					<h4>Selected bibliography</h4>
+					<ul style="font-size: 0.5em">
+						<li>Carrà, Sergio, ed. 1999. <i>Il ruolo del modello nella scienza e nel sapere (Roma, 27-28 ottobre 1998)</i>. Roma: Accademia nazionale dei Lincei.</li>
+						<li>Ciula, Arianna, and Øyvind Eide. 2017. ‘Modelling in Digital Humanities: Signs in Context’. Digital Scholarship in the Humanities 32 (suppl_1): i33–46.</li>
+						<li>Eide, Øyvind. 2014. ‘Ontologies, Data Modeling, and TEI’. Journal of the Text Encoding Initiative, no. Issue 8 (December).</li>
+						<li>Flanders, Julia, and Fotis Jannidis. 2015. ‘Knowledge Organization and Data Modeling in the Humanities’. In . http://www.wwp.northeastern.edu/outreach/conference/kodm2012/index.html.</li>
+						<li>———. 2016. ‘Data Modeling’. In <i>A New Companion to Digital Humanities</i>, edited by Susan Schreibman, Ray Siemens, and John Unsworth, 229–37. Wiley-Blackwell.</li>
+						<li>McCarty, Willard. 2004. ‘Modeling: A Study in Words and Meanings’. In <i>A Companion to Digital Humanities</i>, edited by Susan Schreibman, Ray Siemens, and John Unsworth. Oxford: Blackwell. </li>
+						<li>Pierazzo, Elena. 2015. <i>Digital Scholarly Editing: Theories, Models and Methods</i>. Ashgate.</li>
+						<li>The Shape of Data in Digital Humanities by Julia Flanders and Fotis Jannidis (Hardback). 2017. https://wordery.com/the-shape-of-data-in-digital-humanities-julia-flanders-9781472443243.</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<!-- about the course -->
+					<p class="small" style="text-align: left;">
+						Introduction to Data Modelling in the Humanities
+							<br/>Elena Spadini
+							<br/>CC BY-SA 4.0
+						
+					</p>
+				</section>
+
+
+<!-- ==================================================================================================  -->
+<!-- 										SECTION 4                                                   -->
+<!-- ==================================================================================================  -->
+
+
+
+				
+
+
+
+				
+
+			</div>
+		</div>
+
+		<script src="../reveal.js-master/dist/reveal.js"></script>
+		<script src="../reveal.js-master/plugin/notes/notes.js"></script>
+		<script src="../reveal.js-master/plugin/markdown/markdown.js"></script>
+		<script src="../reveal.js-master/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

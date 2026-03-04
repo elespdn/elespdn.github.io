@@ -1,0 +1,402 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Semantic web</title>
+
+	<link rel="stylesheet" href="../reveal.js-master/dist/reset.css">
+	<link rel="stylesheet" href="../reveal.js-master/dist/reveal.css">
+	<link rel="stylesheet" href="../reveal.js-master/dist/theme/white.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+
+
+	<style>
+		h3, h2 {
+			color: #E26310 !important;
+		}
+		div.quote {
+			font-size: 0.8em;
+			text-align: justify;
+		}
+
+		div.source {
+			font-size: 0.6em;
+			text-align: right;
+			margin-top: 20px
+		}
+
+		div.section-title {
+			background-color: orange;
+			text-align: left;
+			padding-left: 1em;
+		}
+
+		.small {
+			font-size: 0.8em;
+		}
+
+		.smaller {
+			font-size: 0.7em;
+		}
+		.smallest {
+			font-size: 0.5em;
+		}
+		.left {
+			text-align: left;
+		}
+		.no-bottom {
+			margin-bottom: 0px !important;
+			padding-bottom: 0px !important;
+		}
+		.no-top {
+			margin-top: 0px !important;
+			padding-top: 0px !important;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+
+			<section data-background-image="../images/netzwerk-total-160544461.jpg" data-background-opacity="0.2" background-size="contain">
+				<h1>Semantic Web and Linked Data in DH</h1>
+			</section>
+
+
+			<section>
+				<table border="1">
+  <tr>
+    <th>XML</th>
+    <th>Relational DB</th>
+	<th>RDF</th>
+  </tr>
+  <tr>
+    <td>Hierarchical (tree of elements)</td>
+    <td>Flat tables (rows and columns)</td>
+	<td>Graph</td>
+  </tr>
+  <tr>
+    <td>Document centric</td>
+    <td>Data centric</td>
+	<td>Data centric</td>
+  </tr>
+  <tr>
+    <td>Semi-structured data</td>
+    <td>Structured data</td>
+	<td>Structured data</td>
+  </tr>
+</table>
+
+			</section>
+
+			<section>
+				<table class="small" border="1">
+  <tr>
+    <th>XML</th>
+    <th>Relational DB</th>
+	<th>RDF</th>
+  </tr>
+  <tr>
+    <td>Hierarchical (tree of elements)</td>
+    <td>Flat tables (rows and columns)</td>
+	<td>Graph</td>
+  </tr>
+  <tr>
+    <td>Document centric</td>
+    <td>Data centric</td>
+	<td>Data centric</td>
+  </tr>
+  <tr>
+    <td>Semi-structured data</td>
+    <td>Structured data</td>
+	<td>Structured data</td>
+  </tr>
+</table>
+<div class="left">
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="../images/data-sIlos.png" width="30%" /> &emsp;&emsp;&emsp;<img src="../images/webData.jpeg" width="30%" />
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;⟶<br/>
+	&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;from data silos to web of data
+	<br/>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;from extension of indices to linked data
+</div>
+
+
+			</section>
+
+
+			
+
+
+
+			<section data-markdown>
+	<script type="text/template">
+	### Application of semantic web technologies to DH projects
+	
+	<div class="small">
+		<p class="left"><strong>TWO LEVELS:</strong></p>
+		<ol>
+			<li>Extension of indices (Vogeler 2019)
+				<ul>
+					<li>Identify entities by linking to <strong>authority files and controlled vocabularies</strong>. This can be done with any technology (XML, relational DB, etc.)</li>
+				</ul>
+			</li>
+			<br/>
+			<li>Linked data
+				<ul>
+					<li>Databases of <strong>RDF statements</strong></li>
+					<li><strong>Persistent URIs</strong> and <strong>existing ontologies</strong> for organising information</li>
+					<li>Expose data through a <strong>SPARQL endpoint</strong></li>
+				</ul>
+			</li>
+		</ol>
+		</div>
+  </script>
+</section>
+
+
+
+<section data-markdown class="small">
+	<script type="text/template">
+		## Level 1. Extension of indices
+		#### Some authority files and controlled vocabularies
+		
+		
+		- [VIAF](https://viaf.org/en)
+		- [GeoNames](https://www.geonames.org/)
+		- Getty Vocabularies:
+			- Art & Architecture Thesaurus (AAT)
+			- Getty Thesaurus of Geographic Names (TGN)
+			- Union List of Artist Names (ULAN)
+			- Cultural Objects Name Authority (CONA)
+			- Getty Iconography Authority (IA)
+		- [Iconclass](https://iconclass.org/)
+		- Trismegistos
+		- [Schema.org](https://schema.org/docs/full.html)
+
+  	</script>
+</section>
+
+			
+
+<section>
+				
+		<h3>Level 2. Linked Data</h3>
+		<p> <strong>SEMANTIC WEB</strong> or <strong>WEB OF DATA</strong> or <strong>WEB 3.0</strong> </p>
+
+		<div class="left">
+			<p class="no-bottom">
+				&#x2022; <strong>URIs</strong> to identify things (not only documents)</p>
+			<p class="smallest no-top">Examples:<br/>Dahlia (plan): https://www.wikidata.org/wiki/Q130918<br/>Dahlia de la Cerda: https://dbpedia.org/page/Dahlia_de_la_Cerda</p>
+			<p class="no-bottom">
+				&#x2022; <strong>Ontologies</strong> to define common vocabularies</p>
+			<p class="smallest no-top">FOAF (Friend of a Friend): http://xmlns.com/foaf/spec/, CIDOC-CRM: http://www.cidoc-crm.org/cidoc-crm/</p>
+			<p class="no-bottom">
+				&#x2022; <strong>RDF</strong> to express data as triples</p>
+			<p class="smallest no-top">&lt;https://dbpedia.org/page/Dahlia_de_la_Cerda&gt; foaf:birthday "1985-03-09"^^xsd:date ..</p>
+			<p class="no-bottom">
+				&#x2022; <strong>SPARQL</strong> to query data</p>		
+			<p>&#x2022; Linking data across different sources → <strong>Linked Data</strong></p>				
+		</div>
+
+</section>
+
+
+			<section>
+				<h3>Why linked data? Some examples</h3>
+				<div>
+<div class="left small">
+			<p class="no-bottom">
+				&#x2022; <strong>Breaks data silos</strong>. Connect data from different sources.</p>
+			<p class="smaller no-top">Examples:<br/>Library records linked to author biographies and book reviews from other sites.</p>
+			<p class="no-bottom">
+				&#x2022; <strong>Machine-Readable and interoperable. Richer queries and discoveries</strong>. Data is published in standard formats (RDF, URIs) so computers can understand and use it automatically.</p>
+			<p class="smaller no-top">A search engine combining data about people, places, and events from diverse websites.<br/>Find all researchers working on climate change by querying scholarly and environmental datasets.</p>
+			<p class="no-bottom">
+				&#x2022; <strong>Supports data reuse and updating</strong>. Data can be published once and reused by many applications.</p>
+			<p class="smaller no-top">Open government data sets reused by civic apps for transparency and services.</p>
+		</div>
+			</section>
+
+
+
+			
+
+			<section data-markdown class="small">
+				<script type="text/template">
+### History Timeline (1990s to 2010s)  
+
+| Year  | Milestone                                 |  
+|-------|-------------------------------------------|  
+| 1994  | Early visions of the Semantic Web         |  
+| 1999  | RDF formal W3C Recommendation               |  
+| 2001  | Scientific American article formalizes vision |  
+| 2004  | OWL becomes W3C standard                    |  
+| 2010s | Growth of Linked Open Data and Schema.org  |  
+
+				</script>
+			</section>
+
+
+
+			
+
+			<section data-markdown class="small">
+				<script type="text/template">
+### History Timeline (1990s to 2010s)  
+
+| Year  | Milestone                                 |  
+|-------|-------------------------------------------|  
+| 1994  | Early visions of the Semantic Web         |  
+| 1999  | RDF formal W3C Recommendation               |  
+| 2001  | Scientific American article formalizes vision |  
+| 2004  | OWL becomes W3C standard                    |  
+| 2010s | Growth of Linked Open Data and Schema.org  |  
+
+<br/><strong>What is the W3C?</strong><br/>
+<a href="https://www.w3.org/">World Wide Web Consortium</a> (W3C), international community developing web standards like HTML, CSS, XML, RDF, OWL, SPARQL.
+  </script>
+			</section>
+
+
+
+			<section>
+<img src="../images/scientificAmerican2001.webp" width="400px" />
+<div class="smallest"><em>Scientific American</em>, May 2001<br/>"The Semantic Web"<br/>Tim Berners-Lee, James Hendler and Ora Lassila 
+			</section>
+
+			<section>
+				<iframe src="http://dig.csail.mit.edu/2007/Talks/0108-sw-tbl/#(16)" width="100%"
+					height="600px"></iframe>
+				<div class="source">Introduction to Semantic Web, Tim Berners-Lee, 2007
+					<br />http://dig.csail.mit.edu/2007/Talks/0108-sw-tbl
+					<br/>"For example in biopax" (slide 16)
+				</div>
+			</section>
+
+			
+
+			<section>
+				<h3>Examples of current usage</h3>
+				<div>
+<div class="left small">
+			<p class="no-bottom">
+				&#x2022; An RDF dataset is a <strong>Knowledge Graph</strong>, sometimes abbreviated as KG (but not all KGs are RDF datasets, other technologies can be used).</p>
+			<p class="smaller no-top">Examples:<br/><a href="https://blog.google/products/search/introducing-knowledge-graph-things-not/">Google Knowledge Graph</a></p>
+			<p class="no-bottom">
+				&#x2022; Semantic web technologies power <strong>search engines</strong>.</p>
+			<p class="smaller no-top"><a href="https://schema.org/">Schema.org</a> has been adopted by web browsers.<br/> The Google KG is used to produce <a href="https://blog.google/products/search/about-knowledge-graph-and-knowledge-panels/">Knowledge Panels</a>.</p>
+			<p class="no-bottom">
+				&#x2022; Semantic web technologies are used in <strong>healthcare, bioinformatics, smart utilities, cultural heritage, government, and more</strong>.</p>
+			<p class="smaller no-top"><a href="https://www.sib.swiss/services/open-software-and-databases#resources-portfolio">Swiss Institute of Bioinformatics data resources</a>
+				<br/><a href="https://dl.acm.org/doi/10.1145/3746264.3760494">Swiss Food Knowledge Graph</a><br/><a href="https://opendata.swiss">Swiss Open Government data</a></p>
+		</div>
+			</section>
+
+
+
+			<section>
+				<strong>The <a href="https://lod-cloud.net/">Linked Open Data Cloud</a></strong>
+				<img src="https://lod-cloud.net/clouds/lod-cloud-sm.jpg" width="60%" />
+			</section>
+
+
+
+
+
+
+
+<!--
+
+
+<section data-markdown>
+	<script type="text/template">
+		## Examples of DH projects using Semantic Web technologies
+		- [Pelagios](https://pelagios.org/)
+		- [Pleiades](https://pleiades.stoa.org/)
+		- [Perseus Digital Library](http://www.perseus.tufts.edu/hopper/)
+		- [Linked Ancient World Data Institute (LAWDI)](https://lawdi.github.io/)
+		- [Semantic Publishing and Referencing (SPAR) Ontologies](http://www.sparontologies.net/)
+		- [Tabula Imperii Romani (TIR)](http://tir.oeaw.ac.at/)
+  	</script>
+	</section>
+-->
+
+	<section data-markdown class="small">
+		<script type="text/template">
+		## Ontologies commonly used in DH
+		- [CIDOC CRM](http://www.cidoc-crm.org/): Conceptual Reference Model for cultural heritage information
+		- [LRMoo](http://www.cidoc-crm.org/lrmo/): Library Reference Model for bibliographic information (previously FRBRoo)
+		- [Dublin Core](https://www.dublincore.org/): Metadata terms for resource description
+		- [SPAR Ontologies](http://www.sparontologies.net/): Ontologies for citations, bibliographic references, and more
+		- [FOAF](http://xmlns.com/foaf/spec/): Friend of a Friend vocabulary for describing people and their relationships
+		- [PROV-O](https://www.w3.org/TR/prov-o/): Provenance Ontology for representing provenance information 
+		- [RIC-O](https://ica-egad.github.io/RiC-O/): Records in Context Ontology for bibliographic records
+  	</script>
+</section>
+
+
+<!--
+<section data-markdown>
+	<script type="text/template">
+		## Some Linked Open Data Cloud
+		- [DBpedia](https://www.dbpedia.org/)
+		- [Wikidata](https://www.wikidata.org/)
+		- [Europeana](https://www.europeana.eu/en)
+  	</script>
+</section>	
+
+ - [LOD Cloud Diagram](https://lod-cloud.net/)
+
+		- [Digital Public Library of America (DPLA)](https://dp.la/)
+		 -->
+
+
+<section>
+	<h2>Some DH related public SPARQL endpoints</h2>
+	<ul class="small">
+		<li><a href="https://europeana.atlassian.net/wiki/spaces/EF/pages/2385870903/SPARQL+API+Documentation">Europeana</a>: digital cultural heritage platform.</li>
+		<li><a href="https://mapping-manuscript-migrations.github.io/sparql/sparql_tutorial.html">Mapping Manuscript Migrations</a>: pre-modern manuscripts and their movements.</li>
+		<li><a href="https://mimotext.github.io/MiMoTextBase_Tutorial/">MiMo TextBase</a>: French Enlightenment novel (1750-1800).</li>
+		<li><a href="https://lila-erc.eu/sparql/">LiLa (Linking Latin)</a>: linguistic resources for latin.</li>
+		<li><a href="https://www.dnb.de/EN/Professionell/Metadatendienste/Datenbezug/LDS/lds_node.html">German National Library</a>: Linked Data service.</li>
+		
+		<li><a href="https://data.bnf.fr/sparql/">BnF Data</a>: open data of the French National Library.</li>
+		
+		<!-- https://projects.dharc.unibo.it/odi/sparql   Castello destini incrociati, Calvino -->
+</section>
+
+
+
+
+
+
+		</div>
+	</div>
+
+	<script src="../reveal.js-master/dist/reveal.js"></script>
+	<script src="../reveal.js-master/plugin/notes/notes.js"></script>
+	<script src="../reveal.js-master/plugin/markdown/markdown.js"></script>
+	<script src="../reveal.js-master/plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>

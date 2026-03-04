@@ -1,0 +1,353 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Wikidata</title>
+		
+		<link rel="stylesheet" href="../reveal.js-master/dist/reset.css">
+		<link rel="stylesheet" href="../reveal.js-master/dist/reveal.css">
+		<link rel="stylesheet" href="../reveal.js-master/dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+
+
+		<style>
+			div.quote {font-size: 0.8em; text-align: justify;}
+			div.source   {font-size: 0.6em; text-align: right; margin-top: 20px}
+			div.section-title {background-color: orange;text-align: left;padding-left: 1em;}
+			.small {font-size: 0.8em;}
+			.smaller {font-size: 0.7em;}
+			.align-left {text-align: left;}
+			pre, code {
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+}
+
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+							
+								
+				<section data-markdown>
+				<script type="text/template">
+				## Introduction to
+				a free, collaborative, multilingual knowledge base
+				<img src="../images/Wikidata-logo.png" width="40%" style="maring:0px"/>
+				</script>
+				
+				</section>
+
+				<section data-markdown>
+				<script type="text/template">
+				## What is Wikidata?
+				A structured, open knowledge base supporting Wikipedia and other Wikimedia projects.
+				
+				It stores linked data about people, places, events, concepts, and more.
+				
+				Data is multilingual and editable by anyone, embracing a collaborative model
+				
+				</script>
+				</section>
+
+				<section data-markdown>
+				<script type="text/template">
+					## Wikidata and Wikipedia
+					
+					Wikidata acts as a centralized, structured knowledge base for Wikipedia and other Wikimedia projects. 
+
+					Infobox templates in Wikipedia are auto-filled using live updates from Wikidata.
+
+					Interwiki links (interprojects or interlanguage) are managed centrally in Wikidata.
+					</script>
+				</section>
+
+				
+
+				<section data-markdown>
+				<script type="text/template">
+				## How to Use Wikidata?
+				
+				Add or edit factual statements on items
+				
+				Create new items for notable entities
+				
+				**Use SPARQL to query the data via the Wikidata Query Service**
+				
+				Embed data in Wikipedia and external websites
+				</script>
+				</section>
+
+
+				<section data-markdown class="align-left">
+				<script type="text/template">
+				## Data Model
+				Open, flexible graph structure for knowledge representation
+
+				A statement:
+
+				**Item** — has a **Property** — with a **Value**
+
+				Statements may have qualifiers (extra content or detail) and references (source).
+				
+				</script>
+				</section>
+
+
+				<section data-markdown>
+				<script type="text/template">
+				## Data Model
+				
+				**Item** — has a **Property** — with a **Value**
+
+				- **Property** describes what kind of information is stated on the item, e.g., "date of birth," "occupation"
+				- **Value** is the actual data, e.g., "1867-11-07," "chemist".
+				
+				</script>
+				</section>
+
+				<section>
+					<table style="border:1;font-size: 0.5em;"; cellpadding="5" cellspacing="0"	> 
+  <thead>
+    <tr>
+      <th>Item (Subject)</th>
+      <th>Property</th>
+      <th>Value (Object)</th>
+      <th>Explanation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Marie Curie (Q7186)</td>
+      <td>occupation (P106)</td>
+      <td>physicist (Q169470)</td>
+      <td>Marie Curie’s occupation includes physicist</td>
+    </tr>
+    <tr>
+      <td>Marie Curie (Q7186)</td>
+      <td>occupation (P106)</td>
+      <td>chemist (Q593644)</td>
+      <td>She also had the occupation of chemist</td>
+    </tr>
+    <tr>
+      <td>Marie Curie (Q7186)</td>
+      <td>award received (P166)</td>
+      <td>Nobel Prize in Physics (Q38104)</td>
+      <td>She received the Nobel Prize in Physics</td>
+    </tr>
+    <tr>
+      <td>Marie Curie (Q7186)</td>
+      <td>date of birth (P569)</td>
+      <td>1867-11-07</td>
+      <td>Her birthdate is November 7, 1867</td>
+    </tr>
+    <tr>
+      <td>Marie Curie (Q7186)</td>
+      <td>place of birth (P19)</td>
+      <td>Warsaw (Q2692)</td>
+      <td>She was born in Warsaw</td>
+    </tr>
+    <tr>
+      <td>Marie Curie (Q7186)</td>
+      <td>educated at (P69)</td>
+      <td>University of Paris (Q35794)</td>
+      <td>She was educated at the University of Paris</td>
+    </tr>
+    <tr>
+      <td>Marie Curie (Q7186)</td>
+      <td>child (P40)</td>
+      <td>Irène Joliot-Curie (Q12345)</td>
+      <td>Her child Irène Joliot-Curie</td>
+    </tr>
+  </tbody>
+</table>
+
+				</section>
+
+				<section>
+					<a href="https://www.wikidata.org/wiki/Q7186">https://www.wikidata.org/wiki/Q7186</a>
+				</section>
+
+
+				<section>
+					<a href="https://query.wikidata.org/">https://query.wikidata.org/</a>
+					<br/>
+					A public SPARQL endpoint for querying the entire Wikidata knowledge graph
+				</section>
+
+
+				
+
+<section data-markdown>
+  <script type="text/template">
+## What is SPARQL?
+- The standard query language for RDF data  
+- Allows querying by patterns of triples (subject-predicate-object)  
+- Supports filters, optional matches, aggregation, sorting, and more  
+- Used to query Wikidata's structured graph data  
+  </script>
+</section>
+
+<section data-markdown>
+  <script type="text/template">
+## Basic Structure of a Wikidata Query
+- PREFIX declarations: shorthand for namespaces  
+- SELECT statement: specifies which variables (data) to return  
+- WHERE clause: graph pattern with triples and constraints  
+</script>
+</section>
+
+
+
+<section data-markdown>
+  <script type="text/template">
+    
+## Example SPARQL Query
+
+<pre>
+<code>
+PREFIX wd: http://www.wikidata.org/entity/
+PREFIX wdt: http://www.wikidata.org/prop/direct/
+
+SELECT ?item ?itemLabel WHERE {
+?item wdt:P31 wd:Q6256. # all countries
+SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+LIMIT 10
+
+</code>
+</pre>
+  </script>
+</section>
+
+<section data-markdown>
+  <script type="text/template">
+## Using the Wikidata Query Service Interface
+- Write or paste SPARQL queries into the editor  
+- Use “Add prefixes” button for common prefix declarations  
+- Click “Execute” to run the query and see results  
+- Save queries or generate short URLs for sharing  
+- Choose result views: table, graph, map, timeline, etc.  
+  </script>
+</section>
+
+
+<section data-markdown>
+  <script type="text/template">
+## Example Use Cases
+1. Retrieve all humans born in a specific country  
+2. Find all movies directed by a given person  
+3. Map geographic distribution of UNESCO World Heritage Sites 
+4. Analyze co-occurrence of concepts across items (items with multiple shared properties)
+  </script>
+</section>
+
+
+<section data-markdown>
+  <script type="text/template">
+## Example 1
+
+<pre>
+<code>
+SELECT ?person ?personLabel WHERE {
+  ?person wdt:P31 wd:Q5;          # instance of human
+          wdt:P19 ?place.         # place of birth
+  ?place wdt:P17 wd:Q142.         # country is France (Q142)
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+LIMIT 10
+</code>
+</pre>
+  </script>
+</section>
+
+<section data-markdown>
+  <script type="text/template">
+## Example 2
+
+<pre>
+<code>
+SELECT ?movie ?movieLabel WHERE {
+  ?movie wdt:P31 wd:Q11424;       # instance of film
+         wdt:P57 wd:Q8877.        # director is Steven Spielberg (Q8877)
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+LIMIT 10
+</code></pre>
+  </script>
+</section>
+
+
+<section data-markdown>
+  <script type="text/template">
+## Example 3
+
+<pre>
+<code>
+SELECT ?landmark ?landmarkLabel ?coord WHERE {
+  ?landmark wdt:P31 wd:Q9259;       # instance of World Heritage Site
+            wdt:P625 ?coord.         # coordinate location
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+LIMIT 10
+</code></pre>
+  </script>
+</section>
+
+
+
+<section data-markdown>
+  <script type="text/template">
+## Example 4
+
+<pre>
+<code>
+SELECT ?person ?personLabel WHERE {
+  ?person wdt:P31 wd:Q5;            # instance of human
+          wdt:P106 wd:Q169470;      # occupation physicist
+          wdt:P551 wd:Q64.          # residence Berlin (Q64)
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+LIMIT 10
+</code></pre>
+  </script>
+</section>
+
+
+
+
+
+
+				
+
+
+
+
+
+				
+
+			</div>
+		</div>
+
+		<script src="../reveal.js-master/dist/reveal.js"></script>
+		<script src="../reveal.js-master/plugin/notes/notes.js"></script>
+		<script src="../reveal.js-master/plugin/markdown/markdown.js"></script>
+		<script src="../reveal.js-master/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
